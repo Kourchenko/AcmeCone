@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:id="@+id/drains_linear"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <include android:id="@+id/toolbar_actionbar"
+                    layout="@layout/toolbar_default"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/drains_two_drop"
+                        android:contentDescription="@string/app_name"
+                        android:src="@mipmap/drains_two_drop"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:columnWidth="100dp"
+                        android:gravity="center"
+                        android:verticalSpacing="5dp"
+                        android:focusable="true"
+                        android:clickable="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true" />
+
+
+                    <TextView
+                        android:text="@string/drains_two_drop"
+                        android:gravity="center"
+                        android:textSize="35sp"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/drains_two_drop"
+                        android:layout_toRightOf="@+id/drains_two_drop"
+                        android:layout_alignParentTop="true" />
+
+
+                    <TextView
+                        android:id="@+id/drains_two_drop_desc"
+                        android:text="@string/drains_two_drop_desc"
+                        android:textSize="20sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="5dp"
+                        android:paddingLeft="5dp"
+                        android:paddingEnd="5dp"
+                        android:gravity="start"
+                        android:layout_gravity="start"
+                        android:layout_below="@+id/drains_two_drop"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+
+                    <ImageView
+                        android:id="@+id/drains_two_metal"
+                        android:contentDescription="@string/app_name"
+                        android:src="@mipmap/drains_two_metal"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:columnWidth="100dp"
+                        android:gravity="center"
+                        android:focusable="true"
+                        android:clickable="true"
+                        android:layout_below="@+id/drains_two_drop_desc"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true" />
+                    <TextView
+                        android:id="@+id/drains_two_metal_desc"
+                        android:text="@string/drains_two_metal_desc"
+                        android:textSize="20sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="5dp"
+                        android:paddingLeft="5dp"
+                        android:paddingEnd="5dp"
+                        android:gravity="end"
+                        android:layout_gravity="end"
+                        android:layout_below="@+id/drains_two_metal"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+                    <TextView
+                        android:text="@string/drains_two_metal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="35sp"
+                        android:gravity="center"
+                        android:layout_below="@+id/drains_two_drop_desc"
+                        android:layout_above="@+id/drains_two_metal_desc"
+                        android:layout_toLeftOf="@+id/drains_two_metal"
+                        android:layout_toStartOf="@+id/drains_two_metal" />
+
+                    <ImageView
+                        android:id="@+id/drains_three_drop"
+                        android:contentDescription="@string/app_name"
+                        android:src="@mipmap/drains_three_drop"
+                        android:focusable="true"
+                        android:clickable="true"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_below="@+id/drains_two_metal_desc"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"/>
+
+                    <TextView
+                        android:text="@string/drains_three_drop"
+                        android:textSize="35sp"
+                        android:gravity="center"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/drains_two_metal_desc"
+                        android:layout_above="@+id/drains_three_drop_desc"
+                        android:layout_toRightOf="@+id/drains_three_drop"/>
+
+                    <TextView
+                        android:id="@+id/drains_three_drop_desc"
+                        android:text="@string/drains_three_drop_desc"
+                        android:textSize="20sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="5dp"
+                        android:paddingLeft="5dp"
+                        android:paddingEnd="5dp"
+                        android:gravity="start"
+                        android:layout_gravity="start"
+                        android:layout_below="@+id/drains_three_drop"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true" />
+
+                    <ImageView
+                        android:id="@+id/drains_three_metal"
+                        android:contentDescription="@string/app_name"
+                        android:src="@mipmap/drains_three_metal"
+                        android:focusable="true"
+                        android:clickable="true"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_below="@+id/drains_three_drop_desc"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"/>
+
+                    <TextView
+                        android:text="@string/drains_three_metal"
+                        android:textSize="35sp"
+                        android:gravity="center"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/drains_three_drop_desc"
+                        android:layout_above="@+id/drains_three_metal_desc"
+                        android:layout_toLeftOf="@+id/drains_three_metal"
+                        android:layout_toStartOf="@id/drains_three_metal"/>
+
+                    <TextView
+                        android:id="@+id/drains_three_metal_desc"
+                        android:text="@string/drains_three_metal_desc"
+                        android:textSize="20sp"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="5dp"
+                        android:paddingLeft="5dp"
+                        android:paddingEnd="5dp"
+                        android:gravity="end"
+                        android:layout_gravity="end"
+                        android:layout_below="@+id/drains_three_metal"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"/>
+
+                    <ImageView
+                        android:id="@+id/drains_commercial"
+                        android:contentDescription="@string/app_name"
+                        android:src="@mipmap/drains_commercial"
+                        android:focusable="true"
+                        android:clickable="true"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_below="@+id/drains_three_metal_desc"/>
+
+                    <TextView
+                        android:text="@string/drains_commercial"
+                        android:textSize="35sp"
+                        android:gravity="center"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/drains_three_metal_desc"
+                        android:layout_toRightOf="@id/drains_commercial"/>
+                    <TextView
+                        android:id="@+id/drains_commercial_desc"
+                        android:text="@string/drains_commercial_desc"
+                        android:textSize="20sp"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="5dp"
+                        android:paddingLeft="5dp"
+                        android:paddingEnd="5dp"
+                        android:gravity="start"
+                        android:layout_gravity="start"
+                        android:layout_below="@+id/drains_commercial"/>
+
+                </RelativeLayout>
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_drains"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        app:layout_anchor="@id/drains_linear"
+        app:layout_anchorGravity="bottom|right|end"
+        android:src="@drawable/ic_add_white_36dp" />
+
+
+</android.support.design.widget.CoordinatorLayout>
+
+
+

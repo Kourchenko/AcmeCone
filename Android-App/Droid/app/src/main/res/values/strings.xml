@@ -1,0 +1,481 @@
+<resources>
+    <string name="app_name">Acme Cone</string>
+    <string name="drawer_open">Menu opened</string>
+    <string name="drawer_close">Menu closed</string>
+
+    <!-- Settings -->
+    <string name="action_settings">Login</string>
+    <string name="action_help">Register</string>
+
+
+    <!-- Home Fragment -->
+
+    <!-- Stock Fragment -->
+    <string name="err_msg_name">Enter name</string>
+    <string name="err_msg_email">Enter email</string>
+    <string name="err_msg_company">Enter company</string>
+    <string name="err_msg_manuf">Enter manufacturer</string>
+    <string name="submit">Submit</string>
+    <string name="review_order">Review Order</string>
+
+    <string name="stock_autocomplete">Cone, RVO, Corners (Auto-Complete)</string>
+    <string name="split">Split</string>
+    <string name="non_split">Non-Split</string>
+
+    <!-- Stock Menu -->
+
+    <!-- Review Fragment -->
+    <string name="review_empty_cart">You have no items in cart.</string>
+    <string name="undo">Undo</string>
+    <string name="deleted">Deleted</string>
+
+    <!-- Custom Fragment -->
+
+    <!-- Checkout Fragment -->
+
+
+
+    <!-- About Us-->
+    <string name="acme_info_a"><b>A</b></string>
+    <string name="acme_info_b"><b>cme Cone</b> is an established single ply
+        flashing manufacturer focused on customization to suit the needs of
+        each individual customer. </string>
+
+    <string name="acme_info_c"><b>Q</b></string>
+    <string name="acme_info_d"><b>uality and Customization:</b> Leading in product quality, Acme Cone hand welds every product
+        rather than relying on dielectric technology.</string>
+
+    <string name="acme_info_e"><b>A</b></string>
+    <string name="acme_info_f"><b>ccuracy:</b> Using a precision cutting CNC to process rolls of membrane,
+        flashings are accurate down to a 16th of an inch. This insures the best possible fit.</string>
+
+    <string name="acme_hours">\n<b>Office Hours</b>
+                                \n 7:00AM - 4:00PM</string>
+    <string name="acme_directions">3237 W 11th Ave, Eugene OR 97407</string>
+    <string name="acme_directions_button">Directions to Acme Cone.</string>
+    <string name="acme_youtube">YouTube Channel</string>
+
+
+    <!-- Login -->
+    <string name="login_edit_email">Email</string>
+    <string name="login_prompt_password">Password</string>
+    <string name="login_signInBttn">Sign In</string>
+    <string name="login_noaccount">No account? Register</string>
+
+
+    <!-- Register -->
+    <string name="register_edit_name">Name</string>
+    <string name="register_edit_email">Email</string>
+    <string name="register_edit_manufacturer">Manufacturer</string>
+    <string name="register_prompt_password">Password</string>
+    <string name="register_registration">Register Account</string>
+    <string name="register_signIn">Already have an account? Sign In</string>
+
+    <!-- Order Form -->
+    <string name="orderform_orderB">Click to Place Order</string>
+    <string name="orderform_item">Stock Items</string>
+    <string name="orderform_addToOrder">Add to Order</string>
+
+
+    <string name="optional_notes">Notes (Optional)</string>
+    <string name="color">Color</string>
+    <string name="material">Material</string>
+    <string name="quantity">Quantity</string>
+    <string name="length">Length</string>
+    <string name="height">Height</string>
+    <string name="width">Width</string>
+    <string name="depth">Depth</string>
+    <string name="flange">Flange</string>
+    <string name="top_diameter">Top Diameter</string>
+    <string name="bot_diameter">Bottom Diameter</string>
+    <string name="diameter">Diameter</string>
+    <string name="fractions">Fractions</string>
+
+    <string-array name="fractions">
+        <item>1/8</item>
+        <item>&#188;</item>
+        <item>3/8</item>
+        <item>&#189;</item>
+        <item>5/8</item>
+        <item>&#190;</item>
+        <item>7/8</item>
+    </string-array>
+
+
+    <!-- Cones Description -->
+    <string name="product_cones">Cones</string>
+    <string name="product_cones_text">Our Cones are available in both split and non-split versions.
+                                Available in TPO(white/grey) and PVC(white/grey).
+    </string>
+
+    <string name="cones_a">A Cone</string>
+    <string name="cones_a_desc"><b>Dimensions: </b>
+                                        \n 1” Top diameter,
+                                        \n 5” Bottom diameter,
+                                        \n 10” Height,
+                                        \n 5” Flange
+    </string>
+
+    <string name="cones_b">B Cone</string>
+    <string name="cones_b_desc"><b>Dimensions: </b>
+                                        \n 2” Top diameter,
+                                        \n 6” Bottom diameter,
+                                        \n 12” Height,
+                                        \n 6” Flange
+    </string>
+
+    <string name="cones_c">C Cone</string>
+    <string name="cones_c_desc"><b>Dimensions: </b>
+                                        \n 4” Top diameter,
+                                        \n 7” Bottom diameter,
+                                        \n 12” Height,
+                                        \n 6” Flange
+    </string>
+
+    <string name="cones_d">D Cone</string>
+    <string name="cones_d_desc"><b>Dimensions: </b>
+                                    \n Top diameter,
+                                    \n 12” Bottom diameter,
+                                    \n 12” Height,
+                                    \n 6” Flange</string>
+
+    <!-- Boxes Description -->
+    <string name="boxes_text">Custom Made Boxes</string>
+    <string name="boxes_curbwrap">Curb Wraps</string>
+    <string name="boxes_curbwrap_desc">Curb wraps can be made split, non-split, 2 piece, and 4 piece.
+                                    A quick easy fix for a variety of HVAC units, our pre fab
+                                    curbs are sure to be one of the biggest time savers
+                                    out in the field. Curb Wraps are made to
+                                    order for your specific needs.
+    </string>
+
+    <string name="boxes_sleeper">Sleepers</string>
+    <string name="boxes_sleeper_desc">Closed top sleeper boxes are available by request in any size.
+                                    Great for equipment platforms or blocks and when combined with
+                                    a support they can be utilized as snow guards.
+                                    Also available in tapered options!
+                                    Sleepers are made to order for your specific needs.
+    </string>
+
+    <!-- Corners Description -->
+    <string name="corners_text">Custom Corners</string>
+    <string name="corners_outside">Outside Corners</string>
+    <string name="corners_outside_descr">Because of its simplicity the outside corner is an
+                                        inexpensive fix to many a common problem.
+                                        \n <b>Dimensions: </b>
+                                        \n 6” Height,
+                                        \n 6” Width,
+                                        \n 6” Flange
+    </string>
+    <string name="corners_inside">Inside Corners</string>
+    <string name="corners_inside_descr">The inside corner again saves time for roof applicators in
+                                        the field. Rather than creating and re-creating patches
+                                        on the job site, save time and use our pre welded inside corners.
+                                        \n <b>Dimensions:</b>
+                                        \n 6” Height,
+                                        \n 6” Width,
+                                        \n 6” Flange
+    </string>
+
+    <!-- Pipe Wraps Description -->
+    <string name="custom_pipes">Custom Pipe Wraps</string>
+    <string name="pipewrap_text">Pipe Wraps</string>
+    <string name="pipewrap_split">Pipe Wrap Split</string>
+    <string name="pipewrap_split_desc"><b>Standard</b>
+                                        \n 10\" Height 5\" Flange
+                                        \n\n Diameter made custom.
+    </string>
+    <string name="pipewrap_nonsplit">Pipe Wrap Non-Split</string>
+    <string name="pipewrap_nonsplit_desc"><b>Standard:</b>
+                                        \n 10\" Height 5\" Flange
+                                        \n\n Diameter made custom.
+    </string>
+
+
+    <!-- Drain Scuppers -->
+    <string name="custom_drains">Custom Drop Scuppers</string>
+    <string name="drains_two_drop">2\" Drop Scupper</string>
+    <string name="drains_two_drop_desc"><b>Dimensions:</b>
+                                        \n   8” Depth,
+                                        \n 1-7/8” Diameter,
+                                        \n 14”X14” Base
+    </string>
+
+    <string name="drains_two_metal">2\" Metal Drop Scupper</string>
+    <string name="drains_two_metal_choice">Metal 2\" Drop</string>
+    <string name="drains_two_metal_desc"><b>Dimensions:</b>
+                                        \n   11” Depth,
+                                        \n 1-3/4” Inside Diameter,
+                                        \n 2” Outside Diameter,
+                                        \n 7”X7” Metal Base,
+                                        \n 9”X9” Membrane Skirt
+    </string>
+
+    <string name="drains_three_drop">3\" Drop Scupper</string>
+    <string name="drains_three_drop_desc"><b>Dimensions:</b>
+                                        \n   8” Depth,
+                                        \n 2-5/8” Diameter,
+                                        \n 15.5”X14” Base
+    </string>
+
+    <string name="drains_three_metal">3\" Metal Drop Scupper</string>
+    <string name="drains_three_metal_choice">Metal 3\" Drop</string>
+    <string name="drains_three_metal_desc"><b>Dimensions:</b>
+                                            \n   11” Depth,
+                                            \n 2-1/2” Inside Diameter,
+                                            \n 2-3/4” Outside Diameter,
+                                            \n 9”X9” Metal Base,
+                                            \n 11”X11” Membrane Skirt
+    </string>
+
+    <string name="drains_commercial">3\" Commercial Drain</string>
+    <string name="drains_commercial_desc"><b>Dimensions:</b>
+                                            \n   11” Depth,
+                                            \n 2-1/2” Inside Diameter,
+                                            \n 2-3/4” Outside Diameter,
+                                            \n 17” Round Metal Base,
+                                            \n 20” Round Membrane Skirt,
+                                            \n 5-1/2” Tall Removable Aluminum Basket
+    </string>
+
+    <!-- Metal -->
+    <string name="metal_desc">Both our Drip edge as well as Gravel stop are ideal for a clean finished look
+                                around the perimeter of any single ply roof. Custom starter metal
+                                and clear story is available upon request.
+    </string>
+    <string name="metal_phone_call">Please call for a quote.</string>
+    <string name="metal_drip">Drip Edge</string>
+    <string name="metal_gravel">Gravel Stop</string>
+
+    <!-- Scuppers -->
+    <string name="custom_scuppers">Custom Scuppers</string>
+    <string name="scuppers_notes">(Optional) Notes: ThruDeck, ThruWall, 45˚ Cant</string>
+    <string name="scuppers_tw_four">4" ThruWall Scupper</string>
+    <string name="scuppers_tw_four_desc"><b>Dimensions: </b>
+                                            \n 4” Height,
+                                            \n 4” Width,
+                                            \n 12” Depth,
+                                            \n 4” Metal Flange,
+                                            \n 6” Membrane Flange
+    </string>
+
+    <string name="scuppers_tw_six">6" ThruWall Scupper</string>
+    <string name="scuppers_tw_six_desc"><b>Dimensions: </b>
+                                            \n 6\" Height,
+                                            \n 6\" Width,
+                                            \n 12\" Depth,
+                                            \n 4\" Metal Flange,
+                                            \n 6\" Membrane Flange
+    </string>
+    <string name="scuppers_overflow">Overflows</string>
+    <string name="scuppers_overflow_desc"> Over Flow boxes are available upon request in any dimension.
+                                        \n Over flows can include a metal or membrane only drop drain
+                                        in the back and are available in open top, open back or back
+                                        capped options.
+                                        \n Over Flows are made to order for your specific needs
+                                        including both right and left wall corner options.
+    </string>
+
+
+    <!-- Pitch Pans -->
+    <string name="pitchpans">Custom Pitch Pans</string>
+    <string name="pitchpans_open">Pitch Pans</string>
+    <string name="pitchpans_closed">Pitch Pans</string>
+    <string name="pitchpans_desc">Pitch pans are available in any size.
+                                        What we consider to be standard is a two piece split,
+                                        2” height and 5” flange if you require more or less please specify.
+                                        \n\nPitch pans can be made round or square to accommodate
+                                        the specific demands of your job. Available in split or non-split.
+    </string>
+
+    <!-- Tube Wraps Description -->
+    <string name="tubewraps">Custom Tube Wraps</string>
+    <string name="tubewraps_title">Tube Wraps</string>
+    <string name="tubewrap_split">Tube Wrap Split</string>
+    <string name="tubewrap_nonsplit">Tube Wrap Non-Split</string>
+    <string name="tubewrap_desc">Square tube wraps are available in any size.
+                                    In the case that one side is longer than the other please specify
+                                    which (if any) is to be split. What we consider to be
+                                    standard is a 10” height and a 5” flange, if you require
+                                    something else please specify.
+
+                                    \n\n<u>Given that we make tube wraps to order be sure to note
+                                    whether a “4X4 post” is wood or metal as this will affect
+                                    the true size of the flashing. Available in split or non-split.</u>
+    </string>
+
+
+    <!-- Cones -->
+    <string name="custom_cones">Custom Cones</string>
+
+    <!-- Boxes -->
+    <string name="custom_boxes">Custom Curb Wraps</string>
+    <string name="custom_sleepers">Custom Sleeper Boxes</string>
+
+
+
+    <!-- Inventory :: START-->
+
+    <!-- RVO -->
+    <string name="RVOs">RVOs</string>
+    <string name="RVV_W_T">RVO White TPO</string>
+    <string name="RVV_G_T">RVO Grey TPO</string>
+    <string name="RVV_W_P">RVO White PVC</string>
+    <string name="RVV_G_P">RvO Grey PVC</string>
+
+    <!-- Cones -->
+        <!-- SPLIT -->
+    <string name="SAS_W_T">[SPLIT] Short A Cone White TPO</string>
+    <string name="SAS_G_T">[SPLIT] Short A Cone Grey TPO</string>
+    <string name="SAS_W_P">[SPLIT] Short A Cone White PVC</string>
+    <string name="SAS_G_P">[SPLIT] Short A Cone Grey PVC</string>
+
+    <string name="ACS_W_T">[SPLIT] A Cone White TPO</string>
+    <string name="ACS_G_T">[SPLIT] A Cone Grey TPO</string>
+    <string name="ACS_W_P">[SPLIT] A Cone White PVC</string>
+    <string name="ACS_G_P">[SPLIT] A Cone Grey PVC</string>
+
+    <string name="BCS_W_T">[SPLIT] B Cone White TPO</string>
+    <string name="BCS_G_T">[SPLIT] B Cone Grey TPO</string>
+    <string name="BCS_W_P">[SPLIT] B Cone White PVC</string>
+    <string name="BCS_G_P">[SPLIT] B Cone Grey PVC</string>
+
+    <string name="CCS_W_T">[SPLIT] C Cone White TPO</string>
+    <string name="CCS_G_T">[SPLIT] C Cone Grey TPO</string>
+    <string name="CCS_W_P">[SPLIT] C Cone White PVC</string>
+    <string name="CCS_G_P">[SPLIT] C Cone Grey PVC</string>
+
+        <!-- NON-SPLIT -->
+    <string name="SA_W_T">[NON-SPLIT] Short A Cone White TPO</string>
+    <string name="SA_G_T">[NON-SPLIT] Short A Cone Grey TPO</string>
+    <string name="SA_W_P">[NON-SPLIT] Short A Cone White PVC</string>
+    <string name="SA_G_P">[NON-SPLIT] Short A Cone Grey PVC</string>
+
+    <string name="AC_W_T">[NON-SPLIT] A Cone White TPO</string>
+    <string name="AC_G_T">[NON-SPLIT] A Cone Grey TPO</string>
+    <string name="AC_W_P">[NON-SPLIT] A Cone White PVC</string>
+    <string name="AC_G_P">[NON-SPLIT] A Cone Grey PVC</string>
+
+    <string name="BC_W_T">[NON-SPLIT] B Cone White TPO</string>
+    <string name="BC_G_T">[NON-SPLIT] B Cone Grey TPO</string>
+    <string name="BC_W_P">[NON-SPLIT] B Cone White PVC</string>
+    <string name="BC_G_P">[NON-SPLIT] B Cone Grey PVC</string>
+
+    <string name="CC_W_T">[NON-SPLIT] C Cone White TPO</string>
+    <string name="CC_G_T">[NON-SPLIT] C Cone Grey TPO</string>
+    <string name="CC_W_P">[NON-SPLIT] C Cone White PVC</string>
+    <string name="CC_G_P">[NON-SPLIT] C Cone Grey PVC</string>
+
+    <!-- BV2 -->
+    <string name="BV2">Breather Vent 2-Way</string>
+    <string name="BV2_W_T">2-Way Breather Vent White TPO</string>
+    <string name="BV2_G_T">2-Way Breather Vent White TPO</string>
+    <string name="BV2_W_P">2-Way Breather Vent White PVC</string>
+    <string name="BV2_G_P">2-Way Breather Vent Grey PVC</string>
+
+    <!-- BV1 -->
+    <string name="BV1">Breather Vent 1-Way</string>
+    <string name="BV1_W_T">1-Way Breather Vent White TPO</string>
+    <string name="BV1_G_T">1-Way Breather Vent White TPO</string>
+    <string name="BV1_W_P">1-Way Breather Vent White PVC</string>
+    <string name="BV1_G_P">1-Way Breather Vent Grey PVC</string>
+
+    <!-- Corners -->
+    <string name="Corners">Corners</string>
+        <!--Inside-->
+    <string name="IC_W_T">[INSIDE] Corner White TPO</string>
+    <string name="IC_G_T">[INSIDE] Corner Grey TPO</string>
+    <string name="IC_W_P">[INSIDE] Corner White PVC</string>
+    <string name="IC_G_P">[INSIDE] Corner Grey PVC</string>
+        <!-- Outside -->
+    <string name="OC_W_T">[OUTSIDE] Corner White TPO</string>
+    <string name="OC_G_T">[OUTSIDE] Corner Grey TPO</string>
+    <string name="OC_W_P">[OUTSIDE] Corner White PVC</string>
+    <string name="OC_G_P">[OUTSIDE] Corner Grey PVC</string>
+
+
+
+    <!-- Drop Scuppers -->
+    <string name="drop_scuppers">Drop Scuppers</string>
+    <string name="DS2_W_T">2\" Drop Scupper White TPO</string>
+    <string name="DS2_G_T">2\" Drop Scupper Grey TPO</string>
+    <string name="DS2_W_P">2\" Drop Scupper White PVC</string>
+    <string name="DS2_G_P">2\" Drop Scupper Grey PVC</string>
+
+    <string name="DS3_W_T">3\" Drop Scupper White TPO</string>
+    <string name="DS3_G_T">3\" Drop Scupper Grey TPO</string>
+    <string name="DS3_W_P">3\" Drop Scupper White TPO</string>
+    <string name="DS3_G_P">3\" Drop Scupper Grey PVC</string>
+
+    <!-- Commercial Drains -->
+    <string name="commercial_drain">Commercial Drains</string>
+    <string name="CDS3_W_T">3\" Commercial Drain White TPO</string>
+    <string name="CDS3_G_T">3\" Commercial Drain Grey TPO</string>
+    <string name="CDS3_W_P">3\" Commercial Drain White PVC</string>
+    <string name="CDS3_G_P">3\" Commercial Drain Grey PVC</string>
+
+    <!-- Thru-Wall Scuppers -->
+    <string name="thruwall_scuppers">ThruWall Scuppers</string>
+    <string name="TW4_W_T">4\"X4\" ThruWall Scupper White TPO</string>
+    <string name="TW4_G_T">4\"X4\" ThruWall Scupper Grey TPO</string>
+    <string name="TW4_W_P">4\"X4\" ThruWall Scupper White PVC</string>
+    <string name="TW4_G_P">4\"X4\" ThruWall Scupper Grey PVC</string>
+
+    <string name="TW6_W_T">6\"X6\" ThruWall Scupper White TPO</string>
+    <string name="TW6_G_T">6\"X6\" ThruWall Scupper Grey TPO</string>
+    <string name="TW6_W_P">6\"X6\" ThruWall Scupper White TPO</string>
+    <string name="TW6_G_P">6\"X6\" ThruWall Scupper Grey TPO</string>
+
+    <!-- Pitch Pans -->
+    <string name="pitch_pans">Pitch Pans</string>
+
+        <!-- Round -->
+    <string name="RPP6_W_T">[ROUND] 6\" Pitch Pan White TPO</string>
+    <string name="RPP6_G_T">[ROUND] 6\" Pitch Pan Grey TPO</string>
+    <string name="RPP6_W_P">[ROUND] 6\" Pitch Pan White PVC</string>
+    <string name="RPP6_G_P">[ROUND] 6\" Pitch Pan Grey PVC</string>
+
+    <string name="RPP9_W_T">[ROUND] 9\" Pitch Pan White TPO</string>
+    <string name="RPP9_G_T">[ROUND] 9\" Pitch Pan Grey TPO</string>
+    <string name="RPP9_W_P">[ROUND] 9\" Pitch Pan White PVC</string>
+    <string name="RPP9_G_P">[ROUND] 9\" Pitch Pan Grey PVC</string>
+
+    <string name="RPP12_W_T">[ROUND] 12\" Pitch Pan White TPO</string>
+    <string name="RPP12_G_T">[ROUND] 12\" Pitch Pan Grey TPO</string>
+    <string name="RPP12_W_P">[ROUND] 12\" Pitch Pan White PVC</string>
+    <string name="RPP12_G_P">[ROUND] 12\" Pitch Pan Grey PVC</string>
+
+        <!-- Square -->
+    <string name="SPP6_W_T">[SQUARE] 6\"X6\" Pitch Pan White TPO</string>
+    <string name="SPP6_G_T">[SQUARE] 6\"X6\" Pitch Pan Grey TPO</string>
+    <string name="SPP6_W_P">[SQUARE] 6\"X6\" Pitch Pan White PVC</string>
+    <string name="SPP6_G_P">[SQUARE] 6\"X6\" Pitch Pan Grey PVC</string>
+
+    <string name="SPP9_W_T">[SQUARE] 9\"X9\" Pitch Pan White TPO</string>
+    <string name="SPP9_G_T">[SQUARE] 9\"X9\" Pitch Pan Grey TPO</string>
+    <string name="SPP9_W_P">[SQUARE] 9\"X9\" Pitch Pan White PVC</string>
+    <string name="SPP9_G_P">[SQUARE] 9\"X9\" Pitch Pan Grey PVC</string>
+
+    <string name="SPP12_W_T">[SQUARE] 12\"X12\" Pitch Pan White TPO</string>
+    <string name="SPP12_G_T">[SQUARE] 12\"X12\" Pitch Pan Grey TPO</string>
+    <string name="SPP12_W_P">[SQUARE] 12\"X12\" Pitch Pan White PVC</string>
+    <string name="SPP12_G_P">[SQUARE] 12\"X12\" Pitch Pan Grey PVC</string>
+
+
+    <!-- Drip Edge -->
+    <string name="DE">Drip Edge</string>
+    <string name="DE_W_T">Drip Edge White TPO</string>
+    <string name="DE_G_T">Drip Edge Grey TPO</string>
+    <string name="DE_W_P">Drip Edge White PVC</string>
+    <string name="DE_G_P">Drip Edge Grey PVC</string>
+
+    <!-- Gravel Stop -->
+    <string name="GS">Gravel Stop</string>
+    <string name="GS_W_T">Gravel Stop White TPO</string>
+    <string name="GS_G_T">Gravel Stop Grey TPO</string>
+    <string name="GS_W_P">Gravel Stop White PVC</string>
+    <string name="GS_G_P">Gravel Stop Grey PVC</string>
+    <string name="note_optional">Note (Optional)</string>
+
+    <!-- Inventory :: END -->
+</resources>

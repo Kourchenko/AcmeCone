@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="@string/RVOs">
+        <menu>
+            <item
+                android:id="@+id/stock_RVVWTPO"
+                android:icon="@drawable/ic_text_rvo"
+                android:title="@string/RVV_W_T"/>
+
+            <item
+                android:id="@+id/stock_RVVGTPO"
+                android:icon="@drawable/ic_text_rvo"
+                android:title="@string/RVV_G_T" />
+
+            <item
+                android:id="@+id/stock_RVVWPVC"
+                android:icon="@drawable/ic_text_rvo"
+                android:title="@string/RVV_W_P" />
+
+            <item
+                android:id="@+id/stock_RVVGPVC"
+                android:icon="@drawable/ic_text_rvo"
+                android:title="@string/RVV_G_P" />
+
+        </menu>
+    </item>
+
+    <item android:title="Cones">
+        <menu>
+
+            <!-- SPLIT -->
+            <item
+                android:id="@+id/stock_SASWT"
+                android:icon="@drawable/ic_text_cone"
+                android:title="@string/SAS_W_T" />
+
+            <item
+                android:id="@+id/stock_SASGT"
+                android:icon="@drawable/ic_text_cone"
+                android:title="@string/SAS_G_T" />
+
+            <item
+                android:id="@+id/stock_SASWP"
+                android:icon="@drawable/ic_text_cone"
+                android:title="@string/SAS_W_P" />
+
+            <item
+                android:id="@+id/stock_SASGP"
+                android:icon="@drawable/ic_text_cone"
+                android:title="@string/SAS_G_P" />
+
+            <item
+                android:id="@+id/stock_ACSWT"
+                android:icon="@drawable/ic_text_cone"
+                android:title="@string/ACS_W_T" />
+
+            <item
+                android:id="@+id/stock_ACSGT"
+                android:icon="@drawable/ic_text_cone"
+                android:title="@string/ACS_G_T" />
+
+            <item android:id="@+id/stock_ACSWP"
+                android:icon="@drawable/ic_text_cone"
+                android:title="@string/ACS_W_P" />
+
+            <item
+                android:id="@+id/stock_ACSGP"
+                android:icon="@drawable/ic_text_cone"
+                android:title="@string/ACS_G_P" />
+
+            <item
+                android:id="@+id/stock_BCSWT"
+                android:icon="@drawable/ic_text_cone"
+                android:title="@string/BCS_W_T" />
+
+            <item
+                android:id="@+id/stock_BCSGT"
+                android:icon="@drawable/ic_text_cone"
+                android:title="@string/BCS_G_T" />
+
+            <item
+                android:id="@+id/stock_BCSWP"
+                android:icon="@drawable/ic_text_cone"
+                android:title="@string/BCS_W_P" />
+
+            <item
+                android:id="@+id/stock_BCSGP"
+                android:icon="@drawable/ic_text_cone"
+                android:title="@string/BCS_G_P" />
+
+            <item
+                android:id="@+id/stock_CCSWT"
+                android:icon="@drawable/ic_text_cone"
+                android:title="@string/CCS_W_T" />
+
+            <item
+                android:id="@+id/stock_CCSGT"
+                android:icon="@drawable/ic_text_cone"
+                android:title="@string/CCS_G_T" />
+
+            <item
+                android:id="@+id/stock_CCSWP"
+                android:icon="@drawable/ic_text_cone"
+                android:title="@string/CCS_W_P" />
+
+            <item
+                android:id="@+id/stock_CCSGP"
+                android:icon="@drawable/ic_text_cone"
+                android:title="@string/CCS_G_P" />
+
+
+            <!-- NON-SPLIT -->
+            <item
+                android:id="@+id/stock_SAWT"
+                android:icon="@drawable/ic_text_cone"
+                android:title="@string/SA_W_T" />
+
+            <item
+                android:id="@+id/stock_SAGT"
+                android:icon="@drawable/ic_text_cone"
+                android:title="@string/SA_G_T" />
+
+            <item
+                android:id="@+id/stock_SAWP"
+                android:icon="@drawable/ic_text_cone"
+                android:title="@string/SA_W_P" />
+
+            <item
+                android:id="@+id/stock_SAGP"
+                android:icon="@drawable/ic_text_cone"
+                android:title="@string/SA_G_P" />
+
+            <item
+                android:id="@+id/stock_ACWT"
+                android:icon="@drawable/ic_text_cone"
+                android:title="@string/AC_W_T" />
+
+            <item
+                android:id="@+id/stock_ACGT"
+                android:icon="@drawable/ic_text_cone"
+                android:title="@string/AC_G_T" />
+
+            <item android:id="@+id/stock_ACWP"
+                android:icon="@drawable/ic_text_cone"
+                android:title="@string/AC_W_P" />
+
+            <item
+                android:id="@+id/stock_ACGP"
+                android:icon="@drawable/ic_text_cone"
+                android:title="@string/AC_G_P" />
+
+            <item
+                android:id="@+id/stock_BCWT"
+                android:icon="@drawable/ic_text_cone"
+                android:title="@string/BC_W_T" />
+
+            <item
+                android:id="@+id/stock_BCGT"
+                android:icon="@drawable/ic_text_cone"
+                android:title="@string/BC_G_T" />
+
+            <item
+                android:id="@+id/stock_BCWP"
+                android:icon="@drawable/ic_text_cone"
+                android:title="@string/BC_W_P" />
+
+            <item
+                android:id="@+id/stock_BCGP"
+                android:icon="@drawable/ic_text_cone"
+                android:title="@string/BC_G_P" />
+
+            <item
+                android:id="@+id/stock_CCWT"
+                android:icon="@drawable/ic_text_cone"
+                android:title="@string/CC_W_T" />
+
+            <item
+                android:id="@+id/stock_CCGT"
+                android:icon="@drawable/ic_text_cone"
+                android:title="@string/CC_G_T" />
+
+            <item
+                android:id="@+id/stock_CCWP"
+                android:icon="@drawable/ic_text_cone"
+                android:title="@string/CC_W_P" />
+
+            <item
+                android:id="@+id/stock_CCGP"
+                android:icon="@drawable/ic_text_cone"
+                android:title="@string/CC_G_P" />
+
+        </menu>
+    </item>
+
+    <item android:title="@string/BV1">
+        <menu>
+            <item
+                android:id="@+id/stock_BV1WT"
+                android:icon="@drawable/ic_text_bv1"
+                android:title="@string/BV1_W_T" />
+
+            <item
+                android:id="@+id/stock_BV1GT"
+                android:icon="@drawable/ic_text_bv1"
+                android:title="@string/BV1_G_T" />
+
+            <item
+                android:id="@+id/stock_BV1WP"
+                android:icon="@drawable/ic_text_bv1"
+                android:title="@string/BV1_W_P" />
+
+            <item
+                android:id="@+id/stock_BV1GP"
+                android:icon="@drawable/ic_text_bv1"
+                android:title="@string/BV1_G_P" />
+
+        </menu>
+    </item>
+
+    <item android:title="@string/BV2">
+        <menu>
+            <item
+                android:id="@+id/stock_BV2WT"
+                android:icon="@drawable/ic_text_bv2"
+                android:title="@string/BV2_W_T" />
+
+            <item
+                android:id="@+id/stock_BV2GT"
+                android:icon="@drawable/ic_text_bv2"
+                android:title="@string/BV2_G_T" />
+
+            <item
+                android:id="@+id/stock_BV2WP"
+                android:icon="@drawable/ic_text_bv2"
+                android:title="@string/BV2_W_P" />
+
+            <item
+                android:id="@+id/stock_BV2GP"
+                android:icon="@drawable/ic_text_bv2"
+                android:title="@string/BV2_G_P" />
+        </menu>
+    </item>
+
+    <item android:title="@string/Corners">
+        <menu>
+            <item
+                android:id="@+id/stock_CIWTPO"
+                android:icon="@drawable/ic_text_corner"
+                android:title="@string/IC_W_T" />
+
+            <item
+                android:id="@+id/stock_CIGTPO"
+                android:icon="@drawable/ic_text_corner"
+                android:title="@string/IC_G_T" />
+
+            <item
+                android:id="@+id/stock_CIWPVC"
+                android:icon="@drawable/ic_text_corner"
+                android:title="@string/IC_W_P" />
+
+            <item
+                android:id="@+id/stock_CIGPVC"
+                android:icon="@drawable/ic_text_corner"
+                android:title="@string/IC_G_P" />
+
+            <item
+                android:id="@+id/stock_COWTPO"
+                android:icon="@drawable/ic_text_corner"
+                android:title="@string/OC_W_T" />
+
+            <item
+                android:id="@+id/stock_COGTPO"
+                android:icon="@drawable/ic_text_corner"
+                android:title="@string/OC_G_T" />
+
+            <item
+                android:id="@+id/stock_COWPVC"
+                android:icon="@drawable/ic_text_corner"
+                android:title="@string/OC_W_P" />
+
+            <item
+                android:id="@+id/stock_COGPVC"
+                android:icon="@drawable/ic_text_corner"
+                android:title="@string/OC_G_P" />
+
+        </menu>
+
+    </item>
+
+    <item android:title="@string/drop_scuppers">
+        <menu>
+            <item
+                android:id="@+id/DS2WT"
+                android:icon="@drawable/ic_text_drop"
+                android:title="@string/DS2_W_T" />
+
+            <item
+                android:id="@+id/DS2GT"
+                android:icon="@drawable/ic_text_drop"
+                android:title="@string/DS2_G_T" />
+
+            <item
+                android:id="@+id/DS2WP"
+                android:icon="@drawable/ic_text_drop"
+                android:title="@string/DS2_W_P" />
+
+            <item
+                android:id="@+id/DS2GP"
+                android:icon="@drawable/ic_text_drop"
+                android:title="@string/DS2_G_P" />
+
+            <item
+                android:id="@+id/DS3WT"
+                android:icon="@drawable/ic_text_drop"
+                android:title="@string/DS3_W_T" />
+
+            <item
+                android:id="@+id/DS3GT"
+                android:icon="@drawable/ic_text_drop"
+                android:title="@string/DS3_G_T" />
+
+            <item
+                android:id="@+id/DS3WP"
+                android:icon="@drawable/ic_text_drop"
+                android:title="@string/DS3_W_P" />
+
+            <item
+                android:id="@+id/DS3GP"
+                android:icon="@drawable/ic_text_drop"
+                android:title="@string/DS3_G_P" />
+        </menu>
+
+    </item>
+
+    <item android:title="@string/commercial_drain">
+        <menu>
+            <item
+                android:id="@+id/CDS3WT"
+                android:icon="@drawable/ic_text_drain"
+                android:title="@string/CDS3_W_T" />
+
+            <item
+                android:id="@+id/CDS3GT"
+                android:icon="@drawable/ic_text_drain"
+                android:title="@string/CDS3_G_T" />
+
+            <item
+                android:id="@+id/CDS3WP"
+                android:icon="@drawable/ic_text_drain"
+                android:title="@string/CDS3_W_P" />
+
+            <item
+                android:id="@+id/CDS3GP"
+                android:icon="@drawable/ic_text_drain"
+                android:title="@string/CDS3_G_P" />
+
+        </menu>
+    </item>
+
+    <item android:title="@string/thruwall_scuppers">
+        <menu>
+            <item
+                android:id="@+id/TW4WT"
+                android:icon="@drawable/ic_text_scupper"
+                android:title="@string/TW4_W_T" />
+
+            <item
+                android:id="@+id/TW4GT"
+                android:icon="@drawable/ic_text_scupper"
+                android:title="@string/TW4_G_T" />
+
+            <item
+                android:id="@+id/TW4WP"
+                android:icon="@drawable/ic_text_scupper"
+                android:title="@string/TW4_W_P" />
+
+            <item
+                android:id="@+id/TW4GP"
+                android:icon="@drawable/ic_text_scupper"
+                android:title="@string/TW4_G_P" />
+
+            <item
+                android:id="@+id/TW6WT"
+                android:icon="@drawable/ic_text_scupper"
+                android:title="@string/TW6_W_T" />
+
+            <item
+                android:id="@+id/TW6GT"
+                android:icon="@drawable/ic_text_scupper"
+                android:title="@string/TW6_G_T" />
+
+            <item
+                android:id="@+id/TW6WP"
+                android:icon="@drawable/ic_text_scupper"
+                android:title="@string/TW6_W_P" />
+
+            <item
+                android:id="@+id/TW6GP"
+                android:icon="@drawable/ic_text_scupper"
+                android:title="@string/TW6_G_P" />
+
+        </menu>
+    </item>
+
+    <item android:title="@string/pitch_pans">
+        <menu>
+            <item
+            android:id="@+id/RPP6WT"
+            android:icon="@drawable/ic_text_pans"
+            android:title="@string/RPP6_W_T" />
+
+            <item
+                android:id="@+id/RPP6GT"
+                android:icon="@drawable/ic_text_pans"
+                android:title="@string/RPP6_G_T" />
+
+            <item
+                android:id="@+id/RPP6WP"
+                android:icon="@drawable/ic_text_pans"
+                android:title="@string/RPP6_W_P" />
+
+            <item
+                android:id="@+id/RPP6GP"
+                android:icon="@drawable/ic_text_pans"
+                android:title="@string/RPP6_G_P" />
+
+            <item
+                android:id="@+id/RPP9WT"
+                android:icon="@drawable/ic_text_pans"
+                android:title="@string/RPP9_W_T" />
+
+            <item
+                android:id="@+id/RPP9GT"
+                android:icon="@drawable/ic_text_pans"
+                android:title="@string/RPP6_G_T" />
+
+            <item
+                android:id="@+id/RPP9WP"
+                android:icon="@drawable/ic_text_pans"
+                android:title="@string/RPP6_W_P" />
+
+            <item
+                android:id="@+id/RPP9GP"
+                android:icon="@drawable/ic_text_pans"
+                android:title="@string/RPP6_G_P" />
+
+            <item
+                android:id="@+id/RPP12WT"
+                android:icon="@drawable/ic_text_pans"
+                android:title="@string/RPP12_W_T" />
+
+            <item
+                android:id="@+id/RPP12GT"
+                android:icon="@drawable/ic_text_pans"
+                android:title="@string/RPP12_G_T" />
+
+            <item
+                android:id="@+id/RPP12WP"
+                android:icon="@drawable/ic_text_pans"
+                android:title="@string/RPP12_W_P" />
+
+            <item
+                android:id="@+id/RPP12GP"
+                android:icon="@drawable/ic_text_pans"
+                android:title="@string/RPP12_G_P" />
+
+        </menu>
+    </item>
+
+</menu>

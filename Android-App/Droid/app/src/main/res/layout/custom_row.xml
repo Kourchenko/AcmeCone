@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="4dp"
+    android:elevation="3dp"
+    android:translationZ="3dp"
+    android:background="#ffffff"
+    android:clickable="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/custom_row_img"
+            android:layout_width="75dp"
+            android:layout_height="75dp" />
+
+        <RelativeLayout
+            android:layout_toEndOf="@id/custom_row_img"
+            android:layout_toRightOf="@id/custom_row_img"
+            android:layout_width="fill_parent"
+            android:layout_height="75dp">
+
+            <TextView
+                android:id="@+id/custom_row_txt"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:gravity="start"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@+id/imageView"
+                android:layout_alignParentTop="true"
+                android:layout_above="@+id/textView" />
+
+            <TextView
+                android:text="Tap To Add"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@+id/imageView"
+                android:id="@+id/textView"
+                android:layout_alignParentBottom="true" />
+
+            <ImageView
+                android:src="@drawable/ic_keyboard_arrow_right_grey_600_36dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:id="@+id/imageView"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

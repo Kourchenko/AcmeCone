@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="custom_fractions">
+        <item>   </item>
+        <item>1/8</item>
+        <item>(&#188;)</item>
+        <item>3/8</item>
+        <item>(&#189;)</item>
+        <item>5/8</item>
+        <item>(&#190;)</item>
+        <item>7/8</item>
+
+    </string-array>
+
+    <string-array name="acme_material">
+        <item>TPO</item>
+        <item>PVC</item>
+    </string-array>
+
+    <string-array name="acme_color">
+        <item>White</item>
+        <item>PVC</item>
+    </string-array>
+</resources>

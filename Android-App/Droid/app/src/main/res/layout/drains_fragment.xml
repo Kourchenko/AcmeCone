@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="true" >
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- TODO: Drains -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/orderform_drains"
+                android:text="@string/custom_drains"
+                android:textSize="30sp"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:contentDescription="@string/app_name"
+                        android:src="@mipmap/drains_two_drop"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp" />
+                    <ImageView
+                        android:contentDescription="@string/app_name"
+                        android:src="@mipmap/drains_two_metal"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp" />
+
+                    <ImageView
+                        android:contentDescription="@string/app_name"
+                        android:src="@mipmap/drains_three_drop"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp" />
+                    <ImageView
+                        android:contentDescription="@string/app_name"
+                        android:src="@mipmap/drains_three_metal"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp" />
+
+                    <ImageView
+                        android:contentDescription="@string/app_name"
+                        android:src="@mipmap/drains_commercial"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp" />
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+            <RadioGroup
+                android:id="@+id/drains_radio"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <RadioButton
+                    android:id="@+id/drains_custom"
+                    android:text="Custom"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <RadioButton
+                    android:id="@+id/drains_two_metal_choice"
+                    android:text="@string/drains_two_metal_choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <RadioButton
+                    android:id="@+id/drains_three_metal_choice"
+                    android:contentDescription="@string/app_name"
+                    android:text="@string/drains_three_metal_choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <RadioButton
+                    android:id="@+id/drains_commercial_choice"
+                    android:contentDescription="@string/app_name"
+                    android:text="@string/drains_commercial"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RadioGroup>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/drains_quantity"
+                    android:hint="@string/quantity"
+                    android:inputType="number"
+                    android:imeOptions="actionNext"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center" />
+
+                <TextView
+                    android:text="@string/fractions"
+                    android:textSize="25sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:layout_toRightOf="@+id/drains_quantity"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/drains_diameter_choice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+                <EditText
+                    android:id="@+id/drains_diameter"
+                    android:hint="@string/diameter"
+                    android:inputType="number"
+                    android:imeOptions="actionNext"
+                    android:gravity="right"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content" />
+
+                <Spinner
+                    android:id="@+id/drains_diameter_frac"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/drains_depth_choice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" >
+                <EditText
+                    android:id="@+id/drains_depth"
+                    android:hint="@string/depth"
+                    android:gravity="right"
+                    android:inputType="number"
+                    android:imeOptions="actionNext"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content" />
+
+                <Spinner
+                    android:id="@+id/drains_depth_frac"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/drains_flange"
+                    android:hint="@string/flange"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:imeOptions="actionNext"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content" />
+
+                <Spinner
+                    android:id="@+id/drains_flange_frac"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
+
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/drains_notes"
+                android:hint="@string/optional_notes"
+                android:imeOptions="actionNext"
+                android:layout_width="match_parent"
+                android:layout_height="200dp" />
+
+            <AutoCompleteTextView
+                android:id="@+id/drains_color"
+                android:hint="@string/color"
+                android:inputType="text"
+                android:imeOptions="actionNext"
+                android:gravity="center"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content" />
+
+            <AutoCompleteTextView
+                android:id="@+id/drains_material"
+                android:hint="@string/material"
+                android:inputType="text"
+                android:imeOptions="actionDone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/drains_submitB"
+                android:text="@string/orderform_addToOrder"
+                android:padding="20dp"
+                android:layout_gravity="right|bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="50dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
