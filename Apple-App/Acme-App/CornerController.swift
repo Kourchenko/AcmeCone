@@ -10,6 +10,19 @@ import UIKit
 
 class CornerController: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
 
+    var segmentedArray = ["Inside", "Outside"]
+    
+    var segue_quantity = ""
+    var segue_type = ""
+    var segue_height = ""
+    var segue_heightFrac = ""
+    var segue_depth = ""
+    var segue_depthFrac = ""
+    var segue_flange = ""
+    var segue_flangeFrac = ""
+    var segue_color = ""
+    var segue_material = ""
+    var segue_optional = ""
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var typeSegmented: UISegmentedControl!
@@ -56,13 +69,6 @@ class CornerController: UIViewController, UITextFieldDelegate, UIPickerViewDeleg
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ConeController.keyboardWillShow(_:)), name:UIKeyboardWillShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ConeController.keyboardWillHide(_:)), name:UIKeyboardWillHideNotification, object: nil)
         
-        quantityLabel.hidden = true
-        heightLabel.hidden = true
-        depthLabel.hidden = true
-        flangeLabel.hidden = true
-        colorLabel.hidden = true
-        materialLabel.hidden = true
-        
         err_quantity_int.hidden = true
         err_height_int.hidden = true
         err_depth_int.hidden = true
@@ -74,6 +80,40 @@ class CornerController: UIViewController, UITextFieldDelegate, UIPickerViewDeleg
         err_flange.hidden = true
         err_color.hidden = true
         err_material.hidden = true
+        
+        if (segue_quantity == "") {
+            quantityLabel.hidden = true
+            heightLabel.hidden = true
+            depthLabel.hidden = true
+            flangeLabel.hidden = true
+            colorLabel.hidden = true
+            materialLabel.hidden = true
+        } else if (segue_quantity != ""){
+            quantityLabel.hidden = false
+            heightLabel.hidden = false
+            depthLabel.hidden = false
+            flangeLabel.hidden = false
+            colorLabel.hidden = false
+            materialLabel.hidden = false
+            
+            typeSegmented.selectedSegmentIndex = segmentedArray.indexOf(segue_type)!
+            
+            quantityTextField.text = segue_quantity
+            
+            heightTextField.text = segue_height
+            heightFracPicker.selectRow(fractions.indexOf((segue_heightFrac))!, inComponent: 0, animated: false)
+            
+            depthTextField.text = segue_depth
+            depthFracPicker.selectRow(fractions.indexOf(segue_depthFrac)!, inComponent: 0, animated: false)
+            
+            flangeTextField.text = segue_flange
+            flangeFracPicker.selectRow(fractions.indexOf(segue_flangeFrac)!, inComponent: 0, animated: false)
+            
+            colorTextField.text = segue_color
+            materialTextField.text = segue_material
+            _optionalTextField.text = segue_optional
+    
+        }
         
     }
     
@@ -124,6 +164,8 @@ class CornerController: UIViewController, UITextFieldDelegate, UIPickerViewDeleg
                         err_flange_int.hidden = false
                     }
                 } else {
+                    let id = String(depth) + String(material) + String(color)
+
                     let corner = Corner(quantity: Int(quantity)!,
                                         type: self.typeSegmented.titleForSegmentAtIndex(self.typeSegmented.selectedSegmentIndex)!,
                                         depth: Int(depth)!,
@@ -134,11 +176,34 @@ class CornerController: UIViewController, UITextFieldDelegate, UIPickerViewDeleg
                                         flangeFrac: flangeFrac,
                                         color: color,
                                         material: material,
-                                        _optional: "")
+                                        _optional: "",
+                                        id: id)
                     
-                    CORNERS.append(corner)
-                    self.dismissViewControllerAnimated(true, completion: nil)
+                    let results = CORNERS.filter {$0.id == id}
+                    if (results.isEmpty) {
+                        CORNERS.append(corner)
+                        self.dismissViewControllerAnimated(true, completion: nil)
+                    } else {
+                        
+                        let alert: UIAlertView = UIAlertView(title: "", message: "These Corner Measurements exist in your Cart!", delegate: nil, cancelButtonTitle: "OK");
+                        let loadingIndicator: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(50, 10, 37, 37)) as UIActivityIndicatorView
+                        
+                        loadingIndicator.center = self.view.center;
+                        loadingIndicator.hidesWhenStopped = true
+                        loadingIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray
+                        loadingIndicator.startAnimating();
+                        
+                        alert.show()
+                        
+                        // Delay the dismissal by 3 seconds
+                        let delay = 2.0 * Double(NSEC_PER_SEC)
+                        let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+                        dispatch_after(time, dispatch_get_main_queue(), {
+                            alert.dismissWithClickedButtonIndex(-1, animated: true)
+                        })
+                    }
                 }
+                
             } else {
                 if ((Int(quantity) == nil)
                     || (Int(depth) == nil)
@@ -155,6 +220,9 @@ class CornerController: UIViewController, UITextFieldDelegate, UIPickerViewDeleg
                         err_flange_int.hidden = false
                     }
                 } else {
+                    
+                    let id = String(depth) + String(material) + String(color)
+                    
                     let corner = Corner(quantity: Int(quantity)!,
                                         type: self.typeSegmented.titleForSegmentAtIndex(self.typeSegmented.selectedSegmentIndex)!,
                                         depth: Int(depth)!,
@@ -165,12 +233,35 @@ class CornerController: UIViewController, UITextFieldDelegate, UIPickerViewDeleg
                                         flangeFrac: flangeFrac,
                                         color: color,
                                         material: material,
-                                        _optional: optional)
+                                        _optional: optional,
+                                        id: id)
                     
-                    CORNERS.append(corner)
-                    self.dismissViewControllerAnimated(true, completion: nil)
+                    let results = CORNERS.filter {$0.id == id}
+                    if (results.isEmpty) {
+                        CORNERS.append(corner)
+                        self.dismissViewControllerAnimated(true, completion: nil)
+                    } else {
+                        
+                        let alert: UIAlertView = UIAlertView(title: "", message: "These Corner Measurements exist in your Cart!", delegate: nil, cancelButtonTitle: "OK");
+                        let loadingIndicator: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(50, 10, 37, 37)) as UIActivityIndicatorView
+                        
+                        loadingIndicator.center = self.view.center;
+                        loadingIndicator.hidesWhenStopped = true
+                        loadingIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray
+                        loadingIndicator.startAnimating();
+                        
+                        alert.show()
+                        
+                        // Delay the dismissal by 2 seconds
+                        let delay = 2.0 * Double(NSEC_PER_SEC)
+                        let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+                        dispatch_after(time, dispatch_get_main_queue(), {
+                            alert.dismissWithClickedButtonIndex(-1, animated: true)
+                        })
+                    }
                 }
             }
+            
         } else {
             if ((quantity.isEmpty)
                 || (height.isEmpty)

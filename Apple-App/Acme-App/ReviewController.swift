@@ -21,32 +21,10 @@ var CURBS = [Curb]()
 var SLEEPERS = [Sleeper]()
 
 class ReviewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
-    
-    @IBOutlet weak var nameField: UITextField!
-    @IBOutlet weak var companyField: UITextField!
-    @IBOutlet weak var emailField: UITextField!
-    @IBOutlet weak var manufacturerField: UITextField!
-    
     @IBOutlet weak var currentOrderTable: UITableView!
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         self.view.endEditing(true)
-    }
-    
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
-        if (textField == nameField) {
-            companyField.becomeFirstResponder()
-        } else if (textField == companyField) {
-            emailField.becomeFirstResponder()
-        } else if (textField == emailField) {
-            manufacturerField.becomeFirstResponder()
-        } else if (textField == manufacturerField) {
-            manufacturerField.resignFirstResponder()
-        } else {
-            manufacturerField.resignFirstResponder()
-        }
-        
-        return true
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -202,9 +180,47 @@ class ReviewController: UIViewController, UITableViewDelegate, UITableViewDataSo
             
         }
         
-        
         deleteAction.backgroundColor = UIColor.redColor()
         return [deleteAction]
+        
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        if (indexPath.section == 1) {
+            
+            let vc = storyboard?.instantiateViewControllerWithIdentifier("Cones") as! ConeController
+        
+            let quantity = CONES[indexPath.row].quantity
+            let coneSegmented = CONES[indexPath.row].type
+            let height = CONES[indexPath.row].height
+            let heightFrac = CONES[indexPath.row].heightFrac
+            let top = CONES[indexPath.row].topDiameter
+            let topFrac = CONES[indexPath.row].topFrac
+            let bot = CONES[indexPath.row].botDiameter
+            let botFrac = CONES[indexPath.row].botFrac
+            let flange = CONES[indexPath.row].flange
+            let flangeFrac = CONES[indexPath.row].flangeFrac
+            let color = CONES[indexPath.row].color
+            let material = CONES[indexPath.row].material
+            let optional = CONES[indexPath.row]._optional
+
+            vc.segue_type = coneSegmented
+            vc.segue_quantity = String(quantity)
+            vc.segue_height = String(height)
+            vc.segue_heightFrac = String(heightFrac)
+            vc.segue_top = String(top)
+            vc.segue_topFrac = String(topFrac)
+            vc.segue_bot = String(bot)
+            vc.segue_botFrac = String(botFrac)
+            vc.segue_flange = String(flange)
+            vc.segue_flangeFrac = String(flangeFrac)
+            vc.segue_color = String(color)
+            vc.segue_material = String(material)
+            vc.segue_optional = String(optional)
+        
+            self.presentViewController(vc, animated: true, completion: nil)
+        }
         
     }
     

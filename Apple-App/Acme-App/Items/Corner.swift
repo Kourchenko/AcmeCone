@@ -25,4 +25,5 @@ struct Corner {
     var material: String
     
     var _optional: String
+    var id: String
 }
