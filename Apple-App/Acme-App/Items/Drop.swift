@@ -11,10 +11,10 @@ import Foundation
 struct Drop {
     var quantity: Int
     
-    var diameter: Int
-    var diameterFrac: String
     var depth: Int
     var depthFrac: String
+    var diameter: Int
+    var diameterFrac: String
     var flange: Int
     var flangeFrac: String
     
@@ -22,4 +22,5 @@ struct Drop {
     var material: String
     
     var _optional: String
+    var id: String
 }

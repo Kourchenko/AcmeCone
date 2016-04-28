@@ -84,7 +84,7 @@ class CustomController: UIViewController, UITableViewDelegate, UITableViewDataSo
             let vc = storyboard?.instantiateViewControllerWithIdentifier("Pipe Wraps")
             self.presentViewController(vc!, animated: true, completion: nil)
         } else if (indexPath.row == 3) {
-            let vc = storyboard?.instantiateViewControllerWithIdentifier("Drop Scupper")
+            let vc = storyboard?.instantiateViewControllerWithIdentifier("Drop Scuppers")
             self.presentViewController(vc!, animated: true, completion: nil)
         } else if (indexPath.row == 4) {
             let vc = storyboard?.instantiateViewControllerWithIdentifier("Thruwall Scuppers")

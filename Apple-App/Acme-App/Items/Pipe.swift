@@ -23,4 +23,5 @@ struct Pipe {
     var material: String
     
     var _optional: String
+    var id: String
 }

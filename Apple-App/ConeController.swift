@@ -10,6 +10,22 @@ import UIKit
 
 class ConeController: UIViewController, UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
     
+    var segmentedArray = ["Split", "Non-Split"]
+    
+    var segue_quantity = ""
+    var segue_type = ""
+    var segue_height = ""
+    var segue_heightFrac = ""
+    var segue_top = ""
+    var segue_topFrac = ""
+    var segue_bot = ""
+    var segue_botFrac = ""
+    var segue_flange = ""
+    var segue_flangeFrac = ""
+    var segue_color = ""
+    var segue_material = ""
+    var segue_optional = ""
+    
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var coneSegmented: UISegmentedControl!
     @IBOutlet weak var quantityLabel: UILabel!
@@ -44,6 +60,7 @@ class ConeController: UIViewController, UITextFieldDelegate, UIPickerViewDataSou
     @IBOutlet weak var err_material: UILabel!
     @IBOutlet weak var _optionalTextField: UITextField!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -61,14 +78,6 @@ class ConeController: UIViewController, UITextFieldDelegate, UIPickerViewDataSou
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ConeController.keyboardWillShow(_:)), name:UIKeyboardWillShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ConeController.keyboardWillHide(_:)), name:UIKeyboardWillHideNotification, object: nil)
         
-        quantityLabel.hidden = true
-        heightLabel.hidden = true
-        topLabel.hidden = true
-        botLabel.hidden = true
-        flangeLabel.hidden = true
-        colorLabel.hidden = true
-        materialLabel.hidden = true
-        
         err_quantity_int.hidden = true
         err_height_int.hidden = true
         err_top_int.hidden = true
@@ -82,6 +91,39 @@ class ConeController: UIViewController, UITextFieldDelegate, UIPickerViewDataSou
         err_flange.hidden = true
         err_color.hidden = true
         err_material.hidden = true
+        
+        if (segue_quantity == "") {
+            quantityLabel.hidden = true
+            heightLabel.hidden = true
+            topLabel.hidden = true
+            botLabel.hidden = true
+            flangeLabel.hidden = true
+            colorLabel.hidden = true
+            materialLabel.hidden = true
+        } else if (segue_quantity != "") {
+            quantityLabel.hidden = false
+            heightLabel.hidden = false
+            topLabel.hidden = false
+            botLabel.hidden = false
+            flangeLabel.hidden = false
+            colorLabel.hidden = false
+            materialLabel.hidden = false
+
+            coneSegmented.selectedSegmentIndex = segmentedArray.indexOf(segue_type)!
+            quantityTextField.text = segue_quantity
+            heightTextField.text = segue_height
+            heightFracPicker.selectRow(fractions.indexOf(segue_heightFrac)!, inComponent: 0, animated: false)
+            topTextField.text = segue_top
+            topFracPicker.selectRow(fractions.indexOf(segue_topFrac)!, inComponent: 0, animated: false)
+            botTextField.text = segue_bot
+            botFracPicker.selectRow(fractions.indexOf(segue_botFrac)!, inComponent: 0, animated: false)
+            flangeTextField.text = segue_flange
+            flangeFracPicker.selectRow(fractions.indexOf(segue_flangeFrac)!, inComponent: 0, animated: false)
+            colorTextField.text = segue_color
+            materialTextField.text = segue_material
+            _optionalTextField.text = segue_optional
+        }
+        
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -101,6 +143,7 @@ class ConeController: UIViewController, UITextFieldDelegate, UIPickerViewDataSou
     
     @IBAction func coneAdd(sender: AnyObject) {
         let quantity = quantityTextField.text!
+        let type = self.coneSegmented.titleForSegmentAtIndex(self.coneSegmented.selectedSegmentIndex)!
         let height = heightTextField.text!
         let top = topTextField.text!
         let bot = botTextField.text!
@@ -143,9 +186,9 @@ class ConeController: UIViewController, UITextFieldDelegate, UIPickerViewDataSou
                         }
                         
                 } else {
-                
+                    let id = String(top) + String(bot) + String(material)
                     let cone = Cone(quantity: Int(quantity)!,
-                                type: self.coneSegmented.titleForSegmentAtIndex(self.coneSegmented.selectedSegmentIndex)!,
+                                type: type,
                                 topDiameter: Int(top)!,
                                 topFrac: topFrac,
                                 botDiameter: Int(bot)!,
@@ -156,11 +199,35 @@ class ConeController: UIViewController, UITextFieldDelegate, UIPickerViewDataSou
                                 flangeFrac: flangeFrac,
                                 color: color,
                                 material: material,
-                                _optional: "")
-        
-                    CONES.append(cone)
-                    self.dismissViewControllerAnimated(true, completion: nil)
+                                _optional: "",
+                                id: id)
+
+                    let results = CONES.filter {$0.id == id}
+                    if (results.isEmpty) {
+                        
+                        CONES.append(cone)
+                        self.dismissViewControllerAnimated(true, completion: nil)
+                        
+                    } else {
+                        let alert: UIAlertView = UIAlertView(title: "", message: "These Cone Measurements exist in your Cart!", delegate: nil, cancelButtonTitle: "OK");
+                        let loadingIndicator: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(50, 10, 37, 37)) as UIActivityIndicatorView
+                        
+                        loadingIndicator.center = self.view.center;
+                        loadingIndicator.hidesWhenStopped = true
+                        loadingIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray
+                        loadingIndicator.startAnimating();
+                        
+                        alert.show()
+                        
+                        // Delay the dismissal by 3 seconds
+                        let delay = 2.0 * Double(NSEC_PER_SEC)
+                        let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+                        dispatch_after(time, dispatch_get_main_queue(), {
+                            alert.dismissWithClickedButtonIndex(-1, animated: true)
+                        })
+                    }
                 }
+                
             } else {
                 if ((Int(quantity) == nil)
                     || (Int(height) == nil)
@@ -180,6 +247,8 @@ class ConeController: UIViewController, UITextFieldDelegate, UIPickerViewDataSou
                         err_flange_int.hidden = false
                     }
                 } else {
+                    let id = String(top) + String(bot) + String(material)
+
                     let cone = Cone(quantity: Int(quantity)!,
                                 type: self.coneSegmented.titleForSegmentAtIndex(self.coneSegmented.selectedSegmentIndex)!,
                                 topDiameter: Int(top)!,
@@ -192,10 +261,33 @@ class ConeController: UIViewController, UITextFieldDelegate, UIPickerViewDataSou
                                 flangeFrac: flangeFrac,
                                 color: color,
                                 material: material,
-                                _optional: _optional)
+                                _optional: _optional,
+                                id: id)
                 
-                    CONES.append(cone)
-                    self.dismissViewControllerAnimated(true, completion: nil)
+                    let results = CONES.filter {$0.id == id}
+                    if (results.isEmpty) {
+                        
+                        CONES.append(cone)
+                        self.dismissViewControllerAnimated(true, completion: nil)
+                        
+                    } else {
+                        let alert: UIAlertView = UIAlertView(title: "", message: "These Cone Measurements exist in your Cart!", delegate: nil, cancelButtonTitle: "OK");
+                        let loadingIndicator: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(50, 10, 37, 37)) as UIActivityIndicatorView
+                        
+                        loadingIndicator.center = self.view.center;
+                        loadingIndicator.hidesWhenStopped = true
+                        loadingIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray
+                        loadingIndicator.startAnimating();
+                        
+                        alert.show()
+                        
+                        // Delay the dismissal by 2 seconds
+                        let delay = 2.0 * Double(NSEC_PER_SEC)
+                        let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+                        dispatch_after(time, dispatch_get_main_queue(), {
+                            alert.dismissWithClickedButtonIndex(-1, animated: true)
+                        })
+                    }
                 }
         
             }
@@ -228,9 +320,8 @@ class ConeController: UIViewController, UITextFieldDelegate, UIPickerViewDataSou
         }
     }
     
-    // -* fieldChange
-    //
-    // -> ScrollView moves TextField above Keyboard
+
+    // ScrollView moves TextField above Keyboard
     func keyboardWillShow(notification: NSNotification) {
         var userInfo = notification.userInfo!
         var keyboardFrame: CGRect = (userInfo[UIKeyboardFrameBeginUserInfoKey] as! NSValue).CGRectValue();
@@ -246,7 +337,7 @@ class ConeController: UIViewController, UITextFieldDelegate, UIPickerViewDataSou
         let contentInset: UIEdgeInsets = UIEdgeInsetsZero
         self.scrollView.contentInset = contentInset
     }
-    // -* ScrollView
+    // -- ScrollView
     
     
     // - fieldChange
