@@ -13,12 +13,35 @@ class TubeController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var typeSegmented: UISegmentedControl!
     @IBOutlet weak var quantityTextField: UITextField!
+    @IBOutlet weak var quantityLabel: UILabel!
+    @IBOutlet weak var err_quantity: UILabel!
+    @IBOutlet weak var err_quantity_int: UILabel!
     @IBOutlet weak var heightTextField: UITextField!
+    @IBOutlet weak var heightFracPicker: UIPickerView!
+    @IBOutlet weak var heightLabel: UILabel!
+    @IBOutlet weak var err_height: UILabel!
+    @IBOutlet weak var err_height_int: UILabel!
     @IBOutlet weak var widthTextField: UITextField!
+    @IBOutlet weak var widthFracPicker: UIPickerView!
+    @IBOutlet weak var widthLabel: UILabel!
+    @IBOutlet weak var err_width: UILabel!
+    @IBOutlet weak var err_width_int: UILabel!
     @IBOutlet weak var lengthTextField: UITextField!
+    @IBOutlet weak var lengthFracPicker: UIPickerView!
+    @IBOutlet weak var lengthLabel: UILabel!
+    @IBOutlet weak var err_length: UILabel!
+    @IBOutlet weak var err_length_int: UILabel!
     @IBOutlet weak var flangeTextField: UITextField!
+    @IBOutlet weak var flangeFracPicker: UIPickerView!
+    @IBOutlet weak var flangeLabel: UILabel!
+    @IBOutlet weak var err_Flange: UILabel!
+    @IBOutlet weak var err_flange_int: UILabel!
     @IBOutlet weak var colorTextField: UITextField!
+    @IBOutlet weak var colorLabel: UILabel!
+    @IBOutlet weak var err_color: UILabel!
     @IBOutlet weak var materialTextField: UITextField!
+    @IBOutlet weak var materialLabel: UILabel!
+    @IBOutlet weak var err_material: UILabel!
     @IBOutlet weak var _optionalTextField: UITextField!
     
     
@@ -27,6 +50,7 @@ class TubeController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ConeController.keyboardWillShow(_:)), name:UIKeyboardWillShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ConeController.keyboardWillHide(_:)), name:UIKeyboardWillHideNotification, object: nil)

@@ -12,14 +12,30 @@ class DropController: UIViewController, UITextFieldDelegate, UIPickerViewDelegat
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var quantityTextField: UITextField!
+    @IBOutlet weak var quantityLabel: UILabel!
+    @IBOutlet weak var err_quantity: UILabel!
+    @IBOutlet weak var err_quantity_int: UILabel!
     @IBOutlet weak var depthTextField: UITextField!
     @IBOutlet weak var depthFracPicker: UIPickerView!
+    @IBOutlet weak var depthLabel: UILabel!
+    @IBOutlet weak var err_depth: UILabel!
+    @IBOutlet weak var err_depth_int: UILabel!
     @IBOutlet weak var diameterTextField: UITextField!
     @IBOutlet weak var diameterFracPicker: UIPickerView!
+    @IBOutlet weak var diameterLabel: UILabel!
+    @IBOutlet weak var err_diameter: UILabel!
+    @IBOutlet weak var err_diameter_int: UILabel!
     @IBOutlet weak var flangeTextField: UITextField!
     @IBOutlet weak var flangeFracPicker: UIPickerView!
+    @IBOutlet weak var flangeLabel: UILabel!
+    @IBOutlet weak var err_flange: UILabel!
+    @IBOutlet weak var err_flange_int: UILabel!
     @IBOutlet weak var colorTextField: UITextField!
+    @IBOutlet weak var colorLabel: UILabel!
+    @IBOutlet weak var err_color: UILabel!
     @IBOutlet weak var materialTextField: UITextField!
+    @IBOutlet weak var materialLabel: UILabel!
+    @IBOutlet weak var err_material: UILabel!
     @IBOutlet weak var _optionalTextField: UITextField!
     
 

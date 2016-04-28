@@ -13,15 +13,77 @@ class PipeController: UIViewController, UITextFieldDelegate, UIPickerViewDelegat
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var typeSegment: UISegmentedControl!
     @IBOutlet weak var quantityTextField: UITextField!
+    @IBOutlet weak var quantityLabel: UILabel!
+    @IBOutlet weak var err_quantity: UILabel!
+    @IBOutlet weak var err_quantity_int: UILabel!
     @IBOutlet weak var heightTextField: UITextField!
     @IBOutlet weak var heightFracPicker: UIPickerView!
+    @IBOutlet weak var heightLabel: UILabel!
+    @IBOutlet weak var err_height: UILabel!
+    @IBOutlet weak var err_height_int: UILabel!
     @IBOutlet weak var diameterTextField: UITextField!
     @IBOutlet weak var diameterFracPicker: UIPickerView!
+    @IBOutlet weak var diameterLabel: UILabel!
+    @IBOutlet weak var err_diameter: UILabel!
+    @IBOutlet weak var err_diameter_int: UILabel!
     @IBOutlet weak var flangeTextField: UITextField!
     @IBOutlet weak var flangeFracPicker: UIPickerView!
+    @IBOutlet weak var flangeLabel: UILabel!
+    @IBOutlet weak var err_flange: UILabel!
+    @IBOutlet weak var err_flange_int: UILabel!
     @IBOutlet weak var colorTextField: UITextField!
+    @IBOutlet weak var colorLabel: UILabel!
+    @IBOutlet weak var err_color: UILabel!
     @IBOutlet weak var materialTextField: UITextField!
+    @IBOutlet weak var materialLabel: UILabel!
+    @IBOutlet weak var err_material: UILabel!
     @IBOutlet weak var _optionalTextField: UITextField!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Do any additional setup after loading the view.
+        
+        quantityTextField.delegate = self
+        heightTextField.delegate = self
+        diameterTextField.delegate = self
+        flangeTextField.delegate = self
+        colorTextField.delegate = self
+        materialTextField.delegate = self
+        _optionalTextField.delegate = self
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ConeController.keyboardWillShow(_:)), name:UIKeyboardWillShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ConeController.keyboardWillHide(_:)), name:UIKeyboardWillHideNotification, object: nil)
+        
+        quantityLabel.hidden = true
+        heightLabel.hidden = true
+        diameterLabel.hidden = true
+        flangeLabel.hidden = true
+        colorLabel.hidden = true
+        materialLabel.hidden = true
+        
+        err_quantity_int.hidden = true
+        err_height_int.hidden = true
+        err_diameter_int.hidden = true
+        err_flange_int.hidden = true
+        
+        err_quantity.hidden = true
+        err_height.hidden = true
+        err_diameter.hidden = true
+        err_flange.hidden = true
+        err_color.hidden = true
+        err_material.hidden = true
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
     
     
     @IBAction func cancel(sender: AnyObject) {
@@ -38,12 +100,12 @@ class PipeController: UIViewController, UITextFieldDelegate, UIPickerViewDelegat
         let color = colorTextField.text!
         let material = materialTextField.text!
         
-        if (   (!quantity.isEmpty)
-            || (!height.isEmpty)
-            || (!diameter.isEmpty)
-            || (!flange.isEmpty)
-            || (!color.isEmpty)
-            || (!material.isEmpty)) {
+        if ((!quantity.isEmpty)
+            && (!height.isEmpty)
+            && (!diameter.isEmpty)
+            && (!flange.isEmpty)
+            && (!color.isEmpty)
+            && (!material.isEmpty)) {
             
             let heightFrac = String(fractions[heightFracPicker.selectedRowInComponent(0)])
             let diameterFrac = String(fractions[diameterFracPicker.selectedRowInComponent(0)])
@@ -52,8 +114,24 @@ class PipeController: UIViewController, UITextFieldDelegate, UIPickerViewDelegat
 
             
             if (_optional.isEmpty) {
+                if ((Int(quantity) == nil)
+                    || (Int(height) == nil)
+                    || (Int(diameter) == nil)
+                    || (Int(flange) == nil)) {
+                    
+                    if (Int(quantity) == nil) {
+                        err_quantity_int.hidden = false
+                    } else if (Int(height) == nil) {
+                        err_height_int.hidden = false
+                    } else if (Int(diameter) == nil) {
+                        err_diameter_int.hidden = false
+                    } else if (Int(flange) == nil) {
+                        err_flange_int.hidden = false
+                    }
+                    
+                } else {
                 
-                let pipe = Pipe(quantity: Int(quantity)!,
+                    let pipe = Pipe(quantity: Int(quantity)!,
                                 type: String(self.typeSegment.titleForSegmentAtIndex(self.typeSegment.selectedSegmentIndex)!),
                                 height: Int(height)!,
                                 heightFrac: heightFrac,
@@ -65,12 +143,27 @@ class PipeController: UIViewController, UITextFieldDelegate, UIPickerViewDelegat
                                 material: material,
                                 _optional: "")
                 
-                PIPES.append(pipe)
-                self.dismissViewControllerAnimated(true, completion: nil)
-                                
-                
+                    PIPES.append(pipe)
+                    self.dismissViewControllerAnimated(true, completion: nil)
+                }
             } else {
-                let pipe = Pipe(quantity: Int(quantity)!,
+                if ((Int(quantity) == nil)
+                    || (Int(height) == nil)
+                    || (Int(diameter) == nil)
+                    || (Int(flange) == nil)) {
+                    
+                    if (Int(quantity) == nil) {
+                        err_quantity_int.hidden = false
+                    } else if (Int(height) == nil) {
+                        err_height_int.hidden = false
+                    } else if (Int(diameter) == nil) {
+                        err_diameter_int.hidden = false
+                    } else if (Int(flange) == nil) {
+                        err_flange_int.hidden = false
+                    }
+                    
+                } else {
+                    let pipe = Pipe(quantity: Int(quantity)!,
                                 type: String(self.typeSegment.titleForSegmentAtIndex(self.typeSegment.selectedSegmentIndex)!),
                                 height: Int(height)!,
                                 heightFrac: heightFrac,
@@ -82,37 +175,38 @@ class PipeController: UIViewController, UITextFieldDelegate, UIPickerViewDelegat
                                 material: material,
                                 _optional: _optional)
                 
-                PIPES.append(pipe)
-                self.dismissViewControllerAnimated(true, completion: nil)
+                    PIPES.append(pipe)
+                    self.dismissViewControllerAnimated(true, completion: nil)
+                }
+            }
+        } else {
+            if ((quantity.isEmpty)
+                || (height.isEmpty)
+                || (diameter.isEmpty)
+                || (flange.isEmpty)
+                || (color.isEmpty)
+                || (material.isEmpty)) {
+                
+                if (quantity.isEmpty) {
+                    err_quantity.hidden = false
+                } else if (height.isEmpty) {
+                    err_height.hidden = false
+                } else if (diameter.isEmpty) {
+                    err_diameter.hidden = false
+                } else if (flange.isEmpty) {
+                    err_flange.hidden = false
+                } else if (color.isEmpty) {
+                    err_color.hidden = false
+                } else if (material.isEmpty) {
+                    err_material.hidden = false
+                }
                 
             }
         }
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        
-        quantityTextField.delegate = self
-        heightTextField.delegate = self
-        diameterTextField.delegate = self
-        flangeTextField.delegate = self
-        colorTextField.delegate = self
-        materialTextField.delegate = self
-        _optionalTextField.delegate = self
-        
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ConeController.keyboardWillShow(_:)), name:UIKeyboardWillShowNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ConeController.keyboardWillHide(_:)), name:UIKeyboardWillHideNotification, object: nil)
-        
-        
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+    // -* fieldChange
+    //
+    // -> ScrollView moves TextField above Keyboard
     func keyboardWillShow(notification: NSNotification) {
         var userInfo = notification.userInfo!
         var keyboardFrame: CGRect = (userInfo[UIKeyboardFrameBeginUserInfoKey] as! NSValue).CGRectValue();
@@ -127,6 +221,94 @@ class PipeController: UIViewController, UITextFieldDelegate, UIPickerViewDelegat
     func keyboardWillHide(notification: NSNotification) {
         let contentInset: UIEdgeInsets = UIEdgeInsetsZero
         self.scrollView.contentInset = contentInset
+    }
+    // -* ScrollView
+    
+    
+    // - fieldChange
+    // -- Show TextField placeholder
+    // -- Show Error if no content
+    
+    @IBAction func quantityFieldChanged(sender: AnyObject) {
+        if (!quantityTextField.hasText()) {
+            quantityLabel.hidden = true
+            err_quantity.hidden = true
+            err_quantity_int.hidden = true
+            // Dispose of no quantity error
+        } else if (quantityTextField.hasText()) {
+            quantityLabel.hidden = false
+            err_quantity.hidden = true
+            if (Int(quantityTextField.text!) != nil) {
+                err_quantity_int.hidden = true
+            } else if (Int(quantityTextField.text!) == nil) {
+                err_quantity_int.hidden = false
+            }
+        }
+    }
+    
+    @IBAction func heightFieldChanged(sender: AnyObject) {
+        if (!heightTextField.hasText()) {
+            heightLabel.hidden = true
+            err_height.hidden = true
+            err_height_int.hidden = true
+        } else if (heightTextField.hasText()) {
+            heightLabel.hidden = false
+            err_height.hidden = true
+            if (Int(heightTextField.text!) != nil) {
+                err_height_int.hidden = true
+            } else if (Int(heightTextField.text!) == nil) {
+                err_height_int.hidden = false
+            }
+        }
+    }
+    @IBAction func diameterFieldChanged(sender: AnyObject) {
+        if (!diameterTextField.hasText()) {
+            diameterLabel.hidden = true
+            err_diameter.hidden = true
+            err_diameter_int.hidden = true
+            // Dispose of no quantity error
+        } else if (diameterTextField.hasText()) {
+            diameterLabel.hidden = false
+            err_diameter.hidden = true
+            if (Int(diameterTextField.text!) != nil) {
+                err_diameter_int.hidden = true
+            } else if (Int(diameterTextField.text!) == nil) {
+                err_diameter_int.hidden = false
+            }
+        }
+    }
+    @IBAction func flangeFieldChanged(sender: AnyObject) {
+        if (!flangeTextField.hasText()) {
+            flangeLabel.hidden = true
+            err_flange.hidden = true
+            err_flange_int.hidden = true
+        } else if (flangeTextField.hasText()) {
+            flangeLabel.hidden = false
+            err_flange.hidden = true
+            if (Int(flangeTextField.text!) != nil) {
+                err_flange_int.hidden = true
+            } else if (Int(flangeTextField.text!) == nil) {
+                err_flange_int.hidden = false
+            }
+        }
+    }
+    @IBAction func colorFieldChanged(sender: AnyObject) {
+        if (!colorTextField.hasText()) {
+            colorLabel.hidden = true
+            err_color.hidden = false
+        } else if (colorTextField.hasText()) {
+            colorLabel.hidden = false
+            err_color.hidden = true
+        }
+    }
+    @IBAction func materialFieldChanged(sender: AnyObject) {
+        if (materialTextField.text == "") {
+            materialLabel.hidden = true
+            err_material.hidden = false
+        } else if (materialTextField.text != "") {
+            materialLabel.hidden = false
+            err_material.hidden = true
+        }
     }
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
@@ -166,7 +348,7 @@ class PipeController: UIViewController, UITextFieldDelegate, UIPickerViewDelegat
         } else if (textField == _optionalTextField) {
             _optionalTextField.resignFirstResponder()
         }
-        return true
+        return false
     }
 
     /*

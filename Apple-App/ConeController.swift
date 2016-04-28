@@ -79,6 +79,7 @@ class ConeController: UIViewController, UITextFieldDelegate, UIPickerViewDataSou
         err_height.hidden = true
         err_top.hidden = true
         err_bot.hidden = true
+        err_flange.hidden = true
         err_color.hidden = true
         err_material.hidden = true
     }
@@ -99,7 +100,6 @@ class ConeController: UIViewController, UITextFieldDelegate, UIPickerViewDataSou
     
     
     @IBAction func coneAdd(sender: AnyObject) {
-        
         let quantity = quantityTextField.text!
         let height = heightTextField.text!
         let top = topTextField.text!
@@ -125,10 +125,10 @@ class ConeController: UIViewController, UITextFieldDelegate, UIPickerViewDataSou
         
             if (_optional.isEmpty) {
                 if ((Int(quantity) == nil)
-                    || Int(height) == nil)
+                    || (Int(height) == nil)
                     || (Int(top) == nil)
                     || (Int(bot) == nil)
-                    || (Int(flange) == nil) {
+                    || (Int(flange) == nil)) {
                         
                         if (Int(quantity) == nil) {
                             err_quantity_int.hidden = false
@@ -163,10 +163,10 @@ class ConeController: UIViewController, UITextFieldDelegate, UIPickerViewDataSou
                 }
             } else {
                 if ((Int(quantity) == nil)
-                    || Int(height) == nil)
+                    || (Int(height) == nil)
                     || (Int(top) == nil)
                     || (Int(bot) == nil)
-                    || (Int(flange) == nil) {
+                    || (Int(flange) == nil)) {
                     
                     if (Int(quantity) == nil) {
                         err_quantity_int.hidden = false
@@ -199,6 +199,32 @@ class ConeController: UIViewController, UITextFieldDelegate, UIPickerViewDataSou
                 }
         
             }
+        } else {
+            if ((quantity.isEmpty)
+                || (height.isEmpty)
+                || (top.isEmpty)
+                || (bot.isEmpty)
+                || (flange.isEmpty)
+                || (color.isEmpty)
+                || (material.isEmpty)) {
+                
+                if (quantity.isEmpty) {
+                    err_quantity.hidden = false
+                } else if (height.isEmpty) {
+                    err_height.hidden = false
+                } else if (top.isEmpty) {
+                    err_top.hidden = false
+                } else if (bot.isEmpty) {
+                    err_bot.hidden = false
+                } else if (flange.isEmpty) {
+                    err_flange.hidden = false
+                } else if (color.isEmpty) {
+                    err_color.hidden = false
+                } else if (material.isEmpty) {
+                    err_material.hidden = false
+                }
+            
+            }
         }
     }
     
@@ -220,52 +246,41 @@ class ConeController: UIViewController, UITextFieldDelegate, UIPickerViewDataSou
         let contentInset: UIEdgeInsets = UIEdgeInsetsZero
         self.scrollView.contentInset = contentInset
     }
-    
     // -* ScrollView
+    
     
     // - fieldChange
     // -- Show TextField placeholder
     // -- Show Error if no content
     @IBAction func quantityFieldChanged(sender: AnyObject) {
         if (!quantityTextField.hasText()) {
-            quantityTextField.hidden = true
+            quantityLabel.hidden = true
+            err_quantity.hidden = true
+            err_quantity_int.hidden = true
             // Dispose of no quantity error
         } else if (quantityTextField.hasText()) {
+            quantityLabel.hidden = false
             err_quantity.hidden = true
             if (Int(quantityTextField.text!) != nil) {
                 err_quantity_int.hidden = true
             } else if (Int(quantityTextField.text!) == nil) {
                 err_quantity_int.hidden = false
             }
-        } else {
-            if (quantityTextField.hasText()) {
-                quantityTextField.hidden = true
-                if (Int(quantityTextField.text!) != nil) {
-                    err_quantity_int.hidden = true
-                } else if (Int(quantityTextField.text!) == nil) {
-                    err_quantity_int.hidden = false
-                }
-            }
-        
         }
     }
     
     @IBAction func heightFieldChanged(sender: AnyObject) {
         if (!heightTextField.hasText()) {
             heightLabel.hidden = true
+            err_height.hidden = true
+            err_height_int.hidden = true
+        } else if (heightTextField.hasText()) {
+            heightLabel.hidden = false
+            err_height.hidden = true
             if (Int(heightTextField.text!) != nil) {
                 err_height_int.hidden = true
             } else if (Int(heightTextField.text!) == nil) {
                 err_height_int.hidden = false
-            }
-        } else {
-            if (heightTextField.hasText()) {
-                heightLabel.hidden = false
-                if (Int(heightTextField.text!) != nil) {
-                    err_height_int.hidden = true
-                } else if (Int(heightTextField.text!) == nil) {
-                    err_height_int.hidden = false
-                }
             }
         }
     }
@@ -273,19 +288,15 @@ class ConeController: UIViewController, UITextFieldDelegate, UIPickerViewDataSou
     @IBAction func topFieldChanged(sender: AnyObject) {
         if (!topTextField.hasText()) {
             topLabel.hidden = true
+            err_top.hidden = true
+            err_top_int.hidden = true
+        } else if (topTextField.hasText()) {
+            topLabel.hidden = false
+            err_top.hidden = true
             if (Int(topTextField.text!) != nil) {
                 err_top_int.hidden = true
             } else if (Int(topTextField.text!) == nil) {
                 err_top_int.hidden = false
-            }
-        } else {
-            if (topTextField.hasText()) {
-                topLabel.hidden = false
-                if (Int(topTextField.text!) != nil) {
-                    err_top_int.hidden = true
-                } else if (Int(topTextField.text!) == nil) {
-                    err_top_int.hidden = false
-                }
             }
         }
     }
@@ -293,19 +304,15 @@ class ConeController: UIViewController, UITextFieldDelegate, UIPickerViewDataSou
     @IBAction func botFieldChanged(sender: AnyObject) {
         if (!botTextField.hasText()) {
             botLabel.hidden = true
+            err_bot.hidden = true
+            err_bot_int.hidden = true
+        } else if (botTextField.hasText()) {
+            botLabel.hidden = false
+            err_top.hidden = true
             if (Int(botTextField.text!) != nil) {
                 err_bot_int.hidden = true
             } else if (Int(botTextField.text!) == nil) {
                 err_bot_int.hidden = false
-            }
-        } else {
-            if (botTextField.hasText()) {
-                botLabel.hidden = false
-                if (Int(botTextField.text!) != nil) {
-                    err_bot_int.hidden = true
-                } else if (Int(botTextField.text!) == nil) {
-                    err_bot_int.hidden = false
-                }
             }
         }
     }
@@ -313,19 +320,15 @@ class ConeController: UIViewController, UITextFieldDelegate, UIPickerViewDataSou
     @IBAction func flangeFieldChanged(sender: AnyObject) {
         if (!flangeTextField.hasText()) {
             flangeLabel.hidden = true
+            err_flange.hidden = true
+            err_flange_int.hidden = true
+        } else if (flangeTextField.hasText()) {
+            flangeLabel.hidden = false
+            err_flange.hidden = true
             if (Int(flangeTextField.text!) != nil) {
                 err_flange_int.hidden = true
             } else if (Int(flangeTextField.text!) == nil) {
                 err_flange_int.hidden = false
-            }
-        } else {
-            if (flangeTextField.hasText()) {
-                flangeLabel.hidden = false
-                if (Int(flangeTextField.text!) != nil) {
-                    err_flange_int.hidden = true
-                } else if (Int(flangeTextField.text!) == nil) {
-                    err_flange_int.hidden = false
-                }
             }
         }
     }
@@ -335,11 +338,9 @@ class ConeController: UIViewController, UITextFieldDelegate, UIPickerViewDataSou
             colorLabel.hidden = true
             err_color.hidden = false
             
-        } else {
-            if (colorTextField.hasText()) {
-                colorLabel.hidden = false
-                err_color.hidden = true
-            }
+        } else if (colorTextField.hasText()) {
+            colorLabel.hidden = false
+            err_color.hidden = true
         }
     }
     
@@ -347,11 +348,9 @@ class ConeController: UIViewController, UITextFieldDelegate, UIPickerViewDataSou
         if (materialTextField.text == "") {
             materialLabel.hidden = true
             err_material.hidden = false
-        } else {
-            if (materialTextField.text != "") {
-                materialLabel.hidden = false
-                err_material.hidden = true
-            }
+        } else if (materialTextField.text != "") {
+            materialLabel.hidden = false
+            err_material.hidden = true
         }
     }
     
@@ -399,7 +398,7 @@ class ConeController: UIViewController, UITextFieldDelegate, UIPickerViewDataSou
         } else if (textField == _optionalTextField) {
             _optionalTextField.resignFirstResponder()
         }
-        return true
+        return false
     }
     
     

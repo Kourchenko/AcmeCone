@@ -172,18 +172,30 @@ class CornerController: UIViewController, UITextFieldDelegate, UIPickerViewDeleg
                 }
             }
         } else {
-            if (quantityTextField.text == "") {
-                err_quantity.hidden = false
-            } else if (heightTextField.text == "") {
-                err_height.hidden = false
-            } else if (depthTextField.text == "") {
-                err_depth.hidden = false
-            } else if (flangeTextField.text == "") {
-                err_flange.hidden = false
-            } else if (colorTextField.text == "") {
-                err_color.hidden = false
-            } else if (materialTextField.text == "") {
-                err_material.hidden = false
+            if ((quantity.isEmpty)
+                || (height.isEmpty)
+                || (depth.isEmpty)
+                || (height.isEmpty)
+                || (flange.isEmpty)
+                || (color.isEmpty)
+                || (material.isEmpty)) {
+                
+                if (quantity.isEmpty) {
+                    err_quantity.hidden = false
+                } else if (height.isEmpty) {
+                    err_height.hidden = false
+                } else if (depth.isEmpty) {
+                    err_depth.hidden = false
+                } else if (height.isEmpty) {
+                    err_height.hidden = false
+                } else if (flange.isEmpty) {
+                    err_flange.hidden = false
+                } else if (color.isEmpty) {
+                    err_color.hidden = false
+                } else if (material.isEmpty) {
+                    err_material.hidden = false
+                }
+                
             }
         }
     }

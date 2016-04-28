@@ -14,16 +14,35 @@ class ScupperController: UIViewController, UITextFieldDelegate, UIPickerViewDele
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var typeSegmented: UISegmentedControl!
     @IBOutlet weak var quantityTextField: UITextField!
+    @IBOutlet weak var quantityLabel: UILabel!
+    @IBOutlet weak var err_quantity: UILabel!
+    @IBOutlet weak var err_quantity_int: UILabel!
     @IBOutlet weak var depthTextField: UITextField!
+    @IBOutlet weak var depthFracPicker: UIPickerView!
+    @IBOutlet weak var depthLabel: UILabel!
+    @IBOutlet weak var err_depth: UILabel!
+    @IBOutlet weak var err_depth_int: UILabel!
     @IBOutlet weak var lengthTextField: UITextField!
     @IBOutlet weak var lengthFracPicker: UIPickerView!
-    @IBOutlet weak var depthFracPicker: UIPickerView!
+    @IBOutlet weak var lengthLabel: UILabel!
+    @IBOutlet weak var err_length: UILabel!
+    @IBOutlet weak var err_length_int: UILabel!
     @IBOutlet weak var widthTextField: UITextField!
     @IBOutlet weak var widthFracPicker: UIPickerView!
+    @IBOutlet weak var widthLabel: UILabel!
+    @IBOutlet weak var err_width: UILabel!
+    @IBOutlet weak var err_width_int: UILabel!
     @IBOutlet weak var flangeTextField: UITextField!
     @IBOutlet weak var flangeFracPicker: UIPickerView!
+    @IBOutlet weak var flangeLabel: UILabel!
+    @IBOutlet weak var err_flange: UILabel!
+    @IBOutlet weak var err_flange_int: UILabel!
     @IBOutlet weak var colorTextField: UITextField!
+    @IBOutlet weak var colorLabel: UILabel!
+    @IBOutlet weak var err_color: UILabel!
     @IBOutlet weak var materialTextField: UITextField!
+    @IBOutlet weak var materialLabel: UILabel!
+    @IBOutlet weak var err_material: UILabel!
     @IBOutlet weak var _optionalTextField: UITextField!
     
 
