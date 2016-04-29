@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  Acme-App
 //
-//  Created by diegok on 3/31/16.
+//  Created by Diego Kourchenko on 3/31/16.
 //  Copyright © 2016 Acme. All rights reserved.
 //
 
