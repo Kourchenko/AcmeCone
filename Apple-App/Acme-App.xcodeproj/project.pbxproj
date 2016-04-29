@@ -22,6 +22,9 @@
 		E578DA831CADACBA00F87E93 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E578DA811CADACBA00F87E93 /* LaunchScreen.storyboard */; };
 		E578DA8E1CADACBA00F87E93 /* Acme_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E578DA8D1CADACBA00F87E93 /* Acme_AppTests.swift */; };
 		E578DA991CADACBA00F87E93 /* Acme_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E578DA981CADACBA00F87E93 /* Acme_AppUITests.swift */; };
+		E5B4D9111CD3340700EB645B /* StockConeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B4D9101CD3340700EB645B /* StockConeController.swift */; };
+		E5B4D9131CD33E9400EB645B /* StockConeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B4D9121CD33E9400EB645B /* StockConeCell.swift */; };
+		E5B4D9151CD3BB3000EB645B /* PansController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B4D9141CD3BB3000EB645B /* PansController.swift */; };
 		E5EAC3201CCA87720091AE87 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5EAC31F1CCA87720091AE87 /* Images.xcassets */; };
 		E5F22BEA1CADB23D008EB068 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F22BE91CADB23D008EB068 /* ViewController.swift */; };
 		E5F22C241CADE031008EB068 /* Cone.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F22C1A1CADE031008EB068 /* Cone.swift */; };
@@ -76,6 +79,9 @@
 		E578DA941CADACBA00F87E93 /* Acme-AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Acme-AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E578DA981CADACBA00F87E93 /* Acme_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Acme_AppUITests.swift; sourceTree = "<group>"; };
 		E578DA9A1CADACBA00F87E93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5B4D9101CD3340700EB645B /* StockConeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockConeController.swift; sourceTree = "<group>"; };
+		E5B4D9121CD33E9400EB645B /* StockConeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockConeCell.swift; sourceTree = "<group>"; };
+		E5B4D9141CD3BB3000EB645B /* PansController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PansController.swift; sourceTree = "<group>"; };
 		E5EAC31F1CCA87720091AE87 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E5F22BE91CADB23D008EB068 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E5F22C1A1CADE031008EB068 /* Cone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Cone.swift; path = Items/Cone.swift; sourceTree = "<group>"; };
@@ -125,6 +131,7 @@
 				E52EC9901CCFDE9A00723D5E /* DropController.swift */,
 				E52EC9921CCFE13900723D5E /* ScupperController.swift */,
 				E52EC9941CCFE18C00723D5E /* TubeController.swift */,
+				E5B4D9141CD3BB3000EB645B /* PansController.swift */,
 			);
 			name = CustomControllers;
 			sourceTree = "<group>";
@@ -133,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				E57311641CCADE1300720417 /* StockCell.swift */,
+				E5B4D9121CD33E9400EB645B /* StockConeCell.swift */,
 			);
 			name = CustomCells;
 			sourceTree = "<group>";
@@ -173,6 +181,7 @@
 				E578DA811CADACBA00F87E93 /* LaunchScreen.storyboard */,
 				E578DA841CADACBA00F87E93 /* Info.plist */,
 				E5EAC31F1CCA87720091AE87 /* Images.xcassets */,
+				E5B4D9101CD3340700EB645B /* StockConeController.swift */,
 			);
 			path = "Acme-App";
 			sourceTree = "<group>";
@@ -347,6 +356,7 @@
 			files = (
 				E54380881CCDD6E300C1EDDB /* CustomController.swift in Sources */,
 				E52EC98F1CCFDB4200723D5E /* PipeController.swift in Sources */,
+				E5B4D9111CD3340700EB645B /* StockConeController.swift in Sources */,
 				E5F22C2B1CADE031008EB068 /* Sleeper.swift in Sources */,
 				E5F22C251CADE031008EB068 /* Corner.swift in Sources */,
 				E52EC9911CCFDE9A00723D5E /* DropController.swift in Sources */,
@@ -357,6 +367,7 @@
 				E5F22C281CADE031008EB068 /* Pan.swift in Sources */,
 				E5F22C2D1CADE031008EB068 /* Tube.swift in Sources */,
 				E57311671CCAE81200720417 /* StockController.swift in Sources */,
+				E5B4D9151CD3BB3000EB645B /* PansController.swift in Sources */,
 				E5F22C291CADE031008EB068 /* Pipe.swift in Sources */,
 				E5F22C2A1CADE031008EB068 /* Scupper.swift in Sources */,
 				E52EC98D1CCED2B800723D5E /* CornerController.swift in Sources */,
@@ -367,6 +378,7 @@
 				E5F22C261CADE031008EB068 /* Curb.swift in Sources */,
 				E5F22C271CADE031008EB068 /* Drop.swift in Sources */,
 				E5F22BEA1CADB23D008EB068 /* ViewController.swift in Sources */,
+				E5B4D9131CD33E9400EB645B /* StockConeCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -219,7 +219,7 @@ class ConeController: UIViewController, UITextFieldDelegate, UIPickerViewDataSou
                         
                         alert.show()
                         
-                        // Delay the dismissal by 3 seconds
+                        // Delay the dismissal by 2 seconds
                         let delay = 2.0 * Double(NSEC_PER_SEC)
                         let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
                         dispatch_after(time, dispatch_get_main_queue(), {
@@ -228,7 +228,7 @@ class ConeController: UIViewController, UITextFieldDelegate, UIPickerViewDataSou
                     }
                 }
                 
-            } else {
+            } else if (!_optional.isEmpty) {
                 if ((Int(quantity) == nil)
                     || (Int(height) == nil)
                     || (Int(top) == nil)
@@ -315,7 +315,6 @@ class ConeController: UIViewController, UITextFieldDelegate, UIPickerViewDataSou
                 } else if (material.isEmpty) {
                     err_material.hidden = false
                 }
-            
             }
         }
     }
@@ -467,22 +466,16 @@ class ConeController: UIViewController, UITextFieldDelegate, UIPickerViewDataSou
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         if (textField == quantityTextField) {
-            quantityTextField.resignFirstResponder()
             heightTextField.becomeFirstResponder()
         } else if (textField == heightTextField) {
-            heightTextField.resignFirstResponder()
             topTextField.becomeFirstResponder()
         } else if (textField == topTextField) {
-            topTextField.resignFirstResponder()
             botTextField.becomeFirstResponder()
         } else if (textField == botTextField) {
-            botTextField.resignFirstResponder()
             flangeTextField.becomeFirstResponder()
         } else if (textField == flangeTextField) {
-            flangeTextField.resignFirstResponder()
             colorTextField.becomeFirstResponder()
         } else if (textField == colorTextField) {
-            colorTextField.resignFirstResponder()
             materialTextField.becomeFirstResponder()
         } else if (textField == materialTextField) {
             materialTextField.resignFirstResponder()

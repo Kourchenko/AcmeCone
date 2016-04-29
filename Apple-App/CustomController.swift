@@ -15,7 +15,7 @@ class CustomController: UIViewController, UITableViewDelegate, UITableViewDataSo
     @IBOutlet weak var customTable: UITableView!
     
     
-    var CUSTOM = ["Cones", "Corners", "Pipe Wraps", "Drains", "Scuppers", "PitchPans", "Tubewraps", "Curbs", "Sleepers"]
+    var CUSTOM = ["Cones", "Corners", "Pipe Wraps", "Drop Scuppers", "Scuppers", "Pitch Pans", "Tube Wraps", "Curbs", "Sleepers"]
     
     
     override func viewDidLoad() {
@@ -32,6 +32,10 @@ class CustomController: UIViewController, UITableViewDelegate, UITableViewDataSo
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
+    }
+    
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Custom Products"
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -52,7 +56,7 @@ class CustomController: UIViewController, UITableViewDelegate, UITableViewDataSo
             cell.imageView!.image = UIImage(named: "Pipewraps")
         } else if (indexPath.row == 3) {
             cell.textLabel!.text = CUSTOM[indexPath.row]
-            cell.imageView!.image = UIImage(named: "Drains")
+            cell.imageView!.image = UIImage(named: "Drops")
         } else if (indexPath.row == 4) {
             cell.textLabel!.text = CUSTOM[indexPath.row]
             cell.imageView!.image = UIImage(named: "Scuppers")
@@ -90,6 +94,9 @@ class CustomController: UIViewController, UITableViewDelegate, UITableViewDataSo
             let vc = storyboard?.instantiateViewControllerWithIdentifier("Thruwall Scuppers")
             self.presentViewController(vc!, animated: true, completion: nil)
         } else if (indexPath.row == 5) {
+            let vc = storyboard?.instantiateViewControllerWithIdentifier("Pitch Pans")
+            self.presentViewController(vc!, animated: true, completion: nil)
+        } else if (indexPath.row == 6) {
             let vc = storyboard?.instantiateViewControllerWithIdentifier("Tube Wraps")
             self.presentViewController(vc!, animated: true, completion: nil)
         }

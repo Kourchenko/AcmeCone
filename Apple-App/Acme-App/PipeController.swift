@@ -190,7 +190,7 @@ class PipeController: UIViewController, UITextFieldDelegate, UIPickerViewDelegat
                         self.dismissViewControllerAnimated(true, completion: nil)
                 
                     } else {
-                        let alert: UIAlertView = UIAlertView(title: "", message: "These Cone Measurements exist in your Cart!", delegate: nil, cancelButtonTitle: "OK");
+                        let alert: UIAlertView = UIAlertView(title: "", message: "These Pipe Measurements exist in your Cart!", delegate: nil, cancelButtonTitle: "OK");
                         let loadingIndicator: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(50, 10, 37, 37)) as UIActivityIndicatorView
                         
                         loadingIndicator.center = self.view.center;
@@ -351,7 +351,6 @@ class PipeController: UIViewController, UITextFieldDelegate, UIPickerViewDelegat
             diameterLabel.hidden = true
             err_diameter.hidden = true
             err_diameter_int.hidden = true
-            // Dispose of no quantity error
         } else if (diameterTextField.hasText()) {
             diameterLabel.hidden = false
             err_diameter.hidden = true
@@ -414,19 +413,14 @@ class PipeController: UIViewController, UITextFieldDelegate, UIPickerViewDelegat
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         if (textField == quantityTextField) {
-            quantityTextField.resignFirstResponder()
             heightTextField.becomeFirstResponder()
         } else if (textField == heightTextField) {
-            heightTextField.resignFirstResponder()
             diameterTextField.becomeFirstResponder()
         } else if (textField == diameterTextField) {
-            diameterTextField.resignFirstResponder()
             flangeTextField.becomeFirstResponder()
         } else if (textField == flangeTextField) {
-            flangeTextField.resignFirstResponder()
             colorTextField.becomeFirstResponder()
         } else if (textField == colorTextField) {
-            colorTextField.resignFirstResponder()
             materialTextField.becomeFirstResponder()
         } else if (textField == materialTextField) {
             materialTextField.resignFirstResponder()

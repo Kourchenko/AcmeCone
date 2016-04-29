@@ -167,7 +167,7 @@ class DropController: UIViewController, UITextFieldDelegate, UIPickerViewDelegat
                         DROPS.append(drop)
                         self.dismissViewControllerAnimated(true, completion: nil)
                     } else {
-                        let alert: UIAlertView = UIAlertView(title: "", message: "These Cone Measurements exist in your Cart!", delegate: nil, cancelButtonTitle: "OK");
+                        let alert: UIAlertView = UIAlertView(title: "", message: "These Drop Scupper Measurements exist in your Cart!", delegate: nil, cancelButtonTitle: "OK");
                         let loadingIndicator: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(50, 10, 37, 37)) as UIActivityIndicatorView
                         
                         loadingIndicator.center = self.view.center;
@@ -222,7 +222,7 @@ class DropController: UIViewController, UITextFieldDelegate, UIPickerViewDelegat
                         DROPS.append(drop)
                         self.dismissViewControllerAnimated(true, completion: nil)
                     } else {
-                        let alert: UIAlertView = UIAlertView(title: "", message: "These Cone Measurements exist in your Cart!", delegate: nil, cancelButtonTitle: "OK");
+                        let alert: UIAlertView = UIAlertView(title: "", message: "These Drop Scupper Measurements exist in your Cart!", delegate: nil, cancelButtonTitle: "OK");
                         let loadingIndicator: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(50, 10, 37, 37)) as UIActivityIndicatorView
                         
                         loadingIndicator.center = self.view.center;
@@ -232,7 +232,7 @@ class DropController: UIViewController, UITextFieldDelegate, UIPickerViewDelegat
                         
                         alert.show()
                         
-                        // Delay the dismissal by 3 seconds
+                        // Delay the dismissal by 2 seconds
                         let delay = 2.0 * Double(NSEC_PER_SEC)
                         let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
                         dispatch_after(time, dispatch_get_main_queue(), {
@@ -314,7 +314,6 @@ class DropController: UIViewController, UITextFieldDelegate, UIPickerViewDelegat
             diameterLabel.hidden = true
             err_diameter.hidden = true
             err_diameter_int.hidden = true
-            // Dispose of no quantity error
         } else if (diameterTextField.hasText()) {
             diameterLabel.hidden = false
             err_diameter.hidden = true
@@ -331,7 +330,6 @@ class DropController: UIViewController, UITextFieldDelegate, UIPickerViewDelegat
             depthLabel.hidden = true
             err_depth.hidden = true
             err_depth_int.hidden = true
-            // Dispose of no quantity error
         } else if (depthTextField.hasText()) {
             depthLabel.hidden = false
             err_depth.hidden = true
@@ -400,19 +398,14 @@ class DropController: UIViewController, UITextFieldDelegate, UIPickerViewDelegat
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         if (textField == quantityTextField) {
-            quantityTextField.resignFirstResponder()
             depthTextField.becomeFirstResponder()
         } else if (textField == depthTextField) {
-            depthTextField.resignFirstResponder()
             diameterTextField.becomeFirstResponder()
         } else if (textField == diameterTextField) {
-            diameterTextField.resignFirstResponder()
             flangeTextField.becomeFirstResponder()
         } else if (textField == flangeTextField) {
-            flangeTextField.resignFirstResponder()
             colorTextField.becomeFirstResponder()
         } else if (textField == colorTextField) {
-            colorTextField.resignFirstResponder()
             materialTextField.becomeFirstResponder()
         } else if (textField == materialTextField) {
             materialTextField.resignFirstResponder()
