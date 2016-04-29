@@ -228,7 +228,7 @@ class ConeController: UIViewController, UITextFieldDelegate, UIPickerViewDataSou
                     }
                 }
                 
-            } else {
+            } else if (!_optional.isEmpty) {
                 if ((Int(quantity) == nil)
                     || (Int(height) == nil)
                     || (Int(top) == nil)
