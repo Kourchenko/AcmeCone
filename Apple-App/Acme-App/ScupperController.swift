@@ -193,7 +193,66 @@ class ScupperController: UIViewController, UITextFieldDelegate, UIPickerViewDele
                                           flangeFrac: flangeFrac,
                                           color: color,
                                           material: material,
-                                          _optional: _optional,
+                                          _optional: "",
+                                          id: id)
+                    
+                    let results = SCUPPERS.filter {$0.id == id}
+                    if (results.isEmpty) {
+                        SCUPPERS.append(scupper)
+                        self.dismissViewControllerAnimated(true, completion: nil)
+                    } else {
+                        let alert: UIAlertView = UIAlertView(title: "", message: "These Scupper Measurements exist in your Cart!", delegate: nil, cancelButtonTitle: "OK");
+                        let loadingIndicator: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(50, 10, 37, 37)) as UIActivityIndicatorView
+                        
+                        loadingIndicator.center = self.view.center;
+                        loadingIndicator.hidesWhenStopped = true
+                        loadingIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray
+                        loadingIndicator.startAnimating();
+                        
+                        alert.show()
+                        
+                        // Delay the dismissal by 2 seconds
+                        let delay = 2.0 * Double(NSEC_PER_SEC)
+                        let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+                        dispatch_after(time, dispatch_get_main_queue(), {
+                            alert.dismissWithClickedButtonIndex(-1, animated: true)
+                        })
+                    }
+                }
+            } else {
+                if ((Int(quantity) == nil)
+                    || (Int(depth) == nil)
+                    || (Int(length) == nil)
+                    || (Int(width) == nil)
+                    || (Int(flange) == nil)) {
+                    
+                    if (Int(quantity) == nil) {
+                        err_quantity_int.hidden = false
+                    } else if (Int(depth) == nil) {
+                        err_depth_int.hidden = false
+                    } else if (Int(length) == nil) {
+                        err_length_int.hidden = false
+                    } else if (Int(width) == nil) {
+                        err_width_int.hidden = false
+                    } else if (Int(flange) == nil) {
+                        err_flange_int.hidden = false
+                    }
+                    
+                } else {
+                    let id = String(depth) + String(length) + String(material)
+                    let scupper = Scupper(quantity: Int(quantity)!,
+                                          type: type,
+                                          depth: Int(depth)!,
+                                          depthFrac: depthFrac,
+                                          length: Int(length)!,
+                                          lengthFrac: lengthFrac,
+                                          width: Int(width)!,
+                                          widthFrac: widthFrac,
+                                          flange: Int(flange)!,
+                                          flangeFrac: flangeFrac,
+                                          color: color,
+                                          material: material,
+                                          _optional: "",
                                           id: id)
                     
                     let results = SCUPPERS.filter {$0.id == id}
@@ -267,18 +326,101 @@ class ScupperController: UIViewController, UITextFieldDelegate, UIPickerViewDele
     // -- ScrollView
     
     @IBAction func quantityFieldChanged(sender: AnyObject) {
+        if (!quantityTextField.hasText()) {
+            quantityLabel.hidden = true
+            err_quantity.hidden = true
+            err_quantity_int.hidden = true
+            // Dispose of no quantity error
+        } else if (quantityTextField.hasText()) {
+            quantityLabel.hidden = false
+            err_quantity.hidden = true
+            if (Int(quantityTextField.text!) != nil) {
+                err_quantity_int.hidden = true
+            } else if (Int(quantityTextField.text!) == nil) {
+                err_quantity_int.hidden = false
+            }
+        }
     }
     @IBAction func depthFieldChanged(sender: AnyObject) {
+        if (!depthTextField.hasText()) {
+            depthLabel.hidden = true
+            err_depth.hidden = true
+            err_depth_int.hidden = true
+        } else if (depthTextField.hasText()) {
+            depthLabel.hidden = false
+            err_depth.hidden = true
+            if (Int(depthTextField.text!) != nil) {
+                err_depth_int.hidden = true
+            } else if (Int(depthTextField.text!) == nil) {
+                err_depth_int.hidden = false
+            }
+        }
     }
     @IBAction func widthFieldChanged(sender: AnyObject) {
+        if (!widthTextField.hasText()) {
+            widthLabel.hidden = true
+            err_width.hidden = true
+            err_width_int.hidden = true
+        } else if (widthTextField.hasText()) {
+            widthLabel.hidden = false
+            err_width.hidden = true
+            if (Int(widthTextField.text!) != nil) {
+                err_width_int.hidden = true
+            } else if (Int(widthTextField.text!) == nil) {
+                err_width_int.hidden = false
+            }
+        }
     }
     @IBAction func lengthFieldChanged(sender: AnyObject) {
+        if (!lengthTextField.hasText()) {
+            lengthLabel.hidden = true
+            err_length.hidden = true
+            err_length_int.hidden = true
+        } else if (lengthTextField.hasText()) {
+            lengthLabel.hidden = false
+            err_length.hidden = true
+            if (Int(lengthTextField.text!) != nil) {
+                err_length_int.hidden = true
+            } else if (Int(lengthTextField.text!) == nil) {
+                err_length_int.hidden = false
+            }
+        }
     }
+    
     @IBAction func flangeFieldChanged(sender: AnyObject) {
+        if (!flangeTextField.hasText()) {
+            flangeLabel.hidden = true
+            err_flange.hidden = true
+            err_flange_int.hidden = true
+        } else if (flangeTextField.hasText()) {
+            flangeLabel.hidden = false
+            err_flange.hidden = true
+            if (Int(flangeTextField.text!) != nil) {
+                err_flange_int.hidden = true
+            } else if (Int(flangeTextField.text!) == nil) {
+                err_flange_int.hidden = false
+            }
+        }
     }
+    
     @IBAction func colorFieldChanged(sender: AnyObject) {
+        if (!colorTextField.hasText()) {
+            colorLabel.hidden = true
+            err_color.hidden = false
+        } else if (colorTextField.hasText()) {
+            colorLabel.hidden = false
+            err_color.hidden = true
+        }
     }
+    
     @IBAction func materialFieldChanged(sender: AnyObject) {
+        if (materialTextField.text == "") {
+            materialLabel.hidden = true
+            err_material.hidden = false
+        } else if (materialTextField.text != "") {
+            materialLabel.hidden = false
+            err_material.hidden = true
+        }
     }
     
     
@@ -303,9 +445,9 @@ class ScupperController: UIViewController, UITextFieldDelegate, UIPickerViewDele
         if (textField == quantityTextField) {
             depthTextField.becomeFirstResponder()
         } else if (textField == depthTextField) {
-            lengthTextField.becomeFirstResponder()
-        } else if (textField == lengthTextField) {
             widthTextField.becomeFirstResponder()
+        } else if (textField == lengthTextField) {
+            lengthTextField.becomeFirstResponder()
         } else if (textField == widthTextField) {
             flangeTextField.becomeFirstResponder()
         } else if (textField == flangeTextField) {

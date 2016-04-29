@@ -10,12 +10,19 @@ import Foundation
 
 struct Tube {
     var quantity: Int
+    var type: String
     var length: Int
+    var lengthFrac: String
     var width: Int
+    var widthFrac: String
     var height: Int
+    var heightFrac: String
     var flange: Int
+    var flangeFrac: String
     
-    var optional: String
     var color: String
     var material: String
+    
+    var _optional: String
+    var id: String
 }

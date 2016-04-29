@@ -317,21 +317,18 @@ class CornerController: UIViewController, UITextFieldDelegate, UIPickerViewDeleg
     // -- Show TextField placeholder
     // -- Show Error if no content
     @IBAction func quantityFieldChanged(sender: AnyObject) {
-        if (quantityTextField.text == "") {
+        if (!quantityTextField.hasText()) {
             quantityLabel.hidden = true
+            err_quantity.hidden = true
+            err_quantity_int.hidden = true
+            // Dispose of no quantity error
+        } else if (quantityTextField.hasText()) {
+            quantityLabel.hidden = false
+            err_quantity.hidden = true
             if (Int(quantityTextField.text!) != nil) {
                 err_quantity_int.hidden = true
             } else if (Int(quantityTextField.text!) == nil) {
                 err_quantity_int.hidden = false
-            }
-        } else {
-            if (quantityTextField.text != "") {
-                quantityLabel.hidden = false
-                if (Int(quantityTextField.text!) != nil) {
-                    err_quantity_int.hidden = true
-                } else if (Int(quantityTextField.text!) == nil) {
-                    err_quantity_int.hidden = false
-                }
             }
         }
     }
@@ -339,19 +336,15 @@ class CornerController: UIViewController, UITextFieldDelegate, UIPickerViewDeleg
     @IBAction func heightFieldChanged(sender: AnyObject) {
         if (!heightTextField.hasText()) {
             heightLabel.hidden = true
+            err_height.hidden = true
+            err_height_int.hidden = true
+        } else if (heightTextField.hasText()) {
+            heightLabel.hidden = false
+            err_height.hidden = true
             if (Int(heightTextField.text!) != nil) {
                 err_height_int.hidden = true
             } else if (Int(heightTextField.text!) == nil) {
                 err_height_int.hidden = false
-            }
-        } else {
-            if (heightTextField.hasText()) {
-                heightLabel.hidden = false
-                if (Int(heightTextField.text!) != nil) {
-                    err_height_int.hidden = true
-                } else if (Int(heightTextField.text!) == nil) {
-                    err_height_int.hidden = false
-                }
             }
         }
     }
@@ -359,19 +352,15 @@ class CornerController: UIViewController, UITextFieldDelegate, UIPickerViewDeleg
     @IBAction func depthFieldChanged(sender: AnyObject) {
         if (!depthTextField.hasText()) {
             depthLabel.hidden = true
+            err_depth.hidden = true
+            err_depth_int.hidden = true
+        } else if (depthTextField.hasText()) {
+            depthLabel.hidden = false
+            err_depth.hidden = true
             if (Int(depthTextField.text!) != nil) {
                 err_depth_int.hidden = true
             } else if (Int(depthTextField.text!) == nil) {
                 err_depth_int.hidden = false
-            }
-        } else {
-            if (depthTextField.hasText()) {
-                depthLabel.hidden = false
-                if (Int(depthTextField.text!) != nil) {
-                    err_depth_int.hidden = true
-                } else if (Int(depthTextField.text!) == nil) {
-                    err_depth_int.hidden = false
-                }
             }
         }
     }
@@ -379,34 +368,27 @@ class CornerController: UIViewController, UITextFieldDelegate, UIPickerViewDeleg
     @IBAction func flangeFieldChanged(sender: AnyObject) {
         if (!flangeTextField.hasText()) {
             flangeLabel.hidden = true
+            err_flange.hidden = true
+            err_flange_int.hidden = true
+        } else if (flangeTextField.hasText()) {
+            flangeLabel.hidden = false
+            err_flange.hidden = true
             if (Int(flangeTextField.text!) != nil) {
                 err_flange_int.hidden = true
             } else if (Int(flangeTextField.text!) == nil) {
                 err_flange_int.hidden = false
             }
-        } else {
-            if (flangeTextField.hasText()) {
-                flangeLabel.hidden = false
-                if (Int(flangeTextField.text!) != nil) {
-                    err_flange_int.hidden = true
-                } else if (Int(flangeTextField.text!) == nil) {
-                    err_flange_int.hidden = false
-                }
-            }
         }
     }
-    
     
     @IBAction func colorFieldChanged(sender: AnyObject) {
         if (!colorTextField.hasText()) {
             colorLabel.hidden = true
             err_color.hidden = false
             
-        } else {
-            if (colorTextField.hasText()) {
-                colorLabel.hidden = false
-                err_color.hidden = true
-            }
+        } else if (colorTextField.hasText()) {
+            colorLabel.hidden = false
+            err_color.hidden = true
         }
     }
     
@@ -414,11 +396,9 @@ class CornerController: UIViewController, UITextFieldDelegate, UIPickerViewDeleg
         if (materialTextField.text == "") {
             materialLabel.hidden = true
             err_material.hidden = false
-        } else {
-            if (materialTextField.text != "") {
-                materialLabel.hidden = false
-                err_material.hidden = true
-            }
+        } else if (materialTextField.text != "") {
+            materialLabel.hidden = false
+            err_material.hidden = true
         }
     }
     
@@ -442,19 +422,14 @@ class CornerController: UIViewController, UITextFieldDelegate, UIPickerViewDeleg
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         if (textField == quantityTextField) {
-            quantityTextField.resignFirstResponder()
             heightTextField.becomeFirstResponder()
         } else if (textField == heightTextField) {
-            heightTextField.resignFirstResponder()
             depthTextField.becomeFirstResponder()
         } else if (textField == depthTextField) {
-            depthTextField.resignFirstResponder()
             flangeTextField.becomeFirstResponder()
         } else if (textField == flangeTextField) {
-            flangeTextField.resignFirstResponder()
             colorTextField.becomeFirstResponder()
         } else if (textField == colorTextField) {
-            colorTextField.resignFirstResponder()
             materialTextField.becomeFirstResponder()
         } else if (textField == materialTextField) {
             materialTextField.resignFirstResponder()

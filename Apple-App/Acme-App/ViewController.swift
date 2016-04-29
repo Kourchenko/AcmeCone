@@ -25,9 +25,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var IMG_LOGO: UIImageView!
     
     
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
