@@ -25,6 +25,7 @@
 		E5B4D9111CD3340700EB645B /* StockConeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B4D9101CD3340700EB645B /* StockConeController.swift */; };
 		E5B4D9131CD33E9400EB645B /* StockConeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B4D9121CD33E9400EB645B /* StockConeCell.swift */; };
 		E5B4D9151CD3BB3000EB645B /* PansController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B4D9141CD3BB3000EB645B /* PansController.swift */; };
+		E5B4D9171CD4136200EB645B /* CurbsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B4D9161CD4136200EB645B /* CurbsController.swift */; };
 		E5EAC3201CCA87720091AE87 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5EAC31F1CCA87720091AE87 /* Images.xcassets */; };
 		E5F22BEA1CADB23D008EB068 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F22BE91CADB23D008EB068 /* ViewController.swift */; };
 		E5F22C241CADE031008EB068 /* Cone.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F22C1A1CADE031008EB068 /* Cone.swift */; };
@@ -82,6 +83,7 @@
 		E5B4D9101CD3340700EB645B /* StockConeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockConeController.swift; sourceTree = "<group>"; };
 		E5B4D9121CD33E9400EB645B /* StockConeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockConeCell.swift; sourceTree = "<group>"; };
 		E5B4D9141CD3BB3000EB645B /* PansController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PansController.swift; sourceTree = "<group>"; };
+		E5B4D9161CD4136200EB645B /* CurbsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurbsController.swift; sourceTree = "<group>"; };
 		E5EAC31F1CCA87720091AE87 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E5F22BE91CADB23D008EB068 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E5F22C1A1CADE031008EB068 /* Cone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Cone.swift; path = Items/Cone.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				E52EC9921CCFE13900723D5E /* ScupperController.swift */,
 				E52EC9941CCFE18C00723D5E /* TubeController.swift */,
 				E5B4D9141CD3BB3000EB645B /* PansController.swift */,
+				E5B4D9161CD4136200EB645B /* CurbsController.swift */,
 			);
 			name = CustomControllers;
 			sourceTree = "<group>";
@@ -357,6 +360,7 @@
 				E54380881CCDD6E300C1EDDB /* CustomController.swift in Sources */,
 				E52EC98F1CCFDB4200723D5E /* PipeController.swift in Sources */,
 				E5B4D9111CD3340700EB645B /* StockConeController.swift in Sources */,
+				E5B4D9171CD4136200EB645B /* CurbsController.swift in Sources */,
 				E5F22C2B1CADE031008EB068 /* Sleeper.swift in Sources */,
 				E5F22C251CADE031008EB068 /* Corner.swift in Sources */,
 				E52EC9911CCFDE9A00723D5E /* DropController.swift in Sources */,

@@ -59,43 +59,70 @@ class ReviewController: UIViewController, UITableViewDelegate, UITableViewDataSo
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("currentOrderCell")
+        let cell = tableView.dequeueReusableCellWithIdentifier("currentOrderCell")!
         
         if indexPath.section == 0 {
-            cell?.textLabel!.text = STOCK[indexPath.row]
+            cell.textLabel!.text = STOCK[indexPath.row]
             
             //cell?.textLabel?.text = String(STOCK[indexPath.row].amount) + ": " + STOCK[indexPath.row].type
             
         } else if indexPath.section == 1 {
-            cell!.textLabel?.text = String(CONES[indexPath.row].quantity) + ": "
+            cell.textLabel?.text = String(CONES[indexPath.row].quantity) + ": "
                                     + CONES[indexPath.row].type + " "
                                     + CONES[indexPath.row].color + " "
                                     + CONES[indexPath.row].material + " "
                                     + "Cones"
             
         } else if indexPath.section == 2 {
-            cell!.textLabel?.text = String(CORNERS[indexPath.row].quantity) + ": "
+            cell.textLabel?.text = String(CORNERS[indexPath.row].quantity) + ": "
                                     + CORNERS[indexPath.row].type + " "
                                     + CORNERS[indexPath.row].color + " "
                                     + CORNERS[indexPath.row].material + " "
                                     + "Corners"
         } else if indexPath.section == 3 {
-            cell!.textLabel?.text = PIPES[indexPath.row].type + " Pipes"
-        }else if indexPath.section == 1 {
-            cell!.textLabel?.text = DROPS[indexPath.row].color + " Cones"
-        } else if indexPath.section == 2 {
-            cell!.textLabel?.text = SCUPPERS[indexPath.row].color + " Corners"
-        } else if indexPath.section == 3 {
-            cell!.textLabel?.text = PANS[indexPath.row].color + " Pipes"
-        }else if indexPath.section == 1 {
-            cell!.textLabel?.text = TUBES[indexPath.row].color + " Cones"
-        } else if indexPath.section == 2 {
-            cell!.textLabel?.text = CURBS[indexPath.row].color + " Corners"
-        } else if indexPath.section == 3 {
-            cell!.textLabel?.text = SLEEPERS[indexPath.row].color + " Pipes"
+            cell.textLabel?.text = String(PIPES[indexPath.row].quantity) + ":"
+                                    + PIPES[indexPath.row].type + " "
+                                    + PIPES[indexPath.row].color + " "
+                                    + PIPES[indexPath.row].material +  " "
+                                    + "Pipes"
+        } else if indexPath.section == 4 {
+            cell.textLabel?.text = String(DROPS[indexPath.row].quantity) + ": "
+                                    + DROPS[indexPath.row].color + " "
+                                    + DROPS[indexPath.row].material + " "
+                                    + "Drops"
+        } else if indexPath.section == 5 {
+            cell.textLabel?.text = String(SCUPPERS[indexPath.row].quantity) + ": "
+                                    + SCUPPERS[indexPath.row].type + " "
+                                    + SCUPPERS[indexPath.row].color + " "
+                                    + SCUPPERS[indexPath.row].material + " "
+                                    + "Scuppers"
+        } else if indexPath.section == 6 {
+            cell.textLabel?.text = String(PANS[indexPath.row].quantity) + ": "
+                                    + PANS[indexPath.row].roundType + " "
+                                    + PANS[indexPath.row].splitType + " "
+                                    + PANS[indexPath.row].color + " "
+                                    + PANS[indexPath.row].material + " "
+                                    + "Pitch Pans"
+        }else if indexPath.section == 7 {
+            cell.textLabel?.text = String(TUBES[indexPath.row].quantity) + ": "
+                                    + TUBES[indexPath.row].type + " "
+                                    + TUBES[indexPath.row].color + " "
+                                    + TUBES[indexPath.row].material + " "
+                                    + "Tube Wraps"
+        } else if indexPath.section == 8 {
+            cell.textLabel?.text = String(CURBS[indexPath.row].quantity) + ": "
+                                    + CURBS[indexPath.row].type + " "
+                                    + CURBS[indexPath.row].color + " "
+                                    + CURBS[indexPath.row].material + " "
+                                    + "Curbs"
+        } else if indexPath.section == 9 {
+            cell.textLabel?.text = String(SLEEPERS[indexPath.row].quantity) + ": "
+                                    + SLEEPERS[indexPath.row].color + " "
+                                    + SLEEPERS[indexPath.row].material + " "
+                                    + "Sleepers"
         }
         
-        return cell!
+        return cell
     }
     
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {

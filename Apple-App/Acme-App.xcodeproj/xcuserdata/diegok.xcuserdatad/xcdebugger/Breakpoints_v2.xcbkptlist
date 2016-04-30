@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Acme-App/ReviewController.swift"
-            timestampString = "483513865.867589"
+            timestampString = "483659248.095624"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "137"
-            endingLineNumber = "137"
+            startingLineNumber = "164"
+            endingLineNumber = "164"
             landmarkName = "tableView(_:editActionsForRowAtIndexPath:)"
             landmarkType = "5">
             <Locations>
@@ -106,13 +106,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ConeController.swift"
-            timestampString = "483597843.026677"
+            timestampString = "483554462.620434"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "320"
-            endingLineNumber = "320"
-            landmarkName = "coneAdd(_:)"
-            landmarkType = "5">
+            startingLineNumber = "321"
+            endingLineNumber = "321"
+            landmarkName = "ConeController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -122,11 +122,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Acme-App/CornerController.swift"
-            timestampString = "483600503.385412"
+            timestampString = "483554462.620434"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "412"
-            endingLineNumber = "412"
+            startingLineNumber = "432"
+            endingLineNumber = "432"
             landmarkName = "pickerView(_:numberOfRowsInComponent:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -300,22 +300,6 @@
             endingLineNumber = "112"
             landmarkName = "viewDidLoad()"
             landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Acme-App/PansController.swift"
-            timestampString = "483646214.781062"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
-            landmarkName = "PansController"
-            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

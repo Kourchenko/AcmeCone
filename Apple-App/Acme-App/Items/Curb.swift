@@ -10,12 +10,19 @@ import Foundation
 
 struct Curb {
     var quantity: Int
-    var length: Int
-    var width: Int
-    var height: Int
-    var flange: Int
+    var type: String
     
-    var optional: String
+    var length: Int
+    var lengthFrac: String
+    var width: Int
+    var widthFrac: String
+    var height: Int
+    var heightFrac: String
+    var flange: Int
+    var flangeFrac: String
+    
     var color: String
     var material: String
+    var _optional: String
+    var id: String
 }
