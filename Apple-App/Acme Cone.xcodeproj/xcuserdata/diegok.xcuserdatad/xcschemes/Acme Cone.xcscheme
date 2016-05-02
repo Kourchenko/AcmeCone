@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0720"
+   LastUpgradeVersion = "0730"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "E578DA721CADACBA00F87E93"
-               BuildableName = "Acme-App.app"
-               BlueprintName = "Acme-App"
-               ReferencedContainer = "container:Acme-App.xcodeproj">
+               BuildableName = "Acme Cone.app"
+               BlueprintName = "Acme Cone"
+               ReferencedContainer = "container:Acme Cone.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,34 +28,14 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E578DA881CADACBA00F87E93"
-               BuildableName = "Acme-AppTests.xctest"
-               BlueprintName = "Acme-AppTests"
-               ReferencedContainer = "container:Acme-App.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E578DA931CADACBA00F87E93"
-               BuildableName = "Acme-AppUITests.xctest"
-               BlueprintName = "Acme-AppUITests"
-               ReferencedContainer = "container:Acme-App.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E578DA721CADACBA00F87E93"
-            BuildableName = "Acme-App.app"
-            BlueprintName = "Acme-App"
-            ReferencedContainer = "container:Acme-App.xcodeproj">
+            BuildableName = "Acme Cone.app"
+            BlueprintName = "Acme Cone"
+            ReferencedContainer = "container:Acme Cone.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +56,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E578DA721CADACBA00F87E93"
-            BuildableName = "Acme-App.app"
-            BlueprintName = "Acme-App"
-            ReferencedContainer = "container:Acme-App.xcodeproj">
+            BuildableName = "Acme Cone.app"
+            BlueprintName = "Acme Cone"
+            ReferencedContainer = "container:Acme Cone.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +75,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "E578DA721CADACBA00F87E93"
-            BuildableName = "Acme-App.app"
-            BlueprintName = "Acme-App"
-            ReferencedContainer = "container:Acme-App.xcodeproj">
+            BuildableName = "Acme Cone.app"
+            BlueprintName = "Acme Cone"
+            ReferencedContainer = "container:Acme Cone.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

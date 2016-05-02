@@ -180,7 +180,7 @@ class ScupperController: UIViewController, UITextFieldDelegate, UIPickerViewDele
                     }
                     
                 } else {
-                    let id = String(depth) + String(length) + String(material)
+                    let id: String = String(depth) + String(depthFrac) + String(length) + String(lengthFrac) + String(width) + String(widthFrac) + String(flange) + String(flangeFrac) + String(color)
                     let scupper = Scupper(quantity: Int(quantity)!,
                                           type: type,
                                           depth: Int(depth)!,
@@ -239,7 +239,7 @@ class ScupperController: UIViewController, UITextFieldDelegate, UIPickerViewDele
                     }
                     
                 } else {
-                    let id = String(depth) + String(length) + String(material)
+                    let id: String = String(depth) + String(depthFrac) + String(length) + String(lengthFrac) + String(width) + String(widthFrac) + String(flange) + String(flangeFrac) + String(color)
                     let scupper = Scupper(quantity: Int(quantity)!,
                                           type: type,
                                           depth: Int(depth)!,

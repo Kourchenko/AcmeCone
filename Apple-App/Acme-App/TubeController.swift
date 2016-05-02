@@ -182,7 +182,7 @@ class TubeController: UIViewController, UITextFieldDelegate, UIPickerViewDelegat
                     
                 } else {
                  
-                    let id = String(height) + String(width) + String(length)
+                    let id: String = String(type) + String(length) + String(lengthFrac) + String(width) + String(widthFrac) + String(flange) + String(flangeFrac) + String(color)
                     let tube = Tube(quantity: Int(quantity)!,
                                     type: type,
                                     length: Int(length)!,
@@ -222,7 +222,7 @@ class TubeController: UIViewController, UITextFieldDelegate, UIPickerViewDelegat
                     }
                 }
             } else {
-                let id = String(height) + String(width) + String(length)
+                let id: String = String(type) + String(length) + String(lengthFrac) + String(width) + String(widthFrac) + String(flange) + String(flangeFrac) + String(color)
                 let tube = Tube(quantity: Int(quantity)!,
                                 type: type,
                                 length: Int(length)!,

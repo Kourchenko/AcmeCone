@@ -26,7 +26,11 @@
 		E5B4D9131CD33E9400EB645B /* StockConeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B4D9121CD33E9400EB645B /* StockConeCell.swift */; };
 		E5B4D9151CD3BB3000EB645B /* PansController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B4D9141CD3BB3000EB645B /* PansController.swift */; };
 		E5B4D9171CD4136200EB645B /* CurbsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B4D9161CD4136200EB645B /* CurbsController.swift */; };
+		E5B4D9191CD4721100EB645B /* SleepersController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B4D9181CD4721100EB645B /* SleepersController.swift */; };
 		E5EAC3201CCA87720091AE87 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5EAC31F1CCA87720091AE87 /* Images.xcassets */; };
+		E5EE4E5A1CD59A8700FCBA44 /* FinalSendController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EE4E591CD59A8700FCBA44 /* FinalSendController.swift */; };
+		E5EE4E5C1CD59FDA00FCBA44 /* FinalSendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EE4E5B1CD59FDA00FCBA44 /* FinalSendCell.swift */; };
+		E5EE4E5E1CD7C3FE00FCBA44 /* ViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5EE4E5D1CD7C3FE00FCBA44 /* ViewCell.swift */; };
 		E5F22BEA1CADB23D008EB068 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F22BE91CADB23D008EB068 /* ViewController.swift */; };
 		E5F22C241CADE031008EB068 /* Cone.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F22C1A1CADE031008EB068 /* Cone.swift */; };
 		E5F22C251CADE031008EB068 /* Corner.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F22C1B1CADE031008EB068 /* Corner.swift */; };
@@ -68,23 +72,27 @@
 		E54380871CCDD6E300C1EDDB /* CustomController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomController.swift; path = ../CustomController.swift; sourceTree = "<group>"; };
 		E57311641CCADE1300720417 /* StockCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StockCell.swift; path = ../StockCell.swift; sourceTree = "<group>"; };
 		E57311661CCAE81200720417 /* StockController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockController.swift; sourceTree = "<group>"; };
-		E578DA731CADACBA00F87E93 /* Acme-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Acme-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E578DA731CADACBA00F87E93 /* Acme Cone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Acme Cone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E578DA761CADACBA00F87E93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E578DA7D1CADACBA00F87E93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E578DA7F1CADACBA00F87E93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E578DA821CADACBA00F87E93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E578DA841CADACBA00F87E93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E578DA891CADACBA00F87E93 /* Acme-AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Acme-AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E578DA891CADACBA00F87E93 /* Acme Cone.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Acme Cone.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E578DA8D1CADACBA00F87E93 /* Acme_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Acme_AppTests.swift; sourceTree = "<group>"; };
 		E578DA8F1CADACBA00F87E93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E578DA941CADACBA00F87E93 /* Acme-AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Acme-AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E578DA941CADACBA00F87E93 /* Acme Cone.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Acme Cone.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E578DA981CADACBA00F87E93 /* Acme_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Acme_AppUITests.swift; sourceTree = "<group>"; };
 		E578DA9A1CADACBA00F87E93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E5B4D9101CD3340700EB645B /* StockConeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockConeController.swift; sourceTree = "<group>"; };
 		E5B4D9121CD33E9400EB645B /* StockConeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockConeCell.swift; sourceTree = "<group>"; };
 		E5B4D9141CD3BB3000EB645B /* PansController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PansController.swift; sourceTree = "<group>"; };
 		E5B4D9161CD4136200EB645B /* CurbsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurbsController.swift; sourceTree = "<group>"; };
+		E5B4D9181CD4721100EB645B /* SleepersController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SleepersController.swift; sourceTree = "<group>"; };
 		E5EAC31F1CCA87720091AE87 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		E5EE4E591CD59A8700FCBA44 /* FinalSendController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalSendController.swift; sourceTree = "<group>"; };
+		E5EE4E5B1CD59FDA00FCBA44 /* FinalSendCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalSendCell.swift; sourceTree = "<group>"; };
+		E5EE4E5D1CD7C3FE00FCBA44 /* ViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewCell.swift; sourceTree = "<group>"; };
 		E5F22BE91CADB23D008EB068 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E5F22C1A1CADE031008EB068 /* Cone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Cone.swift; path = Items/Cone.swift; sourceTree = "<group>"; };
 		E5F22C1B1CADE031008EB068 /* Corner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Corner.swift; path = Items/Corner.swift; sourceTree = "<group>"; };
@@ -135,6 +143,7 @@
 				E52EC9941CCFE18C00723D5E /* TubeController.swift */,
 				E5B4D9141CD3BB3000EB645B /* PansController.swift */,
 				E5B4D9161CD4136200EB645B /* CurbsController.swift */,
+				E5B4D9181CD4721100EB645B /* SleepersController.swift */,
 			);
 			name = CustomControllers;
 			sourceTree = "<group>";
@@ -144,6 +153,8 @@
 			children = (
 				E57311641CCADE1300720417 /* StockCell.swift */,
 				E5B4D9121CD33E9400EB645B /* StockConeCell.swift */,
+				E5EE4E5B1CD59FDA00FCBA44 /* FinalSendCell.swift */,
+				E5EE4E5D1CD7C3FE00FCBA44 /* ViewCell.swift */,
 			);
 			name = CustomCells;
 			sourceTree = "<group>";
@@ -151,9 +162,9 @@
 		E578DA6A1CADACBA00F87E93 = {
 			isa = PBXGroup;
 			children = (
-				E578DA751CADACBA00F87E93 /* Acme-App */,
-				E578DA8C1CADACBA00F87E93 /* Acme-AppTests */,
-				E578DA971CADACBA00F87E93 /* Acme-AppUITests */,
+				E578DA751CADACBA00F87E93 /* Acme Cone */,
+				E578DA8C1CADACBA00F87E93 /* AcmeTests */,
+				E578DA971CADACBA00F87E93 /* AcmeUITests */,
 				E578DA741CADACBA00F87E93 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -161,14 +172,14 @@
 		E578DA741CADACBA00F87E93 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E578DA731CADACBA00F87E93 /* Acme-App.app */,
-				E578DA891CADACBA00F87E93 /* Acme-AppTests.xctest */,
-				E578DA941CADACBA00F87E93 /* Acme-AppUITests.xctest */,
+				E578DA731CADACBA00F87E93 /* Acme Cone.app */,
+				E578DA891CADACBA00F87E93 /* Acme Cone.xctest */,
+				E578DA941CADACBA00F87E93 /* Acme Cone.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E578DA751CADACBA00F87E93 /* Acme-App */ = {
+		E578DA751CADACBA00F87E93 /* Acme Cone */ = {
 			isa = PBXGroup;
 			children = (
 				E52EC98B1CCEC7DD00723D5E /* CustomCells */,
@@ -176,6 +187,7 @@
 				E5F22BF11CADC57A008EB068 /* Items */,
 				E578DA761CADACBA00F87E93 /* AppDelegate.swift */,
 				E578DA7C1CADACBA00F87E93 /* Main.storyboard */,
+				E5EE4E591CD59A8700FCBA44 /* FinalSendController.swift */,
 				E5F22BE91CADB23D008EB068 /* ViewController.swift */,
 				E57311661CCAE81200720417 /* StockController.swift */,
 				E5F22C301CADE076008EB068 /* ReviewController.swift */,
@@ -186,24 +198,27 @@
 				E5EAC31F1CCA87720091AE87 /* Images.xcassets */,
 				E5B4D9101CD3340700EB645B /* StockConeController.swift */,
 			);
+			name = "Acme Cone";
 			path = "Acme-App";
 			sourceTree = "<group>";
 		};
-		E578DA8C1CADACBA00F87E93 /* Acme-AppTests */ = {
+		E578DA8C1CADACBA00F87E93 /* AcmeTests */ = {
 			isa = PBXGroup;
 			children = (
 				E578DA8D1CADACBA00F87E93 /* Acme_AppTests.swift */,
 				E578DA8F1CADACBA00F87E93 /* Info.plist */,
 			);
+			name = AcmeTests;
 			path = "Acme-AppTests";
 			sourceTree = "<group>";
 		};
-		E578DA971CADACBA00F87E93 /* Acme-AppUITests */ = {
+		E578DA971CADACBA00F87E93 /* AcmeUITests */ = {
 			isa = PBXGroup;
 			children = (
 				E578DA981CADACBA00F87E93 /* Acme_AppUITests.swift */,
 				E578DA9A1CADACBA00F87E93 /* Info.plist */,
 			);
+			name = AcmeUITests;
 			path = "Acme-AppUITests";
 			sourceTree = "<group>";
 		};
@@ -227,9 +242,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E578DA721CADACBA00F87E93 /* Acme-App */ = {
+		E578DA721CADACBA00F87E93 /* Acme Cone */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E578DA9D1CADACBA00F87E93 /* Build configuration list for PBXNativeTarget "Acme-App" */;
+			buildConfigurationList = E578DA9D1CADACBA00F87E93 /* Build configuration list for PBXNativeTarget "Acme Cone" */;
 			buildPhases = (
 				E578DA6F1CADACBA00F87E93 /* Sources */,
 				E578DA701CADACBA00F87E93 /* Frameworks */,
@@ -239,14 +254,14 @@
 			);
 			dependencies = (
 			);
-			name = "Acme-App";
+			name = "Acme Cone";
 			productName = "Acme-App";
-			productReference = E578DA731CADACBA00F87E93 /* Acme-App.app */;
+			productReference = E578DA731CADACBA00F87E93 /* Acme Cone.app */;
 			productType = "com.apple.product-type.application";
 		};
-		E578DA881CADACBA00F87E93 /* Acme-AppTests */ = {
+		E578DA881CADACBA00F87E93 /* Acme ConeTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E578DAA01CADACBA00F87E93 /* Build configuration list for PBXNativeTarget "Acme-AppTests" */;
+			buildConfigurationList = E578DAA01CADACBA00F87E93 /* Build configuration list for PBXNativeTarget "Acme ConeTests" */;
 			buildPhases = (
 				E578DA851CADACBA00F87E93 /* Sources */,
 				E578DA861CADACBA00F87E93 /* Frameworks */,
@@ -257,14 +272,14 @@
 			dependencies = (
 				E578DA8B1CADACBA00F87E93 /* PBXTargetDependency */,
 			);
-			name = "Acme-AppTests";
+			name = "Acme ConeTests";
 			productName = "Acme-AppTests";
-			productReference = E578DA891CADACBA00F87E93 /* Acme-AppTests.xctest */;
+			productReference = E578DA891CADACBA00F87E93 /* Acme Cone.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		E578DA931CADACBA00F87E93 /* Acme-AppUITests */ = {
+		E578DA931CADACBA00F87E93 /* Acme ConeUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E578DAA31CADACBA00F87E93 /* Build configuration list for PBXNativeTarget "Acme-AppUITests" */;
+			buildConfigurationList = E578DAA31CADACBA00F87E93 /* Build configuration list for PBXNativeTarget "Acme ConeUITests" */;
 			buildPhases = (
 				E578DA901CADACBA00F87E93 /* Sources */,
 				E578DA911CADACBA00F87E93 /* Frameworks */,
@@ -275,9 +290,9 @@
 			dependencies = (
 				E578DA961CADACBA00F87E93 /* PBXTargetDependency */,
 			);
-			name = "Acme-AppUITests";
+			name = "Acme ConeUITests";
 			productName = "Acme-AppUITests";
-			productReference = E578DA941CADACBA00F87E93 /* Acme-AppUITests.xctest */;
+			productReference = E578DA941CADACBA00F87E93 /* Acme Cone.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -304,7 +319,7 @@
 					};
 				};
 			};
-			buildConfigurationList = E578DA6E1CADACBA00F87E93 /* Build configuration list for PBXProject "Acme-App" */;
+			buildConfigurationList = E578DA6E1CADACBA00F87E93 /* Build configuration list for PBXProject "Acme Cone" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -317,9 +332,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E578DA721CADACBA00F87E93 /* Acme-App */,
-				E578DA881CADACBA00F87E93 /* Acme-AppTests */,
-				E578DA931CADACBA00F87E93 /* Acme-AppUITests */,
+				E578DA721CADACBA00F87E93 /* Acme Cone */,
+				E578DA881CADACBA00F87E93 /* Acme ConeTests */,
+				E578DA931CADACBA00F87E93 /* Acme ConeUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -357,6 +372,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5EE4E5A1CD59A8700FCBA44 /* FinalSendController.swift in Sources */,
 				E54380881CCDD6E300C1EDDB /* CustomController.swift in Sources */,
 				E52EC98F1CCFDB4200723D5E /* PipeController.swift in Sources */,
 				E5B4D9111CD3340700EB645B /* StockConeController.swift in Sources */,
@@ -374,10 +390,13 @@
 				E5B4D9151CD3BB3000EB645B /* PansController.swift in Sources */,
 				E5F22C291CADE031008EB068 /* Pipe.swift in Sources */,
 				E5F22C2A1CADE031008EB068 /* Scupper.swift in Sources */,
+				E5EE4E5C1CD59FDA00FCBA44 /* FinalSendCell.swift in Sources */,
 				E52EC98D1CCED2B800723D5E /* CornerController.swift in Sources */,
 				E5F22C311CADE076008EB068 /* ReviewController.swift in Sources */,
+				E5B4D9191CD4721100EB645B /* SleepersController.swift in Sources */,
 				E5F22C241CADE031008EB068 /* Cone.swift in Sources */,
 				E52EC9871CCDE5D200723D5E /* ConeController.swift in Sources */,
+				E5EE4E5E1CD7C3FE00FCBA44 /* ViewCell.swift in Sources */,
 				E578DA771CADACBA00F87E93 /* AppDelegate.swift in Sources */,
 				E5F22C261CADE031008EB068 /* Curb.swift in Sources */,
 				E5F22C271CADE031008EB068 /* Drop.swift in Sources */,
@@ -407,12 +426,12 @@
 /* Begin PBXTargetDependency section */
 		E578DA8B1CADACBA00F87E93 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = E578DA721CADACBA00F87E93 /* Acme-App */;
+			target = E578DA721CADACBA00F87E93 /* Acme Cone */;
 			targetProxy = E578DA8A1CADACBA00F87E93 /* PBXContainerItemProxy */;
 		};
 		E578DA961CADACBA00F87E93 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = E578DA721CADACBA00F87E93 /* Acme-App */;
+			target = E578DA721CADACBA00F87E93 /* Acme Cone */;
 			targetProxy = E578DA951CADACBA00F87E93 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -527,7 +546,7 @@
 				INFOPLIST_FILE = "Acme-App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.acme.acmecone;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Acme Cone";
 				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
@@ -541,7 +560,7 @@
 				INFOPLIST_FILE = "Acme-App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.acme.acmecone;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Acme Cone";
 				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
@@ -553,8 +572,8 @@
 				INFOPLIST_FILE = "Acme-AppTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.acme.Acme-AppTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Acme-App.app/Acme-App";
+				PRODUCT_NAME = "Acme Cone";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Acme Cone.app/Acme Cone";
 			};
 			name = Debug;
 		};
@@ -565,8 +584,8 @@
 				INFOPLIST_FILE = "Acme-AppTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.acme.Acme-AppTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Acme-App.app/Acme-App";
+				PRODUCT_NAME = "Acme Cone";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Acme Cone.app/Acme Cone";
 			};
 			name = Release;
 		};
@@ -576,7 +595,7 @@
 				INFOPLIST_FILE = "Acme-AppUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.acme.Acme-AppUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Acme Cone";
 				TEST_TARGET_NAME = "Acme-App";
 				USES_XCTRUNNER = YES;
 			};
@@ -588,7 +607,7 @@
 				INFOPLIST_FILE = "Acme-AppUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.acme.Acme-AppUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Acme Cone";
 				TEST_TARGET_NAME = "Acme-App";
 				USES_XCTRUNNER = YES;
 			};
@@ -597,7 +616,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E578DA6E1CADACBA00F87E93 /* Build configuration list for PBXProject "Acme-App" */ = {
+		E578DA6E1CADACBA00F87E93 /* Build configuration list for PBXProject "Acme Cone" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E578DA9B1CADACBA00F87E93 /* Debug */,
@@ -606,7 +625,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E578DA9D1CADACBA00F87E93 /* Build configuration list for PBXNativeTarget "Acme-App" */ = {
+		E578DA9D1CADACBA00F87E93 /* Build configuration list for PBXNativeTarget "Acme Cone" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E578DA9E1CADACBA00F87E93 /* Debug */,
@@ -615,7 +634,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E578DAA01CADACBA00F87E93 /* Build configuration list for PBXNativeTarget "Acme-AppTests" */ = {
+		E578DAA01CADACBA00F87E93 /* Build configuration list for PBXNativeTarget "Acme ConeTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E578DAA11CADACBA00F87E93 /* Debug */,
@@ -624,7 +643,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E578DAA31CADACBA00F87E93 /* Build configuration list for PBXNativeTarget "Acme-AppUITests" */ = {
+		E578DAA31CADACBA00F87E93 /* Build configuration list for PBXNativeTarget "Acme ConeUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E578DAA41CADACBA00F87E93 /* Debug */,

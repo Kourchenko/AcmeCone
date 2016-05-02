@@ -169,8 +169,9 @@ class PipeController: UIViewController, UITextFieldDelegate, UIPickerViewDelegat
                     }
                     
                 } else {
-                
-                    let id = String(height) + String(diameter) + String(material)
+                    
+                    let id: String = String(height) + String(heightFrac) + String(diameter) + String(diameterFrac) + String(flange) + String(flangeFrac) + String(color)
+                    
                     let pipe = Pipe(quantity: Int(quantity)!,
                                 type: String(self.typeSegment.titleForSegmentAtIndex(self.typeSegment.selectedSegmentIndex)!),
                                 height: Int(height)!,
@@ -225,7 +226,7 @@ class PipeController: UIViewController, UITextFieldDelegate, UIPickerViewDelegat
                     }
                     
                 } else {
-                    let id = String(height) + String(diameter) + String(material)
+                    let id: String = String(height) + String(heightFrac) + String(diameter) + String(diameterFrac) + String(flange) + String(flangeFrac) + String(color)
                     let pipe = Pipe(quantity: Int(quantity)!,
                                     type: String(self.typeSegment.titleForSegmentAtIndex(self.typeSegment.selectedSegmentIndex)!),
                                     height: Int(height)!,

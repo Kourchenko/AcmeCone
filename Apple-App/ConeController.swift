@@ -186,7 +186,7 @@ class ConeController: UIViewController, UITextFieldDelegate, UIPickerViewDataSou
                         }
                         
                 } else {
-                    let id = String(top) + String(bot) + String(material)
+                    let id: String = String(type) + String(bot) + String(botFrac) + String(bot) + String(botFrac) + String(flange) + String(flangeFrac) + String(color)
                     let cone = Cone(quantity: Int(quantity)!,
                                 type: type,
                                 topDiameter: Int(top)!,
@@ -247,7 +247,7 @@ class ConeController: UIViewController, UITextFieldDelegate, UIPickerViewDataSou
                         err_flange_int.hidden = false
                     }
                 } else {
-                    let id = String(top) + String(bot) + String(material)
+                    let id: String = String(type) + String(bot) + String(botFrac) + String(bot) + String(botFrac)
 
                     let cone = Cone(quantity: Int(quantity)!,
                                 type: self.coneSegmented.titleForSegmentAtIndex(self.coneSegmented.selectedSegmentIndex)!,

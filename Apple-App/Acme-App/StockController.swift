@@ -275,7 +275,6 @@ class StockController: UIViewController, UITableViewDataSource, UITableViewDeleg
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(StockController.keyboardWillShow(_:)), name: UIKeyboardWillShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(StockController.keyboardWillHide(_:)), name: UIKeyboardWillHideNotification, object: nil)
         
-        
     }
     
     override func shouldAutorotate() -> Bool {
@@ -342,7 +341,6 @@ class StockController: UIViewController, UITableViewDataSource, UITableViewDeleg
         
     }
     
-    
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if (searchActive) {
             if (filtered.count >= 1) {
@@ -375,7 +373,50 @@ class StockController: UIViewController, UITableViewDataSource, UITableViewDeleg
         }
     }
     
-    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+
+        if (searchActive) {
+            if (filtered.count >= 1) {
+                let stockCellAlert = UIAlertView(title: filtered[indexPath.row], message: "", delegate: self, cancelButtonTitle: "OK")
+                stockCellAlert.show()
+            } else {
+                let stockCellAlert = UIAlertView(title: STOCK_DATA[indexPath.row], message: "", delegate: self, cancelButtonTitle: "OK")
+                stockCellAlert.show()
+            }
+        } else {
+            if (indexPath.section == 0) {
+                let stockCellAlert = UIAlertView(title: STOCK_RVO[indexPath.row], message: "", delegate: self, cancelButtonTitle: "OK")
+                stockCellAlert.show()
+            } else if (indexPath.section == 1) {
+                let stockCellAlert = UIAlertView(title: STOCK_CONES[indexPath.row], message: "", delegate: self, cancelButtonTitle: "OK")
+                stockCellAlert.show()
+            } else if (indexPath.section == 2) {
+                let stockCellAlert = UIAlertView(title: STOCK_BV1[indexPath.row], message: "", delegate: self, cancelButtonTitle: "OK")
+                stockCellAlert.show()
+            } else if (indexPath.section == 3) {
+                let stockCellAlert = UIAlertView(title: STOCK_BV2[indexPath.row], message: "", delegate: self, cancelButtonTitle: "OK")
+                stockCellAlert.show()
+            } else if (indexPath.section == 4) {
+                let stockCellAlert = UIAlertView(title: STOCK_CORNERS[indexPath.row], message: "", delegate: self, cancelButtonTitle: "OK")
+                stockCellAlert.show()
+            } else if (indexPath.section == 5) {
+                let stockCellAlert = UIAlertView(title: STOCK_DRAINS[indexPath.row], message: "", delegate: self, cancelButtonTitle: "OK")
+                stockCellAlert.show()
+            } else if (indexPath.section == 6) {
+                let stockCellAlert = UIAlertView(title: STOCK_COMM_DRAINS[indexPath.row], message: "", delegate: self, cancelButtonTitle: "OK")
+                stockCellAlert.show()
+            } else if (indexPath.section == 7) {
+                let stockCellAlert = UIAlertView(title: STOCK_THRUWALLS[indexPath.row], message: "", delegate: self, cancelButtonTitle: "OK")
+                stockCellAlert.show()
+            } else if (indexPath.section == 8) {
+                let stockCellAlert = UIAlertView(title: STOCK_PANS[indexPath.row], message: "", delegate: self, cancelButtonTitle: "OK")
+                stockCellAlert.show()
+            } else {
+                let stockCellAlert = UIAlertView(title: STOCK_DATA[indexPath.row], message: "", delegate: self, cancelButtonTitle: "OK")
+                stockCellAlert.show()
+            }
+        }
+    }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if (searchActive) {
@@ -407,9 +448,7 @@ class StockController: UIViewController, UITableViewDataSource, UITableViewDeleg
                 return STOCK_DATA.count
             }
         }
-    
     }
-
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
@@ -437,50 +476,41 @@ class StockController: UIViewController, UITableViewDataSource, UITableViewDeleg
             if indexPath.section == 0 {
                 
                 cell.stockLabel!.text = STOCK_RVO[indexPath.row]
-                cell.stockAdd.tag = 0
                 cell.stockAdd.addTarget(self, action: #selector(StockController.addSTOCK(_:)), forControlEvents: .TouchUpInside)
-                    
+                
             } else if indexPath.section == 1 {
                 cell.stockLabel!.text = STOCK_CONES[indexPath.row]
-                cell.stockAdd.tag = 1
                 cell.stockAdd.addTarget(self, action: #selector(StockController.addSTOCK(_:)), forControlEvents: .TouchUpInside)
-                    
                 
             } else if indexPath.section == 2 {
                 cell.stockLabel!.text = STOCK_BV1[indexPath.row]
-                cell.stockAdd.tag = 2
                 cell.stockAdd.addTarget(self, action: #selector(StockController.addSTOCK(_:)), forControlEvents: .TouchUpInside)
-                    
+                
             } else if indexPath.section == 3 {
                 cell.stockLabel!.text = STOCK_BV2[indexPath.row]
-                cell.stockAdd.tag = 3
                 cell.stockAdd.addTarget(self, action: #selector(StockController.addSTOCK(_:)), forControlEvents: .TouchUpInside)
-                    
+                
             } else if indexPath.section == 4 {
                 cell.stockLabel!.text = STOCK_CORNERS[indexPath.row]
-                cell.stockAdd.tag = 4
                 cell.stockAdd.addTarget(self, action: #selector(StockController.addSTOCK(_:)), forControlEvents: .TouchUpInside)
-                    
+                
             } else if indexPath.section == 5 {
                 cell.stockLabel!.text = STOCK_DRAINS[indexPath.row]
-                cell.stockAdd.tag = 5
                 cell.stockAdd.addTarget(self, action: #selector(StockController.addSTOCK(_:)), forControlEvents: .TouchUpInside)
-                    
+                
             } else if indexPath.section == 6 {
                 cell.stockLabel!.text = STOCK_COMM_DRAINS[indexPath.row]
-                cell.stockAdd.tag = 6
                 cell.stockAdd.addTarget(self, action: #selector(StockController.addSTOCK(_:)), forControlEvents: .TouchUpInside)
-                    
+
+                
             } else if indexPath.section == 7 {
                 cell.stockLabel!.text = STOCK_THRUWALLS[indexPath.row]
-                cell.stockAdd.tag = 7
                 cell.stockAdd.addTarget(self, action: #selector(StockController.addSTOCK(_:)), forControlEvents: .TouchUpInside)
-                    
+                
             } else if indexPath.section == 8 {
                 cell.stockLabel!.text = STOCK_PANS[indexPath.row]
-                cell.stockAdd.tag = indexPath.row
                 cell.stockAdd.addTarget(self, action: #selector(StockController.addSTOCK(_:)), forControlEvents: .TouchUpInside)
-                    
+                
             }
         }
         
@@ -501,6 +531,7 @@ class StockController: UIViewController, UITableViewDataSource, UITableViewDeleg
                 if (!STOCK.contains(text)) {
                     STOCK.append(text)
                     selectedCell.stockQuantity!.text = ""
+                    selectedCell.stockQuantity.resignFirstResponder()
                 } else {
                     return
                 }

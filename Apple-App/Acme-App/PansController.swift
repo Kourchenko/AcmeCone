@@ -251,7 +251,7 @@ class PansController: UIViewController, UITextFieldDelegate, UIPickerViewDelegat
                             err_flange_int.hidden = false
                         }
                     } else {
-                        let id = String(roundType) + String(height) + String(heightFrac)
+                        let id: String = String(roundType) + String(splitType) + String(height) + String(heightFrac) + String(diameter) + String(diameterFrac) + String(width) + String(widthFrac) + String(length) + String(lengthFrac) + String(flange) + String(flangeFrac) + String(color)
                         
                         let pan = Pan(quantity: Int(quantity)!,
                                       roundType: String(roundType),
@@ -312,7 +312,7 @@ class PansController: UIViewController, UITextFieldDelegate, UIPickerViewDelegat
                             err_flange_int.hidden = false
                         }
                     } else {
-                        let id = String(roundType) + String(height) + String(heightFrac)
+                        let id: String = String(roundType) + String(splitType) + String(height) + String(heightFrac) + String(diameter) + String(diameterFrac) + String(width) + String(widthFrac) + String(length) + String(lengthFrac) + String(flange) + String(flangeFrac) + String(color)
                         
                         let pan = Pan(quantity: Int(quantity)!,
                                       roundType: String(roundType),

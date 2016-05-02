@@ -99,6 +99,12 @@ class CustomController: UIViewController, UITableViewDelegate, UITableViewDataSo
         } else if (indexPath.row == 6) {
             let vc = storyboard?.instantiateViewControllerWithIdentifier("Tube Wraps")
             self.presentViewController(vc!, animated: true, completion: nil)
+        } else if (indexPath.row == 7) {
+            let vc = storyboard?.instantiateViewControllerWithIdentifier("Curb Wraps")
+            self.presentViewController(vc!, animated: true, completion: nil)
+        } else if (indexPath.row == 8) {
+            let vc = storyboard?.instantiateViewControllerWithIdentifier("Sleeper Boxes")
+            self.presentViewController(vc!, animated: true, completion: nil)
         }
     }
 
@@ -106,15 +112,21 @@ class CustomController: UIViewController, UITableViewDelegate, UITableViewDataSo
         return .None
     }
     
+    override func shouldAutorotate() -> Bool {
+        return false
+    }
+    
+    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.Portrait
+    }
+    
+    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
-        
-        
-        
     }
+     */
     
 
 }

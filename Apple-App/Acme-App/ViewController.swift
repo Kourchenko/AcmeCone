@@ -23,12 +23,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var IMG_TUBE: UIImageView!
     
     @IBOutlet weak var IMG_LOGO: UIImageView!
+    @IBOutlet weak var collectionView: UICollectionView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view, typically from a nib.
+        UIDevice.currentDevice().setValue(UIInterfaceOrientation.Portrait.rawValue, forKey: "Orientation")
     }
     
     override func shouldAutorotate() -> Bool {
@@ -38,7 +40,11 @@ class ViewController: UIViewController {
     override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
         return UIInterfaceOrientationMask.Portrait
     }
-    
+
+    override func preferredInterfaceOrientationForPresentation() -> UIInterfaceOrientation {
+        return UIInterfaceOrientation.Portrait
+    }
+        
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

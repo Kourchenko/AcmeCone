@@ -63,9 +63,6 @@ class ReviewController: UIViewController, UITableViewDelegate, UITableViewDataSo
         
         if indexPath.section == 0 {
             cell.textLabel!.text = STOCK[indexPath.row]
-            
-            //cell?.textLabel?.text = String(STOCK[indexPath.row].amount) + ": " + STOCK[indexPath.row].type
-            
         } else if indexPath.section == 1 {
             cell.textLabel?.text = String(CONES[indexPath.row].quantity) + ": "
                                     + CONES[indexPath.row].type + " "
@@ -133,19 +130,19 @@ class ReviewController: UIViewController, UITableViewDelegate, UITableViewDataSo
         }else if section == 2 {
             return "Corners"
         } else if section == 3 {
-            return "Pipes"
+            return "Pipe Wraps"
         } else if section == 4 {
-            return "Drops"
+            return "Drop Scuppers"
         } else if section == 5 {
             return "Scuppers"
         } else if section == 6 {
-            return "Pans"
+            return "Pitch Pans"
         } else if section == 7 {
-            return "Tubes"
+            return "Tube Wraps"
         } else if section == 8 {
-            return "Curbs"
+            return "Curb Wraps"
         } else if section == 9 {
-            return "Sleepers"
+            return "Sleeper Boxes"
         } else {
             return "Custom"
         }
@@ -247,7 +244,7 @@ class ReviewController: UIViewController, UITableViewDelegate, UITableViewDataSo
             vc.segue_optional = String(optional)
         
             self.presentViewController(vc, animated: true, completion: nil)
-        }
+        } 
         
     }
     
@@ -261,7 +258,6 @@ class ReviewController: UIViewController, UITableViewDelegate, UITableViewDataSo
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        
         
     }
     

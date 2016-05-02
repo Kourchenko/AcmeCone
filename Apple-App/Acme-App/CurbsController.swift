@@ -147,12 +147,12 @@ class CurbsController: UIViewController, UITextFieldDelegate, UIPickerViewDelega
         let material = materialTextField.text!
         
         if ((!quantity.isEmpty)
-        || (!height.isEmpty)
-        || (!length.isEmpty)
-        || (!width.isEmpty)
-        || (!flange.isEmpty)
-        || (!color.isEmpty)
-        || (!material.isEmpty)) {
+        && (!height.isEmpty)
+        && (!length.isEmpty)
+        && (!width.isEmpty)
+        && (!flange.isEmpty)
+        && (!color.isEmpty)
+        && (!material.isEmpty)) {
             
             let heightFrac = String(fractions[heightFracPicker.selectedRowInComponent(0)])
             let lengthFrac = String(fractions[lengthFracPicker.selectedRowInComponent(0)])
@@ -160,7 +160,7 @@ class CurbsController: UIViewController, UITextFieldDelegate, UIPickerViewDelega
             let flangeFrac = String(fractions[flangeFracPicker.selectedRowInComponent(0)])
             let _optional = _optionalTextField.text!
             
-            if (!_optional.isEmpty) {
+            if (_optional.isEmpty) {
                 if ((Int(quantity) == nil)
                     || (Int(height) == nil)
                     || (Int(length) == nil)
@@ -179,7 +179,7 @@ class CurbsController: UIViewController, UITextFieldDelegate, UIPickerViewDelega
                         err_flange_int.hidden = false
                     }
                 } else {
-                    let id = String(height) + String(length) + String(widthFrac)
+                    let id: String = String(type) + String(length) + String(lengthFrac) + String(width) + String(widthFrac) + String(height) + String(heightFrac) + String(flange) + String(flangeFrac) + String(color)
                     let curb = Curb(quantity: Int(quantity)!,
                                     type: type,
                                     length: Int(length)!,
@@ -219,7 +219,7 @@ class CurbsController: UIViewController, UITextFieldDelegate, UIPickerViewDelega
                     }
                 }
                 
-            } else if (_optional.isEmpty) {
+            } else if (!_optional.isEmpty) {
                 if ((Int(quantity) == nil)
                     || (Int(height) == nil)
                     || (Int(length) == nil)
@@ -238,7 +238,7 @@ class CurbsController: UIViewController, UITextFieldDelegate, UIPickerViewDelega
                         err_flange_int.hidden = false
                     }
                 } else {
-                    let id = String(height) + String(length) + String(widthFrac)
+                    let id: String = String(type) + String(length) + String(lengthFrac) + String(width) + String(widthFrac) + String(height) + String(heightFrac) + String(flange) + String(flangeFrac) + String(color)
                     let curb = Curb(quantity: Int(quantity)!,
                                     type: type,
                                     length: Int(length)!,
@@ -251,7 +251,7 @@ class CurbsController: UIViewController, UITextFieldDelegate, UIPickerViewDelega
                                     flangeFrac: flangeFrac,
                                     color: color,
                                     material: material,
-                                    _optional: "",
+                                    _optional: _optional,
                                     id: id)
                     
                     let results = CURBS.filter {$0.id == id}

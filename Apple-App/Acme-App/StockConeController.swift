@@ -8,10 +8,11 @@
 
 import UIKit
 
+
 class StockConeController: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource {
 
     
-    
+    var titles = ["Short A-Cone", "A-Cone", "B-Cone", "C-Cone", "D-Cone"]
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -68,22 +69,22 @@ class StockConeController: UIViewController, UITextFieldDelegate, UITableViewDel
             "\n\n Acme Cone works with all major manufacturerers and brands."
             
             
-            let alert: UIAlertView = UIAlertView(title: "Short A-Cone", message: message , delegate: nil, cancelButtonTitle: "OK");
-            let loadingIndicator: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(50, 10, 37, 37)) as UIActivityIndicatorView
+        let alert: UIAlertView = UIAlertView(title: titles[indexPath.row], message: message , delegate: nil, cancelButtonTitle: "OK");
+        let loadingIndicator: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(50, 10, 37, 37)) as UIActivityIndicatorView
             
-            loadingIndicator.center = self.view.center;
-            loadingIndicator.hidesWhenStopped = true
-            loadingIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray
-            loadingIndicator.startAnimating();
+        loadingIndicator.center = self.view.center;
+        loadingIndicator.hidesWhenStopped = true
+        loadingIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray
+        loadingIndicator.startAnimating();
             
-            alert.show()
+        alert.show()
             
-            // Delay the dismissal by 2 seconds
-            let delay = 5.0 * Double(NSEC_PER_SEC)
-            let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
-            dispatch_after(time, dispatch_get_main_queue(), {
-                alert.dismissWithClickedButtonIndex(-1, animated: true)
-            })
+        // Delay the dismissal by 5 seconds
+        let delay = 5.0 * Double(NSEC_PER_SEC)
+        let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+        dispatch_after(time, dispatch_get_main_queue(), {
+            alert.dismissWithClickedButtonIndex(-1, animated: true)
+        })
     }
 
     /*

@@ -149,7 +149,7 @@ class DropController: UIViewController, UITextFieldDelegate, UIPickerViewDelegat
                 
                 } else {
                     
-                    let id = String(depth) + String(diameter) + String(material)
+                    let id: String = String(depth) + String(depthFrac) + String(diameter) + String(diameterFrac) + String(flange) + String(flangeFrac)
                     let drop = Drop(quantity: Int(quantity)!,
                                      depth: Int(depth)!,
                                      depthFrac: depthFrac,
@@ -204,7 +204,7 @@ class DropController: UIViewController, UITextFieldDelegate, UIPickerViewDelegat
                     
                 } else {
                     
-                    let id = String(depth) + String(diameter) + String(material)
+                    let id: String = String(depth) + String(depthFrac) + String(diameter) + String(diameterFrac) + String(flange) + String(flangeFrac)
                     let drop = Drop(quantity: Int(quantity)!,
                                     depth: Int(depth)!,
                                     depthFrac: depthFrac,
