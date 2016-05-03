@@ -244,7 +244,258 @@ class ReviewController: UIViewController, UITableViewDelegate, UITableViewDataSo
             vc.segue_optional = String(optional)
         
             self.presentViewController(vc, animated: true, completion: nil)
-        } 
+        } else if (indexPath.section == 2) {
+            let vc = storyboard?.instantiateViewControllerWithIdentifier("Corners") as! CornerController
+            
+            let quantity = CORNERS[indexPath.row].quantity
+            let type = CORNERS[indexPath.row].type
+            let depth = CORNERS[indexPath.row].depth
+            let depthFrac = CORNERS[indexPath.row].depthFrac
+            let height = CORNERS[indexPath.row].height
+            let heightFrac = CORNERS[indexPath.row].heightFrac
+            let flange = CORNERS[indexPath.row].flange
+            let flangeFrac = CORNERS[indexPath.row].flangeFrac
+            let color = CORNERS[indexPath.row].color
+            let material = CORNERS[indexPath.row].material
+            let _optional = CORNERS[indexPath.row]._optional
+            
+            vc.segue_type = type
+            vc.segue_quantity = String(quantity)
+            vc.segue_depth = String(depth)
+            vc.segue_depthFrac = depthFrac
+            vc.segue_height = String(height)
+            vc.segue_heightFrac = heightFrac
+            vc.segue_flange = String(flange)
+            vc.segue_flangeFrac = flangeFrac
+            vc.segue_color = color
+            vc.segue_material = material
+            vc.segue_optional = _optional
+            
+            self.presentViewController(vc, animated: true, completion: nil)
+            
+        } else if (indexPath.section == 3) {
+            let vc = storyboard?.instantiateViewControllerWithIdentifier("Drop Scuppers") as! PipeController
+            
+            let quantity = PIPES[indexPath.row].quantity
+            let type = PIPES[indexPath.row].type
+            let height = PIPES[indexPath.row].height
+            let heightFrac = PIPES[indexPath.row].heightFrac
+            let diameter = PIPES[indexPath.row].diameter
+            let diameterFrac = PIPES[indexPath.row].diameterFrac
+            let flange = PIPES[indexPath.row].flange
+            let flangeFrac = PIPES[indexPath.row].flangeFrac
+            let color = PIPES[indexPath.row].color
+            let material = PIPES[indexPath.row].material
+            let _optional = PIPES[indexPath.row]._optional
+            
+            vc.segue_quantity = String(quantity)
+            vc.segue_type = type
+            vc.segue_height = String(height)
+            vc.segue_heightFrac = heightFrac
+            vc.segue_diameter = String(diameter)
+            vc.segue_diameterFrac = diameterFrac
+            vc.segue_flange = String(flange)
+            vc.segue_flangeFrac = flangeFrac
+            vc.segue_color = color
+            vc.segue_material = material
+            vc.segue_optional = _optional
+            
+            self.presentViewController(vc, animated: true, completion: nil)
+            
+        } else if (indexPath.section == 4) {
+            let vc = storyboard?.instantiateViewControllerWithIdentifier("Drop Scuppers") as! DropController
+            
+            let quantity = DROPS[indexPath.row].quantity
+            let depth = DROPS[indexPath.row].depth
+            let depthFrac = DROPS[indexPath.row].depthFrac
+            let diameter = DROPS[indexPath.row].diameter
+            let diameterFrac = DROPS[indexPath.row].diameterFrac
+            let flange = DROPS[indexPath.row].flange
+            let flangeFrac = DROPS[indexPath.row].flangeFrac
+            let color = DROPS[indexPath.row].color
+            let material = DROPS[indexPath.row].material
+            let _optional = DROPS[indexPath.row]._optional
+            
+            vc.segue_quantity = String(quantity)
+            vc.segue_depth = String(depth)
+            vc.segue_depthFrac = depthFrac
+            vc.segue_diameter = String(diameter)
+            vc.segue_diameterFrac = String(diameterFrac)
+            vc.segue_flange = String(flange)
+            vc.segue_flangeFrac = flangeFrac
+            vc.segue_color = color
+            vc.segue_material  = material
+            vc.segue_optional = _optional
+            
+            self.presentViewController(vc, animated: true, completion: nil)
+        
+        } else if (indexPath.section == 5) {
+            let vc = storyboard?.instantiateViewControllerWithIdentifier("Scuppers") as! ScupperController
+            
+            let quantity = SCUPPERS[indexPath.row].quantity
+            let type = SCUPPERS[indexPath.row].type
+            let depth = SCUPPERS[indexPath.row].depth
+            let depthFrac = SCUPPERS[indexPath.row].depthFrac
+            let length = SCUPPERS[indexPath.row].length
+            let lengthFrac = SCUPPERS[indexPath.row].lengthFrac
+            let width = SCUPPERS[indexPath.row].width
+            let widthFrac = SCUPPERS[indexPath.row].widthFrac
+            let flange = SCUPPERS[indexPath.row].flange
+            let flangeFrac = SCUPPERS[indexPath.row].flangeFrac
+            let color = SCUPPERS[indexPath.row].color
+            let material = SCUPPERS[indexPath.row].material
+            let _optional = SCUPPERS[indexPath.row]._optional
+            
+            vc.segue_quantity = String(quantity)
+            vc.segue_type = type
+            vc.segue_depth = String(depth)
+            vc.segue_depthFrac = depthFrac
+            vc.segue_length = String(length)
+            vc.segue_lengthFrac = lengthFrac
+            vc.segue_width = String(width)
+            vc.segue_widthFrac = widthFrac
+            vc.segue_flange = String(flange)
+            vc.segue_flangeFrac = flangeFrac
+            vc.segue_color = color
+            vc.segue_material = material
+            vc.segue_optional = _optional
+            
+            self.presentViewController(vc, animated: true, completion: nil)
+        }
+        if (indexPath.section == 6) {
+            let vc = storyboard?.instantiateViewControllerWithIdentifier("Pitch Pans") as! PansController
+            
+            let quantity = PANS[indexPath.row].quantity
+            let roundType = PANS[indexPath.row].roundType
+            let splitType = PANS[indexPath.row].splitType
+            let height = PANS[indexPath.row].height
+            let heightFrac = PANS[indexPath.row].heightFrac
+            let diameter = PANS[indexPath.row].diameter
+            let diameterFrac = PANS[indexPath.row].diameterFrac
+            let width = PANS[indexPath.row].width
+            let widthFrac = PANS[indexPath.row].widthFrac
+            let length = PANS[indexPath.row].length
+            let lengthFrac = PANS[indexPath.row].lengthFrac
+            let flange = PANS[indexPath.row].flange
+            let flangeFrac = PANS[indexPath.row].flangeFrac
+            let color = PANS[indexPath.row].color
+            let material = PANS[indexPath.row].material
+            let _optional = PANS[indexPath.row]._optional
+            
+            vc.segue_quantity = String(quantity)
+            vc.segue_round = roundType
+            vc.segue_split = splitType
+            vc.segue_height = String(height)
+            vc.segue_heightFrac = heightFrac
+            vc.segue_diameter = String(diameter)
+            vc.segue_diameterFrac = diameterFrac
+            vc.segue_width = String(width)
+            vc.segue_widthFrac = widthFrac
+            vc.segue_length = String(length)
+            vc.segue_lengthFrac = lengthFrac
+            vc.segue_flange = String(flange)
+            vc.segue_flangeFrac = flangeFrac
+            vc.segue_color = color
+            vc.segue_material = material
+            vc.segue_optional = _optional
+            
+            self.presentViewController(vc, animated: true, completion: nil)
+        } else if (indexPath.section == 7) {
+            let vc = storyboard?.instantiateViewControllerWithIdentifier("Tube Wraps") as! TubeController
+            
+            let quantity = TUBES[indexPath.row].quantity
+            let type = TUBES[indexPath.row].type
+            let length = TUBES[indexPath.row].length
+            let lengthFrac = TUBES[indexPath.row].lengthFrac
+            let width = TUBES[indexPath.row].width
+            let widthFrac = TUBES[indexPath.row].widthFrac
+            let height = TUBES[indexPath.row].height
+            let heightFrac = TUBES[indexPath.row].heightFrac
+            let flange = TUBES[indexPath.row].flange
+            let flangeFrac = TUBES[indexPath.row].flangeFrac
+            let color = TUBES[indexPath.row].color
+            let material = TUBES[indexPath.row].material
+            let _optional = TUBES[indexPath.row]._optional
+            
+            vc.segue_quantity = String(quantity)
+            vc.segue_type = type
+            vc.segue_length = String(length)
+            vc.segue_lengthFrac = lengthFrac
+            vc.segue_width = String(width)
+            vc.segue_widthFrac = widthFrac
+            vc.segue_height = String(height)
+            vc.segue_heightFrac = heightFrac
+            vc.segue_flange = String(flange)
+            vc.segue_flangeFrac = flangeFrac
+            vc.segue_color = color
+            vc.segue_material = material
+            
+            vc.segue_optional = _optional
+            
+            self.presentViewController(vc, animated: true, completion: nil)
+        } else if (indexPath.section == 8) {
+            let vc = storyboard?.instantiateViewControllerWithIdentifier("Curb Wraps") as! CurbsController
+            
+            let quantity = CURBS[indexPath.row].quantity
+            let type = CURBS[indexPath.row].type
+            let length = CURBS[indexPath.row].length
+            let lenghtFrac = CURBS[indexPath.row].lengthFrac
+            let width = CURBS[indexPath.row].width
+            let widhtFrac = CURBS[indexPath.row].widthFrac
+            let height = CURBS[indexPath.row].height
+            let heightFrac = CURBS[indexPath.row].heightFrac
+            let flange = CURBS[indexPath.row].flange
+            let flangeFrac = CURBS[indexPath.row].flangeFrac
+            let color = CURBS[indexPath.row].color
+            let material = CURBS[indexPath.row].material
+            let _optional = CURBS[indexPath.row]._optional
+            
+            vc.segue_quantity = String(quantity)
+            vc.segue_type = type
+            vc.segue_length = String(length)
+            vc.segue_lengthFrac = lenghtFrac
+            vc.segue_width = String(width)
+            vc.segue_widthFrac = widhtFrac
+            vc.segue_height = String(height)
+            vc.segue_heightFrac = heightFrac
+            vc.segue_flange = String(flange)
+            vc.segue_flangeFrac = flangeFrac
+            vc.segue_color = color
+            vc.segue_material = material
+            vc.segue_optional = _optional
+            
+            self.presentViewController(vc, animated: true, completion: nil)
+        } else if (indexPath.section == 9) {
+            let vc = storyboard?.instantiateViewControllerWithIdentifier("Sleeper Boxes") as! SleepersController
+            
+            let quantity = SLEEPERS[indexPath.row].quantity
+            let length = SLEEPERS[indexPath.row].length
+            let lengthFrac = SLEEPERS[indexPath.row].lengthFrac
+            let width = SLEEPERS[indexPath.row].width
+            let widthFrac = SLEEPERS[indexPath.row].widthFrac
+            let height = SLEEPERS[indexPath.row].height
+            let heightFrac = SLEEPERS[indexPath.row].heightFrac
+            let flange = SLEEPERS[indexPath.row].flange
+            let flangeFrac = SLEEPERS[indexPath.row].flangeFrac
+            let color = SLEEPERS[indexPath.row].color
+            let material = SLEEPERS[indexPath.row].material
+            let _optional = SLEEPERS[indexPath.row]._optional
+            
+            vc.segue_quantity = String(quantity)
+            vc.segue_height = String(height)
+            vc.segue_heightFrac = heightFrac
+            vc.segue_width = String(width)
+            vc.segue_widthFrac = widthFrac
+            vc.segue_height = String(height)
+            vc.segue_heightFrac = heightFrac
+            vc.segue_flange = String(flange)
+            vc.segue_flangeFrac = flangeFrac
+            vc.segue_color = color
+            vc.segue_material = material
+            vc.segue_optional = _optional
+            
+            self.presentViewController(vc, animated: true, completion: nil)
+        }
         
     }
     

@@ -12,7 +12,11 @@ import UIKit
 class StockConeController: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource {
 
     
-    var titles = ["Short A-Cone", "A-Cone", "B-Cone", "C-Cone", "D-Cone"]
+    var segue_titles = []
+    var segue_images = []
+    var segue_desc = []
+    var segue_numberOfRowsInSection: Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,34 +29,18 @@ class StockConeController: UIViewController, UITextFieldDelegate, UITableViewDel
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return segue_numberOfRowsInSection
     }
     
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("coneStockCell") as! StockConeCell
         
-        if (indexPath.row == 0) {
-            cell.coneStockImage.image = UIImage(named: "SAS_W_T")
-            cell.coneStockHeader.text = "Short A-Cone"
-            cell.coneStockDesc.text = ".25” Top Diameter, 4” Bottom Diameter, 5” Height, 5” Flange"
-        } else if (indexPath.row == 1) {
-            cell.coneStockImage.image = UIImage(named: "AS_W_T")
-            cell.coneStockHeader.text = "A-Cone"
-            cell.coneStockDesc.text = "1” Top Diameter, 5” Bottom Diameter, 10” Height, 5” Flange"
-        } else if (indexPath.row == 2) {
-            cell.coneStockImage.image = UIImage(named: "BS_W_T")
-            cell.coneStockHeader.text = "B-Cone"
-            cell.coneStockDesc.text = "2” Top Diameter, 6” Bottom Diameter, 12” Height, 6” Flange"
-        } else if (indexPath.row == 3){
-            cell.coneStockImage.image = UIImage(named: "CS_W_T")
-            cell.coneStockHeader.text = "C-Cone"
-            cell.coneStockDesc.text = "4” Top Diameter, 7” Bottom Diameter, 12” Height, 6” Flange"
-        } else if (indexPath.row == 4) {
-            cell.coneStockImage.image = UIImage(named: "DS_W_T")
-            cell.coneStockHeader.text = "D-Cone"
-            cell.coneStockDesc.text = "7” Top Diameter, 12” Bottom Diameter, 12” Height, 6” Flange"
-        }
+        
+        cell.coneStockImage.image = segue_images[indexPath.row] as? UIImage
+        cell.coneStockHeader.text = segue_titles[indexPath.row] as? String
+        cell.coneStockDesc.text = segue_desc[indexPath.row] as? String
+
         
         return cell
     }
@@ -69,7 +57,7 @@ class StockConeController: UIViewController, UITextFieldDelegate, UITableViewDel
             "\n\n Acme Cone works with all major manufacturerers and brands."
             
             
-        let alert: UIAlertView = UIAlertView(title: titles[indexPath.row], message: message , delegate: nil, cancelButtonTitle: "OK");
+        let alert: UIAlertView = UIAlertView(title: segue_titles[indexPath.row] as? String, message: message , delegate: nil, cancelButtonTitle: "OK");
         let loadingIndicator: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(50, 10, 37, 37)) as UIActivityIndicatorView
             
         loadingIndicator.center = self.view.center;

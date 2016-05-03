@@ -11,6 +11,7 @@ import Foundation
 struct Tube {
     var quantity: Int
     var type: String
+    
     var length: Int
     var lengthFrac: String
     var width: Int

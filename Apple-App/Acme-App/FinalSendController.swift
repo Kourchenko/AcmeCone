@@ -9,7 +9,6 @@ import Foundation
 import UIKit
 import MessageUI
 
-
 class FinalSendController: UIViewController, UITextFieldDelegate, MFMailComposeViewControllerDelegate {
     
     @IBOutlet weak var scrollView: UIScrollView!
@@ -25,7 +24,6 @@ class FinalSendController: UIViewController, UITextFieldDelegate, MFMailComposeV
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(StockController.keyboardWillShow(_:)), name: UIKeyboardWillShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(StockController.keyboardWillHide(_:)), name: UIKeyboardWillHideNotification, object: nil)
@@ -46,7 +44,6 @@ class FinalSendController: UIViewController, UITextFieldDelegate, MFMailComposeV
     }
     
     @IBAction func sendEmail(sender: AnyObject) {
-        print("Button Tapped!")
         let mailComposeView = configuredMailComposeViewController()
         if MFMailComposeViewController.canSendMail() {
             if ((!STOCK.isEmpty)
@@ -76,6 +73,7 @@ class FinalSendController: UIViewController, UITextFieldDelegate, MFMailComposeV
         let _recipients = emailTextField.text!
         let _subject = companyTextField.text! + ": Order Request"
         let _body = sendEmailHelper()
+        
         mailComposerVC.setToRecipients(["acmecone.acme@gmail.com", _recipients])
         mailComposerVC.setSubject(_subject)
         mailComposerVC.setMessageBody(_body, isHTML: false)
@@ -88,7 +86,6 @@ class FinalSendController: UIViewController, UITextFieldDelegate, MFMailComposeV
         let sendMailErrorAlert = UIAlertView(title: "Empty Cart!", message: "Nothing Ordered...", delegate: self, cancelButtonTitle: "OK")
         sendMailErrorAlert.show()
     }
-    
     
     
     func showSendMailErrorAlert() {
@@ -124,6 +121,7 @@ class FinalSendController: UIViewController, UITextFieldDelegate, MFMailComposeV
 
     }
     
+    
     // GATHER ORDER INTO ONE MESSAGE
     func sendEmailHelper() -> String {
         var finalString: String = ""
@@ -136,8 +134,8 @@ class FinalSendController: UIViewController, UITextFieldDelegate, MFMailComposeV
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "MM/dd/yyyy"
         let date = dateFormatter.stringFromDate(datePicker.date)
-        
-        
+
+
         finalString += "ORDER NEEDED: " + String(date)
         // GET ORDER
         // && USER_INFO

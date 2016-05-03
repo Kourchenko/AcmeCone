@@ -137,13 +137,14 @@
 			children = (
 				E52EC9861CCDE5D200723D5E /* ConeController.swift */,
 				E52EC98C1CCED2B800723D5E /* CornerController.swift */,
-				E52EC98E1CCFDB4200723D5E /* PipeController.swift */,
-				E52EC9901CCFDE9A00723D5E /* DropController.swift */,
-				E52EC9921CCFE13900723D5E /* ScupperController.swift */,
-				E52EC9941CCFE18C00723D5E /* TubeController.swift */,
-				E5B4D9141CD3BB3000EB645B /* PansController.swift */,
 				E5B4D9161CD4136200EB645B /* CurbsController.swift */,
+				E52EC9901CCFDE9A00723D5E /* DropController.swift */,
+				E5B4D9141CD3BB3000EB645B /* PansController.swift */,
+				E52EC98E1CCFDB4200723D5E /* PipeController.swift */,
+				E52EC9921CCFE13900723D5E /* ScupperController.swift */,
 				E5B4D9181CD4721100EB645B /* SleepersController.swift */,
+				E5B4D9101CD3340700EB645B /* StockConeController.swift */,
+				E52EC9941CCFE18C00723D5E /* TubeController.swift */,
 			);
 			name = CustomControllers;
 			sourceTree = "<group>";
@@ -182,21 +183,16 @@
 		E578DA751CADACBA00F87E93 /* Acme Cone */ = {
 			isa = PBXGroup;
 			children = (
+				E5CE1B201CD83AA00008DE36 /* MainViewControllers */,
+				E578DA761CADACBA00F87E93 /* AppDelegate.swift */,
+				E578DA7F1CADACBA00F87E93 /* Assets.xcassets */,
 				E52EC98B1CCEC7DD00723D5E /* CustomCells */,
 				E52EC98A1CCEC7CA00723D5E /* CustomControllers */,
-				E5F22BF11CADC57A008EB068 /* Items */,
-				E578DA761CADACBA00F87E93 /* AppDelegate.swift */,
-				E578DA7C1CADACBA00F87E93 /* Main.storyboard */,
-				E5EE4E591CD59A8700FCBA44 /* FinalSendController.swift */,
-				E5F22BE91CADB23D008EB068 /* ViewController.swift */,
-				E57311661CCAE81200720417 /* StockController.swift */,
-				E5F22C301CADE076008EB068 /* ReviewController.swift */,
-				E54380871CCDD6E300C1EDDB /* CustomController.swift */,
-				E578DA7F1CADACBA00F87E93 /* Assets.xcassets */,
-				E578DA811CADACBA00F87E93 /* LaunchScreen.storyboard */,
-				E578DA841CADACBA00F87E93 /* Info.plist */,
 				E5EAC31F1CCA87720091AE87 /* Images.xcassets */,
-				E5B4D9101CD3340700EB645B /* StockConeController.swift */,
+				E578DA841CADACBA00F87E93 /* Info.plist */,
+				E5F22BF11CADC57A008EB068 /* Items */,
+				E578DA811CADACBA00F87E93 /* LaunchScreen.storyboard */,
+				E578DA7C1CADACBA00F87E93 /* Main.storyboard */,
 			);
 			name = "Acme Cone";
 			path = "Acme-App";
@@ -220,6 +216,18 @@
 			);
 			name = AcmeUITests;
 			path = "Acme-AppUITests";
+			sourceTree = "<group>";
+		};
+		E5CE1B201CD83AA00008DE36 /* MainViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E54380871CCDD6E300C1EDDB /* CustomController.swift */,
+				E5EE4E591CD59A8700FCBA44 /* FinalSendController.swift */,
+				E5F22C301CADE076008EB068 /* ReviewController.swift */,
+				E57311661CCAE81200720417 /* StockController.swift */,
+				E5F22BE91CADB23D008EB068 /* ViewController.swift */,
+			);
+			name = MainViewControllers;
 			sourceTree = "<group>";
 		};
 		E5F22BF11CADC57A008EB068 /* Items */ = {

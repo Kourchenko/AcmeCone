@@ -286,5 +286,83 @@
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Acme-App/ViewController.swift"
+            timestampString = "483935794.857011"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "IMG_CONE(_:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Acme_Cone.ViewController.IMG_PIPE.getter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UIImageView&gt;"
+                  moduleName = "Acme Cone"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/diegok/Desktop/AcmeCone-master/Apple-App/Acme-App/ViewController.swift"
+                  timestampString = "483934841.706942"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "34">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Acme_Cone.ViewController.IMG_PIPE.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UIImageView&gt;"
+                  moduleName = "Acme Cone"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/diegok/Desktop/AcmeCone-master/Apple-App/Acme-App/ViewController.swift"
+                  timestampString = "483934841.707185"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "47">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Acme_Cone.ViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.NSBundle&gt;) -&gt; Acme_Cone.ViewController"
+                  moduleName = "Acme Cone"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/diegok/Desktop/AcmeCone-master/Apple-App/Acme-App/ViewController.swift"
+                  timestampString = "483934841.707313"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "317">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Acme_Cone.ViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;Acme_Cone.ViewController&gt;"
+                  moduleName = "Acme Cone"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/diegok/Desktop/AcmeCone-master/Apple-App/Acme-App/ViewController.swift"
+                  timestampString = "483934841.707435"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "207">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

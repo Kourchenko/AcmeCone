@@ -10,7 +10,10 @@ import UIKit
 private let reuseIdentifier = "cell"
 
 class ViewController: UIViewController {
-    @IBOutlet weak var IMG_CONE: UIImageView!
+    
+    @IBAction func IMG_CONE(sender: AnyObject) {
+        
+    }
     @IBOutlet weak var IMG_BOX: UIImageView!
     @IBOutlet weak var IMG_CORNER: UIImageView!
     
@@ -50,5 +53,19 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "coneSegue") {
+
+            let vc = StockConeController()
+            
+            vc.segue_numberOfRowsInSection = 2
+            vc.segue_titles = ["Short A-Cone", "A-Cone"]
+            vc.segue_images = [UIImage(named: "SAS_W_T")!, UIImage(named:"AS_W_T")!]
+            vc.segue_desc = ["Short", "A-Cone"]
+            
+            vc.performSegueWithIdentifier("coneSegue", sender: sender)
+            
+        }
+    }
 }
 
