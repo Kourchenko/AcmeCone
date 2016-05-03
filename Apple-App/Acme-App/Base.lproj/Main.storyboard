@@ -3651,7 +3651,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="next"/>
                                         <connections>
-                                            <action selector="quantityFieldChanged:" destination="x2U-DV-CDs" eventType="editingDidEnd" id="q2i-5d-sVJ"/>
+                                            <action selector="quantityFieldChanged:" destination="x2U-DV-CDs" eventType="editingChanged" id="eyE-ah-G3Q"/>
                                         </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="headTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P1h-oA-kwG">
@@ -3748,7 +3748,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="next"/>
                                         <connections>
-                                            <action selector="heightFieldChanged:" destination="x2U-DV-CDs" eventType="editingDidEnd" id="Jd3-n0-P0Y"/>
+                                            <action selector="heightFieldChanged:" destination="x2U-DV-CDs" eventType="editingChanged" id="kZM-zn-0yh"/>
                                         </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="headTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="duy-ov-eNP">
@@ -3801,7 +3801,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="next"/>
                                         <connections>
-                                            <action selector="widthFieldChanged:" destination="x2U-DV-CDs" eventType="editingDidEnd" id="yh1-os-BA5"/>
+                                            <action selector="widthFieldChanged:" destination="x2U-DV-CDs" eventType="editingChanged" id="GmW-2R-rBP"/>
                                         </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="headTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1X8-Px-9fk">
@@ -3854,7 +3854,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="next"/>
                                         <connections>
-                                            <action selector="lengthFieldChanged:" destination="x2U-DV-CDs" eventType="editingDidEnd" id="A37-AB-cAd"/>
+                                            <action selector="lengthFieldChanged:" destination="x2U-DV-CDs" eventType="editingChanged" id="Xkx-OI-EuX"/>
                                         </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="headTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cvo-p2-Sxm">
@@ -3907,7 +3907,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="next"/>
                                         <connections>
-                                            <action selector="flangeFieldChanged:" destination="x2U-DV-CDs" eventType="editingDidEnd" id="gV7-Bc-NlJ"/>
+                                            <action selector="flangeFieldChanged:" destination="x2U-DV-CDs" eventType="editingChanged" id="PCt-yz-tn2"/>
                                         </connections>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Color (Required)" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="iko-kn-em4">
@@ -3915,7 +3915,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" keyboardType="alphabet" returnKeyType="next"/>
                                         <connections>
-                                            <action selector="colorFieldChanged:" destination="x2U-DV-CDs" eventType="editingDidEnd" id="5sh-Y0-AQZ"/>
+                                            <action selector="colorFieldChanged:" destination="x2U-DV-CDs" eventType="editingChanged" id="MtO-ET-hjd"/>
                                         </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="headTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UqC-Bz-agN">
@@ -3948,7 +3948,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" keyboardType="alphabet" returnKeyType="done"/>
                                         <connections>
-                                            <action selector="materialFieldChanged:" destination="x2U-DV-CDs" eventType="editingDidEnd" id="J2I-OJ-8Mk"/>
+                                            <action selector="materialFieldChanged:" destination="x2U-DV-CDs" eventType="editingChanged" id="FFf-nz-i4m"/>
                                         </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="headTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IIg-Kw-g4s">
@@ -4129,7 +4129,7 @@
                     <connections>
                         <outlet property="_optionalTextField" destination="6xY-Sn-hUQ" id="Ggv-fy-Pxu"/>
                         <outlet property="colorLabel" destination="aI7-mK-xh4" id="992-0t-XWt"/>
-                        <outlet property="colorTextField" destination="iko-kn-em4" id="Ulk-6h-V6Z"/>
+                        <outlet property="colorTextField" destination="iko-kn-em4" id="7wY-Jg-kqo"/>
                         <outlet property="err_color" destination="UqC-Bz-agN" id="f3h-iZ-i4a"/>
                         <outlet property="err_flange" destination="Qmf-v5-eeR" id="syb-HR-H4a"/>
                         <outlet property="err_flange_int" destination="cvo-p2-Sxm" id="d9R-DO-RIL"/>
@@ -4144,21 +4144,21 @@
                         <outlet property="err_width_int" destination="duy-ov-eNP" id="x11-F5-usx"/>
                         <outlet property="flangeFracPicker" destination="hfR-UH-6VU" id="H42-qE-kdM"/>
                         <outlet property="flangeLabel" destination="vk8-ma-LzJ" id="fdw-Iv-nuo"/>
-                        <outlet property="flangeTextField" destination="ftV-mr-u8q" id="8JU-nk-LXA"/>
+                        <outlet property="flangeTextField" destination="ftV-mr-u8q" id="Heb-to-uID"/>
                         <outlet property="heightFracPicker" destination="KRG-pY-MFG" id="Pqm-xo-N8B"/>
                         <outlet property="heightLabel" destination="rgQ-MP-Ju4" id="OvF-BL-duB"/>
-                        <outlet property="heightTextField" destination="AAf-X2-slF" id="xzb-6Y-yMl"/>
+                        <outlet property="heightTextField" destination="AAf-X2-slF" id="zPy-6A-gBn"/>
                         <outlet property="lengthFracPicker" destination="DcD-cY-xMY" id="Fgu-Py-EkG"/>
                         <outlet property="lengthLabel" destination="Cen-GE-Lr9" id="N8N-OL-cVP"/>
-                        <outlet property="lengthTextField" destination="8Nt-Fn-k1h" id="sT2-XC-RLZ"/>
+                        <outlet property="lengthTextField" destination="8Nt-Fn-k1h" id="lEf-zp-Wzw"/>
                         <outlet property="materialLabel" destination="8iy-GJ-6nd" id="d30-XH-S1p"/>
-                        <outlet property="materialTextField" destination="idd-ef-qh3" id="AXH-JH-elg"/>
+                        <outlet property="materialTextField" destination="idd-ef-qh3" id="ydb-uG-ukK"/>
                         <outlet property="quantityLabel" destination="Gcn-E6-Igm" id="fdG-nX-UfH"/>
-                        <outlet property="quantityTextField" destination="DgS-Qv-GgG" id="4tm-Cr-Tk7"/>
+                        <outlet property="quantityTextField" destination="DgS-Qv-GgG" id="2mj-aX-PGn"/>
                         <outlet property="scrollView" destination="CC2-a9-jix" id="xgE-ex-vXw"/>
                         <outlet property="widthFracPicker" destination="df0-4i-Mre" id="7rp-Bc-QbP"/>
                         <outlet property="widthLabel" destination="2Wd-k9-UmX" id="L4T-N9-fQ7"/>
-                        <outlet property="widthTextField" destination="56K-yS-ZbM" id="eue-zT-RO5"/>
+                        <outlet property="widthTextField" destination="56K-yS-ZbM" id="ZEo-Nf-9qc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DbN-we-3zJ" userLabel="First Responder" sceneMemberID="firstResponder"/>

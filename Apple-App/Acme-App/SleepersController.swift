@@ -83,6 +83,8 @@ class SleepersController: UIViewController, UITextFieldDelegate, UIPickerViewDel
         err_width.hidden = true
         err_length.hidden = true
         err_flange.hidden = true
+        err_color.hidden = true
+        err_material.hidden = true
         
         if (segue_quantity == "") {
             quantityLabel.hidden = true
