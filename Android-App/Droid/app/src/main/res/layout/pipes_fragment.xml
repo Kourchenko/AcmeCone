@@ -52,13 +52,13 @@
 
                     <RadioButton
                         android:id="@+id/pipes_split"
-                        android:text="@string/split"
+                        android:text="@string/Split"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
 
                     <RadioButton
                         android:id="@+id/pipes_nonsplit"
-                        android:text="@string/non_split"
+                        android:text="@string/Non_Split"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
                 </RadioGroup>

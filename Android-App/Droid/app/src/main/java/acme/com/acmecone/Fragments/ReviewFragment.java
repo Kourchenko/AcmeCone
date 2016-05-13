@@ -20,10 +20,12 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.ConcurrentModificationException;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.Callable;
 
 
+import acme.com.acmecone.Adapters.ProductsAdapter;
 import acme.com.acmecone.Adapters.ViewAdapter;
 import acme.com.acmecone.R;
 import acme.com.acmecone.Adapters.ListViewAdapter;
@@ -34,8 +36,9 @@ import acme.com.acmecone.Utility.ConstantVar;
 public class ReviewFragment extends Fragment {
 
     private static final int TIME_TO_AUTOMATICALLY_DISMISS_ITEM = 3000;
-    public ListView listView;
-    private TextView listEmpty;
+    public ListView stockListView;
+    public ListView coneListView;
+    public ListView cornerListView;
     private Vibrator vib;
 
 
@@ -108,20 +111,27 @@ public class ReviewFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.review_fragment, container, false);
         final Context context = getActivity().getApplicationContext();
-        final MyBaseAdapter adapter = new MyBaseAdapter();
+        final MyBaseAdapter stockAdapter = new MyBaseAdapter();
+        final ConeBaseAdapter coneAdapter = new ConeBaseAdapter();
+        final CornerBaseAdapter cornerAdapter = new CornerBaseAdapter();
         vib = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
 
         // Resolved input keyboard layout below EditTexts && AutoCompleteTextViews
         getActivity().getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
 
-        listView = (ListView) view.findViewById(R.id.review_list_view);
-        listEmpty = (TextView) view.findViewById(R.id.review_empty_cart);
-        listView.setAdapter(adapter);
+        stockListView = (ListView) view.findViewById(R.id.review_list_view_stock);
+        coneListView = (ListView) view.findViewById(R.id.review_list_view_cones);
+        cornerListView = (ListView) view.findViewById(R.id.review_list_view_corners);
 
 
-        final SwipeToDismissTouchListener touchListener =
+        stockListView.setAdapter(stockAdapter);
+        coneListView.setAdapter(coneAdapter);
+        cornerListView.setAdapter(cornerAdapter);
+
+
+        final SwipeToDismissTouchListener stockTouchListener =
                 new SwipeToDismissTouchListener<>(
-                        new ListViewAdapter(listView),
+                        new ListViewAdapter(stockListView),
                         new SwipeToDismissTouchListener.DismissCallbacks() {
                             @Override
                             public boolean canDismiss(int position) {
@@ -135,26 +145,117 @@ public class ReviewFragment extends Fragment {
 
                             @Override
                             public void onDismiss(ViewAdapter recyclerView, int position) {
-                                adapter.remove(position);
+                                stockAdapter.remove(position);
                             }
                         });
 
-        touchListener.setDismissDelay(TIME_TO_AUTOMATICALLY_DISMISS_ITEM);
-        listView.setOnTouchListener(touchListener);
+        stockTouchListener.setDismissDelay(TIME_TO_AUTOMATICALLY_DISMISS_ITEM);
+        stockListView.setOnTouchListener(stockTouchListener);
 
-        listView.setOnScrollListener((AbsListView.OnScrollListener) touchListener.makeScrollListener());
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        stockListView.setOnScrollListener((AbsListView.OnScrollListener) stockTouchListener.makeScrollListener());
+        stockListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                if (touchListener.existPendingDismisses()) {
-                    touchListener.undoPendingDismiss();
+                if (stockTouchListener.existPendingDismisses()) {
+                    stockTouchListener.undoPendingDismiss();
                 } else {
-                    Toast.makeText(context, "IndexOf: " + position, Toast.LENGTH_LONG).show();
+                    // Intent
+                    ConstantVar.DATASET.get(position);
                 }
             }
         });
 
-        listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+        stockListView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                vib.vibrate(100);
+
+                return true;
+            }
+        });
+
+
+
+        final SwipeToDismissTouchListener coneTouchListener =
+                new SwipeToDismissTouchListener<>(
+                        new ListViewAdapter(coneListView),
+                        new SwipeToDismissTouchListener.DismissCallbacks() {
+                            @Override
+                            public boolean canDismiss(int position) {
+                                return true;
+                            }
+
+                            @Override
+                            public void onPendingDismiss(ViewAdapter recyclerView, int position) {
+
+                            }
+
+                            @Override
+                            public void onDismiss(ViewAdapter recyclerView, int position) {
+                                coneAdapter.remove(position);
+                            }
+                        });
+
+        coneTouchListener.setDismissDelay(TIME_TO_AUTOMATICALLY_DISMISS_ITEM);
+        coneListView.setOnTouchListener(coneTouchListener);
+
+        coneListView.setOnScrollListener((AbsListView.OnScrollListener) coneTouchListener.makeScrollListener());
+        coneListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                if (coneTouchListener.existPendingDismisses()) {
+                    coneTouchListener.undoPendingDismiss();
+                } else {
+                    // Intent;
+                }
+            }
+        });
+
+        coneListView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                vib.vibrate(100);
+
+                return true;
+            }
+        });
+
+        final SwipeToDismissTouchListener cornerTouchListener =
+                new SwipeToDismissTouchListener<>(
+                        new ListViewAdapter(cornerListView),
+                        new SwipeToDismissTouchListener.DismissCallbacks() {
+                            @Override
+                            public boolean canDismiss(int position) {
+                                return true;
+                            }
+
+                            @Override
+                            public void onPendingDismiss(ViewAdapter recyclerView, int position) {
+
+                            }
+
+                            @Override
+                            public void onDismiss(ViewAdapter recyclerView, int position) {
+                                cornerAdapter.remove(position);
+                            }
+                        });
+
+        cornerTouchListener.setDismissDelay(TIME_TO_AUTOMATICALLY_DISMISS_ITEM);
+        cornerListView.setOnTouchListener(cornerTouchListener);
+
+        cornerListView.setOnScrollListener((AbsListView.OnScrollListener) cornerTouchListener.makeScrollListener());
+        cornerListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                if (cornerTouchListener.existPendingDismisses()) {
+                    cornerTouchListener.undoPendingDismiss();
+                } else {
+                    // Intent;
+                }
+            }
+        });
+
+        cornerListView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
                 vib.vibrate(100);
@@ -179,6 +280,7 @@ public class ReviewFragment extends Fragment {
 
 
     static class MyBaseAdapter extends BaseAdapter {
+
         MyBaseAdapter() {
         }
 
@@ -242,6 +344,110 @@ public class ReviewFragment extends Fragment {
         }
     }
 
+    static class ConeBaseAdapter extends BaseAdapter {
+        ConeBaseAdapter() {
+        }
+
+        @Override
+        public int getCount() {
+            return ConstantVar.CONES.size();
+        }
+
+        @Override
+        public String getItem(int position) {
+            return ConstantVar.CONES.get(position).quantity + ": " + ConstantVar.CONES.get(position).type + " " + ConstantVar.CONES.get(position).top + " T";
+        }
+
+        @Override
+        public long getItemId(int position) {
+            return position;
+        }
+
+        public void remove(int position) {
+            try {
+
+                ConstantVar.CONES.remove(position);
+
+
+            } catch (ConcurrentModificationException e) {
+                System.out.println("CurrentModificationException : " + e);
+            } finally {
+                notifyDataSetChanged();
+            }
+        }
+        static class ViewHolder {
+            TextView dataTextView;
+            ViewHolder(View view) {
+                dataTextView = (TextView) view.findViewById(R.id.txt_data);
+                view.setTag(this);
+            }
+        }
+
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+
+            ViewHolder viewHolder = convertView == null
+                    ? new ViewHolder(convertView = LayoutInflater.from(parent.getContext())
+                    .inflate(R.layout.review_list_item, parent, false))
+                    : (ViewHolder) convertView.getTag();
+
+            viewHolder.dataTextView.setText(ConstantVar.CONES.get(position).quantity + ": " + ConstantVar.CONES.get(position).type + " " + ConstantVar.CONES.get(position).type + " T");
+            return convertView;
+        }
+    }
+
+
+    static class CornerBaseAdapter extends BaseAdapter {
+        CornerBaseAdapter() {
+        }
+
+        @Override
+        public int getCount() {
+            return ConstantVar.CORNERS.size();
+        }
+
+        @Override
+        public String getItem(int position) {
+            return ConstantVar.CORNERS.get(position).quantity + ": " + ConstantVar.CORNERS.get(position).type + " " + ConstantVar.CORNERS.get(position).height + " H";
+        }
+
+        @Override
+        public long getItemId(int position) {
+            return position;
+        }
+
+        public void remove(int position) {
+            try {
+
+                ConstantVar.CORNERS.remove(position);
+
+
+            } catch (ConcurrentModificationException e) {
+                System.out.println("CurrentModificationException : " + e);
+            } finally {
+                notifyDataSetChanged();
+            }
+        }
+        static class ViewHolder {
+            TextView dataTextView;
+            ViewHolder(View view) {
+                dataTextView = (TextView) view.findViewById(R.id.txt_data);
+                view.setTag(this);
+            }
+        }
+
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+
+            ViewHolder viewHolder = convertView == null
+                    ? new ViewHolder(convertView = LayoutInflater.from(parent.getContext())
+                    .inflate(R.layout.review_list_item, parent, false))
+                    : (ViewHolder) convertView.getTag();
+
+            viewHolder.dataTextView.setText(ConstantVar.CORNERS.get(position).quantity + ": " + ConstantVar.CORNERS.get(position).type + " " + ConstantVar.CORNERS.get(position).height + " H");
+            return convertView;
+        }
+    }
 }
 
 

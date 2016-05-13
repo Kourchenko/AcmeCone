@@ -4,8 +4,10 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:id="@+id/lyt_container"
-    android:background="@color/grey_700"
-    android:layout_margin="10dp">
+    android:layout_margin="5dp"
+    android:elevation="5dp"
+    android:translationZ="5dp"
+    android:background="@android:color/darker_gray">
 
     <TextView
         android:layout_width="match_parent"

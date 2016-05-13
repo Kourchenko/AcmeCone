@@ -4,35 +4,27 @@
     <string name="drawer_close">Menu closed</string>
 
     <!-- Settings -->
-    <string name="action_settings">Login</string>
-    <string name="action_help">Register</string>
 
 
     <!-- Home Fragment -->
 
+
     <!-- Stock Fragment -->
-    <string name="err_msg_name">Enter name</string>
-    <string name="err_msg_email">Enter email</string>
-    <string name="err_msg_company">Enter company</string>
-    <string name="err_msg_manuf">Enter manufacturer</string>
-    <string name="submit">Submit</string>
-    <string name="review_order">Review Order</string>
+    <string name="Stock">STOCK</string>
+    <string name="text_stock_autocomplete">Cone, RVO, Corners (Auto-Complete)</string>
+    <string name="Split">Split</string>
+    <string name="Non_Split">Non-Split</string>
 
-    <string name="stock_autocomplete">Cone, RVO, Corners (Auto-Complete)</string>
-    <string name="split">Split</string>
-    <string name="non_split">Non-Split</string>
-
-    <!-- Stock Menu -->
 
     <!-- Review Fragment -->
-    <string name="review_empty_cart">You have no items in cart.</string>
     <string name="undo">Undo</string>
     <string name="deleted">Deleted</string>
 
+
     <!-- Custom Fragment -->
 
-    <!-- Checkout Fragment -->
 
+    <!-- Checkout Fragment -->
 
 
     <!-- About Us-->
@@ -71,11 +63,6 @@
     <string name="register_registration">Register Account</string>
     <string name="register_signIn">Already have an account? Sign In</string>
 
-    <!-- Order Form -->
-    <string name="orderform_orderB">Click to Place Order</string>
-    <string name="orderform_item">Stock Items</string>
-    <string name="orderform_addToOrder">Add to Order</string>
-
 
     <string name="optional_notes">Notes (Optional)</string>
     <string name="color">Color</string>
@@ -90,6 +77,7 @@
     <string name="bot_diameter">Bottom Diameter</string>
     <string name="diameter">Diameter</string>
     <string name="fractions">Fractions</string>
+    <string name="orderform_addToOrder">Add To Order</string>
 
     <string-array name="fractions">
         <item>1/8</item>
@@ -103,7 +91,7 @@
 
 
     <!-- Cones Description -->
-    <string name="product_cones">Cones</string>
+    <string name="Cones">CONES</string>
     <string name="product_cones_text">Our Cones are available in both split and non-split versions.
                                 Available in TPO(white/grey) and PVC(white/grey).
     </string>
@@ -140,6 +128,7 @@
                                     \n 6” Flange</string>
 
     <!-- Boxes Description -->
+    <string name="Boxes">BOXES</string>
     <string name="boxes_text">Custom Made Boxes</string>
     <string name="boxes_curbwrap">Curb Wraps</string>
     <string name="boxes_curbwrap_desc">Curb wraps can be made split, non-split, 2 piece, and 4 piece.
@@ -149,7 +138,8 @@
                                     order for your specific needs.
     </string>
 
-    <string name="boxes_sleeper">Sleepers</string>
+    <string name="Sleepers">SLEEPERS</string>
+    <string name="boxes_sleeper">Custom Sleepers</string>
     <string name="boxes_sleeper_desc">Closed top sleeper boxes are available by request in any size.
                                     Great for equipment platforms or blocks and when combined with
                                     a support they can be utilized as snow guards.
@@ -178,6 +168,7 @@
     </string>
 
     <!-- Pipe Wraps Description -->
+    <string name="Pipe_Wraps">PIPE WRAPS</string>
     <string name="custom_pipes">Custom Pipe Wraps</string>
     <string name="pipewrap_text">Pipe Wraps</string>
     <string name="pipewrap_split">Pipe Wrap Split</string>
@@ -193,6 +184,7 @@
 
 
     <!-- Drain Scuppers -->
+    <string name="Drop_Scuppers">DROP SCUPPERS</string>
     <string name="custom_drains">Custom Drop Scuppers</string>
     <string name="drains_two_drop">2\" Drop Scupper</string>
     <string name="drains_two_drop_desc"><b>Dimensions:</b>
@@ -248,6 +240,7 @@
     <string name="metal_gravel">Gravel Stop</string>
 
     <!-- Scuppers -->
+    <string name="Scuppers">SCUPPERS</string>
     <string name="custom_scuppers">Custom Scuppers</string>
     <string name="scuppers_notes">(Optional) Notes: ThruDeck, ThruWall, 45˚ Cant</string>
     <string name="scuppers_tw_four">4" ThruWall Scupper</string>
@@ -278,6 +271,7 @@
 
 
     <!-- Pitch Pans -->
+    <string name="Pitch_Pans">PITCH PANS</string>
     <string name="pitchpans">Custom Pitch Pans</string>
     <string name="pitchpans_open">Pitch Pans</string>
     <string name="pitchpans_closed">Pitch Pans</string>
@@ -289,6 +283,7 @@
     </string>
 
     <!-- Tube Wraps Description -->
+    <string name="Tube_Wraps">TUBE WRAPS</string>
     <string name="tubewraps">Custom Tube Wraps</string>
     <string name="tubewraps_title">Tube Wraps</string>
     <string name="tubewrap_split">Tube Wrap Split</string>
@@ -311,7 +306,6 @@
     <!-- Boxes -->
     <string name="custom_boxes">Custom Curb Wraps</string>
     <string name="custom_sleepers">Custom Sleeper Boxes</string>
-
 
 
     <!-- Inventory :: START-->
@@ -381,7 +375,7 @@
     <string name="BV1_G_P">1-Way Breather Vent Grey PVC</string>
 
     <!-- Corners -->
-    <string name="Corners">Corners</string>
+    <string name="Corners">CORNERS</string>
         <!--Inside-->
     <string name="IC_W_T">[INSIDE] Corner White TPO</string>
     <string name="IC_G_T">[INSIDE] Corner Grey TPO</string>

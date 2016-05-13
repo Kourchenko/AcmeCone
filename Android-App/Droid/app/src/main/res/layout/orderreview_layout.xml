@@ -39,7 +39,7 @@
 
                 <Button
                     android:id="@+id/review_submit"
-                    android:text="@string/submit"
+                    android:text="Submit"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"

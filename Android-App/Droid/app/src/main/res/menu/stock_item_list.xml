@@ -433,17 +433,17 @@
             <item
                 android:id="@+id/RPP9GT"
                 android:icon="@drawable/ic_text_pans"
-                android:title="@string/RPP6_G_T" />
+                android:title="@string/RPP9_G_T" />
 
             <item
                 android:id="@+id/RPP9WP"
                 android:icon="@drawable/ic_text_pans"
-                android:title="@string/RPP6_W_P" />
+                android:title="@string/RPP9_W_P" />
 
             <item
                 android:id="@+id/RPP9GP"
                 android:icon="@drawable/ic_text_pans"
-                android:title="@string/RPP6_G_P" />
+                android:title="@string/RPP9_G_P" />
 
             <item
                 android:id="@+id/RPP12WT"
@@ -464,6 +464,65 @@
                 android:id="@+id/RPP12GP"
                 android:icon="@drawable/ic_text_pans"
                 android:title="@string/RPP12_G_P" />
+
+            <item
+                android:id="@+id/SPP6WT"
+                android:icon="@drawable/ic_text_pans"
+                android:title="@string/SPP6_W_T" />
+
+            <item
+                android:id="@+id/SPP6GT"
+                android:icon="@drawable/ic_text_pans"
+                android:title="@string/SPP6_G_T" />
+
+            <item android:id="@+id/SPP6WP"
+                android:icon="@drawable/ic_text_pans"
+                android:title="@string/SPP6_W_P" />
+
+            <item
+                android:id="@+id/SPP6GP"
+                android:icon="@drawable/ic_text_pans"
+                android:title="@string/SPP6_G_P" />
+
+
+            <item
+                android:id="@+id/SPP9WT"
+                android:icon="@drawable/ic_text_pans"
+                android:title="@string/SPP9_W_T" />
+
+            <item
+                android:id="@+id/SPP9GT"
+                android:icon="@drawable/ic_text_pans"
+                android:title="@string/SPP9_G_T" />
+
+            <item android:id="@+id/SPP9WP"
+                android:icon="@drawable/ic_text_pans"
+                android:title="@string/SPP9_W_P" />
+
+            <item
+                android:id="@+id/SPP9GP"
+                android:icon="@drawable/ic_text_pans"
+                android:title="@string/SPP9_G_P" />
+
+
+            <item
+                android:id="@+id/SPP12WT"
+                android:icon="@drawable/ic_text_pans"
+                android:title="@string/SPP12_W_T" />
+
+            <item
+                android:id="@+id/SPP12GT"
+                android:icon="@drawable/ic_text_pans"
+                android:title="@string/SPP12_G_T" />
+
+            <item android:id="@+id/SPP12WP"
+                android:icon="@drawable/ic_text_pans"
+                android:title="@string/SPP12_W_P" />
+
+            <item
+                android:id="@+id/SPP12GP"
+                android:icon="@drawable/ic_text_pans"
+                android:title="@string/SPP12_G_P" />
 
         </menu>
     </item>

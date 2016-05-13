@@ -34,7 +34,6 @@ public class StockFragment extends Fragment implements NavigationView.OnNavigati
     private EditText stock_edit_quantity;
     private AutoCompleteTextView stock_edit_text;
     private Vibrator vib;
-    private int i = 0;
 
     private static final String[] STOCK_ITEMS = new String[]{
             // RVOs
@@ -147,7 +146,6 @@ public class StockFragment extends Fragment implements NavigationView.OnNavigati
         stock_edit_quantity = (EditText) view.findViewById(R.id.stock_edit_quantity);
         stock_edit_text = (AutoCompleteTextView) view.findViewById(R.id.stock_edit_field);
         stockB = (Button) view.findViewById(R.id.stock_add_button);
-
 
         stockB.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -405,9 +403,6 @@ public class StockFragment extends Fragment implements NavigationView.OnNavigati
                 builderTools(builder, inflater, "[SPLIT] C Cone Grey PVC");
                 break;
 
-
-
-
             case R.id.stock_BV1WT:
                 builderTools(builder, inflater, "1-Way Breather Vent White TPO");
                 break;
@@ -552,7 +547,99 @@ public class StockFragment extends Fragment implements NavigationView.OnNavigati
                 builderTools(builder, inflater, "6\"X6\" ThruWall Scupper Grey PVC");
                 break;
 
+            case R.id.RPP6WT:
+                builderTools(builder, inflater, "[ROUND] Pitch Pan 6\" White TPO");
+                break;
 
+            case R.id.RPP6GT:
+                builderTools(builder, inflater, "[ROUND] Pitch Pan 6\" Grey TPO");
+                break;
+
+            case R.id.RPP6WP:
+                builderTools(builder, inflater, "[ROUND] Pitch Pans 6\" White PVC");
+                break;
+
+            case R.id.RPP6GP:
+                builderTools(builder, inflater, "[ROUND] Pitch Pans 6\" Grey PVC");
+                break;
+
+            case R.id.RPP9WT:
+                builderTools(builder, inflater, "[ROUND] Pitch Pans 9\" White TPO");
+                break;
+
+            case R.id.RPP9GT:
+                builderTools(builder, inflater, "[ROUND] Pitch Pans 9\" Grey TPO");
+                break;
+
+            case R.id.RPP9WP:
+                builderTools(builder, inflater, "[ROUND] Pitch Pans 9\" White PVC");
+                break;
+
+            case R.id.RPP9GP:
+                builderTools(builder, inflater, "[ROUND] Pitch Pans 9\" Grey PVC");
+                break;
+
+            case R.id.RPP12WT:
+                builderTools(builder, inflater, "[ROUND] Pitch Pans 12\" White TPO");
+                break;
+
+            case R.id.RPP12GT:
+                builderTools(builder, inflater, "[ROUND] Pitch Pans 12\" Grey TPO");
+                break;
+
+            case R.id.RPP12WP:
+                builderTools(builder, inflater, "[ROUND] Pitch Pans 12\" White PVC");
+                break;
+
+            case R.id.RPP12GP:
+                builderTools(builder, inflater, "[ROUND] Pitch Pans 12\" Grey PVC");
+                break;
+
+            case R.id.SPP6WT:
+                builderTools(builder, inflater, "[SQUARE] Pitch Pans 6\" White TPO");
+                break;
+
+            case R.id.SPP6GT:
+                builderTools(builder, inflater, "[SQUARE] Pitch Pans 6\" Grey TPO");
+                break;
+
+            case R.id.SPP6WP:
+                builderTools(builder, inflater, "[SQUARE] Pitch Pans 6\" White PVC");
+                break;
+
+            case R.id.SPP6GP:
+                builderTools(builder, inflater, "[SQUARE] Pitch Pans 6\" Grey PVC");
+
+            case R.id.SPP9WT:
+                builderTools(builder, inflater, "[SQUARE] Pitch Pans 9\" White TPO");
+                break;
+
+            case R.id.SPP9GT:
+                builderTools(builder, inflater, "[SQUARE] Pitch Pans 9\" Grey TPO");
+                break;
+
+            case R.id.SPP9WP:
+                builderTools(builder, inflater, "[SQUARE] Pitch Pans 9\" White PVC");
+                break;
+
+            case R.id.SPP9GP:
+                builderTools(builder, inflater, "[SQUARE] Pitch Pans 9\" Grey PVC");
+                break;
+
+            case R.id.SPP12WT:
+                builderTools(builder, inflater, "[SQUARE] Pitch Pans 12\" White TPO");
+                break;
+
+            case R.id.SPP12GT:
+                builderTools(builder, inflater, "[SQUARE] Pitch Pans 12\" Grey TPO");
+                break;
+
+            case R.id.SPP12WP:
+                builderTools(builder, inflater, "[SQUARE] Pitch Pans 12\" White PVC");
+                break;
+
+            case R.id.SPP12GP:
+                builderTools(builder, inflater, "[SQUARE] Pitch Pans 12\" Grey PVC");
         }
 
         return true;

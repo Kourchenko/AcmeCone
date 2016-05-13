@@ -4,7 +4,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="4dp"
+    android:layout_margin="3dp"
     android:elevation="3dp"
     android:translationZ="3dp"
     android:background="#ffffff"
@@ -12,17 +12,18 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:padding="5dp">
         <ImageView
             android:id="@+id/custom_row_img"
-            android:layout_width="75dp"
-            android:layout_height="75dp" />
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
 
         <RelativeLayout
             android:layout_toEndOf="@id/custom_row_img"
             android:layout_toRightOf="@id/custom_row_img"
             android:layout_width="fill_parent"
-            android:layout_height="75dp">
+            android:layout_height="50dp">
 
             <TextView
                 android:id="@+id/custom_row_txt"

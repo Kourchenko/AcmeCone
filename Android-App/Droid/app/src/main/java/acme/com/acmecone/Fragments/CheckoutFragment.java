@@ -86,68 +86,67 @@ public class CheckoutFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 if (viewB.getVisibility() == View.VISIBLE) {
-
                     try {
 
 
-                    if (getView() != null && ConstantVar.REVIEW_DATABASE.isEmpty()) {
-                        final InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
-                        imm.hideSoftInputFromWindow(getView().getWindowToken(), 0);
-                    } else {
-                        final String mName = name.getText().toString();
-                        final String mEmail = email.getText().toString();
-                        final String mCompany = company.getText().toString();
-                        final String mPhone = phone.getText().toString();
-                        final String mManufacturer = manufacturer.getText().toString();
-                        final String mNotes = optional_note.getText().toString();
-                        SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
-                        final String selectedDate = sdf.format(new Date(calendar.getDate()));
+                        if ((getView() != null) && ConstantVar.REVIEW_DATABASE.isEmpty()) {
+                            final InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
+                            imm.hideSoftInputFromWindow(getView().getWindowToken(), 0);
+                        } else {
+                            final String mName = name.getText().toString();
+                            final String mEmail = email.getText().toString();
+                            final String mCompany = company.getText().toString();
+                            final String mPhone = phone.getText().toString();
+                            final String mManufacturer = manufacturer.getText().toString();
+                            final String mNotes = optional_note.getText().toString();
+                            SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
+                            final String selectedDate = sdf.format(new Date(calendar.getDate()));
 
-                        if (!mName.isEmpty()
-                                || !mEmail.isEmpty()
-                                || !mCompany.isEmpty()
-                                || !mPhone.isEmpty()
-                                || !mManufacturer.isEmpty()
-                                || !mNotes.isEmpty()) {
+                            if (!mName.isEmpty()
+                                    || !mEmail.isEmpty()
+                                    || !mCompany.isEmpty()
+                                    || !mPhone.isEmpty()
+                                    || !mManufacturer.isEmpty()
+                                    || !mNotes.isEmpty()) {
 
-                            if (!ConstantVar.REVIEW_DATABASE.isEmpty()) {
-                                new AsyncTask<Void, Void, Void>() {
-                                    @Override
-                                    public Void doInBackground(Void... arg) {
-                                        try {
-                                            String orderString = "";
-                                            String orderInfo = mName + "\n"
-                                                    + mEmail + "\n"
-                                                    + mCompany + "\n"
-                                                    + mPhone + "\n"
-                                                    + mManufacturer + "\n";
+                                if (!ConstantVar.REVIEW_DATABASE.isEmpty()) {
+                                    new AsyncTask<Void, Void, Void>() {
+                                        @Override
+                                        public Void doInBackground(Void... arg) {
+                                            try {
+                                                String orderString = "";
+                                                String orderInfo = mName + "\n"
+                                                        + mEmail + "\n"
+                                                        + mCompany + "\n"
+                                                        + mPhone + "\n"
+                                                        + mManufacturer + "\n";
 
-                                            for (String type: ConstantVar.DATASET) {
-                                                orderString += type + "\n";
+                                                for (String type : ConstantVar.DATASET) {
+                                                    orderString += type + "\n";
+                                                }
+
+                                                final String allTogether = "Date Needed: " + selectedDate + "\n\n" + "STOCK: \n" + orderString + "\n\n" + orderInfo;
+
+                                                GMailSender sender = new GMailSender("acmecone.acme@gmail.com", "Acmecone97402");
+                                                sender.sendMail(mCompany + "ordered!", allTogether, mEmail, "acmecone.acme@gmail.com, " + mEmail);
+
+                                                Snackbar.make(container, "Successfully Sent Message!", Snackbar.LENGTH_LONG).show();
+
+                                            } catch (Exception e) {
+                                                vib.vibrate(50);
+                                                Log.e("SendMail", e.getMessage(), e);
                                             }
 
-                                            final String allTogether = "Date Needed: " + selectedDate + "\n\n" + "STOCK: \n" + orderString + "\n\n" + orderInfo;
-
-                                            GMailSender sender = new GMailSender("acmecone.acme@gmail.com", "Acmecone97402");
-                                            sender.sendMail(mCompany + "ordered!", allTogether, mEmail, "acmecone.acme@gmail.com, " + mEmail);
-
-                                            Snackbar.make(container, "Successfully Sent Message!", Snackbar.LENGTH_LONG).show();
-
-                                        } catch (Exception e) {
-                                            vib.vibrate(50);
-                                            Log.e("SendMail", e.getMessage(), e);
+                                            return null;
                                         }
+                                    }.execute();
 
-                                        return null;
-                                    }
-                                }.execute();
-
-                            } else {
-                                vib.vibrate(50);
+                                } else {
+                                    vib.vibrate(50);
+                                }
                             }
                         }
-                    }
-                } finally {
+                    } finally {
                         fab_calendar.setVisibility(View.VISIBLE);
                         viewB.setVisibility(View.GONE);
                         fab_orderform.setVisibility(View.GONE);

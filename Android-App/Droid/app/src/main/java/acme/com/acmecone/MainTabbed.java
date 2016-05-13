@@ -6,8 +6,11 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.MotionEvent;
+import android.view.View;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,21 +42,31 @@ public class MainTabbed extends AppCompatActivity {
 
         mTabLayout = (TabLayout) findViewById(R.id.main_tabs);
         mTabLayout.setupWithViewPager(mViewPager);
-
+        mTabLayout.getTabAt(0).setIcon(R.drawable.ic_home_white_24dp);
+        mTabLayout.getTabAt(1).setIcon(R.drawable.ic_list_white_24dp);
+        mTabLayout.getTabAt(2).setIcon(R.drawable.ic_add_white_24dp);
+        mTabLayout.getTabAt(3).setIcon(R.drawable.ic_border_color_white_24dp);
+        mTabLayout.getTabAt(4).setIcon(R.drawable.ic_exit_to_app_white_24dp);
+        mTabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
     }
 
     public void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(new HomeActivity(), "HOME");
-        adapter.addFragment(new StockFragment(), "STOCK");
-        adapter.addFragment(new ReviewFragment(), "REVIEW");
-        adapter.addFragment(new CustomFragment(), "CUSTOM");
-        adapter.addFragment(new CheckoutFragment(), "CHECKOUT");
+        adapter.addFragment(new HomeActivity(), "");
+        adapter.addFragment(new ReviewFragment(), "");
+        adapter.addFragment(new StockFragment(), "");
+        adapter.addFragment(new CustomFragment(), "");
+        adapter.addFragment(new CheckoutFragment(), "");
 
 
         viewPager.setAdapter(adapter);
-
+        viewPager.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                return true;
+            }
+        });
     }
 
     class ViewPagerAdapter extends FragmentPagerAdapter {
@@ -62,6 +75,7 @@ public class MainTabbed extends AppCompatActivity {
 
         public ViewPagerAdapter(FragmentManager manager) {
             super(manager);
+
         }
 
         @Override
@@ -83,5 +97,6 @@ public class MainTabbed extends AppCompatActivity {
         public CharSequence getPageTitle(int position) {
             return mFragmentTitleList.get(position);
         }
+
     }
 }

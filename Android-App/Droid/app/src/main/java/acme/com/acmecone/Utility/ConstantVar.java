@@ -3,9 +3,13 @@ package acme.com.acmecone.Utility;
 import android.util.ArrayMap;
 import android.widget.ArrayAdapter;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+
+import acme.com.acmecone.Cone;
+import acme.com.acmecone.Corner;
 
 public class ConstantVar {
 
@@ -27,6 +31,8 @@ public class ConstantVar {
     public static final Map<String, String> SEND_DATABASE = new HashMap<>();
     public static final Map<Integer, String> REVIEW_DATABASE = new HashMap<>();
     public static final ArrayList<String> DATASET = new ArrayList<>();
+    public static final ArrayList<Cone> CONES = new ArrayList<>();
+    public static final ArrayList<Corner> CORNERS = new ArrayList<>();
 
     public static final String[] MATERIALS = new String[] {
             "TPO 60mil", "PVC 60mil",
@@ -36,6 +42,7 @@ public class ConstantVar {
     public static final String[] COLORS = new String[] {
             "WHITE", "GREY"
     };
+
     public static String ORDER_MESSAGE = "";
 
 
