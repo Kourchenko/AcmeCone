@@ -1,6 +1,5 @@
 package acme.com.acmecone.Items;
 
-
 public class Cone {
 
     public String type;

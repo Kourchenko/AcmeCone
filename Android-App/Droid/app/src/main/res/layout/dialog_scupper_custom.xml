@@ -36,30 +36,6 @@
         android:layout_height="wrap_content">
 
         <EditText
-            android:id="@+id/scupper_text_height"
-            android:hint="@string/height"
-            android:imeOptions="actionNext"
-            android:inputType="number"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"/>
-
-        <Spinner
-            android:id="@+id/scupper_menu_height_spinner"
-            android:layout_toRightOf="@id/scupper_text_height"
-            android:layout_toEndOf="@id/scupper_text_height"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <EditText
             android:id="@+id/scupper_text_depth"
             android:hint="@string/depth"
             android:imeOptions="actionNext"
@@ -85,7 +61,7 @@
 
         <EditText
             android:id="@+id/scupper_text_width"
-            android:hint="@string/height"
+            android:hint="@string/width"
             android:imeOptions="actionNext"
             android:inputType="number"
             android:layout_width="200dp"

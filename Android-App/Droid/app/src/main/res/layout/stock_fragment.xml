@@ -10,7 +10,7 @@
         android:id="@+id/stock_edit_quantity"
         android:hint="@string/quantity"
         android:inputType="number"
-        android:layout_width="100dp"
+        android:layout_width="200dp"
         android:layout_height="wrap_content" />
 
     <AutoCompleteTextView

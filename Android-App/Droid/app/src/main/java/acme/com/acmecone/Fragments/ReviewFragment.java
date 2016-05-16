@@ -14,6 +14,7 @@ import android.view.WindowManager;
 import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -37,9 +38,8 @@ import acme.com.acmecone.Utility.ConstantVar;
 public class ReviewFragment extends Fragment {
 
     private static final int TIME_TO_AUTOMATICALLY_DISMISS_ITEM = 3000;
-    public ListView stockListView;
-    public ListView coneListView;
-    public ListView cornerListView;
+    public ListView stockListView, coneListView, cornerListView;
+    public LinearLayout stockLayout, coneLayout, cornerLayout, pipeLayout, dropLayout, scupperLayout, panLayout, tubeLayout;
     private Vibrator vib;
 
 
@@ -123,6 +123,63 @@ public class ReviewFragment extends Fragment {
         stockListView = (ListView) view.findViewById(R.id.review_list_view_stock);
         coneListView = (ListView) view.findViewById(R.id.review_list_view_cones);
         cornerListView = (ListView) view.findViewById(R.id.review_list_view_corners);
+
+        // ! Layout Changes for Empty Lists
+        stockLayout = (LinearLayout) view.findViewById(R.id.layout_stock);
+        if (ConstantVar.DATASET.isEmpty()) {
+            stockLayout.setVisibility(View.GONE);
+        } else {
+            stockLayout.setVisibility(View.VISIBLE);
+        }
+
+        coneLayout = (LinearLayout) view.findViewById(R.id.layout_cone);
+        if (ConstantVar.CONES.isEmpty()) {
+            coneLayout.setVisibility(View.GONE);
+        } else {
+            coneLayout.setVisibility(View.VISIBLE);
+        }
+
+        cornerLayout = (LinearLayout) view.findViewById(R.id.layout_corner);
+        if (ConstantVar.CORNERS.isEmpty()) {
+            cornerLayout.setVisibility(View.GONE);
+        } else {
+            cornerLayout.setVisibility(View.VISIBLE);
+        }
+
+        pipeLayout = (LinearLayout) view.findViewById(R.id.layout_pipe);
+        if (ConstantVar.PIPES.isEmpty()) {
+            pipeLayout.setVisibility(View.GONE);
+        } else {
+            pipeLayout.setVisibility(View.VISIBLE);
+        }
+
+        dropLayout = (LinearLayout) view.findViewById(R.id.layout_drop);
+        if (ConstantVar.DROPS.isEmpty()) {
+            dropLayout.setVisibility(View.GONE);
+        } else {
+            dropLayout.setVisibility(View.VISIBLE);
+        }
+
+        scupperLayout = (LinearLayout) view.findViewById(R.id.layout_scupper);
+        if (ConstantVar.SCUPPERS.isEmpty()) {
+            scupperLayout.setVisibility(View.GONE);
+        } else {
+            scupperLayout.setVisibility(View.VISIBLE);
+        }
+
+        panLayout = (LinearLayout) view.findViewById(R.id.layout_pitch_pan);
+        if (ConstantVar.PANS.isEmpty()) {
+            panLayout.setVisibility(View.GONE);
+        } else {
+            panLayout.setVisibility(View.VISIBLE);
+        }
+
+        tubeLayout = (LinearLayout) view.findViewById(R.id.layout_tube);
+        if (ConstantVar.TUBES.isEmpty()) {
+            tubeLayout.setVisibility(View.GONE);
+        } else {
+            tubeLayout.setVisibility(View.VISIBLE);
+        }
 
 
         stockListView.setAdapter(stockAdapter);

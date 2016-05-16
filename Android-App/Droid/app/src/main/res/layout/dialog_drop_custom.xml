@@ -65,7 +65,7 @@
 
         <EditText
             android:id="@+id/drop_text_flange"
-            android:hint="@string/depth"
+            android:hint="@string/flange"
             android:imeOptions="actionNext"
             android:inputType="number"
             android:layout_width="200dp"

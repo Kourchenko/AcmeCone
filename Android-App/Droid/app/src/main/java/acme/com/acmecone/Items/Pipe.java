@@ -1,8 +1,5 @@
 package acme.com.acmecone.Items;
 
-/**
- * Created by diegok on 5/15/16.
- */
 public class Pipe {
 
     public String type;

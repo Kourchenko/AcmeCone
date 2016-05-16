@@ -1,6 +1,5 @@
 package acme.com.acmecone.Items;
 
-
 public class Corner {
 
     public int quantity;

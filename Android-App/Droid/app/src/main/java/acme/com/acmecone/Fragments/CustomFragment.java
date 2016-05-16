@@ -11,18 +11,26 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.RelativeLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.lang.reflect.Array;
+
 import acme.com.acmecone.Items.Cone;
 import acme.com.acmecone.Items.Corner;
+import acme.com.acmecone.Items.Drop;
+import acme.com.acmecone.Items.Pan;
 import acme.com.acmecone.Items.Pipe;
+import acme.com.acmecone.Items.Scupper;
+import acme.com.acmecone.Items.Tube;
 import acme.com.acmecone.R;
 import acme.com.acmecone.Utility.ConstantVar;
 
@@ -53,7 +61,7 @@ public class CustomFragment extends Fragment {
             R.mipmap.default_boxes
     };
 
-    private  RecyclerView mRecycleView;
+    private RecyclerView mRecycleView;
     private RecyclerView.Adapter mCustomAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
 
@@ -291,7 +299,7 @@ public class CustomFragment extends Fragment {
                                         Toast.makeText(layout_corner.getContext(), "ADDED Corner!", Toast.LENGTH_SHORT).show();
 
 
-                                    } catch(NumberFormatException e) {
+                                    } catch (NumberFormatException e) {
                                         Toast.makeText(layout_corner.getContext(), "Nothing Added Empty Entries...", Toast.LENGTH_SHORT).show();
 
                                     }
@@ -325,7 +333,7 @@ public class CustomFragment extends Fragment {
                                         Toast.makeText(layout_corner.getContext(), "ADDED Corner!", Toast.LENGTH_SHORT).show();
 
 
-                                    } catch(NumberFormatException e) {
+                                    } catch (NumberFormatException e) {
                                         Toast.makeText(layout_corner.getContext(), "Nothing Added Empty Entries...", Toast.LENGTH_SHORT).show();
 
                                     }
@@ -347,7 +355,7 @@ public class CustomFragment extends Fragment {
                         AlertDialog.Builder builder_pipe = new AlertDialog.Builder(v.getContext());
 
                         builder_pipe.setTitle("Custom Pipe Wraps");
-                        final View layout_pipe = View.inflate(v.getContext(), R.layout.dialog_corner_custom, null);
+                        final View layout_pipe = View.inflate(v.getContext(), R.layout.dialog_pipe_custom, null);
                         builder_pipe.setView(layout_pipe);
 
                         final RadioGroup btn_pipeRadioGroup = (RadioGroup) layout_pipe.findViewById(R.id.pipe_btn_radio_group);
@@ -449,22 +457,523 @@ public class CustomFragment extends Fragment {
                             }
                         });
 
+                        builder_pipe.show();
                         break;
 
                     case 3:
-                        Toast.makeText(getContext(), "Position: " + position, Toast.LENGTH_SHORT).show();
+                        AlertDialog.Builder builder_drop = new AlertDialog.Builder(v.getContext());
+
+                        builder_drop.setTitle("Custom Drop Scuppers");
+                        final View layout_drop = View.inflate(v.getContext(), R.layout.dialog_drop_custom, null);
+                        builder_drop.setView(layout_drop);
+
+                        final EditText drop_quantity = (EditText) layout_drop.findViewById(R.id.drop_text_quantity);
+                        final EditText drop_diameter = (EditText) layout_drop.findViewById(R.id.drop_text_diameter);
+                        final Spinner drop_diameterFrac = (Spinner) layout_drop.findViewById(R.id.drop_menu_diameter_spinner);
+                        final EditText drop_depth = (EditText) layout_drop.findViewById(R.id.drop_text_depth);
+                        final Spinner drop_depthFrac = (Spinner) layout_drop.findViewById(R.id.drop_menu_depth_spinner);
+                        final EditText drop_flange = (EditText) layout_drop.findViewById(R.id.drop_text_flange);
+                        final Spinner drop_flangeFrac = (Spinner) layout_drop.findViewById(R.id.drop_menu_flange_spinner);
+                        final EditText drop_color = (EditText) layout_drop.findViewById(R.id.drop_text_color);
+                        final EditText drop_material = (EditText) layout_drop.findViewById(R.id.drop_text_material);
+
+                        ArrayAdapter<CharSequence> drop_diaAdp = ArrayAdapter.createFromResource(v.getContext(), R.array.custom_fractions, R.layout.my_spinner_item);
+                        drop_diameterFrac.setAdapter(drop_diaAdp);
+
+                        final ArrayAdapter<CharSequence> drop_depAdp = ArrayAdapter.createFromResource(v.getContext(), R.array.custom_fractions, R.layout.my_spinner_item);
+                        drop_depthFrac.setAdapter(drop_depAdp);
+
+                        ArrayAdapter<CharSequence> drop_flgAdp = ArrayAdapter.createFromResource(v.getContext(), R.array.custom_fractions, R.layout.my_spinner_item);
+                        drop_flangeFrac.setAdapter(drop_flgAdp);
+
+                        builder_drop.setPositiveButton("Add", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                try {
+                                    final int quantity = Integer.parseInt(drop_quantity.getText().toString());
+                                    final int diameter = Integer.parseInt(drop_diameter.getText().toString());
+                                    final String diameterFrac = drop_diameterFrac.getSelectedItem().toString();
+                                    final int depth = Integer.parseInt(drop_depth.getText().toString());
+                                    final String depthFrac = drop_depthFrac.getSelectedItem().toString();
+                                    final int flange = Integer.parseInt(drop_flange.getText().toString());
+                                    final String flangeFrac = drop_flangeFrac.getSelectedItem().toString();
+                                    final String color = drop_color.getText().toString();
+                                    final String material = drop_material.getText().toString();
+
+                                    Drop drop = new Drop();
+                                    drop.quantity = quantity;
+                                    drop.diameter = diameter;
+                                    drop.diameterFrac = diameterFrac;
+                                    drop.depth = depth;
+                                    drop.depthFrac = depthFrac;
+                                    drop.flange = flange;
+                                    drop.flangeFrac = flangeFrac;
+                                    drop.color = color;
+                                    drop.material = material;
+
+                                    ConstantVar.DROPS.add(drop);
+                                    Toast.makeText(layout_drop.getContext(), "ADDED Drop!", Toast.LENGTH_SHORT).show();
+
+                                } catch (NumberFormatException e) {
+                                    Toast.makeText(layout_drop.getContext(), "Nothing Added Empty Entries...", Toast.LENGTH_SHORT).show();
+
+                                }
+                            }
+                        });
+
+                        builder_drop.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int i) {
+                                dialog.dismiss();
+                            }
+                        });
+
+                        builder_drop.show();
+
                         break;
 
                     case 4:
-                        Toast.makeText(getContext(), "Position: " + position, Toast.LENGTH_SHORT).show();
+                        AlertDialog.Builder builder_scupper = new AlertDialog.Builder(v.getContext());
+
+                        builder_scupper.setTitle("Custom Scuppers");
+                        final View layout_scupper = View.inflate(v.getContext(), R.layout.dialog_scupper_custom, null);
+                        builder_scupper.setView(layout_scupper);
+
+                        final RadioGroup scupper_radioGroup = (RadioGroup) layout_scupper.findViewById(R.id.scupper_btn_radio_group);
+                        final RadioButton scupper_radio_tw = (RadioButton) layout_scupper.findViewById(R.id.scupper_btn_radio_tw);
+                        final RadioButton scupper_radio_ovrf = (RadioButton) layout_scupper.findViewById(R.id.scupper_btn_radio_ovrf);
+                        final EditText scupper_quantity = (EditText) layout_scupper.findViewById(R.id.scupper_text_quantity);
+                        final EditText scupper_depth = (EditText) layout_scupper.findViewById(R.id.scupper_text_depth);
+                        final Spinner scupper_depthFrac = (Spinner) layout_scupper.findViewById(R.id.scupper_menu_depth_spinner);
+                        final EditText scupper_width = (EditText) layout_scupper.findViewById(R.id.scupper_text_width);
+                        final Spinner scupper_widthFrac = (Spinner) layout_scupper.findViewById(R.id.scupper_menu_width_spinner);
+                        final EditText scupper_length = (EditText) layout_scupper.findViewById(R.id.scupper_text_length);
+                        final Spinner scupper_lengthFrac = (Spinner) layout_scupper.findViewById(R.id.scupper_menu_length_spinner);
+                        final EditText scupper_flange = (EditText) layout_scupper.findViewById(R.id.scupper_text_flange);
+                        final Spinner scupper_flangeFrac = (Spinner) layout_scupper.findViewById(R.id.scupper_menu_flange_spinner);
+                        final EditText scupper_color = (EditText) layout_scupper.findViewById(R.id.scupper_text_color);
+                        final EditText scupper_material = (EditText) layout_scupper.findViewById(R.id.scupper_text_material);
+
+                        ArrayAdapter<CharSequence> scupper_depAdp = ArrayAdapter.createFromResource(v.getContext(), R.array.custom_fractions, R.layout.my_spinner_item);
+                        scupper_depthFrac.setAdapter(scupper_depAdp);
+
+                        ArrayAdapter<CharSequence> scupper_wdtAdp = ArrayAdapter.createFromResource(v.getContext(), R.array.custom_fractions, R.layout.my_spinner_item);
+                        scupper_widthFrac.setAdapter(scupper_wdtAdp);
+
+                        ArrayAdapter<CharSequence> scupper_lngAdp = ArrayAdapter.createFromResource(v.getContext(), R.array.custom_fractions, R.layout.my_spinner_item);
+                        scupper_lengthFrac.setAdapter(scupper_lngAdp);
+
+                        ArrayAdapter<CharSequence> scupper_flgAdp = ArrayAdapter.createFromResource(v.getContext(), R.array.custom_fractions, R.layout.my_spinner_item);
+                        scupper_flangeFrac.setAdapter(scupper_flgAdp);
+
+                        builder_scupper.setPositiveButton("Add", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                try {
+                                    if (scupper_radioGroup.getCheckedRadioButtonId() == scupper_radio_tw.getId()) {
+                                        final String type = "Thru-Wall";
+                                        final int quantity = Integer.parseInt(scupper_quantity.getText().toString());
+                                        final int depth = Integer.parseInt(scupper_depth.getText().toString());
+                                        final String depthFrac = scupper_depthFrac.getSelectedItem().toString();
+                                        final int width = Integer.parseInt(scupper_width.getText().toString());
+                                        final String widthFrac = scupper_widthFrac.getSelectedItem().toString();
+                                        final int length = Integer.parseInt(scupper_length.getText().toString());
+                                        final String lengthFrac = scupper_lengthFrac.getSelectedItem().toString();
+                                        final int flange = Integer.parseInt(scupper_flange.getText().toString());
+                                        final String flangeFrac = scupper_flangeFrac.getSelectedItem().toString();
+                                        final String color = scupper_color.getText().toString();
+                                        final String material = scupper_material.getText().toString();
+
+                                        Scupper scupper = new Scupper();
+                                        scupper.type = type;
+                                        scupper.quantity = quantity;
+                                        scupper.depth = depth;
+                                        scupper.depthFrac = depthFrac;
+                                        scupper.width = width;
+                                        scupper.widthFrac = widthFrac;
+                                        scupper.length = length;
+                                        scupper.lengthFrac = lengthFrac;
+                                        scupper.flange = flange;
+                                        scupper.flangeFrac = flangeFrac;
+                                        scupper.color = color;
+                                        scupper.material = material;
+
+                                        ConstantVar.SCUPPERS.add(scupper);
+                                        Toast.makeText(layout_scupper.getContext(), "ADDED Scupper!", Toast.LENGTH_SHORT).show();
+
+
+                                    } else if (scupper_radioGroup.getCheckedRadioButtonId() == scupper_radio_ovrf.getId()) {
+                                        final String type = "Overflow";
+                                        final int quantity = Integer.parseInt(scupper_quantity.getText().toString());
+                                        final int depth = Integer.parseInt(scupper_depth.getText().toString());
+                                        final String depthFrac = scupper_depthFrac.getSelectedItem().toString();
+                                        final int width = Integer.parseInt(scupper_width.getText().toString());
+                                        final String widthFrac = scupper_widthFrac.getSelectedItem().toString();
+                                        final int length = Integer.parseInt(scupper_length.getText().toString());
+                                        final String lengthFrac = scupper_lengthFrac.getSelectedItem().toString();
+                                        final int flange = Integer.parseInt(scupper_flange.getText().toString());
+                                        final String flangeFrac = scupper_flangeFrac.getSelectedItem().toString();
+                                        final String color = scupper_color.getText().toString();
+                                        final String material = scupper_material.getText().toString();
+
+                                        Scupper scupper = new Scupper();
+                                        scupper.type = type;
+                                        scupper.quantity = quantity;
+                                        scupper.depth = depth;
+                                        scupper.depthFrac = depthFrac;
+                                        scupper.width = width;
+                                        scupper.widthFrac = widthFrac;
+                                        scupper.length = length;
+                                        scupper.lengthFrac = lengthFrac;
+                                        scupper.flange = flange;
+                                        scupper.flangeFrac = flangeFrac;
+                                        scupper.color = color;
+                                        scupper.material = material;
+
+                                        ConstantVar.SCUPPERS.add(scupper);
+                                        Toast.makeText(layout_scupper.getContext(), "ADDED Scupper!", Toast.LENGTH_SHORT).show();
+                                    }
+                                } catch (NumberFormatException e) {
+                                    Toast.makeText(layout_scupper.getContext(), "Nothing Added Empty Entries...", Toast.LENGTH_SHORT).show();
+
+                                }
+                            }
+                        });
+
+                        builder_scupper.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int i) {
+                                dialog.dismiss();
+                            }
+                        });
+
+                        builder_scupper.show();
                         break;
 
                     case 5:
-                        //
+                        AlertDialog.Builder builder_pan = new AlertDialog.Builder(v.getContext());
+
+                        builder_pan.setTitle("Custom Pitch Pans");
+                        final View layout_pan = View.inflate(v.getContext(), R.layout.dialog_pitch_pans_custom, null);
+                        builder_pan.setView(layout_pan);
+
+                        final String[] pan_array_dimension = {"Round", "Square"};
+
+                        final RelativeLayout pan_dimension_width = (RelativeLayout) layout_pan.findViewById(R.id.pitchpans_dimension_width_hide);
+                        final RelativeLayout pan_dimension_length = (RelativeLayout) layout_pan.findViewById(R.id.pitchpans_dimension_length_hide);
+                        final RelativeLayout pan_dimension_diameter = (RelativeLayout) layout_pan.findViewById(R.id.pitchpans_dimension_diameter_hide);
+                        final RadioGroup pan_radioGroupType = (RadioGroup) layout_pan.findViewById(R.id.pitchpans_btn_radio_group_type);
+                        final RadioButton pan_radioGroupSplit = (RadioButton) layout_pan.findViewById(R.id.pitchpans_btn_radio_split);
+                        final RadioButton pan_radioGroupNonSplit = (RadioButton) layout_pan.findViewById(R.id.pitchpans_btn_radio_nonsplit);
+                        final EditText pan_quantity = (EditText) layout_pan.findViewById(R.id.pitchpans_text_quantity);
+                        final EditText pan_height = (EditText) layout_pan.findViewById(R.id.pitchpans_text_height);
+                        final Spinner pan_heightFrac = (Spinner) layout_pan.findViewById(R.id.pitchpans_menu_height_spinner);
+                        final EditText pan_diameter = (EditText) layout_pan.findViewById(R.id.pitchpans_text_diameter);
+                        final Spinner pan_diameterFrac = (Spinner) layout_pan.findViewById(R.id.pitchpans_menu_diameter_spinner);
+                        final EditText pan_length = (EditText) layout_pan.findViewById(R.id.pitchpans_text_length);
+                        final Spinner pan_lengthFrac = (Spinner) layout_pan.findViewById(R.id.pitchpans_menu_length_spinner);
+                        final EditText pan_width = (EditText) layout_pan.findViewById(R.id.pitchpans_text_width);
+                        final Spinner pan_widthFrac = (Spinner) layout_pan.findViewById(R.id.pitchpans_menu_width_spinner);
+                        final EditText pan_flange = (EditText) layout_pan.findViewById(R.id.pitchpans_text_flange);
+                        final Spinner pan_flangeFrac = (Spinner) layout_pan.findViewById(R.id.pitchpans_menu_flange_spinner);
+                        final EditText pan_color = (EditText) layout_pan.findViewById(R.id.pitchpans_text_color);
+                        final EditText pan_material = (EditText) layout_pan.findViewById(R.id.pitchpans_text_material);
+
+
+                        ArrayAdapter<CharSequence> pan_hthAdp = ArrayAdapter.createFromResource(v.getContext(), R.array.custom_fractions, R.layout.my_spinner_item);
+                        pan_heightFrac.setAdapter(pan_hthAdp);
+
+                        ArrayAdapter<CharSequence> pan_diaAdp = ArrayAdapter.createFromResource(v.getContext(), R.array.custom_fractions, R.layout.my_spinner_item);
+                        pan_diameterFrac.setAdapter(pan_diaAdp);
+
+                        ArrayAdapter<CharSequence> pan_lngAdp = ArrayAdapter.createFromResource(v.getContext(), R.array.custom_fractions, R.layout.my_spinner_item);
+                        pan_lengthFrac.setAdapter(pan_lngAdp);
+
+                        ArrayAdapter<CharSequence> pan_wdtAdp = ArrayAdapter.createFromResource(v.getContext(), R.array.custom_fractions, R.layout.my_spinner_item);
+                        pan_widthFrac.setAdapter(pan_wdtAdp);
+
+                        ArrayAdapter<CharSequence> pan_flgAdp = ArrayAdapter.createFromResource(v.getContext(), R.array.custom_fractions, R.layout.my_spinner_item);
+                        pan_flangeFrac.setAdapter(pan_flgAdp);
+
+
+                        builder_pan.setSingleChoiceItems(pan_array_dimension, 0, new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                if (i == 0) {
+                                    pan_dimension_length.setVisibility(View.GONE);
+                                    pan_dimension_width.setVisibility(View.GONE);
+                                    pan_dimension_diameter.setVisibility(View.VISIBLE);
+                                } else if (i == 1) {
+                                    pan_dimension_length.setVisibility(View.VISIBLE);
+                                    pan_dimension_width.setVisibility(View.VISIBLE);
+                                    pan_dimension_diameter.setVisibility(View.GONE);
+                                }
+                            }
+                        });
+
+                        builder_pan.setPositiveButton("Add", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                try {
+                                    if (pan_radioGroupType.getCheckedRadioButtonId() == pan_radioGroupSplit.getId()) {
+
+                                        if (pan_dimension_diameter.getVisibility() == View.VISIBLE) {
+                                            final String dimension = "Round";
+                                            final String type = "Split";
+                                            final int quantity = Integer.parseInt(pan_quantity.getText().toString());
+                                            final int height = Integer.parseInt(pan_height.getText().toString());
+                                            final String heightFrac = pan_heightFrac.getSelectedItem().toString();
+                                            final int diameter = Integer.parseInt(pan_diameter.getText().toString());
+                                            final String diameterFrac = pan_diameterFrac.getSelectedItem().toString();
+                                            final int flange = Integer.parseInt(pan_flange.getText().toString());
+                                            final String flangeFrac = pan_flangeFrac.getSelectedItem().toString();
+                                            final String color = pan_color.getText().toString();
+                                            final String material = pan_material.getText().toString();
+
+                                            Pan pan = new Pan();
+                                            pan.dimension = dimension;
+                                            pan.type = type;
+                                            pan.quantity = quantity;
+                                            pan.height = height;
+                                            pan.heightFrac = heightFrac;
+                                            pan.diameter = diameter;
+                                            pan.diameterFrac = diameterFrac;
+                                            pan.flange = flange;
+                                            pan.flangeFrac = flangeFrac;
+                                            pan.color = color;
+                                            pan.material = material;
+
+                                            ConstantVar.PANS.add(pan);
+                                            Toast.makeText(layout_pan.getContext(), "ADDED Pitch Pan!", Toast.LENGTH_SHORT).show();
+
+
+                                        } else if (pan_dimension_diameter.getVisibility() == View.GONE) {
+                                            final String dimension = "Square";
+                                            final String type = "Split";
+                                            final int quantity = Integer.parseInt(pan_quantity.getText().toString());
+                                            final int height = Integer.parseInt(pan_height.getText().toString());
+                                            final String heightFrac = pan_heightFrac.getSelectedItem().toString();
+                                            final int length = Integer.parseInt(pan_length.getText().toString());
+                                            final String lengthFrac = pan_lengthFrac.getSelectedItem().toString();
+                                            final int width = Integer.parseInt(pan_width.getText().toString());
+                                            final String widthFrac = pan_widthFrac.getSelectedItem().toString();
+                                            final int flange = Integer.parseInt(pan_flange.getText().toString());
+                                            final String flangeFrac = pan_flangeFrac.getSelectedItem().toString();
+                                            final String color = pan_color.getText().toString();
+                                            final String material = pan_material.getText().toString();
+
+                                            Pan pan = new Pan();
+                                            pan.dimension = dimension;
+                                            pan.type = type;
+                                            pan.quantity = quantity;
+                                            pan.height = height;
+                                            pan.heightFrac = heightFrac;
+                                            pan.length = length;
+                                            pan.lengthFrac = lengthFrac;
+                                            pan.width = width;
+                                            pan.widthFrac = widthFrac;
+                                            pan.flange = flange;
+                                            pan.flangeFrac = flangeFrac;
+                                            pan.color = color;
+                                            pan.material = material;
+
+                                            ConstantVar.PANS.add(pan);
+                                            Toast.makeText(layout_pan.getContext(), "ADDED Pitch Pan!", Toast.LENGTH_SHORT).show();
+
+                                        }
+                                    } else if (pan_radioGroupType.getCheckedRadioButtonId() == pan_radioGroupNonSplit.getId()) {
+                                        if (pan_dimension_diameter.getVisibility() == View.VISIBLE) {
+                                            final String dimension = "Round";
+                                            final String type = "Non-Split";
+                                            final int quantity = Integer.parseInt(pan_quantity.getText().toString());
+                                            final int height = Integer.parseInt(pan_height.getText().toString());
+                                            final String heightFrac = pan_heightFrac.getSelectedItem().toString();
+                                            final int diameter = Integer.parseInt(pan_diameter.getText().toString());
+                                            final String diameterFrac = pan_diameterFrac.getSelectedItem().toString();
+                                            final int flange = Integer.parseInt(pan_flange.getText().toString());
+                                            final String flangeFrac = pan_flangeFrac.getSelectedItem().toString();
+                                            final String color = pan_color.getText().toString();
+                                            final String material = pan_material.getText().toString();
+
+                                            Pan pan = new Pan();
+                                            pan.dimension = dimension;
+                                            pan.type = type;
+                                            pan.quantity = quantity;
+                                            pan.height = height;
+                                            pan.heightFrac = heightFrac;
+                                            pan.diameter = diameter;
+                                            pan.diameterFrac = diameterFrac;
+                                            pan.flange = flange;
+                                            pan.flangeFrac = flangeFrac;
+                                            pan.color = color;
+                                            pan.material = material;
+
+                                            ConstantVar.PANS.add(pan);
+                                            Toast.makeText(layout_pan.getContext(), "ADDED Pitch Pan!", Toast.LENGTH_SHORT).show();
+
+
+                                        } else if (pan_dimension_diameter.getVisibility() == View.GONE) {
+                                            final String dimension = "Square";
+                                            final String type = "Non-Split";
+                                            final int quantity = Integer.parseInt(pan_quantity.getText().toString());
+                                            final int height = Integer.parseInt(pan_height.getText().toString());
+                                            final String heightFrac = pan_heightFrac.getSelectedItem().toString();
+                                            final int length = Integer.parseInt(pan_length.getText().toString());
+                                            final String lengthFrac = pan_lengthFrac.getSelectedItem().toString();
+                                            final int width = Integer.parseInt(pan_width.getText().toString());
+                                            final String widthFrac = pan_widthFrac.getSelectedItem().toString();
+                                            final int flange = Integer.parseInt(pan_flange.getText().toString());
+                                            final String flangeFrac = pan_flangeFrac.getSelectedItem().toString();
+                                            final String color = pan_color.getText().toString();
+                                            final String material = pan_material.getText().toString();
+
+                                            Pan pan = new Pan();
+                                            pan.dimension = dimension;
+                                            pan.type = type;
+                                            pan.quantity = quantity;
+                                            pan.height = height;
+                                            pan.heightFrac = heightFrac;
+                                            pan.length = length;
+                                            pan.lengthFrac = lengthFrac;
+                                            pan.width = width;
+                                            pan.widthFrac = widthFrac;
+                                            pan.flange = flange;
+                                            pan.flangeFrac = flangeFrac;
+                                            pan.color = color;
+                                            pan.material = material;
+
+                                            ConstantVar.PANS.add(pan);
+                                            Toast.makeText(layout_pan.getContext(), "ADDED Pitch Pan!", Toast.LENGTH_SHORT).show();
+
+                                        }
+                                    }
+                                } catch (NumberFormatException e) {
+                                    Toast.makeText(layout_pan.getContext(), "Nothing Added Empty Entries...", Toast.LENGTH_SHORT).show();
+                                }
+                            }
+                        }).setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int i) {
+                                dialog.dismiss();
+                            }
+                        });
+
+                        builder_pan.show();
                         break;
 
                     case 6:
-                        //
+                        AlertDialog.Builder builder_tube = new AlertDialog.Builder(v.getContext());
+
+                        builder_tube.setTitle("Custom Tube Wraps");
+                        final View layout_tube = View.inflate(v.getContext(), R.layout.dialog_tube_custom, null);
+                        builder_tube.setView(layout_tube);
+
+                        final RadioGroup tube_radioGroup = (RadioGroup) layout_tube.findViewById(R.id.tube_btn_radio_group);
+                        final RadioButton tube_radioSplit = (RadioButton) layout_tube.findViewById(R.id.tube_btn_radio_split);
+                        final RadioButton tube_radioNonSplit = (RadioButton) layout_tube.findViewById(R.id.tube_btn_radio_nonsplit);
+                        final EditText tube_quantity = (EditText) layout_tube.findViewById(R.id.tube_text_quantity);
+                        final EditText tube_height = (EditText) layout_tube.findViewById(R.id.tube_text_height);
+                        final Spinner tube_heightFrac = (Spinner) layout_tube.findViewById(R.id.tube_menu_height_spinner);
+                        final EditText tube_length = (EditText) layout_tube.findViewById(R.id.tube_text_length);
+                        final Spinner tube_lengthFrac = (Spinner) layout_tube.findViewById(R.id.tube_menu_length_spinner);
+                        final EditText tube_width = (EditText) layout_tube.findViewById(R.id.tube_text_width);
+                        final Spinner tube_widthFrac = (Spinner) layout_tube.findViewById(R.id.tube_menu_width_spinner);
+                        final EditText tube_flange = (EditText) layout_tube.findViewById(R.id.tube_text_flange);
+                        final Spinner tube_flangeFrac = (Spinner) layout_tube.findViewById(R.id.tube_menu_flange_spinner);
+                        final EditText tube_color = (EditText) layout_tube.findViewById(R.id.tube_text_color);
+                        final EditText tube_material = (EditText) layout_tube.findViewById(R.id.tube_text_material);
+
+                        ArrayAdapter<CharSequence> tube_hthAdp = ArrayAdapter.createFromResource(v.getContext(), R.array.custom_fractions, R.layout.my_spinner_item);
+                        tube_heightFrac.setAdapter(tube_hthAdp);
+
+                        ArrayAdapter<CharSequence> tube_lngAdp = ArrayAdapter.createFromResource(v.getContext(), R.array.custom_fractions, R.layout.my_spinner_item);
+                        tube_lengthFrac.setAdapter(tube_lngAdp);
+
+                        ArrayAdapter<CharSequence> tube_wdtAdp = ArrayAdapter.createFromResource(v.getContext(), R.array.custom_fractions, R.layout.my_spinner_item);
+                        tube_widthFrac.setAdapter(tube_wdtAdp);
+
+                        ArrayAdapter<CharSequence> tube_flgAdp = ArrayAdapter.createFromResource(v.getContext(), R.array.custom_fractions, R.layout.my_spinner_item);
+                        tube_flangeFrac.setAdapter(tube_flgAdp);
+
+                        builder_tube.setPositiveButton("Add", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                if (tube_radioGroup.getCheckedRadioButtonId() == tube_radioSplit.getId()) {
+                                    final String type = "Split";
+                                    final int quantity = Integer.parseInt(tube_quantity.getText().toString());
+                                    final int height = Integer.parseInt(tube_height.getText().toString());
+                                    final String heightFrac = tube_heightFrac.getSelectedItem().toString();
+                                    final int length = Integer.parseInt(tube_length.getText().toString());
+                                    final String lengthFrac = tube_lengthFrac.getSelectedItem().toString();
+                                    final int width = Integer.parseInt(tube_width.getText().toString());
+                                    final String widthFrac = tube_widthFrac.getSelectedItem().toString();
+                                    final int flange = Integer.parseInt(tube_flange.getText().toString());
+                                    final String flangeFrac = tube_flangeFrac.getSelectedItem().toString();
+                                    final String color = tube_color.getText().toString();
+                                    final String material = tube_material.getText().toString();
+
+
+                                    Tube tube = new Tube();
+                                    tube.type = type;
+                                    tube.quanity = quantity;
+                                    tube.height = height;
+                                    tube.heightFrac = heightFrac;
+                                    tube.length = length;
+                                    tube.lengthFrac = lengthFrac;
+                                    tube.width = width;
+                                    tube.widthFrac = widthFrac;
+                                    tube.flange = flange;
+                                    tube.flangeFrac = flangeFrac;
+                                    tube.color = color;
+                                    tube.material = material;
+
+                                    ConstantVar.TUBES.add(tube);
+                                    Toast.makeText(layout_tube.getContext(), "ADDED Tube Wraps!", Toast.LENGTH_SHORT).show();
+                                } else if (tube_radioGroup.getCheckedRadioButtonId() == tube_radioNonSplit.getId()) {
+                                    final String type = "Non-Split";
+                                    final int quantity = Integer.parseInt(tube_quantity.getText().toString());
+                                    final int height = Integer.parseInt(tube_height.getText().toString());
+                                    final String heightFrac = tube_heightFrac.getSelectedItem().toString();
+                                    final int length = Integer.parseInt(tube_length.getText().toString());
+                                    final String lengthFrac = tube_lengthFrac.getSelectedItem().toString();
+                                    final int width = Integer.parseInt(tube_width.getText().toString());
+                                    final String widthFrac = tube_widthFrac.getSelectedItem().toString();
+                                    final int flange = Integer.parseInt(tube_flange.getText().toString());
+                                    final String flangeFrac = tube_flangeFrac.getSelectedItem().toString();
+                                    final String color = tube_color.getText().toString();
+                                    final String material = tube_material.getText().toString();
+
+
+                                    Tube tube = new Tube();
+                                    tube.type = type;
+                                    tube.quanity = quantity;
+                                    tube.height = height;
+                                    tube.heightFrac = heightFrac;
+                                    tube.length = length;
+                                    tube.lengthFrac = lengthFrac;
+                                    tube.width = width;
+                                    tube.widthFrac = widthFrac;
+                                    tube.flange = flange;
+                                    tube.flangeFrac = flangeFrac;
+                                    tube.color = color;
+                                    tube.material = material;
+
+                                    ConstantVar.TUBES.add(tube);
+                                    Toast.makeText(layout_tube.getContext(), "ADDED Tube Wraps!", Toast.LENGTH_SHORT).show();
+                                }
+                            }
+                        });
+
+                        builder_tube.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int i) {
+                                dialog.dismiss();
+                            }
+                        });
+
+                        builder_tube.show();
+
+
                         break;
 
                     case 7:
