@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp">
+
+
+    <RadioGroup
+        android:id="@+id/cone_btn_radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/cone_btn_radio_split"
+            android:text="@string/Split"
+            android:checked="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <RadioButton
+            android:id="@+id/cone_btn_radio_nonsplit"
+            android:text="@string/Non_Split"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RadioGroup>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
+
+    <EditText
+            android:id="@+id/cone_text_quantity"
+            android:hint="@string/quantity"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="15dp" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/cone_text_height"
+            android:hint="@string/height"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"/>
+
+        <Spinner
+            android:id="@+id/menu_cone_height_spinner"
+            android:layout_toRightOf="@id/cone_text_height"
+            android:layout_toEndOf="@id/cone_text_height"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/cone_text_top"
+            android:hint="@string/top_diameter"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content" />
+
+        <Spinner
+            android:id="@+id/menu_cone_top_spinner"
+            android:layout_toRightOf="@id/cone_text_top"
+            android:layout_toEndOf="@id/cone_text_top"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/cone_text_bottom"
+            android:hint="@string/bot_diameter"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content" />
+
+        <Spinner
+            android:id="@+id/menu_cone_bottom_spinner"
+            android:layout_toRightOf="@+id/cone_text_bottom"
+            android:layout_toEndOf="@+id/cone_text_bottom"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/cone_text_flange"
+            android:hint="@string/flange"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content" />
+
+        <Spinner
+            android:id="@+id/menu_cone_flange_spinner"
+            android:layout_toRightOf="@id/cone_text_flange"
+            android:layout_toEndOf="@id/cone_text_flange"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/cone_text_color"
+        android:hint="@string/color"
+        android:imeOptions="actionNext"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:maxLines="1" />
+
+    <EditText
+        android:id="@+id/cone_text_material"
+        android:hint="@string/material"
+        android:inputType="text"
+        android:imeOptions="actionDone"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

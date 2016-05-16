@@ -1,5 +1,6 @@
 package acme.com.acmecone.Fragments;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.Bundle;
 import android.os.SystemClock;
@@ -301,21 +302,7 @@ public class ReviewFragment extends Fragment {
 
         public void remove(int position) {
             try {
-                for (Map.Entry<Integer, String> entry: ConstantVar.REVIEW_DATABASE.entrySet()) {
-                    String mDSET = entry.getKey() + ": " + entry.getValue();
-                    if (ConstantVar.DATASET.get(position).equals(mDSET)) {
-                        ConstantVar.DATASET.remove(ConstantVar.DATASET.indexOf(ConstantVar.DATASET.get(position)));
-                        ConstantVar.REVIEW_DATABASE.values().removeAll(Collections.singleton(entry.getValue()));
-
-                    } else {
-                        System.out.println("Error Found While removing: " + mDSET);
-                    }
-                }
-
-                if (ConstantVar.DATASET.size() == 1 && ConstantVar.REVIEW_DATABASE.size() != ConstantVar.DATASET.size()) {
-                    ConstantVar.DATASET.remove(0);
-                }
-
+                ConstantVar.DATASET.remove(position);
 
             } catch (ConcurrentModificationException e) {
                 System.out.println("CurrentModificationException : " + e);
@@ -383,6 +370,7 @@ public class ReviewFragment extends Fragment {
             }
         }
 
+        @SuppressLint("SetTextI18n")
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
 
@@ -418,9 +406,7 @@ public class ReviewFragment extends Fragment {
 
         public void remove(int position) {
             try {
-
                 ConstantVar.CORNERS.remove(position);
-
 
             } catch (ConcurrentModificationException e) {
                 System.out.println("CurrentModificationException : " + e);
@@ -436,6 +422,7 @@ public class ReviewFragment extends Fragment {
             }
         }
 
+        @SuppressLint("SetTextI18n")
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
 

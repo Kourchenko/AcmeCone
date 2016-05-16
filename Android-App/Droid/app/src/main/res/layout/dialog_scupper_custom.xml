@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RadioGroup
+        android:id="@+id/scupper_btn_radio_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/scupper_btn_radio_tw"
+            android:checked="true"
+            android:text="@string/Thruwall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <RadioButton
+            android:id="@+id/scupper_btn_radio_ovrf"
+            android:text="@string/Overflow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/scupper_text_quantity"
+        android:hint="@string/quantity"
+        android:inputType="number"
+        android:imeOptions="actionNext"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/scupper_text_height"
+            android:hint="@string/height"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"/>
+
+        <Spinner
+            android:id="@+id/scupper_menu_height_spinner"
+            android:layout_toRightOf="@id/scupper_text_height"
+            android:layout_toEndOf="@id/scupper_text_height"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/scupper_text_depth"
+            android:hint="@string/depth"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"/>
+
+        <Spinner
+            android:id="@+id/scupper_menu_depth_spinner"
+            android:layout_toRightOf="@id/scupper_text_depth"
+            android:layout_toEndOf="@id/scupper_text_depth"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/scupper_text_width"
+            android:hint="@string/height"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"/>
+
+        <Spinner
+            android:id="@+id/scupper_menu_width_spinner"
+            android:layout_toRightOf="@id/scupper_text_width"
+            android:layout_toEndOf="@id/scupper_text_width"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/scupper_text_length"
+            android:hint="@string/length"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"/>
+
+        <Spinner
+            android:id="@+id/scupper_menu_length_spinner"
+            android:layout_toRightOf="@id/scupper_text_length"
+            android:layout_toEndOf="@id/scupper_text_length"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/scupper_text_flange"
+            android:hint="@string/flange"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"/>
+
+        <Spinner
+            android:id="@+id/scupper_menu_flange_spinner"
+            android:layout_toRightOf="@id/scupper_text_flange"
+            android:layout_toEndOf="@id/scupper_text_flange"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/scupper_text_color"
+        android:hint="@string/color"
+        android:inputType="text"
+        android:imeOptions="actionNext"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/scupper_text_material"
+        android:hint="@string/material"
+        android:inputType="text"
+        android:imeOptions="actionDone"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

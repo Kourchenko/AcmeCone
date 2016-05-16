@@ -173,13 +173,6 @@ public class StockFragment extends Fragment implements NavigationView.OnNavigati
                                                 Integer temp = entry.getKey();
                                                 Integer sum = temp + quantity;
 
-                                                System.out.println();
-                                                System.out.println();
-                                                System.out.println(">>> " + ConstantVar.REVIEW_DATABASE.toString());
-                                                System.out.println(">> " + ConstantVar.DATASET.toString());
-                                                System.out.println();
-                                                System.out.println();
-
                                                 ConstantVar.DATASET.remove(ConstantVar.DATASET.indexOf(mDSET));
                                                 ConstantVar.REVIEW_DATABASE.values().removeAll(Collections.singleton(entry.getValue()));
 

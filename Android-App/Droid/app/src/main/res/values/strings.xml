@@ -409,6 +409,8 @@
     <string name="CDS3_G_P">3\" Commercial Drain Grey PVC</string>
 
     <!-- Thru-Wall Scuppers -->
+    <string name="Thruwall">Thruwall</string>
+    <string name="Overflow">Overflow</string>
     <string name="thruwall_scuppers">ThruWall Scuppers</string>
     <string name="TW4_W_T">4\"X4\" ThruWall Scupper White TPO</string>
     <string name="TW4_G_T">4\"X4\" ThruWall Scupper Grey TPO</string>
@@ -422,6 +424,8 @@
 
     <!-- Pitch Pans -->
     <string name="pitch_pans">Pitch Pans</string>
+    <string name="Round">Round</string>
+    <string name="Square">Square</string>
 
         <!-- Round -->
     <string name="RPP6_W_T">[ROUND] 6\" Pitch Pan White TPO</string>
