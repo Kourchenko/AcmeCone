@@ -128,7 +128,7 @@
                                     \n 6” Flange</string>
 
     <!-- Boxes Description -->
-    <string name="Boxes">BOXES</string>
+    <string name="Curbs">CURB WRAPS</string>
     <string name="boxes_text">Custom Made Boxes</string>
     <string name="boxes_curbwrap">Curb Wraps</string>
     <string name="boxes_curbwrap_desc">Curb wraps can be made split, non-split, 2 piece, and 4 piece.
@@ -138,7 +138,7 @@
                                     order for your specific needs.
     </string>
 
-    <string name="Sleepers">SLEEPERS</string>
+    <string name="Sleepers">SLEEPER BOXES</string>
     <string name="boxes_sleeper">Custom Sleepers</string>
     <string name="boxes_sleeper_desc">Closed top sleeper boxes are available by request in any size.
                                     Great for equipment platforms or blocks and when combined with

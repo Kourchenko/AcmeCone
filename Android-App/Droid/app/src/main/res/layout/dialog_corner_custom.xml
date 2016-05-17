@@ -26,7 +26,7 @@
 
 
     <EditText
-        android:id="@+id/text_corner_quantity"
+        android:id="@+id/corner_text_quantity"
         android:hint="@string/quantity"
         android:inputType="number"
         android:imeOptions="actionNext"

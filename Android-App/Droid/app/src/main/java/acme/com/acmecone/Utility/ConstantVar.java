@@ -13,6 +13,7 @@ import acme.com.acmecone.Items.Drop;
 import acme.com.acmecone.Items.Pan;
 import acme.com.acmecone.Items.Pipe;
 import acme.com.acmecone.Items.Scupper;
+import acme.com.acmecone.Items.Sleeper;
 import acme.com.acmecone.Items.Tube;
 
 public class ConstantVar {
@@ -45,6 +46,7 @@ public class ConstantVar {
     public static final ArrayList<Pan> PANS         = new ArrayList<>();
     public static final ArrayList<Tube> TUBES       = new ArrayList<>();
     public static final ArrayList<Curb> CURBS       = new ArrayList<>();
+    public static final ArrayList<Sleeper> SLEEPERS = new ArrayList<>();
 
     public static final String[] MATERIALS = new String[] {
             "TPO 60mil", "PVC 60mil",

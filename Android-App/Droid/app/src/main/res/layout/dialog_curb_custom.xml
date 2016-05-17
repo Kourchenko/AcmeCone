@@ -135,7 +135,7 @@
     <EditText
         android:id="@+id/curb_text_color"
         android:hint="@string/color"
-        android:inputType="number"
+        android:inputType="text"
         android:imeOptions="actionNext"
         android:layout_width="200dp"
         android:layout_height="wrap_content" />
@@ -143,7 +143,7 @@
     <EditText
         android:id="@+id/curb_text_material"
         android:hint="@string/material"
-        android:inputType="number"
+        android:inputType="text"
         android:imeOptions="actionDone"
         android:layout_width="200dp"
         android:layout_height="wrap_content" />

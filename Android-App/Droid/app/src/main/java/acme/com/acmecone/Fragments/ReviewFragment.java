@@ -38,8 +38,8 @@ import acme.com.acmecone.Utility.ConstantVar;
 public class ReviewFragment extends Fragment {
 
     private static final int TIME_TO_AUTOMATICALLY_DISMISS_ITEM = 3000;
-    public ListView stockListView, coneListView, cornerListView;
-    public LinearLayout stockLayout, coneLayout, cornerLayout, pipeLayout, dropLayout, scupperLayout, panLayout, tubeLayout;
+    public ListView stockListView, coneListView, cornerListView, pipeListView, dropListView, scupperListView, panListView, tubeListView, curbListView, sleeperListView;
+    public LinearLayout stockLayout, coneLayout, cornerLayout, pipeLayout, dropLayout, scupperLayout, panLayout, tubeLayout, curbLayout, sleeperLayout;
     private Vibrator vib;
 
 
@@ -112,9 +112,19 @@ public class ReviewFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.review_fragment, container, false);
         final Context context = getActivity().getApplicationContext();
-        final MyBaseAdapter stockAdapter = new MyBaseAdapter();
+        final StockBaseAdapter stockAdapter = new StockBaseAdapter();
         final ConeBaseAdapter coneAdapter = new ConeBaseAdapter();
         final CornerBaseAdapter cornerAdapter = new CornerBaseAdapter();
+        final PipeBaseAdapter pipeAdapter = new PipeBaseAdapter();
+        final DropBaseAdapter dropAdapter = new DropBaseAdapter();
+        final ScupperBaseAdapter scupperAdapter = new ScupperBaseAdapter();
+        final PansBaseAdapter pansAdapter = new PansBaseAdapter();
+        final TubesBaseAdapter tubesAdapter = new TubesBaseAdapter();
+        final CurbsBaseAdapter curbsAdapter = new CurbsBaseAdapter();
+        final SleepersBaseAdapter sleepersAdapter = new SleepersBaseAdapter();
+
+
+
         vib = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
 
         // Resolved input keyboard layout below EditTexts && AutoCompleteTextViews
@@ -123,6 +133,14 @@ public class ReviewFragment extends Fragment {
         stockListView = (ListView) view.findViewById(R.id.review_list_view_stock);
         coneListView = (ListView) view.findViewById(R.id.review_list_view_cones);
         cornerListView = (ListView) view.findViewById(R.id.review_list_view_corners);
+        pipeListView = (ListView) view.findViewById(R.id.review_list_view_pipes);
+        dropListView = (ListView) view.findViewById(R.id.review_list_view_drops);
+        scupperListView = (ListView) view.findViewById(R.id.review_list_view_scuppers);
+        panListView = (ListView) view.findViewById(R.id.review_list_view_pans);
+        tubeListView = (ListView) view.findViewById(R.id.review_list_view_tubes);
+        curbListView = (ListView) view.findViewById(R.id.review_list_view_curbs);
+        sleeperListView = (ListView) view.findViewById(R.id.review_list_view_sleepers);
+
 
         // ! Layout Changes for Empty Lists
         stockLayout = (LinearLayout) view.findViewById(R.id.layout_stock);
@@ -181,12 +199,35 @@ public class ReviewFragment extends Fragment {
             tubeLayout.setVisibility(View.VISIBLE);
         }
 
+        curbLayout = (LinearLayout) view.findViewById(R.id.layout_curb);
+        if (ConstantVar.CURBS.isEmpty()) {
+            curbLayout.setVisibility(View.GONE);
+        } else {
+            curbLayout.setVisibility(View.VISIBLE);
+        }
+
+        sleeperLayout = (LinearLayout) view.findViewById(R.id.layout_sleeper);
+        if (ConstantVar.SLEEPERS.isEmpty()) {
+            sleeperLayout.setVisibility(View.GONE);
+        } else {
+            sleeperLayout.setVisibility(View.VISIBLE);
+        }
 
         stockListView.setAdapter(stockAdapter);
         coneListView.setAdapter(coneAdapter);
         cornerListView.setAdapter(cornerAdapter);
+        pipeListView.setAdapter(pipeAdapter);
+        dropListView.setAdapter(dropAdapter);
+        scupperListView.setAdapter(scupperAdapter);
+        panListView.setAdapter(pansAdapter);
+        tubeListView.setAdapter(tubesAdapter);
+        curbListView.setAdapter(curbsAdapter);
+        sleeperListView.setAdapter(sleepersAdapter);
 
 
+        /*
+        * STOCK
+         */
         final SwipeToDismissTouchListener stockTouchListener =
                 new SwipeToDismissTouchListener<>(
                         new ListViewAdapter(stockListView),
@@ -232,8 +273,14 @@ public class ReviewFragment extends Fragment {
             }
         });
 
+        /*
+         * STOCK - END
+         */
 
 
+        /*
+         * CONE
+         */
         final SwipeToDismissTouchListener coneTouchListener =
                 new SwipeToDismissTouchListener<>(
                         new ListViewAdapter(coneListView),
@@ -277,7 +324,14 @@ public class ReviewFragment extends Fragment {
                 return true;
             }
         });
+        /*
+         * CONE - END
+         */
 
+
+        /*
+         * CORNER
+         */
         final SwipeToDismissTouchListener cornerTouchListener =
                 new SwipeToDismissTouchListener<>(
                         new ListViewAdapter(cornerListView),
@@ -322,6 +376,371 @@ public class ReviewFragment extends Fragment {
             }
         });
 
+        /*
+         * CORNER - END
+         */
+
+
+        /*
+         * PIPE WRAP
+         */
+
+        final SwipeToDismissTouchListener pipeTouchListener =
+                new SwipeToDismissTouchListener<>(
+                        new ListViewAdapter(pipeListView),
+                        new SwipeToDismissTouchListener.DismissCallbacks() {
+                            @Override
+                            public boolean canDismiss(int position) {
+                                return true;
+                            }
+
+                            @Override
+                            public void onPendingDismiss(ViewAdapter recyclerView, int position) {
+
+                            }
+
+                            @Override
+                            public void onDismiss(ViewAdapter recyclerView, int position) {
+                                pipeAdapter.remove(position);
+                            }
+                        });
+
+        pipeTouchListener.setDismissDelay(TIME_TO_AUTOMATICALLY_DISMISS_ITEM);
+        pipeListView.setOnTouchListener(pipeTouchListener);
+
+        pipeListView.setOnScrollListener((AbsListView.OnScrollListener) pipeTouchListener.makeScrollListener());
+        pipeListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                if (pipeTouchListener.existPendingDismisses()) {
+                    pipeTouchListener.undoPendingDismiss();
+                } else {
+                    // Intent;
+                }
+            }
+        });
+
+        pipeListView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                vib.vibrate(100);
+                return true;
+            }
+        });
+
+        /*
+         * PIPE WRAP - END
+         */
+
+        /*
+         * DROP SCUPPER
+         */
+        final SwipeToDismissTouchListener dropTouchListener =
+                new SwipeToDismissTouchListener<>(
+                        new ListViewAdapter(dropListView),
+                        new SwipeToDismissTouchListener.DismissCallbacks() {
+                            @Override
+                            public boolean canDismiss(int position) {
+                                return true;
+                            }
+
+                            @Override
+                            public void onPendingDismiss(ViewAdapter recyclerView, int position) {
+
+                            }
+
+                            @Override
+                            public void onDismiss(ViewAdapter recyclerView, int position) {
+                                dropAdapter.remove(position);
+                            }
+                        });
+
+        dropTouchListener.setDismissDelay(TIME_TO_AUTOMATICALLY_DISMISS_ITEM);
+        dropListView.setOnTouchListener(dropTouchListener);
+
+        dropListView.setOnScrollListener((AbsListView.OnScrollListener) dropTouchListener.makeScrollListener());
+        dropListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                if (dropTouchListener.existPendingDismisses()) {
+                    dropTouchListener.undoPendingDismiss();
+                } else {
+                    // Intent;
+                }
+            }
+        });
+
+        dropListView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                vib.vibrate(100);
+                return true;
+            }
+        });
+        /*
+         * DROP - END
+         */
+
+
+        /*
+         * SCUPPER
+         */
+        final SwipeToDismissTouchListener scupperTouchListener =
+                new SwipeToDismissTouchListener<>(
+                        new ListViewAdapter(scupperListView),
+                        new SwipeToDismissTouchListener.DismissCallbacks() {
+                            @Override
+                            public boolean canDismiss(int position) {
+                                return true;
+                            }
+
+                            @Override
+                            public void onPendingDismiss(ViewAdapter recyclerView, int position) {
+
+                            }
+
+                            @Override
+                            public void onDismiss(ViewAdapter recyclerView, int position) {
+                                scupperAdapter.remove(position);
+                            }
+                        });
+
+        scupperTouchListener.setDismissDelay(TIME_TO_AUTOMATICALLY_DISMISS_ITEM);
+        scupperListView.setOnTouchListener(scupperTouchListener);
+
+        scupperListView.setOnScrollListener((AbsListView.OnScrollListener) scupperTouchListener.makeScrollListener());
+        scupperListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                if (scupperTouchListener.existPendingDismisses()) {
+                    scupperTouchListener.undoPendingDismiss();
+                } else {
+                    // Intent;
+                }
+            }
+        });
+
+        scupperListView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                vib.vibrate(100);
+
+                return true;
+            }
+        });
+
+        /*
+         * SCUPPER - END
+         */
+
+
+        /*
+         * PITCH PAN
+         */
+        final SwipeToDismissTouchListener panTouchListener =
+                new SwipeToDismissTouchListener<>(
+                        new ListViewAdapter(panListView),
+                        new SwipeToDismissTouchListener.DismissCallbacks() {
+                            @Override
+                            public boolean canDismiss(int position) {
+                                return true;
+                            }
+
+                            @Override
+                            public void onPendingDismiss(ViewAdapter recyclerView, int position) {
+
+                            }
+
+                            @Override
+                            public void onDismiss(ViewAdapter recyclerView, int position) {
+                                pansAdapter.remove(position);
+                            }
+                        });
+
+        panTouchListener.setDismissDelay(TIME_TO_AUTOMATICALLY_DISMISS_ITEM);
+        panListView.setOnTouchListener(panTouchListener);
+
+        panListView.setOnScrollListener((AbsListView.OnScrollListener) panTouchListener.makeScrollListener());
+        panListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                if (panTouchListener.existPendingDismisses()) {
+                    panTouchListener.undoPendingDismiss();
+                } else {
+                    // Intent;
+                }
+            }
+        });
+
+        panListView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                vib.vibrate(100);
+
+                return true;
+            }
+        });
+
+        /*
+         * PITCH PAN - END
+         */
+
+
+        /*
+         * TUBE WRAP
+         */
+        final SwipeToDismissTouchListener tubeTouchListener =
+                new SwipeToDismissTouchListener<>(
+                        new ListViewAdapter(tubeListView),
+                        new SwipeToDismissTouchListener.DismissCallbacks() {
+                            @Override
+                            public boolean canDismiss(int position) {
+                                return true;
+                            }
+
+                            @Override
+                            public void onPendingDismiss(ViewAdapter recyclerView, int position) {
+
+                            }
+
+                            @Override
+                            public void onDismiss(ViewAdapter recyclerView, int position) {
+                                tubesAdapter.remove(position);
+                            }
+                        });
+
+        tubeTouchListener.setDismissDelay(TIME_TO_AUTOMATICALLY_DISMISS_ITEM);
+        tubeListView.setOnTouchListener(tubeTouchListener);
+
+        tubeListView.setOnScrollListener((AbsListView.OnScrollListener) tubeTouchListener.makeScrollListener());
+        tubeListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                if (tubeTouchListener.existPendingDismisses()) {
+                    tubeTouchListener.undoPendingDismiss();
+                } else {
+                    // Intent;
+                }
+            }
+        });
+
+        tubeListView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                vib.vibrate(100);
+
+                return true;
+            }
+        });
+
+        /*
+         * TUBE WRAPS - END
+         */
+
+
+        /*
+         * CURB WRAPS
+         */
+        final SwipeToDismissTouchListener curbTouchListener =
+                new SwipeToDismissTouchListener<>(
+                        new ListViewAdapter(curbListView),
+                        new SwipeToDismissTouchListener.DismissCallbacks() {
+                            @Override
+                            public boolean canDismiss(int position) {
+                                return true;
+                            }
+
+                            @Override
+                            public void onPendingDismiss(ViewAdapter recyclerView, int position) {
+
+                            }
+
+                            @Override
+                            public void onDismiss(ViewAdapter recyclerView, int position) {
+                                curbsAdapter.remove(position);
+                            }
+                        });
+
+        curbTouchListener.setDismissDelay(TIME_TO_AUTOMATICALLY_DISMISS_ITEM);
+        curbListView.setOnTouchListener(curbTouchListener);
+
+        curbListView.setOnScrollListener((AbsListView.OnScrollListener) curbTouchListener.makeScrollListener());
+        curbListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                if (curbTouchListener.existPendingDismisses()) {
+                    curbTouchListener.undoPendingDismiss();
+                } else {
+                    // Intent;
+                }
+            }
+        });
+
+        curbListView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                vib.vibrate(100);
+
+                return true;
+            }
+        });
+
+        /*
+         * CURB WRAPS - END
+         */
+
+
+        /*
+         * SLEEPER BOXES
+         */
+        final SwipeToDismissTouchListener sleeperTouchListener =
+                new SwipeToDismissTouchListener<>(
+                        new ListViewAdapter(sleeperListView),
+                        new SwipeToDismissTouchListener.DismissCallbacks() {
+                            @Override
+                            public boolean canDismiss(int position) {
+                                return true;
+                            }
+
+                            @Override
+                            public void onPendingDismiss(ViewAdapter recyclerView, int position) {
+
+                            }
+
+                            @Override
+                            public void onDismiss(ViewAdapter recyclerView, int position) {
+                                sleepersAdapter.remove(position);
+                            }
+                        });
+
+        sleeperTouchListener.setDismissDelay(TIME_TO_AUTOMATICALLY_DISMISS_ITEM);
+        sleeperListView.setOnTouchListener(sleeperTouchListener);
+
+        sleeperListView.setOnScrollListener((AbsListView.OnScrollListener) sleeperTouchListener.makeScrollListener());
+        sleeperListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                if (sleeperTouchListener.existPendingDismisses()) {
+                    sleeperTouchListener.undoPendingDismiss();
+                } else {
+                    // Intent;
+                }
+            }
+        });
+
+        sleeperListView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                vib.vibrate(100);
+
+                return true;
+            }
+        });
+        /*
+         * SLEEPER BOXES - END
+         */
+
+
         return view;
     }
 
@@ -337,9 +756,9 @@ public class ReviewFragment extends Fragment {
     }
 
 
-    static class MyBaseAdapter extends BaseAdapter {
+    static class StockBaseAdapter extends BaseAdapter {
 
-        MyBaseAdapter() {
+        StockBaseAdapter() {
         }
 
         @Override
@@ -388,6 +807,7 @@ public class ReviewFragment extends Fragment {
         }
     }
 
+
     static class ConeBaseAdapter extends BaseAdapter {
         ConeBaseAdapter() {
         }
@@ -399,7 +819,7 @@ public class ReviewFragment extends Fragment {
 
         @Override
         public String getItem(int position) {
-            return ConstantVar.CONES.get(position).quantity + ": " + ConstantVar.CONES.get(position).type + " " + ConstantVar.CONES.get(position).top + " T";
+            return ConstantVar.CONES.get(position).quantity + " " + ConstantVar.CONES.get(position).type + " Cone(s): " + ConstantVar.CONES.get(position).top + ConstantVar.CONES.get(position).topFrac + " Top Dia. " + ConstantVar.CONES.get(position).bot + ConstantVar.CONES.get(position).botFrac + "\" B Dia.";
         }
 
         @Override
@@ -409,7 +829,6 @@ public class ReviewFragment extends Fragment {
 
         public void remove(int position) {
             try {
-
                 ConstantVar.CONES.remove(position);
 
 
@@ -436,7 +855,7 @@ public class ReviewFragment extends Fragment {
                     .inflate(R.layout.review_list_item, parent, false))
                     : (ViewHolder) convertView.getTag();
 
-            viewHolder.dataTextView.setText(ConstantVar.CONES.get(position).quantity + ": " + ConstantVar.CONES.get(position).type + " " + ConstantVar.CONES.get(position).type + " T");
+            viewHolder.dataTextView.setText(ConstantVar.CONES.get(position).quantity + " " + ConstantVar.CONES.get(position).type + " Cone(s): " + ConstantVar.CONES.get(position).top + ConstantVar.CONES.get(position).topFrac + " Top Dia. " + ConstantVar.CONES.get(position).bot + ConstantVar.CONES.get(position).botFrac + "\" B Dia." );
             return convertView;
         }
     }
@@ -453,7 +872,7 @@ public class ReviewFragment extends Fragment {
 
         @Override
         public String getItem(int position) {
-            return ConstantVar.CORNERS.get(position).quantity + ": " + ConstantVar.CORNERS.get(position).type + " " + ConstantVar.CORNERS.get(position).height + " H";
+            return ConstantVar.CORNERS.get(position).quantity + " " + ConstantVar.CORNERS.get(position).type + " Corner(s): " + ConstantVar.CORNERS.get(position).height + ConstantVar.CORNERS.get(position).heightFrac + " H " + ConstantVar.CORNERS.get(position).depth + ConstantVar.CORNERS.get(position).depthFrac + " Dep.";
         }
 
         @Override
@@ -488,10 +907,375 @@ public class ReviewFragment extends Fragment {
                     .inflate(R.layout.review_list_item, parent, false))
                     : (ViewHolder) convertView.getTag();
 
-            viewHolder.dataTextView.setText(ConstantVar.CORNERS.get(position).quantity + ": " + ConstantVar.CORNERS.get(position).type + " " + ConstantVar.CORNERS.get(position).height + " H");
+            viewHolder.dataTextView.setText(ConstantVar.CORNERS.get(position).quantity + " " + ConstantVar.CORNERS.get(position).type + " Corner(s): " + ConstantVar.CORNERS.get(position).height + ConstantVar.CORNERS.get(position).heightFrac + " H " + ConstantVar.CORNERS.get(position).depth + ConstantVar.CORNERS.get(position).depthFrac + " Dep.");
             return convertView;
         }
     }
+
+    static class PipeBaseAdapter extends BaseAdapter {
+
+        PipeBaseAdapter() {
+        }
+
+        @Override
+        public int getCount() {
+            return ConstantVar.PIPES.size();
+        }
+
+        @Override
+        public String getItem(int position) {
+            return ConstantVar.PIPES.get(position).quantity + " " + ConstantVar.PIPES.get(position).type + " Pipe Wraps: " + ConstantVar.PIPES.get(position).height + ConstantVar.PIPES.get(position).heightFrac + " H " + ConstantVar.PIPES.get(position).color + " " + ConstantVar.PIPES.get(position).color;
+        }
+
+        @Override
+        public long getItemId(int position) {
+            return position;
+        }
+
+        public void remove(int position) {
+            try {
+                ConstantVar.PIPES.remove(position);
+
+            } catch (ConcurrentModificationException e) {
+                System.out.println("CurrentModificationException : " + e);
+            } finally {
+                notifyDataSetChanged();
+            }
+        }
+        static class ViewHolder {
+            TextView dataTextView;
+            ViewHolder(View view) {
+                dataTextView = (TextView) view.findViewById(R.id.txt_data);
+                view.setTag(this);
+            }
+        }
+
+        @SuppressLint("SetTextI18n")
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+
+            ViewHolder viewHolder = convertView == null
+                    ? new ViewHolder(convertView = LayoutInflater.from(parent.getContext())
+                    .inflate(R.layout.review_list_item, parent, false))
+                    : (ViewHolder) convertView.getTag();
+
+            viewHolder.dataTextView.setText(ConstantVar.PIPES.get(position).quantity + " " + ConstantVar.PIPES.get(position).type + " Pipe Wraps: " + ConstantVar.PIPES.get(position).height + ConstantVar.PIPES.get(position).heightFrac + " H " + ConstantVar.PIPES.get(position).color + " " + ConstantVar.PIPES.get(position).color);
+            return convertView;
+        }
+    }
+
+    static class DropBaseAdapter extends BaseAdapter {
+
+        DropBaseAdapter() {
+        }
+
+        @Override
+        public int getCount() {
+            return ConstantVar.DROPS.size();
+        }
+
+        @Override
+        public String getItem(int position) {
+            return ConstantVar.DROPS.get(position).quantity + ": " + ConstantVar.DROPS.get(position).diameter + " Diameter " + ConstantVar.DROPS.get(position).depth + " Depth";
+        }
+
+        @Override
+        public long getItemId(int position) {
+            return position;
+        }
+
+        public void remove(int position) {
+            try {
+                ConstantVar.DROPS.remove(position);
+
+            } catch (ConcurrentModificationException e) {
+                System.out.println("CurrentModificationException : " + e);
+            } finally {
+                notifyDataSetChanged();
+            }
+        }
+        static class ViewHolder {
+            TextView dataTextView;
+            ViewHolder(View view) {
+                dataTextView = (TextView) view.findViewById(R.id.txt_data);
+                view.setTag(this);
+            }
+        }
+
+        @SuppressLint("SetTextI18n")
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+
+            ViewHolder viewHolder = convertView == null
+                    ? new ViewHolder(convertView = LayoutInflater.from(parent.getContext())
+                    .inflate(R.layout.review_list_item, parent, false))
+                    : (ViewHolder) convertView.getTag();
+
+            viewHolder.dataTextView.setText(ConstantVar.DROPS.get(position).quantity + ": " + ConstantVar.DROPS.get(position).diameter + " Diameter " + ConstantVar.DROPS.get(position).depth + " Depth");
+            return convertView;
+        }
+    }
+
+    static class ScupperBaseAdapter extends BaseAdapter {
+
+        ScupperBaseAdapter() {
+        }
+
+        @Override
+        public int getCount() {
+            return ConstantVar.SCUPPERS.size();
+        }
+
+        @Override
+        public String getItem(int position) {
+            return ConstantVar.SCUPPERS.get(position).quantity + ": " + ConstantVar.SCUPPERS.get(position).type + " " + ConstantVar.SCUPPERS.get(position).depth + " Depth";
+        }
+
+        @Override
+        public long getItemId(int position) {
+            return position;
+        }
+
+        public void remove(int position) {
+            try {
+                ConstantVar.SCUPPERS.remove(position);
+
+            } catch (ConcurrentModificationException e) {
+                System.out.println("CurrentModificationException : " + e);
+            } finally {
+                notifyDataSetChanged();
+            }
+        }
+        static class ViewHolder {
+            TextView dataTextView;
+            ViewHolder(View view) {
+                dataTextView = (TextView) view.findViewById(R.id.txt_data);
+                view.setTag(this);
+            }
+        }
+
+        @SuppressLint("SetTextI18n")
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+
+            ViewHolder viewHolder = convertView == null
+                    ? new ViewHolder(convertView = LayoutInflater.from(parent.getContext())
+                    .inflate(R.layout.review_list_item, parent, false))
+                    : (ViewHolder) convertView.getTag();
+
+            viewHolder.dataTextView.setText(ConstantVar.SCUPPERS.get(position).quantity + ": " + ConstantVar.SCUPPERS.get(position).type + " " + ConstantVar.SCUPPERS.get(position).depth + " Depth");
+            return convertView;
+        }
+    }
+
+    static class PansBaseAdapter extends BaseAdapter {
+
+        PansBaseAdapter() {
+        }
+
+        @Override
+        public int getCount() {
+            return ConstantVar.PANS.size();
+        }
+
+        @Override
+        public String getItem(int position) {
+            return ConstantVar.PANS.get(position).quantity + ": " + ConstantVar.PANS.get(position).type + " " + ConstantVar.PANS.get(position).height + " H";
+        }
+
+        @Override
+        public long getItemId(int position) {
+            return position;
+        }
+
+        public void remove(int position) {
+            try {
+                ConstantVar.PANS.remove(position);
+
+            } catch (ConcurrentModificationException e) {
+                System.out.println("CurrentModificationException : " + e);
+            } finally {
+                notifyDataSetChanged();
+            }
+        }
+        static class ViewHolder {
+            TextView dataTextView;
+            ViewHolder(View view) {
+                dataTextView = (TextView) view.findViewById(R.id.txt_data);
+                view.setTag(this);
+            }
+        }
+
+        @SuppressLint("SetTextI18n")
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+
+            ViewHolder viewHolder = convertView == null
+                    ? new ViewHolder(convertView = LayoutInflater.from(parent.getContext())
+                    .inflate(R.layout.review_list_item, parent, false))
+                    : (ViewHolder) convertView.getTag();
+
+            viewHolder.dataTextView.setText(ConstantVar.PANS.get(position).quantity + ": " + ConstantVar.PANS.get(position).type + " " + ConstantVar.PANS.get(position).height + " H");
+            return convertView;
+        }
+    }
+
+    static class TubesBaseAdapter extends BaseAdapter {
+
+        TubesBaseAdapter() {
+        }
+
+        @Override
+        public int getCount() {
+            return ConstantVar.TUBES.size();
+        }
+
+        @Override
+        public String getItem(int position) {
+            return ConstantVar.TUBES.get(position).quantity + ": " + ConstantVar.TUBES.get(position).type + " " + ConstantVar.TUBES.get(position).height + " H";
+        }
+
+        @Override
+        public long getItemId(int position) {
+            return position;
+        }
+
+        public void remove(int position) {
+            try {
+                ConstantVar.TUBES.remove(position);
+
+            } catch (ConcurrentModificationException e) {
+                System.out.println("CurrentModificationException : " + e);
+            } finally {
+                notifyDataSetChanged();
+            }
+        }
+        static class ViewHolder {
+            TextView dataTextView;
+            ViewHolder(View view) {
+                dataTextView = (TextView) view.findViewById(R.id.txt_data);
+                view.setTag(this);
+            }
+        }
+
+        @SuppressLint("SetTextI18n")
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+
+            ViewHolder viewHolder = convertView == null
+                    ? new ViewHolder(convertView = LayoutInflater.from(parent.getContext())
+                    .inflate(R.layout.review_list_item, parent, false))
+                    : (ViewHolder) convertView.getTag();
+
+            viewHolder.dataTextView.setText(ConstantVar.TUBES.get(position).quantity + ": " + ConstantVar.TUBES.get(position).type + " " + ConstantVar.TUBES.get(position).height + " H");
+            return convertView;
+        }
+    }
+
+    static class CurbsBaseAdapter extends BaseAdapter {
+
+        CurbsBaseAdapter() {
+        }
+
+        @Override
+        public int getCount() {
+            return ConstantVar.CURBS.size();
+        }
+
+        @Override
+        public String getItem(int position) {
+            return ConstantVar.CURBS.get(position).quantity + ": " + ConstantVar.CURBS.get(position).type + " " + ConstantVar.CURBS.get(position).height + " H";
+        }
+
+        @Override
+        public long getItemId(int position) {
+            return position;
+        }
+
+        public void remove(int position) {
+            try {
+                ConstantVar.CURBS.remove(position);
+
+            } catch (ConcurrentModificationException e) {
+                System.out.println("CurrentModificationException : " + e);
+            } finally {
+                notifyDataSetChanged();
+            }
+        }
+        static class ViewHolder {
+            TextView dataTextView;
+            ViewHolder(View view) {
+                dataTextView = (TextView) view.findViewById(R.id.txt_data);
+                view.setTag(this);
+            }
+        }
+
+        @SuppressLint("SetTextI18n")
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+
+            ViewHolder viewHolder = convertView == null
+                    ? new ViewHolder(convertView = LayoutInflater.from(parent.getContext())
+                    .inflate(R.layout.review_list_item, parent, false))
+                    : (ViewHolder) convertView.getTag();
+
+            viewHolder.dataTextView.setText(ConstantVar.CURBS.get(position).quantity + ": " + ConstantVar.CURBS.get(position).type + " " + ConstantVar.CURBS.get(position).height + " H");
+            return convertView;
+        }
+    }
+
+    static class SleepersBaseAdapter extends BaseAdapter {
+
+        SleepersBaseAdapter() {
+        }
+
+        @Override
+        public int getCount() {
+            return ConstantVar.SLEEPERS.size();
+        }
+
+        @Override
+        public String getItem(int position) {
+            return ConstantVar.SLEEPERS.get(position).quantity + ": " + ConstantVar.SLEEPERS.get(position).length + " L " + ConstantVar.SLEEPERS.get(position).height + " H";
+        }
+
+        @Override
+        public long getItemId(int position) {
+            return position;
+        }
+
+        public void remove(int position) {
+            try {
+                ConstantVar.SLEEPERS.remove(position);
+
+            } catch (ConcurrentModificationException e) {
+                System.out.println("CurrentModificationException : " + e);
+            } finally {
+                notifyDataSetChanged();
+            }
+        }
+        static class ViewHolder {
+            TextView dataTextView;
+            ViewHolder(View view) {
+                dataTextView = (TextView) view.findViewById(R.id.txt_data);
+                view.setTag(this);
+            }
+        }
+
+        @SuppressLint("SetTextI18n")
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+
+            ViewHolder viewHolder = convertView == null
+                    ? new ViewHolder(convertView = LayoutInflater.from(parent.getContext())
+                    .inflate(R.layout.review_list_item, parent, false))
+                    : (ViewHolder) convertView.getTag();
+
+            viewHolder.dataTextView.setText(ConstantVar.SLEEPERS.get(position).quantity + ": " + ConstantVar.SLEEPERS.get(position).length + " L " + ConstantVar.SLEEPERS.get(position).height + " H");
+            return convertView;
+        }
+    }
+
 }
 
 

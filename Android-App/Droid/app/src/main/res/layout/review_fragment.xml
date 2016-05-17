@@ -238,5 +238,61 @@
                 android:animateLayoutChanges="true" />
 
         </LinearLayout>
+
+        <!-- CURBS -->
+        <TextView
+            android:id="@+id/review_title_curb"
+            android:text="@string/Curbs"
+            android:textSize="18sp"
+            android:textColor="@color/grey_700"
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:id="@+id/layout_curb"
+            android:visibility="gone"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:orientation="vertical">
+
+            <ListView
+                android:id="@+id/review_list_view_curbs"
+                android:nestedScrollingEnabled="true"
+                android:divider="@color/grey_300"
+                android:dividerHeight="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true" />
+
+        </LinearLayout>
+
+        <!-- SLEEPERS -->
+        <TextView
+            android:id="@+id/review_title_sleeper"
+            android:text="@string/Sleepers"
+            android:textSize="18sp"
+            android:textColor="@color/grey_700"
+            android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:id="@+id/layout_sleeper"
+            android:visibility="gone"
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:orientation="vertical">
+
+            <ListView
+                android:id="@+id/review_list_view_sleepers"
+                android:nestedScrollingEnabled="true"
+                android:divider="@color/grey_300"
+                android:dividerHeight="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true" />
+
+        </LinearLayout>
     </LinearLayout>
 </ScrollView>

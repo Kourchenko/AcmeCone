@@ -1,14 +1,13 @@
 package acme.com.acmecone.Items;
 
-public class Tube {
-    public String type;
+public class Sleeper {
     public int quantity;
     public int height;
     public String heightFrac;
-    public int width;
-    public String widthFrac;
     public int length;
     public String lengthFrac;
+    public int width;
+    public String widthFrac;
     public int flange;
     public String flangeFrac;
     public String color;

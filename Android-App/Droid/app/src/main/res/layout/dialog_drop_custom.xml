@@ -6,7 +6,7 @@
     <EditText
         android:id="@+id/drop_text_quantity"
         android:hint="@string/quantity"
-        android:inputType="text"
+        android:inputType="number"
         android:imeOptions="actionNext"
         android:layout_width="200dp"
         android:layout_height="wrap_content" />

@@ -26,6 +26,15 @@ import java.util.Date;
 import java.util.Map;
 
 import acme.com.acmecone.Adapters.GMailSender;
+import acme.com.acmecone.Items.Cone;
+import acme.com.acmecone.Items.Corner;
+import acme.com.acmecone.Items.Curb;
+import acme.com.acmecone.Items.Drop;
+import acme.com.acmecone.Items.Pan;
+import acme.com.acmecone.Items.Pipe;
+import acme.com.acmecone.Items.Scupper;
+import acme.com.acmecone.Items.Sleeper;
+import acme.com.acmecone.Items.Tube;
 import acme.com.acmecone.R;
 import acme.com.acmecone.Utility.ConstantVar;
 
@@ -121,14 +130,136 @@ public class CheckoutFragment extends Fragment {
                                                         + mPhone + "\n"
                                                         + mManufacturer + "\n";
 
-                                                for (String type : ConstantVar.DATASET) {
-                                                    orderString += type + "\n";
+                                                if (!ConstantVar.DATASET.isEmpty()) {
+                                                    for (String type : ConstantVar.DATASET) {
+                                                        orderString += type + "\n";
+                                                    }
+                                                }
+                                                if (!ConstantVar.CONES.isEmpty()) {
+                                                    orderString += "\n\nCustom Cones: \n";
+                                                    for (Cone cone: ConstantVar.CONES) {
+                                                        orderString +=  cone.quantity +  " " + cone.type + "Cone(s) \n"
+                                                                        +cone.height + " " + cone.heightFrac + " H \n"
+                                                                        +cone.bot + " " + cone.botFrac + " B \n"
+                                                                        +cone.top + " " + cone.topFrac + " T \n"
+                                                                        +cone.flange + " " + cone.flangeFrac + " F \n"
+                                                                        +cone.color + " " + cone.material
+                                                                        +"\n";
+                                                    }
+                                                }
+                                                if (!ConstantVar.CORNERS.isEmpty()) {
+                                                    orderString += "\n\n Custom Corners: \n";
+                                                    for (Corner corner: ConstantVar.CORNERS) {
+                                                        orderString += corner.quantity + " " + corner.type + " Corner(s) \n"
+                                                                        +corner.depth + " " + corner.depthFrac + " Depth \n"
+                                                                        +corner.height + " " + corner.heightFrac + " H \n"
+                                                                        +corner.flange + " " + corner.flangeFrac + " F \n"
+                                                                        +corner.color + " " + corner.material
+                                                                        +"\n";
+                                                    }
+                                                }
+
+                                                if (!ConstantVar.PIPES.isEmpty()) {
+                                                    orderString += "\n\nCustom Pipe Wraps: \n";
+                                                    for (Pipe pipe: ConstantVar.PIPES) {
+                                                        orderString += pipe.quantity + " " + pipe.type + " Pipe(s) \n"
+                                                                        +pipe.diameter + " " + pipe.diameterFrac + " Dia. \n"
+                                                                        +pipe.height + " " + pipe.heightFrac + " H \n"
+                                                                        +pipe.flange + " " + pipe.flangeFrac + " F \n"
+                                                                        +pipe.color + " " + pipe.material
+                                                                        + "\n";
+                                                    }
+                                                }
+
+                                                if (!ConstantVar.DROPS.isEmpty()) {
+                                                    orderString += "\n\nCustom Drop Scuppers: \n";
+                                                    for (Drop drop: ConstantVar.DROPS) {
+                                                        orderString +=  drop.quantity + " Drop(s) \n"
+                                                                        +drop.diameter + " " + drop.diameterFrac + " Dia. \n"
+                                                                        +drop.depth + " " + drop.depthFrac + " Dep. \n"
+                                                                        +drop.flange + " " + drop.flangeFrac + " F \n"
+                                                                        +drop.color + " " + drop.material
+                                                                        + "\n";
+                                                    }
+                                                }
+
+                                                if (!ConstantVar.SCUPPERS.isEmpty()) {
+                                                    orderString += "\n\nCustom Scuppers: \n";
+                                                    for (Scupper scupper: ConstantVar.SCUPPERS) {
+                                                        orderString +=  scupper.quantity + " " + scupper.type + " Scupper(s) \n"
+                                                                        +scupper.depth + " " + scupper.depthFrac + " Dep. \n"
+                                                                        +scupper.length + " " + scupper.lengthFrac + " L \n"
+                                                                        +scupper.width + " " + scupper.widthFrac + " W \n"
+                                                                        +scupper.flange + " " + scupper.flangeFrac + " F \n"
+                                                                        +scupper.color + " " + scupper.material
+                                                                        + "\n";
+                                                    }
+                                                }
+
+                                                if (!ConstantVar.PANS.isEmpty()) {
+                                                    orderString += "\n\nCustom Pitch Pans: \n";
+                                                    for (Pan pan: ConstantVar.PANS) {
+                                                        if (pan.dimension.equals("Round")) {
+                                                            orderString +=  pan.quantity + " " + " " + pan.dimension + " " + pan.type + " Pitch Pan(s) \n"
+                                                                            +pan.height + " " + pan.heightFrac + " H \n"
+                                                                            +pan.diameter + " " + pan.diameterFrac + "Dia. \n"
+                                                                            +pan.flange + " " + pan.flangeFrac + " F \n"
+                                                                            +pan.color + " " + pan.material
+                                                                            + "\n";
+
+                                                        } else if (pan.dimension.equals("Square")) {
+                                                            orderString +=  pan.quantity + " " + pan.dimension + " " +pan.type + " Pitch Pans(s) \n"
+                                                                            +pan.height + " " + pan.heightFrac + " H \n"
+                                                                            +pan.length + " " + pan.lengthFrac + " L \n"
+                                                                            +pan.width + " " + pan.widthFrac + " W \n"
+                                                                            +pan.flange + " " + pan.flangeFrac + " F \n"
+                                                                            +pan.color + " " + pan.material
+                                                                            + "\n";
+                                                        }
+                                                    }
+                                                }
+
+                                                if (!ConstantVar.TUBES.isEmpty()) {
+                                                    for (Tube tube: ConstantVar.TUBES) {
+                                                        orderString +=  tube.quantity + " " + tube.type + " Tube Wrap(s) \n"
+                                                                        +tube.height + " " + tube.heightFrac + " H \n"
+                                                                        +tube.length + " " + tube.lengthFrac + " L \n"
+                                                                        +tube.width + " " + tube.widthFrac + " W \n"
+                                                                        +tube.flange + " " + tube.flangeFrac + " F \n"
+                                                                        +tube.color + " " + tube.material
+                                                                        + "\n";
+                                                    }
+                                                }
+
+                                                if (!ConstantVar.CURBS.isEmpty()) {
+                                                    for (Curb curb: ConstantVar.CURBS) {
+                                                        orderString +=  curb.quantity + " " + curb.type + " Curb Wrap(s) \n"
+                                                                        +curb.height + " " + curb.heightFrac + " H \n"
+                                                                        +curb.length + " " + curb.lengthFrac + " L \n"
+                                                                        +curb.width + " " + curb.widthFrac + " W \n"
+                                                                        +curb.flange + " " + curb.flangeFrac + " F \n"
+                                                                        +curb.color + " " + curb.material
+                                                                        + "\n";
+                                                    }
+                                                }
+
+                                                if (!ConstantVar.SLEEPERS.isEmpty()) {
+                                                    for (Sleeper sleeper: ConstantVar.SLEEPERS) {
+                                                        orderString +=  sleeper.quantity + " " + "Sleeper Box(es) \n"
+                                                                        +sleeper.height + " " + sleeper.heightFrac + " H \n"
+                                                                        +sleeper.length + " " + sleeper.lengthFrac + " L \n"
+                                                                        +sleeper.width + " " + sleeper.widthFrac + " W \n"
+                                                                        +sleeper.flange + " " + sleeper.flangeFrac + " F \n"
+                                                                        +sleeper.color + " " + sleeper.material
+                                                                        + "\n";
+                                                    }
                                                 }
 
                                                 final String allTogether = "Date Needed: " + selectedDate + "\n\n" + "STOCK: \n" + orderString + "\n\n" + orderInfo;
 
-                                                GMailSender sender = new GMailSender("acmecone.acme@gmail.com", "Acmecone97402");
-                                                sender.sendMail(mCompany + "ordered!", allTogether, mEmail, "acmecone.acme@gmail.com, " + mEmail);
+                                                GMailSender sender = new GMailSender("YOUR_EMAIL@domain.com", "password");
+                                                // toRecipients must be seperated by commas: "emailAddress,"
+                                                sender.sendMail(mCompany + "ordered!", allTogether, mEmail, "emailAddress," + "anotherEmailAddress," + mEmail);
 
                                                 Snackbar.make(container, "Successfully Sent Message!", Snackbar.LENGTH_LONG).show();
 
