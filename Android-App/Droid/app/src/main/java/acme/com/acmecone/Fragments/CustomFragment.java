@@ -26,6 +26,7 @@ import java.lang.reflect.Array;
 
 import acme.com.acmecone.Items.Cone;
 import acme.com.acmecone.Items.Corner;
+import acme.com.acmecone.Items.Curb;
 import acme.com.acmecone.Items.Drop;
 import acme.com.acmecone.Items.Pan;
 import acme.com.acmecone.Items.Pipe;
@@ -652,7 +653,6 @@ public class CustomFragment extends Fragment {
 
                     case 5:
                         AlertDialog.Builder builder_pan = new AlertDialog.Builder(v.getContext());
-
                         builder_pan.setTitle("Custom Pitch Pans");
                         final View layout_pan = View.inflate(v.getContext(), R.layout.dialog_pitch_pans_custom, null);
                         builder_pan.setView(layout_pan);
@@ -973,11 +973,96 @@ public class CustomFragment extends Fragment {
 
                         builder_tube.show();
 
-
                         break;
 
                     case 7:
-                        //
+                        AlertDialog.Builder builder_curb = new AlertDialog.Builder(v.getContext());
+                        builder_curb.setTitle("Custom Curb Wraps");
+                        final View layout_curb = View.inflate(v.getContext(), R.layout.dialog_pitch_pans_custom, null);
+                        builder_curb.setView(layout_curb);
+
+                        final RadioGroup curb_radioGroup = (RadioGroup) layout_curb.findViewById(R.id.tube_btn_radio_group);
+                        final RadioButton curb_radioSplit = (RadioButton) layout_curb.findViewById(R.id.tube_btn_radio_split);
+                        final RadioButton curb_radioNonSplit = (RadioButton) layout_curb.findViewById(R.id.tube_btn_radio_nonsplit);
+
+                        builder_curb.setPositiveButton("Add", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+
+                                if (curb_radioGroup.getCheckedRadioButtonId() == curb_radioSplit.getId()) {
+
+                                    final String type = "Split";
+                                    final int quantity = Integer.parseInt(((EditText) layout_curb.findViewById(R.id.tube_text_quantity)).getText().toString());
+                                    final int height = Integer.parseInt(((EditText) layout_curb.findViewById(R.id.tube_text_height)).getText().toString());
+                                    final String heightFrac = ((Spinner) layout_curb.findViewById(R.id.curb_menu_height_spinner)).getSelectedItem().toString();
+                                    final int length = Integer.parseInt(((EditText) layout_curb.findViewById(R.id.tube_text_length)).getText().toString());
+                                    final String lengthFrac = ((Spinner) layout_curb.findViewById(R.id.curb_menu_length_spinner)).getSelectedItem().toString();
+                                    final int width = Integer.parseInt(((EditText) layout_curb.findViewById(R.id.tube_text_width)).getText().toString());
+                                    final String widthFrac = ((Spinner) layout_curb.findViewById(R.id.curb_menu_width_spinner)).getSelectedItem().toString();
+                                    final int flange = Integer.parseInt(((EditText) layout_curb.findViewById(R.id.tube_text_flange)).getText().toString());
+                                    final String flangeFrac = ((Spinner) layout_curb.findViewById(R.id.curb_menu_flange_spinner)).getSelectedItem().toString();
+                                    final String color = ((EditText) layout_curb.findViewById(R.id.curb_text_color)).getText().toString();
+                                    final String material = ((EditText) layout_curb.findViewById(R.id.curb_text_material)).getText().toString();
+
+                                    Curb curb = new Curb();
+                                    curb.type = type;
+                                    curb.quantity = quantity;
+                                    curb.height = height;
+                                    curb.heightFrac = heightFrac;
+                                    curb.length = length;
+                                    curb.lengthFrac = lengthFrac;
+                                    curb.width = width;
+                                    curb.widthFrac = widthFrac;
+                                    curb.flange = flange;
+                                    curb.flangeFrac = flangeFrac;
+                                    curb.color = color;
+                                    curb.material = material;
+
+                                    ConstantVar.CURBS.add(curb);
+                                    Toast.makeText(layout_curb.getContext(), "ADDED Curb Wrap!", Toast.LENGTH_SHORT).show();
+
+                                } else if (curb_radioGroup.getCheckedRadioButtonId() == curb_radioNonSplit.getId()) {
+                                    final String type = "Non-Split";
+                                    final int quantity = Integer.parseInt(((EditText) layout_curb.findViewById(R.id.tube_text_quantity)).getText().toString());
+                                    final int height = Integer.parseInt(((EditText) layout_curb.findViewById(R.id.tube_text_height)).getText().toString());
+                                    final String heightFrac = ((Spinner) layout_curb.findViewById(R.id.curb_menu_height_spinner)).getSelectedItem().toString();
+                                    final int length = Integer.parseInt(((EditText) layout_curb.findViewById(R.id.tube_text_length)).getText().toString());
+                                    final String lengthFrac = ((Spinner) layout_curb.findViewById(R.id.curb_menu_length_spinner)).getSelectedItem().toString();
+                                    final int width = Integer.parseInt(((EditText) layout_curb.findViewById(R.id.tube_text_width)).getText().toString());
+                                    final String widthFrac = ((Spinner) layout_curb.findViewById(R.id.curb_menu_width_spinner)).getSelectedItem().toString();
+                                    final int flange = Integer.parseInt(((EditText) layout_curb.findViewById(R.id.tube_text_flange)).getText().toString());
+                                    final String flangeFrac = ((Spinner) layout_curb.findViewById(R.id.curb_menu_flange_spinner)).getSelectedItem().toString();
+                                    final String color = ((EditText) layout_curb.findViewById(R.id.curb_text_color)).getText().toString();
+                                    final String material = ((EditText) layout_curb.findViewById(R.id.curb_text_material)).getText().toString();
+
+                                    Curb curb = new Curb();
+                                    curb.type = type;
+                                    curb.quantity = quantity;
+                                    curb.height = height;
+                                    curb.heightFrac = heightFrac;
+                                    curb.length = length;
+                                    curb.lengthFrac = lengthFrac;
+                                    curb.width = width;
+                                    curb.widthFrac = widthFrac;
+                                    curb.flange = flange;
+                                    curb.flangeFrac = flangeFrac;
+                                    curb.color = color;
+                                    curb.material = material;
+
+                                    ConstantVar.CURBS.add(curb);
+                                    Toast.makeText(layout_curb.getContext(), "ADDED Curb Wrap!", Toast.LENGTH_SHORT).show();
+                                }
+                            }
+                        });
+
+                        builder_curb.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int i) {
+                                dialog.dismiss();
+                            }
+                        });
+
+                        builder_curb.show();
                         break;
                 }
             }

@@ -1,6 +1,152 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <RadioGroup
+        android:id="@+id/curb_radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/curb_radio_split"
+            android:text="@string/Split"
+            android:checked="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <RadioButton
+            android:id="@+id/curb_radio_nonsplit"
+            android:text="@string/Non_Split"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/curb_text_quantity"
+        android:hint="@string/quantity"
+        android:inputType="number"
+        android:imeOptions="actionNext"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/curb_text_height"
+            android:hint="@string/height"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"/>
+
+        <Spinner
+            android:id="@+id/curb_menu_height_spinner"
+            android:layout_toRightOf="@id/curb_text_height"
+            android:layout_toEndOf="@id/curb_text_height"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/curb_text_height" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/curb_text_width"
+            android:hint="@string/width"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"/>
+
+        <Spinner
+            android:id="@+id/curb_menu_width_spinner"
+            android:layout_toRightOf="@id/curb_text_width"
+            android:layout_toEndOf="@id/curb_text_width"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/curb_text_width" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/curb_text_length"
+            android:hint="@string/length"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"/>
+
+        <Spinner
+            android:id="@+id/curb_menu_length_spinner"
+            android:layout_toRightOf="@id/curb_text_length"
+            android:layout_toEndOf="@id/curb_text_length"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/curb_text_length" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/curb_text_flange"
+            android:hint="@string/flange"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"/>
+
+        <Spinner
+            android:id="@+id/curb_menu_flange_spinner"
+            android:layout_toRightOf="@id/curb_text_flange"
+            android:layout_toEndOf="@id/curb_text_flange"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/curb_text_flange" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/curb_text_color"
+        android:hint="@string/color"
+        android:inputType="number"
+        android:imeOptions="actionNext"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/curb_text_material"
+        android:hint="@string/material"
+        android:inputType="number"
+        android:imeOptions="actionDone"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content" />
+
 
 </LinearLayout>

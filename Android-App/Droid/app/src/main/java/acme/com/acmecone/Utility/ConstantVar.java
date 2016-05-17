@@ -8,6 +8,7 @@ import java.util.Map;
 
 import acme.com.acmecone.Items.Cone;
 import acme.com.acmecone.Items.Corner;
+import acme.com.acmecone.Items.Curb;
 import acme.com.acmecone.Items.Drop;
 import acme.com.acmecone.Items.Pan;
 import acme.com.acmecone.Items.Pipe;
@@ -43,6 +44,7 @@ public class ConstantVar {
     public static final ArrayList<Scupper> SCUPPERS = new ArrayList<>();
     public static final ArrayList<Pan> PANS         = new ArrayList<>();
     public static final ArrayList<Tube> TUBES       = new ArrayList<>();
+    public static final ArrayList<Curb> CURBS       = new ArrayList<>();
 
     public static final String[] MATERIALS = new String[] {
             "TPO 60mil", "PVC 60mil",

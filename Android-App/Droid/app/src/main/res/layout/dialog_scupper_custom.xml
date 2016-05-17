@@ -52,7 +52,8 @@
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/scupper_text_depth" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -76,7 +77,8 @@
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/scupper_text_width" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -100,7 +102,8 @@
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/scupper_text_length" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -124,7 +127,8 @@
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/scupper_text_flange" />
     </RelativeLayout>
 
     <EditText
