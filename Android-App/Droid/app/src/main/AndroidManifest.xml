@@ -132,6 +132,15 @@
 
         </activity>
 
+        <activity android:name=".Fragments.VentViewFragment"
+            android:label="@string/app_name">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainTabbed" />
+
+        </activity>
+
 
         <!-- ATTENTION: This was auto-generated to add Google Play services to your project for
              App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->

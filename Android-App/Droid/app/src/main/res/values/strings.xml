@@ -309,32 +309,41 @@
     <string name="Scuppers">SCUPPERS</string>
     <string name="custom_scuppers">Custom Scuppers</string>
     <string name="scuppers_notes">(Optional) Notes: ThruDeck, ThruWall, 45˚ Cant</string>
-    <string name="scuppers_tw_four">4" ThruWall Scupper</string>
-    <string name="scuppers_tw_four_desc"><b>Dimensions: </b>
-                                            \n 4” Height,
-                                            \n 4” Width,
-                                            \n 12” Depth,
-                                            \n 4” Metal Flange,
-                                            \n 6” Membrane Flange
+    <string name="scuppers_tw_four">4\" ThruWall Scupper</string>
+    <string name="scuppers_tw_four_desc">
+        <b>Dimensions:
+        \n 4” Height,
+        \n 4” Width,
+        \n 12” Depth,
+        \n 4” Metal Flange,
+        \n 6” Membrane Flange
+        </b>
     </string>
 
-    <string name="scuppers_tw_six">6" ThruWall Scupper</string>
-    <string name="scuppers_tw_six_desc"><b>Dimensions: </b>
-                                            \n 6\" Height,
-                                            \n 6\" Width,
-                                            \n 12\" Depth,
-                                            \n 4\" Metal Flange,
-                                            \n 6\" Membrane Flange
+    <string name="scuppers_tw_four_parg">Our 4\” thru wall scupper is made of 24 gauge galvanized clad metal. As a stocked item, you can expect to find both split and non-split in TPO (white/grey) and PVC (white/grey) on our shelves. With our membrane skirt reaching a full 2\” past the metal flanges the Acme 4\” thru wall scupper installs easily with an attractive low profile after being fastened to the roof deck and wall.</string>
+
+    <string name="scuppers_tw_six">6\" ThruWall Scupper</string>
+    <string name="scuppers_tw_six_desc">
+        <b>Dimensions:
+        \n 6\" Height,
+        \n 6\" Width,
+        \n 12\" Depth,
+        \n 4\" Metal Flange,
+        \n 6\" Membrane Flange
+        </b>
     </string>
+    <string name="scuppers_tw_six_parg">Our 6\” thru wall scupper is made of 24 gauge galvanized clad metal. As a stocked item, you can expect to find both split and non-split in TPO (white/grey) and PVC (white/grey) on our shelves. With our membrane skirt reaching a full 2\” past the metal flanges the Acme 6\” thru wall scupper installs easily with an attractive low profile after being fastened to the roof deck and wall.</string>
+
     <string name="scuppers_overflow">Overflows</string>
-    <string name="scuppers_overflow_desc"> Over Flow boxes are available upon request in any dimension.
-                                        \n Over flows can include a metal or membrane only drop drain
-                                        in the back and are available in open top, open back or back
-                                        capped options.
-                                        \n Over Flows are made to order for your specific needs
-                                        including both right and left wall corner options.
+    <string name="scuppers_overflow_desc">
+        Over Flow boxes are available upon request in any dimension.
+        Over flows can include a metal or membrane only drop drain
+        in the back and are available in open top, open back or back capped options.
+        Over Flows are made to order for your specific needs
+        including both right and left wall corner options.
     </string>
 
+    <string name="scuppers_collector_boxes">Custom Thru Walls and collector boxes can be made to any size upon request. Collector boxes as well as custom sized thru walls can be entirely made out of membrane to accommodate a tight corner not easily accessed by a clad metal box. These can also include a drain or drain liner sealed and attached. Custom collector boxes and Thru Walls are made to order for your specific needs.</string>
 
     <!-- Pitch Pans -->
     <string name="Pitch_Pans">PITCH PANS</string>
@@ -361,9 +370,54 @@
                                     something else please specify.
 
                                     \n\n<u>Given that we make tube wraps to order be sure to note
-                                    whether a “4X4 post” is wood or metal as this will affect
+                                    whether a “4\"X4\" post” is wood or metal as this will affect
                                     the true size of the flashing. Available in split or non-split.</u>
     </string>
+
+
+    <string name="vent_bv">Plastic Breather Vent \n(1-Way and 2-Way)</string>
+    <string name="vent_bv_desc">
+        <b>Dimensions:
+            \n8” Height
+            \n4” Diameter
+            \n4” Flange
+        </b>
+    </string>
+    <string name="vent_bv_parg">Breather Vents are another of Acme Cone\’s most popular items. Great for small to mid-area venting needs, the breather vent can accommodate up to a 4\” opening for roughly 12\” of free flow air space. Our breather vent has a ridged PVC cap to prevent rain as well as wire mesh to prevent insects or small debris from blocking air flow. As a stocked item, you can expect to find both split and non-split in TPO (white/grey) and PVC (white/grey) on our shelves. Our breather vents come in either 2 Way venting or 1 Way venting with a flapper cap affixed to the inside which allows air to only escape out and not back in.</string>
+
+    <string name="vent_bvm">Metal Breather Vent \n(1-Way and 2-Way)</string>
+    <string name="vent_bvm_desc">
+        <b>Dimensions:
+            \n8” Height
+            \n4” Diameter
+            \n4” Flange
+        </b>
+    </string>
+    <string name="vent_bvm_parg">Acme Cone is now offering a spun aluminum version of the popular breather vent in both 1 Way and 2 Way designs. Just as our standard BVs it has a 4\” open diameter on the bottom and comes flashed in the TPO or PVC of your choosing for a quick, easy installation.</string>
+
+    <string name="vent_rvo">RVO Vent and Collar Combo</string>
+    <string name="vent_rvo_desc">
+        <b>Dimensions:
+        \n8” Height
+        \n8” Diameter
+        \n4” Metal Flange
+        \n7” Membrane Flange
+        </b>
+    </string>
+    <string name="vent_rvo_parg">The RVO combo kit comes completely assembled and flashed, ready to be installed. If you are flashing an already installed we can also provide the collar as a single unit without the metal bin at cover. As a stocked item, you can expect to find both split and non-split in TPO (white/grey) and PVC (white/grey) on our shelves.</string>
+
+    <string name="vent_tv">12\" Turbine Vent</string>
+    <string name="vent_tv_desc">
+        <b>Dimensions:
+        \n18” Height
+        \n12” Top Diameter
+        \n14” Bottom Diameter
+        \n4” Metal Flange
+        \n6” Membrane Flange
+        </b>
+    </string>
+
+    <string name="vent_tv_parg">The largest of our stocked vents is the 12” turbine or “Whirly Bird” vent is available in colors not sold commercially elsewhere. As a stocked item, you can expect to find both split and non-split in TPO (white/grey) and PVC (white/grey) on our shelves.</string>
 
 
     <!-- Cones -->

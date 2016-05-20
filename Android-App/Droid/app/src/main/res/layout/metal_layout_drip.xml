@@ -40,6 +40,15 @@
                 android:padding="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/metal_phone"
+                android:text="@string/metal_phone_call"
+                android:textSize="25sp"
+                android:padding="15dp"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
         </LinearLayout>
     </ScrollView>
 </android.support.design.widget.CoordinatorLayout>

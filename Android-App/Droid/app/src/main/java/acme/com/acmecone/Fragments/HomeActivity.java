@@ -25,6 +25,7 @@ public class HomeActivity extends Fragment {
     public ImageView scuppers;
     public ImageView pitch_pans;
     public ImageView tube_wraps;
+    public ImageView vent;
 
     public ImageView LOGO;
 
@@ -125,6 +126,15 @@ public class HomeActivity extends Fragment {
             }
         });
 
+        vent = (ImageView) view.findViewById(R.id.main_vent);
+        vent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent ventIntent = new Intent(context, VentViewFragment.class);
+                startActivity(ventIntent);
+            }
+        });
+
         final int matches = 5;
         LOGO = (ImageView) view.findViewById(R.id.logo);
         LOGO.setOnClickListener(new View.OnClickListener() {
@@ -135,6 +145,7 @@ public class HomeActivity extends Fragment {
                     Toast.makeText(context, "Need to Click: " + need.toString(), Toast.LENGTH_SHORT).show();
                     clicked += 1;
                 } else if (matches == clicked) {
+                    Toast.makeText(v.getContext(), "Acme Cone Co.", Toast.LENGTH_LONG).show();
                     Intent callIntent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel: (866) 516-4079"));
                     startActivity(callIntent);
                     clicked = 0;
