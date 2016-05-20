@@ -43,7 +43,7 @@
             </RelativeLayout>
 
             <TextView
-                android:text="@string/boxes_curbwrap_desc"
+                android:text="@string/boxes_curbwrap_parg"
                 android:textSize="18sp"
                 android:padding="10dp"
                 android:layout_width="match_parent"

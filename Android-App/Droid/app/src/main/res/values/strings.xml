@@ -79,17 +79,6 @@
     <string name="fractions">Fractions</string>
     <string name="orderform_addToOrder">Add To Order</string>
 
-    <string-array name="fractions">
-        <item>1/8</item>
-        <item>&#188;</item>
-        <item>3/8</item>
-        <item>&#189;</item>
-        <item>5/8</item>
-        <item>&#190;</item>
-        <item>7/8</item>
-    </string-array>
-
-
     <!-- Cones Description -->
     <string name="Cones">CONES</string>
     <string name="product_cones_text">Our Cones are available in both split and non-split versions.
@@ -185,10 +174,12 @@
     <string name="corners_text">Custom Corners</string>
     <string name="corners_outside">Outside Corners</string>
     <string name="corners_outside_desc">
+        <b>
         Dimensions:
         \n 6” Height,
         \n 6” Width,
         \n 6” Flange
+        </b>
     </string>
     <string name="corners_outside_parg">Because of its simplicity the outside corner is an
                                         inexpensive fix to many a common problem.
