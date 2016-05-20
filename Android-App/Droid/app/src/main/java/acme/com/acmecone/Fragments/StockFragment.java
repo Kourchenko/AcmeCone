@@ -150,12 +150,11 @@ public class StockFragment extends Fragment implements NavigationView.OnNavigati
         stockB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 try {
                     final Integer quantity = Integer.parseInt(stock_edit_quantity.getText().toString());
                     final String type = stock_edit_text.getText().toString();
 
-                    if (ConstantVar.REVIEW_DATABASE.values().contains(type)) {
+                    if (ConstantVar.STOCK.containsKey(type)) {
 
                         // Alert User of Overwriting Product
                         AlertDialog.Builder alert = new AlertDialog.Builder(getActivity());
@@ -164,21 +163,20 @@ public class StockFragment extends Fragment implements NavigationView.OnNavigati
                                 .setPositiveButton("ADD TO SUM", new DialogInterface.OnClickListener() {
                                     @Override
                                     public void onClick(DialogInterface dialog, int which) {
-                                        for (Map.Entry<Integer, String> entry : ConstantVar.REVIEW_DATABASE.entrySet()) {
-                                            String mDSET = entry.getKey() + ": " + entry.getValue();
+                                        for (Map.Entry<String, Integer> entry : ConstantVar.STOCK.entrySet()) {
+                                            String mDSET = entry.getValue() + ": " + entry.getKey();
                                             if (ConstantVar.DATASET.contains(mDSET)) {
 
                                                 System.out.println("DATASET contained: " + mDSET);
                                                 System.out.println("DATASET indexOf: " + ConstantVar.DATASET.indexOf(mDSET));
-                                                Integer temp = entry.getKey();
+                                                Integer temp = entry.getValue();
                                                 Integer sum = temp + quantity;
 
                                                 ConstantVar.DATASET.remove(ConstantVar.DATASET.indexOf(mDSET));
-                                                ConstantVar.REVIEW_DATABASE.values().removeAll(Collections.singleton(entry.getValue()));
+                                                ConstantVar.STOCK.remove(entry.getKey());
 
-                                                ConstantVar.REVIEW_DATABASE.put(sum, type);
-                                                ConstantVar.DATASET.add(0, sum + ": " + type);
-
+                                                ConstantVar.STOCK.put(type, sum);
+                                                ConstantVar.DATASET.add(0, Integer.toString(sum) + ": " + type);
                                             }
                                         }
                                     }
@@ -186,13 +184,17 @@ public class StockFragment extends Fragment implements NavigationView.OnNavigati
                                 .setNeutralButton("REPLACE QUANTITY", new DialogInterface.OnClickListener() {
                                     @Override
                                     public void onClick(DialogInterface dialog, int which) {
+                                        for (Map.Entry<String, Integer> entry: ConstantVar.STOCK.entrySet()) {
+                                            String mDSET = entry.getValue() + ": " + entry.getKey();
+                                            if (entry.getKey().equals(type)) {
+                                                ConstantVar.DATASET.remove(mDSET);
+                                                ConstantVar.STOCK.remove(entry.getKey());
 
-                                        //  Find and Replace Quantity Product in List
-                                        ConstantVar.DATASET.removeAll(Collections.singleton(type));
-                                        ConstantVar.REVIEW_DATABASE.values().removeAll(Collections.singleton(type));
+                                                ConstantVar.DATASET.add(0, quantity + ": " + type);
+                                                ConstantVar.STOCK.put(type, quantity);
+                                            }
+                                        }
 
-                                        ConstantVar.REVIEW_DATABASE.put(quantity, type);
-                                        ConstantVar.DATASET.add(0, quantity + ": " + type);
 
                                     }
                                 })
@@ -201,9 +203,9 @@ public class StockFragment extends Fragment implements NavigationView.OnNavigati
                         stock_edit_quantity.setText("");
                         stock_edit_text.setText("");
 
-                    } else if (!ConstantVar.REVIEW_DATABASE.values().contains(type)) {
-                        ConstantVar.REVIEW_DATABASE.put(quantity, type);
-                        ConstantVar.DATASET.add(0, quantity.toString() + ": " + type);
+                    } else if (!ConstantVar.STOCK.keySet().contains(type)) {
+                        ConstantVar.STOCK.put(type, quantity);
+                        ConstantVar.DATASET.add(0, Integer.toString(quantity) + ": " + type);
 
                         stock_edit_text.setText("");
                         stock_edit_quantity.setText("");
@@ -212,7 +214,7 @@ public class StockFragment extends Fragment implements NavigationView.OnNavigati
                     vib.vibrate(50);
                 }
             }
-         });
+        });
 
         //AUTO-COMPLETE TABLE
         ArrayAdapter<String> adapter = new ArrayAdapter<>(context, R.layout.my_list_item, STOCK_ITEMS);
@@ -238,70 +240,72 @@ public class StockFragment extends Fragment implements NavigationView.OnNavigati
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             if (getView() != null) {
-                                final EditText editText = (EditText) activity.findViewById(R.id.stock_dialog_edittext);
-                                final Integer quantity = Integer.parseInt(editText.getText().toString());
+                                try {
+                                    final EditText editText = (EditText) activity.findViewById(R.id.stock_dialog_edittext);
+                                    final Integer quantity = Integer.parseInt(editText.getText().toString());
 
+                                    if (ConstantVar.STOCK.containsKey(string)) {
+                                        AlertDialog.Builder existsAlert = new AlertDialog.Builder(getActivity());
+                                        existsAlert.setTitle(string + " already in Cart!")
+                                                .setPositiveButton("ADD TO SUM", new DialogInterface.OnClickListener() {
+                                                    @Override
+                                                    public void onClick(DialogInterface dialog, int which) {
+                                                        for (Map.Entry<String, Integer> entry: ConstantVar.STOCK.entrySet()) {
+                                                            String mDSET = entry.getValue() + ": " + entry.getKey();
+                                                            if (ConstantVar.DATASET.contains(mDSET)) {
 
-                                if (ConstantVar.REVIEW_DATABASE.values().contains(string)) {
-                                    AlertDialog.Builder existsAlert = new AlertDialog.Builder(getActivity());
-                                    existsAlert.setTitle(string + " already in Cart!")
-                                            .setPositiveButton("ADD TO SUM", new DialogInterface.OnClickListener() {
+                                                                System.out.println("DATASET contained: " + mDSET);
+                                                                System.out.println("DATASET indexOf: " + ConstantVar.DATASET.indexOf(mDSET));
+                                                                Integer temp = entry.getValue();
+                                                                Integer sum = temp + quantity;
+
+                                                                ConstantVar.DATASET.remove(ConstantVar.DATASET.indexOf(mDSET));
+                                                                ConstantVar.STOCK.remove(entry.getKey());
+
+                                                                ConstantVar.STOCK.put(string, sum);
+                                                                ConstantVar.DATASET.add(0, sum + ": " + string);
+                                                            }
+                                                        }
+                                                    }
+                                                }).setNeutralButton("REPLACE QUANTITY", new DialogInterface.OnClickListener() {
                                                 @Override
                                                 public void onClick(DialogInterface dialog, int which) {
-                                                    for (Map.Entry<Integer, String> entry : ConstantVar.REVIEW_DATABASE.entrySet()) {
-                                                        if (entry.getValue().equals(string)) {
-                                                            Integer temp = entry.getKey();
-                                                            Integer sum = temp + quantity;
+                                                    //  Find and Replace Quantity Product in List
+                                                    for (Map.Entry<String, Integer> entry: ConstantVar.STOCK.entrySet()) {
+                                                        String mDSET = entry.getValue() + ": " + entry.getKey();
+                                                        if (entry.getKey().equals(string)) {
+                                                            ConstantVar.DATASET.remove(mDSET);
+                                                            ConstantVar.STOCK.remove(entry.getKey());
 
-                                                            ConstantVar.REVIEW_DATABASE.values().removeAll(Collections.singleton(string));
-                                                            ConstantVar.DATASET.removeAll(Collections.singleton(temp.toString() + ": " + string));
-
-                                                            System.out.println("Empty REVIEW: " + ConstantVar.REVIEW_DATABASE.toString());
-                                                            System.out.println("Empty DATASET: " + ConstantVar.DATASET.toString());
-
-                                                            ConstantVar.REVIEW_DATABASE.put(sum, string);
-                                                            ConstantVar.DATASET.add(0, sum.toString() + ": " + string);
-
-
+                                                            ConstantVar.DATASET.add(0, quantity + ": " + string);
+                                                            ConstantVar.STOCK.put(string, quantity);
                                                         }
                                                     }
                                                 }
-                                            })
-                                            .setNeutralButton("REPLACE QUANTITY", new DialogInterface.OnClickListener() {
-                                                @Override
-                                                public void onClick(DialogInterface dialog, int which) {
-                                                    for (Map.Entry<Integer, String> entry : ConstantVar.REVIEW_DATABASE.entrySet()) {
-                                                        if (entry.getValue().equals(string)) {
-                                                            ConstantVar.DATASET.removeAll(Collections.singleton(entry.getKey().toString() + ": " + string));
-                                                        }
-                                                    }
-                                                    ConstantVar.REVIEW_DATABASE.values().removeAll(Collections.singleton(string));
+                                            }).show();
 
-                                                    ConstantVar.REVIEW_DATABASE.put(quantity, string);
-                                                    ConstantVar.DATASET.add(0, quantity + ": " + string);
-                                                }
-                                            })
-                                            .show();
-
-                                } else if (!ConstantVar.REVIEW_DATABASE.values().contains(string)) {
-                                    ConstantVar.REVIEW_DATABASE.put(quantity, string);
-                                    ConstantVar.DATASET.add(0, quantity.toString() + ": " + string);
+                                    } else if (!ConstantVar.STOCK.containsKey(string)) {
+                                        ConstantVar.STOCK.put(string, quantity);
+                                        ConstantVar.DATASET.add(0, Integer.toString(quantity) + ": " + string);
+                                    }
+                                } catch (NumberFormatException e) {
+                                    dialog.dismiss();
                                 }
                             }
                         }
-                    })
+                    });
+            builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    dialog.dismiss();
+                }
+            });
+            builder.show();
 
-                    .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            dialog.dismiss();
-                        }
-                    })
-                    .show();
-
-        } catch (NumberFormatException e) {
-            vib.vibrate(50);
+        } catch (NumberFormatException e ) {
+            System.out.println("Builder Tools: " + e);
         }
+
         return true;
 
     }

@@ -9,8 +9,6 @@ import android.widget.TextView;
 
 import java.util.List;
 
-import acme.com.acmecone.NavigationDrawerCallbacks;
-import acme.com.acmecone.Fragments.NavigationItem;
 import acme.com.acmecone.R;
 
 

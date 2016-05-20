@@ -96,7 +96,7 @@
 
         </activity>
 
-        <activity android:name=".Fragments.DrainsViewFragment"
+        <activity android:name=".Fragments.DropsViewFragment"
             android:label="@string/app_name">
 
             <meta-data
@@ -124,15 +124,6 @@
         </activity>
 
         <activity android:name=".Fragments.ScuppersViewFragment"
-            android:label="@string/app_name">
-
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainTabbed" />
-
-        </activity>
-
-        <activity android:name=".Fragments.OrderReviewFragment"
             android:label="@string/app_name">
 
             <meta-data

@@ -2,138 +2,37 @@
 <android.support.design.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/drawer"
+    android:id="@+id/pipewrap_drawer"
     android:layout_width="match_parent"
-    android:fitsSystemWindows="true"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
 
-    <LinearLayout
-        android:id="@+id/pipes_linear"
+
+    <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <include android:id="@+id/toolbar_actionbar"
-                    layout="@layout/toolbar_default"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-
-                <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:id="@+id/tubewrap_split"
-                        android:contentDescription="@string/app_name"
-                        android:src="@mipmap/default_pipewrap_split"
-                        android:layout_width="150dp"
-                        android:layout_height="150dp"
-                        android:gravity="center"
-                        android:verticalSpacing="5dp"
-                        android:focusable="true"
-                        android:clickable="true"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignParentStart="true" />
-
-
-                    <TextView
-                        android:text="@string/pipewrap_split"
-                        android:gravity="center"
-                        android:textSize="30sp"
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_alignBottom="@+id/tubewrap_split"
-                        android:layout_alignRight="@+id/tubewrap_split_desc"
-                        android:layout_alignEnd="@+id/tubewrap_split_desc"
-                        android:layout_toRightOf="@+id/tubewrap_split"/>
-
-
-                    <TextView
-                        android:id="@+id/tubewrap_split_desc"
-                        android:text="@string/pipewrap_split_desc"
-                        android:textSize="20sp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="5dp"
-                        android:paddingLeft="5dp"
-                        android:paddingEnd="5dp"
-                        android:gravity="start"
-                        android:layout_gravity="start"
-                        android:layout_below="@+id/tubewrap_split"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignParentStart="true" />
-
-
-                    <ImageView
-                        android:id="@+id/tubewrap_nonsplit"
-                        android:contentDescription="@string/app_name"
-                        android:src="@mipmap/default_pipewrap_nonsplit"
-                        android:layout_width="150dp"
-                        android:layout_height="150dp"
-                        android:gravity="center"
-                        android:verticalSpacing="5dp"
-                        android:focusable="true"
-                        android:clickable="true"
-                        android:layout_below="@+id/tubewrap_split_desc"
-                        android:layout_alignParentEnd="true"
-                        android:layout_alignParentRight="true" />
-
-                    <TextView
-                        android:text="@string/pipewrap_nonsplit"
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="30sp"
-                        android:gravity="center"
-                        android:layout_below="@+id/tubewrap_split_desc"
-                        android:layout_above="@+id/pipewrap_nonsplit_desc"
-                        android:layout_toLeftOf="@+id/tubewrap_nonsplit"
-                        android:layout_toStartOf="@+id/tubewrap_nonsplit" />
-
-                    <TextView
-                        android:id="@+id/pipewrap_nonsplit_desc"
-                        android:text="@string/pipewrap_nonsplit_desc"
-                        android:textSize="20sp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="5dp"
-                        android:paddingLeft="5dp"
-                        android:paddingEnd="5dp"
-                        android:gravity="end"
-                        android:layout_gravity="end"
-                        android:layout_below="@+id/tubewrap_nonsplit"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignParentStart="true" />
-
-                </RelativeLayout>
-                <Space
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp" />
-            </LinearLayout>
-        </ScrollView>
-    </LinearLayout>
-
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab_pipes"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="16dp"
-        app:layout_anchor="@id/pipes_linear"
-        app:layout_anchorGravity="bottom|right|end"
-        android:src="@drawable/ic_add_white_36dp" />
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" >
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_actionbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/pipewrap_tabs"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pipewrap_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"  />
+
 
 
 </android.support.design.widget.CoordinatorLayout>
-
-
-

@@ -130,12 +130,11 @@ public class CustomFragment extends Fragment {
                         final Spinner cone_menuFlg = (Spinner) layout_cone.findViewById(R.id.menu_cone_flange_spinner);
                         final Spinner cone_menuHth = (Spinner) layout_cone.findViewById(R.id.menu_cone_height_spinner);
 
-                        ArrayAdapter<CharSequence> coneAdapter = ArrayAdapter.createFromResource(v.getContext(), R.array.custom_fractions, R.layout.my_spinner_item);
+                        final ArrayAdapter<CharSequence> coneAdapter = ArrayAdapter.createFromResource(v.getContext(), R.array.custom_fractions, R.layout.my_spinner_item);
                         cone_menuTop.setAdapter(coneAdapter);
                         cone_menuBtm.setAdapter(coneAdapter);
                         cone_menuHth.setAdapter(coneAdapter);
                         cone_menuFlg.setAdapter(coneAdapter);
-
 
                         builder_cone.setPositiveButton("Add", new DialogInterface.OnClickListener() {
                             @Override
@@ -146,7 +145,7 @@ public class CustomFragment extends Fragment {
                                     if (cone_RadioGroup.getCheckedRadioButtonId() == cone_RadioSplit.getId()) {
                                         type = "Split";
                                     } else if (cone_RadioGroup.getCheckedRadioButtonId() == cone_RadioNonSplit.getId()) {
-                                        type = "Split";
+                                        type = "Non-Split";
                                     }
 
                                     final int quantity = Integer.parseInt(((EditText) layout_cone.findViewById(R.id.cone_text_quantity)).getText().toString());
@@ -176,6 +175,7 @@ public class CustomFragment extends Fragment {
                                     cone.material = material;
 
                                     ConstantVar.CONES.add(cone);
+                                    coneAdapter.notifyDataSetChanged();;
                                     Toast.makeText(layout_cone.getContext(), "ADDED Cone!", Toast.LENGTH_SHORT).show();
 
                                 } catch (NumberFormatException e) {
@@ -206,11 +206,11 @@ public class CustomFragment extends Fragment {
                         final RadioButton corner_RadioInside = (RadioButton) layout_corner.findViewById(R.id.corner_btn_radio_inside);
                         final RadioButton corner_RadioOutside = (RadioButton) layout_corner.findViewById(R.id.corner_btn_radio_outside);
                         final Spinner corner_menuHeight = (Spinner) layout_corner.findViewById(R.id.corner_menu_height_spinner);
-                        final Spinner corner_menuDepth = (Spinner) layout_corner.findViewById(R.id.menu_corner_depth_spinner);
-                        final Spinner corner_menuFlange = (Spinner) layout_corner.findViewById(R.id.menu_corner_flange_spinner);
+                        final Spinner corner_menuDepth = (Spinner) layout_corner.findViewById(R.id.corner_menu_depth_spinner);
+                        final Spinner corner_menuFlange = (Spinner) layout_corner.findViewById(R.id.corner_menu_flange_spinner);
 
 
-                        ArrayAdapter<CharSequence> cornerAdapter = ArrayAdapter.createFromResource(v.getContext(), R.array.custom_fractions, R.layout.my_spinner_item);
+                        final ArrayAdapter<CharSequence> cornerAdapter = ArrayAdapter.createFromResource(v.getContext(), R.array.custom_fractions, R.layout.my_spinner_item);
                         corner_menuHeight.setAdapter(cornerAdapter);
                         corner_menuDepth.setAdapter(cornerAdapter);
                         corner_menuFlange.setAdapter(cornerAdapter);
@@ -331,6 +331,13 @@ public class CustomFragment extends Fragment {
                             }
                         });
 
+                        builder_pipe.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int i) {
+                                dialog.dismiss();
+                            }
+                        });
+
                         builder_pipe.show();
                         break;
 
@@ -425,7 +432,7 @@ public class CustomFragment extends Fragment {
                                     if (scupper_radioGroup.getCheckedRadioButtonId() == scupper_radio_tw.getId()) {
                                         type = "Thru-Wall";
                                     } else if (scupper_radioGroup.getCheckedRadioButtonId() == scupper_radio_ovrf.getId()) {
-                                        type = "OverFlow";
+                                        type = "Overflow";
                                     }
 
                                     final int quantity = Integer.parseInt(((EditText) layout_scupper.findViewById(R.id.scupper_text_quantity)).getText().toString());

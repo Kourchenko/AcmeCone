@@ -1,16 +1,5 @@
 package acme.com.acmecone.Utility;
 
-import android.content.Intent;
-import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.AutoCompleteTextView;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Toast;
-
-import acme.com.acmecone.Fragments.OrderReviewFragment;
-import acme.com.acmecone.R;
-
 /**
  * Created by Rob on 4/8/2016.
  */

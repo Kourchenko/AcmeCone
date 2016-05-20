@@ -1,7 +1,6 @@
 package acme.com.acmecone.Fragments;
 
 
-import android.app.Activity;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -10,7 +9,6 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.util.Log;
-import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,11 +17,9 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.AutoCompleteTextView;
 import android.widget.CalendarView;
 import android.widget.FrameLayout;
-import android.widget.LinearLayout;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.Map;
 
 import acme.com.acmecone.Adapters.GMailSender;
 import acme.com.acmecone.Items.Cone;
@@ -61,7 +57,6 @@ public class CheckoutFragment extends Fragment {
         final FloatingActionButton fab_calendar = (FloatingActionButton) view.findViewById(R.id.fab_viewA);
         final FrameLayout viewB = (FrameLayout) view.findViewById(R.id.viewB);
 
-
         calendar = (CalendarView) view.findViewById(R.id.calendar);
         name = (AutoCompleteTextView) view.findViewById(R.id.orderform_edit_name);
         company = (AutoCompleteTextView) view.findViewById(R.id.orderform_edit_company);
@@ -70,13 +65,11 @@ public class CheckoutFragment extends Fragment {
         manufacturer = (AutoCompleteTextView) view.findViewById(R.id.orderform_edit_manufacturer);
         optional_note = (AutoCompleteTextView) view.findViewById(R.id.orderform_edit_note);
 
-
-
         fab_calendar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (viewB.getVisibility() == View.VISIBLE) {
-                    if (ConstantVar.REVIEW_DATABASE.isEmpty()) {
+                    if (ConstantVar.STOCK.isEmpty()) {
                         fab_calendar.setVisibility(View.VISIBLE);
                         viewB.setVisibility(View.GONE);
                         fab_orderform.setVisibility(View.GONE);
@@ -97,11 +90,11 @@ public class CheckoutFragment extends Fragment {
                 if (viewB.getVisibility() == View.VISIBLE) {
                     try {
 
+                        if (getView() != null) {
 
-                        if ((getView() != null) && ConstantVar.REVIEW_DATABASE.isEmpty()) {
                             final InputMethodManager imm = (InputMethodManager) getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
                             imm.hideSoftInputFromWindow(getView().getWindowToken(), 0);
-                        } else {
+
                             final String mName = name.getText().toString();
                             final String mEmail = email.getText().toString();
                             final String mCompany = company.getText().toString();
@@ -112,76 +105,73 @@ public class CheckoutFragment extends Fragment {
                             final String selectedDate = sdf.format(new Date(calendar.getDate()));
 
                             if (!mName.isEmpty()
-                                    || !mEmail.isEmpty()
-                                    || !mCompany.isEmpty()
-                                    || !mPhone.isEmpty()
-                                    || !mManufacturer.isEmpty()
-                                    || !mNotes.isEmpty()) {
+                                    && !mEmail.isEmpty()
+                                    && !mCompany.isEmpty()
+                                    && !mPhone.isEmpty()
+                                    && !mManufacturer.isEmpty()) {
 
-                                if (!ConstantVar.REVIEW_DATABASE.isEmpty()) {
-                                    new AsyncTask<Void, Void, Void>() {
-                                        @Override
-                                        public Void doInBackground(Void... arg) {
-                                            try {
-                                                String orderString = "";
-                                                String orderInfo = mName + "\n"
-                                                        + mEmail + "\n"
-                                                        + mCompany + "\n"
-                                                        + mPhone + "\n"
-                                                        + mManufacturer + "\n";
+                                new AsyncTask<Void, Void, Void>() {
+                                    @Override
+                                    public Void doInBackground(Void... arg) {
+                                        try {
+                                            String orderString = "";
+                                            String orderInfo = mName + "\n"
+                                                    + mEmail + "\n"
+                                                    + mCompany + "\n"
+                                                    + mPhone + "\n"
+                                                    + mManufacturer + "\n";
 
-                                                if (!ConstantVar.DATASET.isEmpty()) {
-                                                    for (String type : ConstantVar.DATASET) {
-                                                        orderString += type + "\n";
-                                                    }
+                                            if (!ConstantVar.DATASET.isEmpty()) {
+                                                for (String type : ConstantVar.DATASET) {
+                                                    orderString += type + "\n";
                                                 }
-                                                if (!ConstantVar.CONES.isEmpty()) {
-                                                    orderString += "\n\nCustom Cones: \n";
-                                                    for (Cone cone: ConstantVar.CONES) {
-                                                        orderString +=  cone.quantity +  " " + cone.type + "Cone(s) \n"
-                                                                        +cone.height + " " + cone.heightFrac + " H \n"
-                                                                        +cone.bot + " " + cone.botFrac + " B \n"
-                                                                        +cone.top + " " + cone.topFrac + " T \n"
-                                                                        +cone.flange + " " + cone.flangeFrac + " F \n"
-                                                                        +cone.color + " " + cone.material
-                                                                        +"\n";
-                                                    }
+                                            }
+                                            if (!ConstantVar.CONES.isEmpty()) {
+                                                orderString += "\n\nCustom Cones: \n";
+                                                for (Cone cone: ConstantVar.CONES) {
+                                                    orderString +=  cone.quantity +  " " + cone.type + "Cone(s) \n"
+                                                            +cone.height + " " + cone.heightFrac + " H \n"
+                                                            +cone.bot + " " + cone.botFrac + " B \n"
+                                                            +cone.top + " " + cone.topFrac + " T \n"
+                                                            +cone.flange + " " + cone.flangeFrac + " F \n"
+                                                            +cone.color + " " + cone.material
+                                                            +"\n";
                                                 }
-                                                if (!ConstantVar.CORNERS.isEmpty()) {
-                                                    orderString += "\n\n Custom Corners: \n";
-                                                    for (Corner corner: ConstantVar.CORNERS) {
-                                                        orderString += corner.quantity + " " + corner.type + " Corner(s) \n"
-                                                                        +corner.depth + " " + corner.depthFrac + " Depth \n"
-                                                                        +corner.height + " " + corner.heightFrac + " H \n"
-                                                                        +corner.flange + " " + corner.flangeFrac + " F \n"
-                                                                        +corner.color + " " + corner.material
-                                                                        +"\n";
-                                                    }
+                                            }
+                                            if (!ConstantVar.CORNERS.isEmpty()) {
+                                                orderString += "\n\n Custom Corners: \n";
+                                                for (Corner corner: ConstantVar.CORNERS) {
+                                                    orderString += corner.quantity + " " + corner.type + " Corner(s) \n"
+                                                            +corner.depth + " " + corner.depthFrac + " Depth \n"
+                                                            +corner.height + " " + corner.heightFrac + " H \n"
+                                                            +corner.flange + " " + corner.flangeFrac + " F \n"
+                                                            +corner.color + " " + corner.material
+                                                            +"\n";
                                                 }
+                                            }
+                                             if (!ConstantVar.PIPES.isEmpty()) {
+                                                 orderString += "\n\nCustom Pipe Wraps: \n";
+                                                 for (Pipe pipe: ConstantVar.PIPES) {
+                                                     orderString += pipe.quantity + " " + pipe.type + " Pipe(s) \n"
+                                                             +pipe.diameter + " " + pipe.diameterFrac + " Dia. \n"
+                                                             +pipe.height + " " + pipe.heightFrac + " H \n"
+                                                             +pipe.flange + " " + pipe.flangeFrac + " F \n"
+                                                             +pipe.color + " " + pipe.material
+                                                             + "\n";
+                                                 }
+                                             }
 
-                                                if (!ConstantVar.PIPES.isEmpty()) {
-                                                    orderString += "\n\nCustom Pipe Wraps: \n";
-                                                    for (Pipe pipe: ConstantVar.PIPES) {
-                                                        orderString += pipe.quantity + " " + pipe.type + " Pipe(s) \n"
-                                                                        +pipe.diameter + " " + pipe.diameterFrac + " Dia. \n"
-                                                                        +pipe.height + " " + pipe.heightFrac + " H \n"
-                                                                        +pipe.flange + " " + pipe.flangeFrac + " F \n"
-                                                                        +pipe.color + " " + pipe.material
-                                                                        + "\n";
-                                                    }
+                                            if (!ConstantVar.DROPS.isEmpty()) {
+                                                orderString += "\n\nCustom Drop Scuppers: \n";
+                                                for (Drop drop: ConstantVar.DROPS) {
+                                                    orderString +=  drop.quantity + " Drop(s) \n"
+                                                            +drop.diameter + " " + drop.diameterFrac + " Dia. \n"
+                                                            +drop.depth + " " + drop.depthFrac + " Dep. \n"
+                                                            +drop.flange + " " + drop.flangeFrac + " F \n"
+                                                            +drop.color + " " + drop.material
+                                                            + "\n";
                                                 }
-
-                                                if (!ConstantVar.DROPS.isEmpty()) {
-                                                    orderString += "\n\nCustom Drop Scuppers: \n";
-                                                    for (Drop drop: ConstantVar.DROPS) {
-                                                        orderString +=  drop.quantity + " Drop(s) \n"
-                                                                        +drop.diameter + " " + drop.diameterFrac + " Dia. \n"
-                                                                        +drop.depth + " " + drop.depthFrac + " Dep. \n"
-                                                                        +drop.flange + " " + drop.flangeFrac + " F \n"
-                                                                        +drop.color + " " + drop.material
-                                                                        + "\n";
-                                                    }
-                                                }
+                                            }
 
                                                 if (!ConstantVar.SCUPPERS.isEmpty()) {
                                                     orderString += "\n\nCustom Scuppers: \n";
@@ -255,16 +245,32 @@ public class CheckoutFragment extends Fragment {
                                                     }
                                                 }
 
+                                            if (orderString.isEmpty()) {
+                                                Snackbar.make(container, "Can\'t SEND. Nothing Ordered...", Snackbar.LENGTH_LONG).show();
+
+                                            } else {
                                                 final String allTogether = "Date Needed: " + selectedDate + "\n\n" + "STOCK: \n" + orderString + "\n\n" + orderInfo;
 
-                                                GMailSender sender = new GMailSender("YOUR_EMAIL@domain.com", "password");
+                                                GMailSender sender = new GMailSender("acmecone.acme@gmail.com", "Acmecone97402");
                                                 // toRecipients must be seperated by commas: "emailAddress,"
-                                                sender.sendMail(mCompany + "ordered!", allTogether, mEmail, "emailAddress," + "anotherEmailAddress," + mEmail);
+                                                sender.sendMail(mCompany + "ordered!", allTogether, mEmail, "acmecone.acme@gmail.com," + mEmail);
+
+                                                ConstantVar.STOCK.clear();
+                                                ConstantVar.CONES.clear();
+                                                ConstantVar.CORNERS.clear();
+                                                ConstantVar.PIPES.clear();
+                                                ConstantVar.DROPS.clear();
+                                                ConstantVar.DROPS.clear();
+                                                ConstantVar.SCUPPERS.clear();
+                                                ConstantVar.PANS.clear();
+                                                ConstantVar.TUBES.clear();
+                                                ConstantVar.CURBS.clear();
+                                                ConstantVar.SLEEPERS.clear();
 
                                                 Snackbar.make(container, "Successfully Sent Message!", Snackbar.LENGTH_LONG).show();
+                                            }
 
                                             } catch (Exception e) {
-                                                vib.vibrate(50);
                                                 Log.e("SendMail", e.getMessage(), e);
                                             }
 
@@ -272,17 +278,30 @@ public class CheckoutFragment extends Fragment {
                                         }
                                     }.execute();
 
-                                } else {
-                                    vib.vibrate(50);
-                                }
                             }
                         }
                     } finally {
                         fab_calendar.setVisibility(View.VISIBLE);
+                        fab_calendar.animate();
                         viewB.setVisibility(View.GONE);
+                        viewB.animate();
                         fab_orderform.setVisibility(View.GONE);
+                        fab_orderform.animate();
 
-                        Snackbar.make(container, "Can\'t SEND. Nothing Ordered...", Snackbar.LENGTH_LONG).show();
+                        if (ConstantVar.STOCK.isEmpty()
+                                && (ConstantVar.CONES.isEmpty())
+                                && (ConstantVar.CORNERS.isEmpty())
+                                && (ConstantVar.PIPES.isEmpty())
+                                && (ConstantVar.DROPS.isEmpty())
+                                && (ConstantVar.SCUPPERS.isEmpty())
+                                && (ConstantVar.PANS.isEmpty())
+                                && (ConstantVar.TUBES.isEmpty())
+                                && (ConstantVar.CURBS.isEmpty())
+                                && (ConstantVar.SLEEPERS.isEmpty())) {
+
+                            Snackbar.make(container, "Can\'t SEND. Nothing Ordered...", Snackbar.LENGTH_LONG).show();
+
+                        }
                     }
                 }
             }

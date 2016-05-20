@@ -2,7 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="5dp">
 
     <RadioGroup
         android:id="@+id/corner_btn_radio_group"
@@ -73,7 +74,7 @@
             android:layout_alignParentLeft="true"/>
 
         <Spinner
-            android:id="@+id/menu_corner_depth_spinner"
+            android:id="@+id/corner_menu_depth_spinner"
             android:layout_toRightOf="@+id/corner_text_depth"
             android:layout_toEndOf="@+id/corner_text_depth"
             android:layout_alignParentRight="true"
@@ -98,7 +99,7 @@
             android:layout_alignParentLeft="true"/>
 
         <Spinner
-            android:id="@+id/menu_corner_flange_spinner"
+            android:id="@+id/corner_menu_flange_spinner"
             android:layout_toRightOf="@+id/corner_text_flange"
             android:layout_toEndOf="@+id/corner_text_flange"
             android:layout_alignParentRight="true"

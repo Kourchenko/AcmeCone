@@ -2,14 +2,22 @@
 <resources>
 
     <string-array name="custom_fractions">
-        <item>" \"\" "</item>
+        <item>" \" "</item>
+        <item>1/16</item>
         <item>1/8</item>
+        <item>3/16</item>
         <item>(&#188;)</item>
+        <item>5/16</item>
         <item>3/8</item>
+        <item>7/16</item>
         <item>(&#189;)</item>
+        <item>9/16</item>
         <item>5/8</item>
+        <item>11/16</item>
         <item>(&#190;)</item>
+        <item>13/16</item>
         <item>7/8</item>
+        <item>15/16</item>
 
     </string-array>
 

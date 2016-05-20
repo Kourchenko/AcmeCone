@@ -34,10 +34,10 @@ public class ConstantVar {
     public static final ArrayList<String> MACHINE_LEARNING_manf = new ArrayList<>();
 
     public static final Map<String, String> SEND_DATABASE = new HashMap<>();
-    public static final Map<Integer, String> REVIEW_DATABASE = new HashMap<>();
     public static final ArrayList<String> DATASET = new ArrayList<>();
 
 
+    public static final Map<String, Integer> STOCK  = new HashMap<>();
     public static final ArrayList<Cone> CONES       = new ArrayList<>();
     public static final ArrayList<Corner> CORNERS   = new ArrayList<>();
     public static final ArrayList<Pipe> PIPES       = new ArrayList<>();

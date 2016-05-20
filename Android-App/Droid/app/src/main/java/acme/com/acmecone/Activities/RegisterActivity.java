@@ -16,8 +16,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 
-import acme.com.acmecone.NavigationDrawerCallbacks;
-import acme.com.acmecone.NavigationDrawerFragment;
+import acme.com.acmecone.Adapters.NavigationDrawerCallbacks;
+import acme.com.acmecone.Fragments.NavigationDrawerFragment;
 import acme.com.acmecone.R;
 
 

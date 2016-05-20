@@ -2,143 +2,37 @@
 <android.support.design.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/drawer"
+    android:id="@+id/boxes_drawer"
     android:layout_width="match_parent"
-    android:fitsSystemWindows="true"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
 
-    <LinearLayout
-        android:id="@+id/boxes_linear"
+
+    <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <include android:id="@+id/toolbar_actionbar"
-                    layout="@layout/toolbar_default"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-
-                <RelativeLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-
-                    <ImageView
-                        android:id="@+id/boxes_curbwraps"
-                        android:contentDescription="@string/app_name"
-                        android:src="@mipmap/boxes_curbwrap"
-                        android:layout_width="200dp"
-                        android:layout_height="200dp"
-                        android:columnWidth="100dp"
-                        android:gravity="center"
-                        android:verticalSpacing="5dp"
-                        android:focusable="true"
-                        android:clickable="true"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignParentStart="true" />
-
-
-                    <TextView
-                        android:text="@string/boxes_curbwrap"
-                        android:gravity="center"
-                        android:textSize="35sp"
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_alignBottom="@+id/boxes_curbwraps"
-                        android:layout_alignRight="@+id/boxes_curbwraps_desc"
-                        android:layout_alignEnd="@+id/boxes_curbwraps_desc"
-                        android:layout_alignParentTop="true"
-                        android:layout_toRightOf="@+id/boxes_curbwraps"
-                        android:layout_toEndOf="@+id/boxes_curbwraps" />
-
-
-                    <TextView
-                        android:id="@+id/boxes_curbwraps_desc"
-                        android:text="@string/boxes_curbwrap_desc"
-                        android:textSize="18sp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="5dp"
-                        android:paddingLeft="5dp"
-                        android:paddingEnd="5dp"
-                        android:gravity="end"
-                        android:layout_gravity="end"
-                        android:layout_below="@+id/boxes_curbwraps"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignParentStart="true" />
-
-
-                    <TextView
-                        android:text="@string/boxes_sleeper"
-                        android:layout_width="fill_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="35sp"
-                        android:gravity="center"
-                        android:layout_below="@+id/boxes_curbwraps_desc"
-                        android:layout_above="@+id/boxes_sleepers_desc"
-                        android:layout_toLeftOf="@+id/boxes_sleepers"
-                        android:layout_toStartOf="@+id/boxes_sleepers" />
-
-                    <ImageView
-                        android:id="@+id/boxes_sleepers"
-                        android:contentDescription="@string/app_name"
-                        android:src="@mipmap/boxes_sleeper"
-                        android:layout_width="200dp"
-                        android:layout_height="200dp"
-                        android:columnWidth="100dp"
-                        android:gravity="center"
-                        android:verticalSpacing="5dp"
-                        android:focusable="true"
-                        android:clickable="true"
-                        android:layout_below="@+id/boxes_curbwraps_desc"
-                        android:layout_alignParentEnd="true"
-                        android:layout_alignParentRight="true" />
-                    <TextView
-                        android:id="@+id/boxes_sleepers_desc"
-                        android:text="@string/boxes_sleeper_desc"
-                        android:textSize="18sp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:paddingRight="5dp"
-                        android:paddingLeft="5dp"
-                        android:paddingEnd="5dp"
-                        android:gravity="end"
-                        android:layout_gravity="end"
-                        android:layout_below="@+id/boxes_sleepers"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignParentStart="true" />
-
-                </RelativeLayout>
-
-                <Space
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp" />
-            </LinearLayout>
-        </ScrollView>
-    </LinearLayout>
-
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab_boxes"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="16dp"
-        app:layout_anchor="@id/boxes_linear"
-        app:layout_anchorGravity="bottom|right|end"
-        android:src="@drawable/ic_add_white_36dp" />
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" >
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_actionbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/boxes_tabs"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/boxes_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"  />
+
+
 
 </android.support.design.widget.CoordinatorLayout>
-
-
-

@@ -96,46 +96,80 @@
                                 Available in TPO(white/grey) and PVC(white/grey).
     </string>
 
-    <string name="cones_a">A Cone</string>
-    <string name="cones_a_desc"><b>Dimensions: </b>
-                                        \n 1” Top diameter,
-                                        \n 5” Bottom diameter,
-                                        \n 10” Height,
-                                        \n 5” Flange
+    <string name="cones_sa">Short A-Cone</string>
+    <string name="cones_sa_desc">
+        <b> Dimensions:
+            \n 1/4\" Top Diameter
+            \n 4\" Bottom Diameter
+            \n 5\" Height
+            \n 5\" Flange
+        </b>
+    </string>
+    <string name="cones_sa_parg">The Acme Short A cone is available in both split and non-split versions to accommodate the needs of your specific job. As a stocked item, you can expect to find both split and non-split in TPO (white/grey) and PVC (white/grey) on our shelves. Short A cones are great to have on hand for any single ply project you have coming up whether it\'s new construction or retrofitting some obscure corner of a roof that was installed 50 years ago. Conduit pipes, cables running off an HVAC, solar pipes, etc: The short A cone is the answer to the all of the small detail pieces on your next jobsite.</string>
+
+    <string name="cones_a">A-Cone</string>
+    <string name="cones_a_desc">
+        <b> Dimensions:
+            \n 1” Top Diameter
+            \n 5” Bottom Diameter
+            \n 10” Height
+            \n 5” Flange
+        </b>
     </string>
 
-    <string name="cones_b">B Cone</string>
-    <string name="cones_b_desc"><b>Dimensions: </b>
-                                        \n 2” Top diameter,
-                                        \n 6” Bottom diameter,
-                                        \n 12” Height,
-                                        \n 6” Flange
+    <string name="cones_a_parg">The Acme A cone is available in both split and non-split versions to accommodate the needs of your specific job. As a stocked item, you can expect to find both split and non-split in TPO (white/grey) and PVC (white/grey) on our shelves.  The next step up from the short A cone; the A cone stands 10 inches tall off the deck. The A cone is one of our most popular products on account of the degree at which it tapers. The A cone can accommodate a range of diameters while still standing up to the height minimum set by your foreman or field rep. With our recommended application range of 1 inch to 3.5 inches, The A cone can be an invaluable tool on any roof with multiple sizes of penetrations.</string>
+
+    <string name="cones_b">B-Cone</string>
+    <string name="cones_b_desc">
+        <b> Dimensions:
+            \n 2” Top Diameter
+            \n 6” Bottom Diameter
+            \n 12” Height
+            \n 6” Flange
+        </b>
     </string>
 
-    <string name="cones_c">C Cone</string>
-    <string name="cones_c_desc"><b>Dimensions: </b>
-                                        \n 4” Top diameter,
-                                        \n 7” Bottom diameter,
-                                        \n 12” Height,
-                                        \n 6” Flange
+    <string name="cones_b_parg">The Acme B cone is available in both split and non-split versions to accommodate the needs of your specific job. As a stocked item, you can expect to find both split and non-split in TPO (white/grey) and PVC (white/grey) on our shelves. The B cone, the next size up and middle child of the stock cone family maxes out at a height of 12 inches off of the deck. With a suggested application range of 2 inches to 4.5 inches. Because of its wide base the B cone can accommodate pipes that are nested to the deck with exposed bolts or other hardware. The range offered the B cone makes it a versatile tool which can help you accomplish many tasks on the roof.</string>
+    <string name="cones_c">C-Cone</string>
+    <string name="cones_c_desc">
+        <b> Dimensions:
+            \n 4” Top Diameter
+            \n 7” Bottom Diameter
+            \n 12” Height
+            \n 6” Flange
+        </b>
     </string>
 
-    <string name="cones_d">D Cone</string>
-    <string name="cones_d_desc"><b>Dimensions: </b>
-                                    \n Top diameter,
-                                    \n 12” Bottom diameter,
-                                    \n 12” Height,
-                                    \n 6” Flange</string>
+    <string name="cones_c_parg">The Acme C cone is available in both split and non-split versions to accommodate the needs of your specific job. As a stocked item, you can expect to find both split and non-split in TPO (white/grey) and PVC (white/grey) on our shelves.  With the largest opening diameter yet the C con can accommodate pipes from 4 inches to 6 inches as well as small vents and sub jacks. Like the B cone, the C cones 12 inch height and wide base allows the user to circumvent hardware at the base of the flashing. Great for single ply projects replacing older roofing systems with residue from other forms of roofing such as mastic tar.</string>
+
+    <string name="cones_d">D-Cone</string>
+    <string name="cones_d_desc">
+        <b> Dimensions:
+            \n 7\" Top Diameter
+            \n 12” Bottom Diameter
+            \n 12” Height
+            \n 6” Flange
+        </b>
+    </string>
+
+    <string name="cones_d_parg">The Acme D cone is available in both split and non-split versions to accommodate the needs of your specific job. As a stocked item, you can expect to find both split and non-split in TPO (white/grey) and PVC (white/grey) on our shelves.  The last and largest of the stocked cone sizes, the D cone boasts a suggested range of 7 inches to 10.5 inches. The D cone bridges the gap between pipe flashing and conical sub jack flashing. Due to its size and height the D cone easily bypasses hardware or tar residue on vent stacks. Medium to large vent stacks including turbine vents can be quickly and easily wrapped with a D cone.</string>
 
     <!-- Boxes Description -->
     <string name="Curbs">CURB WRAPS</string>
     <string name="boxes_text">Custom Made Boxes</string>
     <string name="boxes_curbwrap">Curb Wraps</string>
-    <string name="boxes_curbwrap_desc">Curb wraps can be made split, non-split, 2 piece, and 4 piece.
+    <string name="boxes_curbwrap_parg">Curb wraps can be made split, non-split, 2 piece, and 4 piece.
                                     A quick easy fix for a variety of HVAC units, our pre fab
                                     curbs are sure to be one of the biggest time savers
                                     out in the field. Curb Wraps are made to
                                     order for your specific needs.
+    </string>
+    <string name="boxes_curbwrap_desc">
+        <b>Dimensions:
+        \n 6” Height,
+        \n 6” Width,
+        \n 6” Flange
+        </b>
     </string>
 
     <string name="Sleepers">SLEEPER BOXES</string>
@@ -150,25 +184,36 @@
     <!-- Corners Description -->
     <string name="corners_text">Custom Corners</string>
     <string name="corners_outside">Outside Corners</string>
-    <string name="corners_outside_descr">Because of its simplicity the outside corner is an
+    <string name="corners_outside_desc">
+        Dimensions:
+        \n 6” Height,
+        \n 6” Width,
+        \n 6” Flange
+    </string>
+    <string name="corners_outside_parg">Because of its simplicity the outside corner is an
                                         inexpensive fix to many a common problem.
-                                        \n <b>Dimensions: </b>
-                                        \n 6” Height,
-                                        \n 6” Width,
-                                        \n 6” Flange
+
     </string>
     <string name="corners_inside">Inside Corners</string>
-    <string name="corners_inside_descr">The inside corner again saves time for roof applicators in
+    <string name="corners_inside_desc">
+        <b>Dimensions:
+            \n 6” Height,
+            \n 6” Width,
+            \n 6” Flange
+        </b>
+    </string>
+    <string name="corners_inside_parg">The inside corner again saves time for roof applicators in
                                         the field. Rather than creating and re-creating patches
                                         on the job site, save time and use our pre welded inside corners.
-                                        \n <b>Dimensions:</b>
-                                        \n 6” Height,
-                                        \n 6” Width,
-                                        \n 6” Flange
     </string>
 
     <!-- Pipe Wraps Description -->
     <string name="Pipe_Wraps">PIPE WRAPS</string>
+    <string name="pipewrap_desc">
+        Round pipe wraps are available in any size. What we consider to be standard is a 10\” height and a 5\” flange, if you require something else please specify.
+        \n
+        Given that we make pipe wraps to order be sure to note that the diameter provided is the true outside diameter measurement. Available in split or non-split.
+    </string>
     <string name="custom_pipes">Custom Pipe Wraps</string>
     <string name="pipewrap_text">Pipe Wraps</string>
     <string name="pipewrap_split">Pipe Wrap Split</string>
@@ -182,53 +227,72 @@
                                         \n\n Diameter made custom.
     </string>
 
-
     <!-- Drain Scuppers -->
     <string name="Drop_Scuppers">DROP SCUPPERS</string>
     <string name="custom_drains">Custom Drop Scuppers</string>
-    <string name="drains_two_drop">2\" Drop Scupper</string>
-    <string name="drains_two_drop_desc"><b>Dimensions:</b>
-                                        \n   8” Depth,
-                                        \n 1-7/8” Diameter,
-                                        \n 14”X14” Base
+    <string name="drop_two">2\" Drop Scupper</string>
+    <string name="drop_two_desc">
+        <b>Dimensions:
+        \n 8” Depth,
+        \n 1-7/8” Diameter,
+        \n 14”X14” Base
+        </b>
     </string>
 
-    <string name="drains_two_metal">2\" Metal Drop Scupper</string>
-    <string name="drains_two_metal_choice">Metal 2\" Drop</string>
-    <string name="drains_two_metal_desc"><b>Dimensions:</b>
-                                        \n   11” Depth,
-                                        \n 1-3/4” Inside Diameter,
-                                        \n 2” Outside Diameter,
-                                        \n 7”X7” Metal Base,
-                                        \n 9”X9” Membrane Skirt
+    <string name="drop_two_parg">
+        Our 2\” drop scupper is fitted to line the inside of any 2\” drainage pipe. As a stocked item, you can expect to find both split and non-split in TPO (white/grey) and PVC (white/grey) on our shelves. Quickly installs with a 14\”X14\” base for maximum coverage.
     </string>
 
-    <string name="drains_three_drop">3\" Drop Scupper</string>
-    <string name="drains_three_drop_desc"><b>Dimensions:</b>
-                                        \n   8” Depth,
-                                        \n 2-5/8” Diameter,
-                                        \n 15.5”X14” Base
+    <string name="drop_two_metal">2\" Metal Drop Scupper</string>
+    <string name="drop_two_metal_choice">Metal 2\" Drop</string>
+    <string name="drop_two_metal_desc">
+        <b>Dimensions:
+        \n   11” Depth,
+        \n 1-3/4” Inside Diameter,
+        \n 2” Outside Diameter,
+        \n 7”X7” Metal Base,
+        \n 9”X9” Membrane Skirt
+        </b>
     </string>
 
-    <string name="drains_three_metal">3\" Metal Drop Scupper</string>
-    <string name="drains_three_metal_choice">Metal 3\" Drop</string>
-    <string name="drains_three_metal_desc"><b>Dimensions:</b>
-                                            \n   11” Depth,
-                                            \n 2-1/2” Inside Diameter,
-                                            \n 2-3/4” Outside Diameter,
-                                            \n 9”X9” Metal Base,
-                                            \n 11”X11” Membrane Skirt
+    <string name="drop_two_metal_parg">Our 2\” metal drop scupper is an all in one drain with membrane attached to a single clad tube with both a metal base and membrane skirt.</string>
+
+    <string name="drop_three">3\" Drop Scupper</string>
+    <string name="drop_three_desc">
+        <b>Dimensions:
+        \n 8” Depth,
+        \n 2-5/8” Diameter,
+        \n 15.5”X14” Base
+        </b>
     </string>
 
-    <string name="drains_commercial">3\" Commercial Drain</string>
-    <string name="drains_commercial_desc"><b>Dimensions:</b>
-                                            \n   11” Depth,
-                                            \n 2-1/2” Inside Diameter,
-                                            \n 2-3/4” Outside Diameter,
-                                            \n 17” Round Metal Base,
-                                            \n 20” Round Membrane Skirt,
-                                            \n 5-1/2” Tall Removable Aluminum Basket
+    <string name="drop_three_parg">Our 3\” drop scupper is fitted to line the inside of any 3\” drainage pipe. As a stocked item, you can expect to find both split and non-split in TPO (white/grey) and PVC (white/grey) on our shelves. Quickly installs with a 15.5\”X14\” base for maximum coverage</string>
+
+    <string name="drop_three_metal">3\" Metal Drop Scupper</string>
+    <string name="drop_three_metal_desc">
+        <b>Dimensions:
+        \n 11” Depth,
+        \n 2-1/2” Inside Diameter,
+        \n 2-3/4” Outside Diameter,
+        \n 9”X9” Metal Base,
+        \n 11”X11” Membrane Skirt
+        </b>
     </string>
+
+    <string name="drop_three_metal_parg">Our 3\” metal drop scupper is an all in one drain with membrane attached to a single clad tube with both a metal base and membrane skirt.</string>
+
+    <string name="drop_commercial">3\" Commercial Drain</string>
+    <string name="drop_commercial_desc">
+        <b>Dimensions:
+        \n 11” Depth,
+        \n 2-1/2” Inside Diameter,
+        \n 2-3/4” Outside Diameter,
+        \n 17” Round Metal Base,
+        \n 20” Round Membrane Skirt,
+        \n 5-1/2” Tall Removable Aluminum Basket
+        </b>
+    </string>
+    <string name="drop_commercial_parg">Similar in size to the 3\” metal drop scupper, the commercial drain includes an aluminum basket attached by a single screw. The commercial drain also features a larger round metal base plate.</string>
 
     <!-- Metal -->
     <string name="metal_desc">Both our Drip edge as well as Gravel stop are ideal for a clean finished look
@@ -237,7 +301,9 @@
     </string>
     <string name="metal_phone_call">Please call for a quote.</string>
     <string name="metal_drip">Drip Edge</string>
+    <string name="metal_drip_desc">Both our Drip edge as well as Gravel stop are ideal for a clean finished look around the perimeter of any single ply roof. Custom starter metal and clear story is available upon request.</string>
     <string name="metal_gravel">Gravel Stop</string>
+    <string name="metal_gravel_desc">Both Drip edge and Gravel stop are stocked in TPO and PVC (white / grey). Edge metal is kept in a clean dry environment in our production warehouse.</string>
 
     <!-- Scuppers -->
     <string name="Scuppers">SCUPPERS</string>

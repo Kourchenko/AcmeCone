@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -32,18 +33,20 @@
             android:layout_width="match_parent"
             android:layout_height="250dp"
             android:layout_gravity="bottom"
+            android:padding="5dp"
             android:animateLayoutChanges="true">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/grey_200"
+                android:background="@color/grey_0"
                 android:orientation="vertical"
                 android:animateLayoutChanges="true">
 
                 <ScrollView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:scrollbarSize="10dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"

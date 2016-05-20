@@ -14,7 +14,7 @@ import android.view.View;
 import java.util.ArrayList;
 import java.util.List;
 
-import acme.com.acmecone.Activities.HomeActivity;
+import acme.com.acmecone.Fragments.HomeActivity;
 import acme.com.acmecone.Fragments.CheckoutFragment;
 import acme.com.acmecone.Fragments.CustomFragment;
 import acme.com.acmecone.Fragments.ReviewFragment;

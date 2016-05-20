@@ -101,18 +101,19 @@
                 android:layout_gravity="center_horizontal" />
         </LinearLayout>
 
-    <acme.com.acmecone.ScrimInsetsFrameLayout android:id="@+id/scrimInsetsFrameLayout"
+    <acme.com.acmecone.Adapters.ScrimInsetsFrameLayout
+        android:id="@+id/scrimInsetsFrameLayout"
         android:layout_width="@dimen/navigation_drawer_width" android:layout_height="wrap_content"
         android:fitsSystemWindows="true" android:layout_gravity="start" app:insetForeground="#4000" >
 
         <fragment android:id="@+id/fragment_drawer"
-            android:name="acme.com.acmecone.NavigationDrawerFragment"
+            android:name="acme.com.acmecone.Fragments.NavigationDrawerFragment"
             android:layout_width="@dimen/navigation_drawer_width"
             android:layout_height="match_parent" android:fitsSystemWindows="true"
             app:layout="@layout/fragment_navigation_drawer"
             tools:layout="@layout/fragment_navigation_drawer" />
 
-    </acme.com.acmecone.ScrimInsetsFrameLayout>
+    </acme.com.acmecone.Adapters.ScrimInsetsFrameLayout>
 
 
 </android.support.v4.widget.DrawerLayout>
