@@ -76,125 +76,7 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f4181114-b3f3-48f8-93b0-9a591a6681f4" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/multidex_1_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/multidex_instrumentation_1_0_1.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/jndn_0_6.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/mail.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/libs/jndn-0.6.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/libs/mail.jar" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/cache.properties.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/outputFileStates.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/outputFileStates.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="$PROJECT_DIR$/.gradle/2.10/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.bin" afterPath="$PROJECT_DIR$/.gradle/2.10/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.10/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="$PROJECT_DIR$/.gradle/2.10/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Activities/AboutUsActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Activities/AboutUsActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Activities/LoginActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Activities/LoginActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Activities/RegisterActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Activities/RegisterActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Adapters/ImageAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Adapters/ImageAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Adapters/NavigationDrawerAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Adapters/NavigationDrawerAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Adapters/ProductsAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Adapters/ProductsAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Adapters/ScrimInsetsFrameLayout.java" afterPath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Adapters/ScrimInsetsFrameLayout.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/BoxesViewFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/BoxesViewFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/BoxesViewFragmentCurb.java" afterPath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/BoxesViewFragmentCurb.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/BoxesViewFragmentSleeper.java" afterPath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/BoxesViewFragmentSleeper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/CheckoutFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/CheckoutFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/ConesViewFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/ConesViewFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/ConesViewFragmentA.java" afterPath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/ConesViewFragmentA.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/ConesViewFragmentB.java" afterPath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/ConesViewFragmentB.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/ConesViewFragmentC.java" afterPath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/ConesViewFragmentC.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/ConesViewFragmentD.java" afterPath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/ConesViewFragmentD.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/ConesViewFragmentSA.java" afterPath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/ConesViewFragmentSA.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/CornersViewFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/CornersViewFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/CornersViewFragmentInside.java" afterPath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/CornersViewFragmentInside.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/CornersViewFragmentOutside.java" afterPath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/CornersViewFragmentOutside.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/CustomFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/CustomFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/DropsViewFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/DropsViewFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/DropsViewFragmentCo.java" afterPath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/DropsViewFragmentCo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/DropsViewFragmentThree.java" afterPath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/DropsViewFragmentThree.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/DropsViewFragmentThreeMetal.java" afterPath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/DropsViewFragmentThreeMetal.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/DropsViewFragmentTwo.java" afterPath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/DropsViewFragmentTwo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/DropsViewFragmentTwoMetal.java" afterPath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/DropsViewFragmentTwoMetal.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/HomeActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/HomeActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/MetalViewFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/MetalViewFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/MetalViewFragmentDrip.java" afterPath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/MetalViewFragmentDrip.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/MetalViewFragmentGravel.java" afterPath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/MetalViewFragmentGravel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/NavigationDrawerFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/NavigationDrawerFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/PipeWrapViewFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/PipeWrapViewFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/PipeWrapViewFragmentS.java" afterPath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/PipeWrapViewFragmentS.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/PitchPansViewFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/PitchPansViewFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/PitchPansViewFragmentS.java" afterPath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/PitchPansViewFragmentS.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/ReviewFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/ReviewFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/ScuppersViewFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/ScuppersViewFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/ScuppersViewFragmentFour.java" afterPath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/ScuppersViewFragmentFour.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/ScuppersViewFragmentOvf.java" afterPath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/ScuppersViewFragmentOvf.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/ScuppersViewFragmentSix.java" afterPath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/ScuppersViewFragmentSix.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/StockFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/StockFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/TubeWarpViewFragmentS.java" afterPath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/TubeWarpViewFragmentS.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/TubeWrapViewFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/TubeWrapViewFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/VentViewFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/VentViewFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/VentViewFragmentBV.java" afterPath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/VentViewFragmentBV.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/VentViewFragmentBVM.java" afterPath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/VentViewFragmentBVM.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/VentViewFragmentRVO.java" afterPath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/VentViewFragmentRVO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/VentViewFragmentTV.java" afterPath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/Fragments/VentViewFragmentTV.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/MainTabbed.java" afterPath="$PROJECT_DIR$/app/src/main/java/acme/com/acmecone/MainTabbed.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_about.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_about.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_register.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_register.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/boxes_layout.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/boxes_layout.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/boxes_layout_curb.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/boxes_layout_curb.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/boxes_layout_sleeper.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/boxes_layout_sleeper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/checkout_fragment.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/checkout_fragment.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/cones_layout.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/cones_layout.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/cones_layout_a.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/cones_layout_a.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/cones_layout_b.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/cones_layout_b.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/cones_layout_c.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/cones_layout_c.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/cones_layout_d.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/cones_layout_d.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/cones_layout_sa.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/cones_layout_sa.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/corners_layout.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/corners_layout.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/corners_layout_inside.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/corners_layout_inside.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/corners_layout_outside.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/corners_layout_outside.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/custom_fragment.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/custom_fragment.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/custom_row.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/custom_row.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/dialog_cone_custom.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/dialog_cone_custom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/drop_layout.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/drop_layout.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/drop_layout_commercial.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/drop_layout_commercial.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/drop_layout_three.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/drop_layout_three.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/drop_layout_three_metal.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/drop_layout_three_metal.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/drop_layout_two.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/drop_layout_two.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/drop_layout_two_metal.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/drop_layout_two_metal.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/home_fragment.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/home_fragment.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/main_viewpager.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/main_viewpager.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/metal_layout.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/metal_layout.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/metal_layout_drip.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/metal_layout_drip.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/metal_layout_gravel.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/metal_layout_gravel.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/my_list_item.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/my_list_item.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/pipewrap_layout.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/pipewrap_layout.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/pipewrap_layout_s.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/pipewrap_layout_s.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/pitchpan_layout_s.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/pitchpan_layout_s.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/pitchpans_layout.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/pitchpans_layout.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/scupper_ovrf.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/scupper_ovrf.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/scupper_tw_four.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/scupper_tw_four.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/scupper_tw_six.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/scupper_tw_six.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/scuppers_layout.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/scuppers_layout.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/tubewrap_layout.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/tubewrap_layout.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/tubewrap_layout_s.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/tubewrap_layout_s.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/vent_layout.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/vent_layout.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/vent_layout_bv.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/vent_layout_bv.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/vent_layout_bv_metal.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/vent_layout_bv_metal.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/vent_layout_rvo.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/vent_layout_rvo.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/vent_layout_tv.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/vent_layout_tv.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
-    </list>
+    <list default="true" id="f4181114-b3f3-48f8-93b0-9a591a6681f4" name="Default" comment="" />
     <ignored path="Droid.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -246,7 +128,7 @@
       <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8598131">
+            <state vertical-scroll-proportion="1.1051402">
               <caret line="154" column="0" selection-start-line="154" selection-start-column="0" selection-end-line="154" selection-end-column="0" />
               <folding />
             </state>
@@ -2103,7 +1985,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="5" />
+    <option name="x" value="136" />
     <option name="y" value="23" />
     <option name="width" value="1122" />
     <option name="height" value="831" />
@@ -2583,7 +2465,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="5" y="23" width="1122" height="831" extended-state="0" />
+    <frame x="136" y="23" width="1122" height="831" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -3134,7 +3016,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8598131">
+        <state vertical-scroll-proportion="1.1051402">
           <caret line="154" column="0" selection-start-line="154" selection-start-column="0" selection-end-line="154" selection-end-column="0" />
           <folding />
         </state>
