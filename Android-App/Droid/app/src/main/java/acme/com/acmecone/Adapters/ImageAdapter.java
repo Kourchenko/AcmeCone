@@ -7,9 +7,6 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 
-/**
- * Created by Diego
- */
 public class ImageAdapter extends BaseAdapter {
 
     private Context mContext;

@@ -12,7 +12,7 @@ import android.util.AttributeSet;
 import android.view.WindowInsets;
 import android.widget.FrameLayout;
 
-import acme.com.acmecone.R;
+import com.acme.acmecone.R;
 
 
 /**

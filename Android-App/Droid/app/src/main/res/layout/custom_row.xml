@@ -33,24 +33,26 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_toStartOf="@+id/imageView"
+                android:layout_toLeftOf="@+id/imageView"
                 android:layout_alignParentTop="true"
                 android:layout_above="@+id/textView" />
 
             <TextView
+                android:id="@+id/textView"
                 android:text="Tap To Add"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_toStartOf="@+id/imageView"
-                android:id="@+id/textView"
+                android:layout_toStartOf="@id/imageView"
+                android:layout_toLeftOf="@id/imageView"
                 android:layout_alignParentBottom="true" />
 
             <ImageView
+                android:id="@+id/imageView"
                 android:src="@drawable/ic_keyboard_arrow_right_grey_600_36dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
-                android:id="@+id/imageView"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:layout_alignParentTop="true"
@@ -59,6 +61,5 @@
         </RelativeLayout>
 
     </RelativeLayout>
-
 
 </LinearLayout>

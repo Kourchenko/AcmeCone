@@ -24,7 +24,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <ImageView
-                    android:id="@+id/boxes_layout_curb_s"
                     android:contentDescription="@string/app_name"
                     android:src="@mipmap/corner_inside"
                     android:layout_width="match_parent"
@@ -51,6 +50,5 @@
         </LinearLayout>
 
     </ScrollView>
-
 
 </android.support.design.widget.CoordinatorLayout>

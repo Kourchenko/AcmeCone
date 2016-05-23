@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import acme.com.acmecone.R;
+import com.acme.acmecone.R;
 
 public class MetalViewFragmentDrip extends Fragment {
 

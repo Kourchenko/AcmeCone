@@ -24,7 +24,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <ImageView
-                    android:id="@+id/vent_bvm"
                     android:contentDescription="@string/app_name"
                     android:src="@mipmap/vent_bvm"
                     android:layout_width="match_parent"

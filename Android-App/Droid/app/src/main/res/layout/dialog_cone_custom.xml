@@ -27,11 +27,6 @@
 
     </RadioGroup>
 
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="20dp" />
-
-
     <EditText
             android:id="@+id/cone_text_quantity"
             android:hint="@string/quantity"

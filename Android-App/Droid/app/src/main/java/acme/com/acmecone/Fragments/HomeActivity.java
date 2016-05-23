@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import acme.com.acmecone.R;
+import com.acme.acmecone.R;
 
 
 public class HomeActivity extends Fragment {
@@ -136,7 +136,7 @@ public class HomeActivity extends Fragment {
         });
 
         final int matches = 5;
-        LOGO = (ImageView) view.findViewById(R.id.logo);
+        LOGO = (ImageView) view.findViewById(R.id.main_logo);
         LOGO.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

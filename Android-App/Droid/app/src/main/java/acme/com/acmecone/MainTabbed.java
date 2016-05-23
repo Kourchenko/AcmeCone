@@ -11,6 +11,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.MotionEvent;
 import android.view.View;
 
+import com.acme.acmecone.R;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -36,7 +38,7 @@ public class MainTabbed extends AppCompatActivity {
         if (mToolbar != null) {
             setSupportActionBar(mToolbar);
         }
-        mViewPager = (ViewPager) findViewById(R.id.mviewpager);
+        mViewPager = (ViewPager) findViewById(R.id.main_viewpager);
         setupViewPager(mViewPager);
 
         mTabLayout = (TabLayout) findViewById(R.id.main_tabs);

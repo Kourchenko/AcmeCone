@@ -24,7 +24,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <ImageView
-                    android:id="@+id/scupper_tw_6_a"
                     android:contentDescription="@string/app_name"
                     android:src="@mipmap/scupper_tw_6_a"
                     android:layout_width="175dp"

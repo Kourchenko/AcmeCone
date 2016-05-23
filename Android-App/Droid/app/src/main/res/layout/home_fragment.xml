@@ -123,7 +123,7 @@
         android:layout_height="fill_parent">
 
         <ImageView
-            android:id="@+id/logo"
+            android:id="@+id/main_logo"
             android:src="@drawable/acme_cone_txt"
             android:layout_alignParentBottom="true"
             android:layout_width="match_parent"

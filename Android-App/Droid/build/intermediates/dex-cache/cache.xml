@@ -2,53 +2,11 @@
 <items version="2" >
 
     <item
-        jar="/Users/diegok/Desktop/AcmeCone-master/Android-App/Droid/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/8.1.0/jars/classes.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="4477ea44f5ec5ad064022a22691732d7638ff197">
-        <dex dex="/Users/diegok/Desktop/AcmeCone-master/Android-App/Droid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-appindexing-8.1.0_dae773b6c028fe1387bd23f00d9e1cc4fb0d8ecb/classes.dex" />
-    </item>
-    <item
-        jar="/Users/diegok/Desktop/AcmeCone-master/Android-App/Droid/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.1.0/jars/classes.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="d0dda274b703dd9c5bb056867649d22b4171ae7d">
-        <dex dex="/Users/diegok/Desktop/AcmeCone-master/Android-App/Droid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-basement-8.1.0_44adf78f7859ad1b62f7078ec8cf02ded4344f80/classes.dex" />
-    </item>
-    <item
         jar="/Users/diegok/Desktop/AcmeCone-master/Android-App/Droid/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         revision="23.0.3"
-        sha1="8dbd6b67bada911ce4ed6bc091781eb47982b7a2">
+        sha1="52791a2f1b61d6fc437d9ba7d264824d12ad5daa">
         <dex dex="/Users/diegok/Desktop/AcmeCone-master/Android-App/Droid/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_76db11c9411aa2c5298637d8e301fa7896e41bff/classes.dex" />
-    </item>
-    <item
-        jar="/Users/diegok/Desktop/AcmeCone-master/Android-App/Droid/app/libs/activation.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="d1257cbff6faa44c1f325ae0d9413522d4644383">
-        <dex dex="/Users/diegok/Desktop/AcmeCone-master/Android-App/Droid/app/build/intermediates/transforms/dex/debug/folders/1000/2/activation_1a8fa41e0b203a1c7be3ed2f3b1c8d903b55f56f/classes.dex" />
-    </item>
-    <item
-        jar="/Users/diegok/Desktop/AcmeCone-master/Android-App/Droid/app/libs/jndn-0.6.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="e7e684d8127af92bdc7df966710b4655fb7d1156">
-        <dex dex="/Users/diegok/Desktop/AcmeCone-master/Android-App/Droid/app/build/intermediates/transforms/dex/debug/folders/1000/2/jndn-0.6_5ff23220c2d3b2a160d652030af6c55ebf6247a4/classes.dex" />
-    </item>
-    <item
-        jar="/Users/diegok/Desktop/AcmeCone-master/Android-App/Droid/app/libs/mail.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="428e267abff0d10802ccde86b915da2c20471160">
-        <dex dex="/Users/diegok/Desktop/AcmeCone-master/Android-App/Droid/app/build/intermediates/transforms/dex/debug/folders/1000/2/mail_b6d0ce623c1440dcf78ded3253d4e0781c53ecab/classes.dex" />
-    </item>
-    <item
-        jar="/Users/diegok/Desktop/AcmeCone-master/Android-App/Droid/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="d662ac8f35b2fdbbeb9ac5e53bd0146df294a9c7">
-        <dex dex="/Users/diegok/Desktop/AcmeCone-master/Android-App/Droid/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_b23e79653bc5cc58dad7f1c6f81d6bc34e83597f/classes.dex" />
     </item>
     <item
         jar="/Users/diegok/Desktop/AcmeCone-master/Android-App/Droid/app/build/intermediates/exploded-aar/com.android.support/design/23.0.1/jars/classes.jar"
@@ -58,20 +16,6 @@
         <dex dex="/Users/diegok/Desktop/AcmeCone-master/Android-App/Droid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-23.0.1_3a7a9c570784b0a5bce3fbbf09e2d9d13b7862a9/classes.dex" />
     </item>
     <item
-        jar="/Users/diegok/Desktop/AcmeCone-master/Android-App/Droid/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/libs/internal_impl-23.0.1.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
-        <dex dex="/Users/diegok/Desktop/AcmeCone-master/Android-App/Droid/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.0.1_dbe870e5128394d1f68cd3c025cf9817d64bde35/classes.dex" />
-    </item>
-    <item
-        jar="/Users/diegok/Desktop/AcmeCone-master/Android-App/Droid/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.0.0/jars/classes.jar"
-        jumboMode="true"
-        revision="23.0.3"
-        sha1="40e7757d9b06db670062ddb3cf5b30c129b2fd8c">
-        <dex dex="/Users/diegok/Desktop/AcmeCone-master/Android-App/Droid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-23.0.0_b5ee21f5f191fe82281541819ef7376753b9df83/classes.dex" />
-    </item>
-    <item
         jar="/Users/diegok/Desktop/AcmeCone-master/Android-App/Droid/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
         jumboMode="true"
         revision="23.0.3"
@@ -79,11 +23,18 @@
         <dex dex="/Users/diegok/Desktop/AcmeCone-master/Android-App/Droid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-23.0.1_93169fdacb3c879a1330825d81e1f7d90af9f5ac/classes.dex" />
     </item>
     <item
-        jar="/Users/diegok/Desktop/AcmeCone-master/Android-App/Droid/app/libs/javax.mail.jar"
+        jar="/Users/diegok/Desktop/AcmeCone-master/Android-App/Droid/app/libs/activation.jar"
         jumboMode="true"
         revision="23.0.3"
-        sha1="4d673ee9d55012cb7bfbe1bc9da71b0f752f14ae">
-        <dex dex="/Users/diegok/Desktop/AcmeCone-master/Android-App/Droid/app/build/intermediates/transforms/dex/debug/folders/1000/2/javax.mail_5b032576cfa79df08463256209d5c47cd91b6421/classes.dex" />
+        sha1="d1257cbff6faa44c1f325ae0d9413522d4644383">
+        <dex dex="/Users/diegok/Desktop/AcmeCone-master/Android-App/Droid/app/build/intermediates/transforms/dex/debug/folders/1000/2/activation_1a8fa41e0b203a1c7be3ed2f3b1c8d903b55f56f/classes.dex" />
+    </item>
+    <item
+        jar="/Users/diegok/Desktop/AcmeCone-master/Android-App/Droid/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appindexing/8.1.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="4477ea44f5ec5ad064022a22691732d7638ff197">
+        <dex dex="/Users/diegok/Desktop/AcmeCone-master/Android-App/Droid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-appindexing-8.1.0_dae773b6c028fe1387bd23f00d9e1cc4fb0d8ecb/classes.dex" />
     </item>
     <item
         jar="/Users/diegok/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.0.1/support-annotations-23.0.1.jar"
@@ -93,6 +44,41 @@
         <dex dex="/Users/diegok/Desktop/AcmeCone-master/Android-App/Droid/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-23.0.1_001ad234d7cd79970eb1ec7a55d583a5e5eb1f6a/classes.dex" />
     </item>
     <item
+        jar="/Users/diegok/Desktop/AcmeCone-master/Android-App/Droid/app/libs/additionnal.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="bd9e8dc422bb8c8405359947fe9f4282b49f57f4">
+        <dex dex="/Users/diegok/Desktop/AcmeCone-master/Android-App/Droid/app/build/intermediates/transforms/dex/debug/folders/1000/2/additionnal_2cb7389da9db9271e8be7aada542a3fccf74f865/classes.dex" />
+    </item>
+    <item
+        jar="/Users/diegok/Desktop/AcmeCone-master/Android-App/Droid/app/build/intermediates/exploded-aar/com.android.support/multidex/1.0.1/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="78ea232052df889856dcb7b7b542707c89bb3bfb">
+        <dex dex="/Users/diegok/Desktop/AcmeCone-master/Android-App/Droid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-multidex-1.0.1_104b7eb6d5216b2dfe39b0a136e3fc234ca67c79/classes.dex" />
+    </item>
+    <item
+        jar="/Users/diegok/Desktop/AcmeCone-master/Android-App/Droid/app/libs/javax.mail.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="4d673ee9d55012cb7bfbe1bc9da71b0f752f14ae">
+        <dex dex="/Users/diegok/Desktop/AcmeCone-master/Android-App/Droid/app/build/intermediates/transforms/dex/debug/folders/1000/2/javax.mail_5b032576cfa79df08463256209d5c47cd91b6421/classes.dex" />
+    </item>
+    <item
+        jar="/Users/diegok/Desktop/AcmeCone-master/Android-App/Droid/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.1.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="d0dda274b703dd9c5bb056867649d22b4171ae7d">
+        <dex dex="/Users/diegok/Desktop/AcmeCone-master/Android-App/Droid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-basement-8.1.0_44adf78f7859ad1b62f7078ec8cf02ded4344f80/classes.dex" />
+    </item>
+    <item
+        jar="/Users/diegok/Desktop/AcmeCone-master/Android-App/Droid/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/23.0.0/jars/classes.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="40e7757d9b06db670062ddb3cf5b30c129b2fd8c">
+        <dex dex="/Users/diegok/Desktop/AcmeCone-master/Android-App/Droid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-23.0.0_b5ee21f5f191fe82281541819ef7376753b9df83/classes.dex" />
+    </item>
+    <item
         jar="/Users/diegok/Desktop/AcmeCone-master/Android-App/Droid/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/classes.jar"
         jumboMode="true"
         revision="23.0.3"
@@ -100,11 +86,18 @@
         <dex dex="/Users/diegok/Desktop/AcmeCone-master/Android-App/Droid/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-23.0.1_f3479bf3ddf8fa9af31a4ac8060fa7e5c96fdc87/classes.dex" />
     </item>
     <item
-        jar="/Users/diegok/Desktop/AcmeCone-master/Android-App/Droid/app/libs/additionnal.jar"
+        jar="/Users/diegok/Desktop/AcmeCone-master/Android-App/Droid/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         revision="23.0.3"
-        sha1="bd9e8dc422bb8c8405359947fe9f4282b49f57f4">
-        <dex dex="/Users/diegok/Desktop/AcmeCone-master/Android-App/Droid/app/build/intermediates/transforms/dex/debug/folders/1000/2/additionnal_2cb7389da9db9271e8be7aada542a3fccf74f865/classes.dex" />
+        sha1="3caf38e4c29723232e6dc41bd1d7042ef57f667b">
+        <dex dex="/Users/diegok/Desktop/AcmeCone-master/Android-App/Droid/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_b23e79653bc5cc58dad7f1c6f81d6bc34e83597f/classes.dex" />
+    </item>
+    <item
+        jar="/Users/diegok/Desktop/AcmeCone-master/Android-App/Droid/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/libs/internal_impl-23.0.1.jar"
+        jumboMode="true"
+        revision="23.0.3"
+        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
+        <dex dex="/Users/diegok/Desktop/AcmeCone-master/Android-App/Droid/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-23.0.1_dbe870e5128394d1f68cd3c025cf9817d64bde35/classes.dex" />
     </item>
 
 </items>

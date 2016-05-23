@@ -16,7 +16,7 @@ import android.widget.ImageView;
 import java.util.ArrayList;
 import java.util.List;
 
-import acme.com.acmecone.R;
+import com.acme.acmecone.R;
 
 
 public class PitchPansViewFragment extends AppCompatActivity {
@@ -28,16 +28,16 @@ public class PitchPansViewFragment extends AppCompatActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.metal_layout);
-        mToolbar = (Toolbar) findViewById(R.id.toolbar_actionbar);
+        setContentView(R.layout.pitchpans_layout);
+        mToolbar = (Toolbar) findViewById(R.id.pitchpan_toolbar_actionbar);
         if (mToolbar != null) {
             setSupportActionBar(mToolbar);
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
 
-        mViewPager = (ViewPager) findViewById(R.id.metal_viewpager);
+        mViewPager = (ViewPager) findViewById(R.id.pitchpan_viewpager);
         setupViewPager(mViewPager);
-        mTabLayout = (TabLayout) findViewById(R.id.metal_tabs);
+        mTabLayout = (TabLayout) findViewById(R.id.pitchpan_tabs);
         mTabLayout.setupWithViewPager(mViewPager);
     }
 

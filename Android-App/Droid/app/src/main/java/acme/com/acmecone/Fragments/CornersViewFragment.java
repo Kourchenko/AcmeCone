@@ -18,7 +18,7 @@ import android.widget.ImageView;
 import java.util.ArrayList;
 import java.util.List;
 
-import acme.com.acmecone.R;
+import com.acme.acmecone.R;
 
 
 public class CornersViewFragment extends ActionBarActivity {
@@ -31,7 +31,7 @@ public class CornersViewFragment extends ActionBarActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.corners_layout);
-        mToolbar = (Toolbar) findViewById(R.id.toolbar_actionbar);
+        mToolbar = (Toolbar) findViewById(R.id.corner_toolbar_actionbar);
         if (mToolbar != null) {
             setSupportActionBar(mToolbar);
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);

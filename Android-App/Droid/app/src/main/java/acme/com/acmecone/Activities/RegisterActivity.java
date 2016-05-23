@@ -18,7 +18,7 @@ import android.widget.ImageView;
 
 import acme.com.acmecone.Adapters.NavigationDrawerCallbacks;
 import acme.com.acmecone.Fragments.NavigationDrawerFragment;
-import acme.com.acmecone.R;
+import com.acme.acmecone.R;
 
 
 public class RegisterActivity extends ActionBarActivity implements NavigationDrawerCallbacks {
@@ -36,14 +36,14 @@ public class RegisterActivity extends ActionBarActivity implements NavigationDra
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        mToolbar = (Toolbar) findViewById(R.id.toolbar_actionbar);
+        mToolbar = (Toolbar) findViewById(R.id.register_toolbar_actionbar);
         setSupportActionBar(mToolbar);
 
         mNavigationDrawerFragment = (NavigationDrawerFragment)
-                getFragmentManager().findFragmentById(R.id.fragment_drawer);
+                getFragmentManager().findFragmentById(R.id.register_fragment_drawer);
 
         // Set up the drawer.
-        mNavigationDrawerFragment.setup(R.id.fragment_drawer, (DrawerLayout) findViewById(R.id.drawer), mToolbar);
+        mNavigationDrawerFragment.setup(R.id.register_fragment_drawer, (DrawerLayout) findViewById(R.id.register_drawer), mToolbar);
         // populate the navigation drawer
         mNavigationDrawerFragment.setUserData("Acme Cone", "sales@acmecone.com", BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher));
 

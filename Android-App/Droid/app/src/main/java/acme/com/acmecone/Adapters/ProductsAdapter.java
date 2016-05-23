@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-import acme.com.acmecone.R;
+import com.acme.acmecone.R;
 
 public class ProductsAdapter extends ArrayAdapter<ImageItem> {
 

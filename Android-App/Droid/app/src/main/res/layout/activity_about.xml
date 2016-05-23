@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/drawer"
+    android:id="@+id/about_drawer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true" >
@@ -13,7 +13,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical" >
 
-            <include android:id="@+id/toolbar_actionbar"
+            <include android:id="@+id/about_toolbar_actionbar"
                 layout="@layout/toolbar_default"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
@@ -34,7 +34,7 @@
                         android:padding="5dp">
 
                         <TextView
-                            android:id="@+id/about_text"
+                            android:id="@+id/about_text_a"
                             android:text="@string/acme_info_a"
                             android:textSize="35sp"
                             android:layout_width="wrap_content"
@@ -43,7 +43,7 @@
                         <TextView
                             android:text="@string/acme_info_b"
                             android:textSize="15sp"
-                            android:layout_toRightOf="@id/about_text"
+                            android:layout_toRightOf="@id/about_text_a"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content" />
 
@@ -55,7 +55,7 @@
                         android:padding="5dp">
 
                         <TextView
-                            android:id="@+id/about_text"
+                            android:id="@+id/about_text_b"
                             android:text="@string/acme_info_c"
                             android:textSize="35sp"
                             android:layout_gravity="top"
@@ -66,7 +66,7 @@
                         <TextView
                             android:text="@string/acme_info_d"
                             android:textSize="15sp"
-                            android:layout_toRightOf="@id/about_text"
+                            android:layout_toRightOf="@id/about_text_b"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content" />
 
@@ -78,7 +78,7 @@
                         android:padding="5dp">
 
                         <TextView
-                            android:id="@+id/about_text"
+                            android:id="@+id/about_text_c"
                             android:text="@string/acme_info_e"
                             android:textSize="35sp"
                             android:layout_gravity="top"
@@ -89,19 +89,19 @@
                         <TextView
                             android:text="@string/acme_info_f"
                             android:textSize="15sp"
-                            android:layout_toRightOf="@id/about_text"
+                            android:layout_toRightOf="@id/about_text_c"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content" />
 
                     </RelativeLayout>
 
                     <RelativeLayout
-                        android:id="@+id/acme_directions"
+                        android:id="@+id/about_acme_directions"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
                         <ImageView
-                            android:id="@+id/acme_directions_img"
+                            android:id="@+id/about_acme_directions_img"
                             android:contentDescription="@string/app_name"
                             android:src="@drawable/ic_directions_black_48dp"
                             android:layout_alignParentLeft="true"
@@ -114,7 +114,7 @@
                             android:textSize="26sp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_toRightOf="@id/acme_directions_img"
+                            android:layout_toRightOf="@id/about_acme_directions_img"
                             android:layout_alignParentBottom="true"
                             android:layout_alignParentTop="true" />
                     </RelativeLayout>
@@ -138,12 +138,12 @@
                         android:layout_height="25dp" />
 
                     <RelativeLayout
-                        android:id="@+id/acme_youtube"
+                        android:id="@+id/about_acme_youtube"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
                         <ImageView
-                            android:id="@+id/acme_youtube_img"
+                            android:id="@+id/about_acme_youtube_img"
                             android:src="@drawable/ic_ondemand_video_black_48dp"
                             android:layout_alignParentLeft="true"
                             android:layout_alignParentStart="true"
@@ -156,13 +156,13 @@
                             android:padding="5dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_toRightOf="@id/acme_youtube_img"
+                            android:layout_toRightOf="@id/about_acme_youtube_img"
                             android:layout_alignParentBottom="true"
                             android:layout_alignParentTop="true" />
                     </RelativeLayout>
 
                     <ImageView
-                        android:id="@+id/acme_cone_text"
+                        android:id="@+id/about_acme_cone_text"
                         android:contentDescription="@string/app_name"
                         android:src="@drawable/acme_cone_txt"
                         android:layout_width="match_parent"
@@ -175,11 +175,14 @@
     </LinearLayout>
 
     <acme.com.acmecone.Adapters.ScrimInsetsFrameLayout
-        android:id="@+id/scrimInsetsFrameLayout"
-        android:layout_width="@dimen/navigation_drawer_width" android:layout_height="wrap_content"
-        android:fitsSystemWindows="true" android:layout_gravity="start" app:insetForeground="#4000" >
+        android:id="@+id/about_scrimInsetsFrameLayout"
+        android:layout_width="@dimen/navigation_drawer_width"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:layout_gravity="start"
+        app:insetForeground="#4000" >
 
-        <fragment android:id="@+id/fragment_drawer"
+        <fragment android:id="@+id/about_fragment_drawer"
             android:name="acme.com.acmecone.Fragments.NavigationDrawerFragment"
             android:layout_width="@dimen/navigation_drawer_width"
             android:layout_height="match_parent" android:fitsSystemWindows="true"

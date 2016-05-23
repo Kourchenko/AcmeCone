@@ -24,7 +24,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <ImageView
-                    android:id="@+id/boxes_layout_curb_s"
                     android:contentDescription="@string/app_name"
                     android:src="@mipmap/corner_outside"
                     android:layout_width="match_parent"
@@ -36,7 +35,7 @@
 
             <TextView
                 android:text="@string/corners_outside_desc"
-                android:textSize="18dp"
+                android:textSize="18sp"
                 android:padding="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />

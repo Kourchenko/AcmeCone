@@ -24,7 +24,7 @@ import android.widget.Toast;
 import java.util.Collections;
 import java.util.Map;
 
-import acme.com.acmecone.R;
+import com.acme.acmecone.R;
 import acme.com.acmecone.Utility.ConstantVar;
 
 

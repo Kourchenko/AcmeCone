@@ -20,7 +20,7 @@ import java.util.Locale;
 
 import acme.com.acmecone.Adapters.NavigationDrawerCallbacks;
 import acme.com.acmecone.Fragments.NavigationDrawerFragment;
-import acme.com.acmecone.R;
+import com.acme.acmecone.R;
 
 
 public class AboutUsActivity extends ActionBarActivity implements NavigationDrawerCallbacks {
@@ -37,18 +37,18 @@ public class AboutUsActivity extends ActionBarActivity implements NavigationDraw
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
 
-        mToolbar = (Toolbar) findViewById(R.id.toolbar_actionbar);
+        mToolbar = (Toolbar) findViewById(R.id.about_toolbar_actionbar);
         setSupportActionBar(mToolbar);
 
         mNavigationDrawerFragment = (NavigationDrawerFragment)
-                getFragmentManager().findFragmentById(R.id.fragment_drawer);
+                getFragmentManager().findFragmentById(R.id.about_fragment_drawer);
 
         // Set up the drawer.
-        mNavigationDrawerFragment.setup(R.id.fragment_drawer, (DrawerLayout) findViewById(R.id.drawer), mToolbar);
+        mNavigationDrawerFragment.setup(R.id.about_fragment_drawer, (DrawerLayout) findViewById(R.id.about_drawer), mToolbar);
         // populate the navigation drawer
         mNavigationDrawerFragment.setUserData("Acme Cone", "info@acmecone.com", BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher));
 
-        directionsApp = (RelativeLayout) findViewById(R.id.acme_directions);
+        directionsApp = (RelativeLayout) findViewById(R.id.about_acme_directions);
         directionsApp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -58,7 +58,7 @@ public class AboutUsActivity extends ActionBarActivity implements NavigationDraw
             }
         });
 
-        youtubeApp = (RelativeLayout)findViewById(R.id.acme_youtube);
+        youtubeApp = (RelativeLayout)findViewById(R.id.about_acme_youtube);
         youtubeApp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -73,7 +73,7 @@ public class AboutUsActivity extends ActionBarActivity implements NavigationDraw
             }
         });
 
-        logoB = (ImageView)findViewById(R.id.acme_cone_text);
+        logoB = (ImageView)findViewById(R.id.about_acme_cone_text);
         logoB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -116,7 +116,6 @@ public class AboutUsActivity extends ActionBarActivity implements NavigationDraw
             super.onBackPressed();
     }
 
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
@@ -130,7 +129,6 @@ public class AboutUsActivity extends ActionBarActivity implements NavigationDraw
                 Intent registerIntent = new Intent(this, RegisterActivity.class);
                 startActivity(registerIntent);
         }
-
 
         return super.onOptionsItemSelected(item);
     }

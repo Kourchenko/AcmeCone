@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/drawer"
+    android:id="@+id/login_drawer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true" >
@@ -13,7 +13,7 @@
             android:orientation="vertical"
             android:weightSum="1" >
 
-            <include android:id="@+id/toolbar_actionbar"
+            <include android:id="@+id/login_toolbar_actionbar"
                 layout="@layout/toolbar_default"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
@@ -102,11 +102,14 @@
         </LinearLayout>
 
     <acme.com.acmecone.Adapters.ScrimInsetsFrameLayout
-        android:id="@+id/scrimInsetsFrameLayout"
-        android:layout_width="@dimen/navigation_drawer_width" android:layout_height="wrap_content"
-        android:fitsSystemWindows="true" android:layout_gravity="start" app:insetForeground="#4000" >
+        android:id="@+id/login_scrimInsetsFrameLayout"
+        android:layout_width="@dimen/navigation_drawer_width"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:layout_gravity="start"
+        app:insetForeground="#4000" >
 
-        <fragment android:id="@+id/fragment_drawer"
+        <fragment android:id="@+id/login_fragment_drawer"
             android:name="acme.com.acmecone.Fragments.NavigationDrawerFragment"
             android:layout_width="@dimen/navigation_drawer_width"
             android:layout_height="match_parent" android:fitsSystemWindows="true"

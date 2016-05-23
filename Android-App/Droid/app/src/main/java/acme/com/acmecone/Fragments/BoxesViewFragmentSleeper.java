@@ -7,7 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import acme.com.acmecone.R;
+import com.acme.acmecone.R;
 
 public class BoxesViewFragmentSleeper extends Fragment {
 

@@ -33,7 +33,7 @@ import java.util.List;
 import acme.com.acmecone.Adapters.NavigationDrawerAdapter;
 import acme.com.acmecone.Adapters.NavigationDrawerCallbacks;
 import acme.com.acmecone.Adapters.NavigationItem;
-import acme.com.acmecone.R;
+import com.acme.acmecone.R;
 
 /**
  * Fragment used for managing interactions for and presentation of a navigation drawer.

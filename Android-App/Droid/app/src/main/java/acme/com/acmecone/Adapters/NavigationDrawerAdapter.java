@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
-import acme.com.acmecone.R;
+import  com.acme.acmecone.R;
 
 
 public class NavigationDrawerAdapter extends RecyclerView.Adapter<NavigationDrawerAdapter.ViewHolder> {

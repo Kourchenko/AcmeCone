@@ -9,7 +9,7 @@
     tools:context=".MainTabbed">
 
     <LinearLayout
-        android:id="@+id/viewA"
+        android:id="@+id/checkout_viewA"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -26,9 +26,8 @@
             android:layout_height="match_parent" />
     </LinearLayout>
 
-
         <FrameLayout
-            android:id="@+id/viewB"
+            android:id="@+id/checkout_viewB"
             android:visibility="gone"
             android:layout_width="match_parent"
             android:layout_height="250dp"
@@ -293,7 +292,7 @@
         android:layout_margin="16dp"
         android:clickable="true"
         android:src="@drawable/ic_send_white_36dp"
-        app:layout_anchor="@id/viewB"
+        app:layout_anchor="@id/checkout_viewB"
         app:layout_anchorGravity="top|right|end"/>
 
 

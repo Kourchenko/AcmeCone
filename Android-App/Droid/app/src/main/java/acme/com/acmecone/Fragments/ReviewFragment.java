@@ -48,7 +48,7 @@ import acme.com.acmecone.Items.Pipe;
 import acme.com.acmecone.Items.Scupper;
 import acme.com.acmecone.Items.Sleeper;
 import acme.com.acmecone.Items.Tube;
-import acme.com.acmecone.R;
+import com.acme.acmecone.R;
 import acme.com.acmecone.Adapters.ListViewAdapter;
 import acme.com.acmecone.Adapters.SwipeToDismissTouchListener;
 import acme.com.acmecone.Utility.ConstantVar;

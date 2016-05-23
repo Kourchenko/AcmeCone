@@ -31,7 +31,7 @@ import acme.com.acmecone.Items.Pipe;
 import acme.com.acmecone.Items.Scupper;
 import acme.com.acmecone.Items.Sleeper;
 import acme.com.acmecone.Items.Tube;
-import acme.com.acmecone.R;
+import com.acme.acmecone.R;
 import acme.com.acmecone.Utility.ConstantVar;
 
 public class CheckoutFragment extends Fragment {
@@ -55,7 +55,7 @@ public class CheckoutFragment extends Fragment {
 
         final FloatingActionButton fab_orderform = (FloatingActionButton) view.findViewById(R.id.fab_viewB);
         final FloatingActionButton fab_calendar = (FloatingActionButton) view.findViewById(R.id.fab_viewA);
-        final FrameLayout viewB = (FrameLayout) view.findViewById(R.id.viewB);
+        final FrameLayout viewB = (FrameLayout) view.findViewById(R.id.checkout_viewB);
 
         calendar = (CalendarView) view.findViewById(R.id.calendar);
         name = (AutoCompleteTextView) view.findViewById(R.id.orderform_edit_name);
@@ -251,7 +251,7 @@ public class CheckoutFragment extends Fragment {
                                             } else {
                                                 final String allTogether = "Date Needed: " + selectedDate + "\n\n" + "STOCK: \n" + orderString + "\n\n" + orderInfo;
 
-                                                GMailSender sender = new GMailSender("EMAIL@address.com", "PW");
+                                                GMailSender sender = new GMailSender("acmecone.acme@gmail.com", "Acmecone97402");
                                                 // toRecipients must be seperated by commas: "emailAddress,"
                                                 sender.sendMail(mCompany + "ordered!", allTogether, mEmail, mEmail);
 
