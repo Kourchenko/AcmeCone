@@ -315,7 +315,7 @@
 				TargetAttributes = {
 					E578DA721CADACBA00F87E93 = {
 						CreatedOnToolsVersion = 7.2.1;
-						DevelopmentTeam = 5S76648C73;
+						DevelopmentTeam = M8D2JQFU96;
 					};
 					E578DA881CADACBA00F87E93 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -500,10 +500,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
+				SDKROOT = iphoneos9.3;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -538,9 +538,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos9.3;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -549,13 +550,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "Developer ID Application: Diego Kourchenko (M8D2JQFU96)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Developer ID Application: Diego Kourchenko (M8D2JQFU96)";
 				INFOPLIST_FILE = "Acme-App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.acme.acmecone;
+				PRODUCT_BUNDLE_IDENTIFIER = com.acmecone.acmecone;
 				PRODUCT_NAME = "Acme Cone";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "b9c10379-de2c-4b8b-8de1-53924cb43af4";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -563,13 +566,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Diego Kourchenko (M8D2JQFU96)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Diego Kourchenko (M8D2JQFU96)";
 				INFOPLIST_FILE = "Acme-App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.acme.acmecone;
+				PRODUCT_BUNDLE_IDENTIFIER = com.acmecone.acmecone;
 				PRODUCT_NAME = "Acme Cone";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "b9c10379-de2c-4b8b-8de1-53924cb43af4";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
