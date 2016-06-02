@@ -14,6 +14,8 @@
 		E52EC9931CCFE13900723D5E /* ScupperController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52EC9921CCFE13900723D5E /* ScupperController.swift */; };
 		E52EC9951CCFE18C00723D5E /* TubeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E52EC9941CCFE18C00723D5E /* TubeController.swift */; };
 		E54380881CCDD6E300C1EDDB /* CustomController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54380871CCDD6E300C1EDDB /* CustomController.swift */; };
+		E57031081CFF42A400FBA490 /* ConeTabbedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57031071CFF42A400FBA490 /* ConeTabbedController.swift */; };
+		E570310A1CFF446D00FBA490 /* TabBarControllerSwipeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57031091CFF446D00FBA490 /* TabBarControllerSwipeExtension.swift */; };
 		E57311651CCADE1300720417 /* StockCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57311641CCADE1300720417 /* StockCell.swift */; };
 		E57311671CCAE81200720417 /* StockController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57311661CCAE81200720417 /* StockController.swift */; };
 		E578DA771CADACBA00F87E93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E578DA761CADACBA00F87E93 /* AppDelegate.swift */; };
@@ -70,6 +72,8 @@
 		E52EC9921CCFE13900723D5E /* ScupperController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScupperController.swift; sourceTree = "<group>"; };
 		E52EC9941CCFE18C00723D5E /* TubeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TubeController.swift; sourceTree = "<group>"; };
 		E54380871CCDD6E300C1EDDB /* CustomController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomController.swift; path = ../CustomController.swift; sourceTree = "<group>"; };
+		E57031071CFF42A400FBA490 /* ConeTabbedController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConeTabbedController.swift; sourceTree = "<group>"; };
+		E57031091CFF446D00FBA490 /* TabBarControllerSwipeExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarControllerSwipeExtension.swift; sourceTree = "<group>"; };
 		E57311641CCADE1300720417 /* StockCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StockCell.swift; path = ../StockCell.swift; sourceTree = "<group>"; };
 		E57311661CCAE81200720417 /* StockController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StockController.swift; sourceTree = "<group>"; };
 		E578DA731CADACBA00F87E93 /* Acme Cone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Acme Cone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,6 +149,8 @@
 				E5B4D9181CD4721100EB645B /* SleepersController.swift */,
 				E5B4D9101CD3340700EB645B /* StockConeController.swift */,
 				E52EC9941CCFE18C00723D5E /* TubeController.swift */,
+				E57031071CFF42A400FBA490 /* ConeTabbedController.swift */,
+				E57031091CFF446D00FBA490 /* TabBarControllerSwipeExtension.swift */,
 			);
 			name = CustomControllers;
 			sourceTree = "<group>";
@@ -310,7 +316,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = Acme;
 				TargetAttributes = {
 					E578DA721CADACBA00F87E93 = {
@@ -400,7 +406,9 @@
 				E5F22C2A1CADE031008EB068 /* Scupper.swift in Sources */,
 				E5EE4E5C1CD59FDA00FCBA44 /* FinalSendCell.swift in Sources */,
 				E52EC98D1CCED2B800723D5E /* CornerController.swift in Sources */,
+				E570310A1CFF446D00FBA490 /* TabBarControllerSwipeExtension.swift in Sources */,
 				E5F22C311CADE076008EB068 /* ReviewController.swift in Sources */,
+				E57031081CFF42A400FBA490 /* ConeTabbedController.swift in Sources */,
 				E5B4D9191CD4721100EB645B /* SleepersController.swift in Sources */,
 				E5F22C241CADE031008EB068 /* Cone.swift in Sources */,
 				E52EC9871CCDE5D200723D5E /* ConeController.swift in Sources */,
@@ -503,7 +511,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos9.3;
+				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -541,7 +549,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos9.3;
+				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
