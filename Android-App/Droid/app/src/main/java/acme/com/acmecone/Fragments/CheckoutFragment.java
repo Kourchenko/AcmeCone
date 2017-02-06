@@ -251,7 +251,7 @@ public class CheckoutFragment extends Fragment {
                                             } else {
                                                 final String allTogether = "Date Needed: " + selectedDate + "\n\n" + "STOCK: \n" + orderString + "\n\n" + orderInfo;
 
-                                                GMailSender sender = new GMailSender("acmecone.acme@gmail.com", "Acmecone97402");
+                                                GMailSender sender = new GMailSender(user_email, user_pass);
                                                 // toRecipients must be seperated by commas: "emailAddress,"
                                                 sender.sendMail(mCompany + "ordered!", allTogether, mEmail, mEmail);
 
